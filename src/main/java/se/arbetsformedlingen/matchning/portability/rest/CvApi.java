@@ -1,11 +1,9 @@
 package se.arbetsformedlingen.matchning.portability.rest;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -47,7 +45,6 @@ public class CvApi {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
 
         System.out.println(results);
         ObjectMapper mapper = new ObjectMapper();
