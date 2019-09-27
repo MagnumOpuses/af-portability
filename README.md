@@ -3,9 +3,9 @@
 [logo]: https://github.com/MagnumOpuses/project-meta/blob/master/img/jobtechdev_black.png "JobTech dev logo"
 [A JobTech Project](https://www.jobtechdev.se)
 
-# Gravity Portability
+# AF Portability
 
-Gravity Portability is the web service that enables the end-user to extract/export their own CV data Arbetsförmedlingen directly to their personal Gravity storage.
+AF Portability is the web service that enables the end-user to extract/export their own CV data Arbetsförmedlingen directly to their personal Gravity storage.
 
 ## Versions, current dev state and future
 
@@ -22,8 +22,8 @@ No prerequisites guidelines yet.
 ### Installation
 
 ```bash
-git clone https://github.com/MagnumOpuses/gravity-portability.git
-cd gravity-portability
+git clone https://github.com/MagnumOpuses/af-portability.git
+cd af-portability
 ```
 
 ## Test

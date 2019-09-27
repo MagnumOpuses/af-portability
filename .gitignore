@@ -1,4 +1,5 @@
-
-.idea/
+.idea
 profile2hropen.iml
-target/
+target
+.classpath
+.project
