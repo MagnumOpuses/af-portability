@@ -2,7 +2,9 @@ package se.arbetsformedlingen.matchning.portability.rest;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -22,6 +24,7 @@ import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.json.*;
 
@@ -32,7 +35,7 @@ public class CvApi {
     private static final String getCvUrl = "http://127.0.0.1:8100/envelop";
 
     @GetMapping(value = "/cv")
-    public String getCv(@RequestParam("sessionToken") String token) {
+    public JsonNode getCv(@RequestParam("sessionToken") String token) throws IOException {
         System.out.println(token);
         String results = null;
         try {
@@ -47,8 +50,24 @@ public class CvApi {
         }
 
 
+        System.out.println(results);
+        ObjectMapper mapper = new ObjectMapper();
+        Response res = mapper.readValue(results, Response.class);
 
-        return results;
+        if (res.value == "") {
+            System.out.println("value not found");
+            ObjectNode emptyNode = mapper.createObjectNode();
+            emptyNode.put("status", 204);
+            emptyNode.put("message", "Content Not found");
+            return emptyNode;
+        }
+
+        JsonNode jsonNode = mapper.readTree(results);
+        JsonNode valueNode = mapper.readTree(jsonNode.get("value").asText());
+        System.out.println("JSON: " + valueNode);
+        ObjectNode o = (ObjectNode) valueNode;
+        o.put("status", 200);
+        return o;
     }
 
     private String requestCvWithSessionToken(String token, String apiUrl) throws IOException, URISyntaxException {
