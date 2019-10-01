@@ -1,6 +1,10 @@
 package se.arbetsformedlingen.matchning.portability.model.sessionToken;
 
 public class Response {
-    private int status;
-    private String value;
+    public int status;
+    public String value;
+
+    public String getAllProperties() {
+        return "status: " + this.status + ", value: " + this.value;
+    }
 }
