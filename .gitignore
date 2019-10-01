@@ -1,6 +1,5 @@
-.idea
-profile2hropen.iml
-target
+.idea/
+target/
 .classpath
 .project
-gravity-portability.iml
+*.iml
