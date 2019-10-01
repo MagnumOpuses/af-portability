@@ -24,15 +24,16 @@ public class SessionTokenApi {
     @GetMapping(value = "/token")
     public Token generateSessionToken() {
         UUID uuid = UUID.randomUUID();
+        String sessionToken = uuid.toString();
 
         try {
-            String result = this.registerTokenToRedis(uuid.toString(), this.registerTokenUrl);
+            String result = this.registerTokenToRedis(sessionToken, this.registerTokenUrl);
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            return new Token(uuid.toString());
+            return new Token(sessionToken);
         }
     }
 
