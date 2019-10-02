@@ -12,6 +12,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,7 @@ public class StoreApi {
 
     ObjectMapper mapper = new ObjectMapper();
 
+    @CrossOrigin
     @PostMapping("/store")
     public JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
         System.out.println(body.token + ": " + body.value);

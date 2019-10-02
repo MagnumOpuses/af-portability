@@ -33,6 +33,7 @@ public class CvApi {
     @Value("${spring.outbox.url:localhost}")
     private static String getCvUrl;
 
+    @CrossOrigin
     @GetMapping(value = "/cv")
     public JsonNode getCv(@RequestParam("sessionToken") String token) throws IOException {
         System.out.println(token);

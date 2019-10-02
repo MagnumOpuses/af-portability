@@ -8,4 +8,5 @@ public class ConvertProfileToHROpenApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ConvertProfileToHROpenApplication.class, args);
 	}
+
 }
