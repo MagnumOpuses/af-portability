@@ -1,7 +1,9 @@
 package se.arbetsformedlingen.matchning.portability.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -10,52 +12,57 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.*;
-import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreRequestBody;
+import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreResponse;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
 import java.io.IOException;
-import java.util.UUID;
-
-import static com.google.common.base.Predicates.equalTo;
 
 @RestController
-public class SessionTokenApi {
+public class StoreApi {
 
     @Value("${spring.outbox.url:localhost}")
-    private static String registerTokenUrl;
+    private static String storeDataUrl;
 
     ObjectMapper mapper = new ObjectMapper();
 
-    @GetMapping(value = "/token")
-    public Token generateSessionToken() {
-        UUID uuid = UUID.randomUUID();
-        Token t = new Token(uuid.toString());
+    @PostMapping("/store")
+    public JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
+        System.out.println(body.token + ": " + body.value);
 
+        String results = null;
         try {
-            String result = this.registerTokenToRedis(t);
+            results = this.storeValueToRedis(body);
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
+            throw new HttpNotFoundException("Token not found");
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            return t;
         }
+
+        JsonNode jsonNode = mapper.readTree(results);
+        ObjectNode o = (ObjectNode) jsonNode;
+        return o;
+
     }
 
-    public String registerTokenToRedis(Token t) throws IOException {
+    public String storeValueToRedis(StoreRequestBody body) throws IOException {
 
         HttpClient client = HttpClients.createDefault();
 
-        HttpPost postRequest = new HttpPost(SessionTokenApi.registerTokenUrl + "/store");
+        HttpPost postRequest = new HttpPost(StoreApi.storeDataUrl + "/store");
 
         String json = "";
         try {
-            json = mapper.writeValueAsString(t);
+            json = mapper.writeValueAsString(body);
             System.out.println("ResultingJSONstring = " + json);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+
 
         StringEntity entity = new StringEntity(json);
         postRequest.setEntity(entity);
@@ -63,7 +70,7 @@ public class SessionTokenApi {
         HttpResponse response = client.execute(postRequest);
 
         if (response.getStatusLine().getStatusCode() != 200) {
-            throw new HttpException(response.getStatusLine().getStatusCode(), SessionTokenApi.registerTokenUrl + "/store");
+            throw new HttpException(response.getStatusLine().getStatusCode(), StoreApi.storeDataUrl + "/store");
         }
         HttpEntity responseEntity = response.getEntity();
         String results = EntityUtils.toString(responseEntity);
@@ -71,5 +78,4 @@ public class SessionTokenApi {
         return results;
 
     }
-
 }
