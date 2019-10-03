@@ -25,17 +25,21 @@ import java.io.IOException;
 @RestController
 public class StoreApi {
 
-    @Value("${spring.outbox.url:localhost}")
     private static String storeDataUrl;
+    StoreApi(
+            @Value("${spring.outbox.host}") String host,
+            @Value("${spring.outbox.port}") String port) {
+        StoreApi.storeDataUrl = "http://" + host + ":" + port;
+    }
 
     ObjectMapper mapper = new ObjectMapper();
 
     @CrossOrigin
     @PostMapping("/store")
-    public JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
+    private JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
         System.out.println(body.token + ": " + body.value);
 
-        String results = null;
+        String results;
         try {
             results = this.storeValueToRedis(body);
         } catch (HttpException he) {
@@ -51,7 +55,7 @@ public class StoreApi {
 
     }
 
-    public String storeValueToRedis(StoreRequestBody body) throws IOException {
+    private String storeValueToRedis(StoreRequestBody body) throws IOException {
 
         HttpClient client = HttpClients.createDefault();
 
