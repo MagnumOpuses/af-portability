@@ -30,8 +30,12 @@ import java.util.UUID;
 @RestController
 public class CvApi {
 
-    @Value("${spring.outbox.url:localhost}")
     private static String getCvUrl;
+    CvApi(
+            @Value("${spring.outbox.host}") String host,
+            @Value("${spring.outbox.port}") String port) {
+        CvApi.getCvUrl = "http://" + host + ":" + port;
+    }
 
     @CrossOrigin
     @GetMapping(value = "/cv")
