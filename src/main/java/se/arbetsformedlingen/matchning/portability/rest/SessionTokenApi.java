@@ -38,7 +38,7 @@ public class SessionTokenApi {
 
     ObjectMapper mapper = new ObjectMapper();
 
-    @CrossOrigin
+    @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
     public Token generateSessionToken() {
         UUID uuid = UUID.randomUUID();
