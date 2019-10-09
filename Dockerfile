@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk
 
+#VOLUME /etc
 # ADD target/search-mvp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/searchapi.war
 #build inside the container, so we can pass this build to openshift
 #laterish, split in buildtime and runtime containers using s2i

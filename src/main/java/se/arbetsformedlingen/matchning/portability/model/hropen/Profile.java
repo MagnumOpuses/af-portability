@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Profile {
+public class  Profile {
     private String languageCode = "sv-SE";
     private String executiveSummary;
     private Identifier profileId;
