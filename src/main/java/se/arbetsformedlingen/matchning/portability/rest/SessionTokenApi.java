@@ -12,16 +12,14 @@ import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
+import se.arbetsformedlingen.matchning.portability.model.ApiKeys;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
+import se.arbetsformedlingen.matchning.portability.repository.ApiGatewayRepository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
 import java.io.IOException;
 import java.util.UUID;
-
-import static com.google.common.base.Predicates.equalTo;
 
 @RestController
 @PropertySource("classpath:application.properties")
@@ -29,6 +27,9 @@ public class SessionTokenApi {
 
     // @Value("${spring.outbox.url}")
     private static String registerTokenUrl;
+
+    @Autowired
+    private ApiGatewayRepository apiGatewayRepository;
 
     SessionTokenApi(
             @Value("${spring.outbox.host}") String host,
@@ -40,7 +41,14 @@ public class SessionTokenApi {
 
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
-    public Token generateSessionToken() {
+    public Token generateSessionToken(@RequestHeader("api-key") String apikey) {
+        // List<ApiKeys> aaaa = apiGatewayRepository.getAllApiKeys();
+
+        ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
+        if (info == null) {
+            throw new UnauthorizedException("Api Key missing or invalid");
+        }
+        System.out.println(info.toString());
         UUID uuid = UUID.randomUUID();
         Token t = new Token(uuid.toString());
         System.out.println(SessionTokenApi.registerTokenUrl);
