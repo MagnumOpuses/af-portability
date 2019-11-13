@@ -6,7 +6,7 @@ FROM openjdk:8-jdk
 #laterish, split in buildtime and runtime containers using s2i
 RUN apt update
 RUN apt install -y maven
-
+RUN apt install wget
 RUN mkdir build
 WORKDIR build
 
