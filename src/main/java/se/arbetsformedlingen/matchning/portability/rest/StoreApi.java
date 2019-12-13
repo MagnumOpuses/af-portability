@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreRequestBody;
-import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreResponse;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
 import java.io.IOException;

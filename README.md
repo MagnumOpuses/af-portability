@@ -17,7 +17,8 @@ No getting started guidelines yet.
 
 ### Prerequisites
 
-No prerequisites guidelines yet.
+Java version 8 >
+and Maven
 
 ### Installation
 
@@ -25,6 +26,30 @@ No prerequisites guidelines yet.
 git clone https://github.com/MagnumOpuses/af-portability.git
 cd af-portability
 ```
+
+## Run 
+To run the project on different environment:
+```bash
+mvn spring-boot:run -Dspring.profiles.active=<env_name>
+```
+Available environment:
+1. local = used for local development
+2. mock = used for mocking the service
+
+## API Specifications
+````bash
+1. /profile 
+GET Request
+gets CV data with the help of token added in the header as 'X-JWT_Assertion'
+
+2. /token?api-key=<apikey>
+GET Request
+gets a session token and the api-key in the query parameter define the authenticity of the user
+
+3. /cv?sessionToken=<sessionToken>
+GET Request
+gets cv from the outbox using the session token
+````
 
 ## Test
 

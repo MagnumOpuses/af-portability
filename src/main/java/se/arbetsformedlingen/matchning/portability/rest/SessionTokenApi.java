@@ -25,33 +25,36 @@ import java.util.UUID;
 @PropertySource("classpath:application.properties")
 public class SessionTokenApi {
 
-    // @Value("${spring.outbox.url}")
     private static String registerTokenUrl;
+
+    private static String envMessage;
 
     @Autowired
     private ApiGatewayRepository apiGatewayRepository;
 
     SessionTokenApi(
             @Value("${spring.outbox.host}") String host,
-            @Value("${spring.outbox.port}") String port) {
+            @Value("${spring.outbox.port}") String port,
+            @Value("${spring.env.message}") String message) {
         SessionTokenApi.registerTokenUrl = "http://" + host + ":" + port;
+        SessionTokenApi.envMessage = message;
     }
 
     ObjectMapper mapper = new ObjectMapper();
 
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
-    public Token generateSessionToken(@RequestHeader("api-key") String apikey) {
-        // List<ApiKeys> aaaa = apiGatewayRepository.getAllApiKeys();
-
+    public Token generateSessionToken(@RequestParam("api-key") String apikey) {
         ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
         }
         System.out.println(info.toString());
+
         UUID uuid = UUID.randomUUID();
         Token t = new Token(uuid.toString());
-        System.out.println(SessionTokenApi.registerTokenUrl);
+        System.out.println(SessionTokenApi.registerTokenUrl + "  env >> " + SessionTokenApi.envMessage);
+
 
         try {
             String result = this.registerTokenToRedis(t);
@@ -61,6 +64,7 @@ public class SessionTokenApi {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return t;
     }
 
