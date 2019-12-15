@@ -55,7 +55,6 @@ public class SessionTokenApi {
         Token t = new Token(uuid.toString());
         System.out.println(SessionTokenApi.registerTokenUrl + "  env >> " + SessionTokenApi.envMessage);
 
-
         try {
             String result = this.registerTokenToRedis(t);
         } catch (HttpException he) {
