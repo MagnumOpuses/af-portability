@@ -11,6 +11,7 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad;
@@ -28,8 +29,11 @@ import java.util.List;
 @Repository
 public class AspRespository {
 
-    private static final String PROFIL_URL = "http://arbetssokandeprofil.arbetsformedlingen.se:80/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler";
-    private static final String KUNDUPPGIFT_URL = "http://arbetssokande.arbetsformedlingen.se:80/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter";
+    //@Value("${spring.profile.url}")
+    private static String PROFIL_URL; //= "http://arbetssokandeprofil.arbetsformedlingen.se:80/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler";
+
+    //@Value("${spring.kundgift.url}")
+    private static String KUNDUPPGIFT_URL; //= "http://arbetssokande.arbetsformedlingen.se:80/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter";
 
     private Logger LOG = LoggerFactory.getLogger(AspRespository.class);
 
@@ -39,8 +43,18 @@ public class AspRespository {
     @Autowired
     Taxonomies taxonomyRepository;
 
+    AspRespository(
+            @Value("${spring.profile.url}") String profilUrl,
+            @Value("${spring.kundgift.url}") String kundgiftUrl
+    ) {
+        PROFIL_URL = profilUrl;
+        KUNDUPPGIFT_URL = kundgiftUrl;
+    }
+
     public Candidate getCandidateForToken(String token) {
         Candidate candidate = null;
+        LOG.info("Profile url: " + PROFIL_URL);
+        LOG.info("Kundgift url: " + KUNDUPPGIFT_URL);
         try {
             String results = readFromAPI(PROFIL_URL, token);
             List<ArbetsSokandeProfil> profiler = mapper.readValue(results, new TypeReference<List<ArbetsSokandeProfil>>() {
