@@ -12,9 +12,12 @@ AF Portability is the web service that enables the end-user to extract/export th
 No versions yet.
 
 ## Getting started
+### Docker 
+spring.profile.url=mock
+spring.profile.url=http://af-connect.local:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler 
+spring.kundgift.url=http://af-connect.local:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
 
-No getting started guidelines yet.
-
+More getting started guidelines.
 ### Prerequisites
 
 Java version 8 >

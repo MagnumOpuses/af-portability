@@ -1,0 +1,75 @@
+version: '3'
+services:
+  af-connect-outbox:
+    image: "jobtechdev/af-connect-outbox:latest"
+    container_name: "af-connect-outbox"
+    environment:
+      - REDIS_HOST=redis-db
+    ports:
+      - "8100:8100"
+    depends_on:
+      - af-connect-redis
+  af-portability:
+    image: "jobtechdev/af-portability:latest"
+    container_name: "af-portability"
+    environment:
+      - SPRING_PROFILE_URL=http://af-connect-mock:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler
+      - SPRING_KUNDGIFT_URL=http://af-connect-mock:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://apimanager:5432/apimanager
+      - SPRING_OUTBOX_HOST=af-connect-outbox
+    links:
+      - apimanager
+    ports:
+      - "8080:8080"
+    depends_on:
+      - apimanager
+      - af-connect-outbox
+      - af-connect-mock
+
+  apimanager:
+    container_name: "apimanager"
+    ports:
+      - "5432:5432"
+    image: "jobtechdev/apimanager-mock:latest"
+  af-connect-redis:
+    container_name: "redis-db"
+    image: "redis:alpine"
+
+  af-connect-demo:
+    container_name: "af-connect-demo"
+    image: "jobtechdev/af-connect-demo:latest"
+    ports:
+      - "3000:8080"
+    environment:
+      - HOST=localhost
+      - AF_PORTABILITY_URL=https://af-portability:8080
+    depends_on:
+      - af-connect
+      - af-portability
+
+  af-connect-mock:
+    container_name: "af-connect-mock"
+    image: "jobtechdev/af-connect-mock:latest"
+    ports:
+      - "9999:9999"
+      - "9998:9998"
+    environment:
+      - HOST=localhost
+      - PKEY=/dist/cert_and_key/privatekey.pem
+      - SSLCERT=/dist/cert_and_key/certificate.crt
+
+
+  af-connect:
+    container_name: "af-connect"
+    image: "jobtechdev/af-connect:latest"
+    ports:
+      - "443:4443"
+    environment:
+      - USE_SSL=true
+      - PKEY=./cert_and_key/privatekey.pem
+      - SSLCERT=./cert_and_key/certificate.crt
+      - HOST=localhost
+      - PORTABILITY_URL=http://af-portability:8080
+      - AF_JWT_URL=https://af-connect-mock:9999/jwt/rest/idp/v0/klientID
+    depends_on:
+      - af-portability
