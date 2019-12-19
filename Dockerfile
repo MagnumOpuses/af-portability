@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:13-jdk
 
 #VOLUME /etc
 # ADD target/search-mvp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/searchapi.war
@@ -23,8 +23,10 @@ RUN chgrp -R 0 /tmp && chmod -R g=u /tmp
 RUN  chmod -R a+rw /tmp
 RUN  chmod -R a+rw /build
 
+COPY tmp/ /tmp
+
 #RUN  chmod -R a+rw /.javacpp
 USER 10000
 EXPOSE 8080
 
-CMD java -jar target/profile2hropen-0.0.1-SNAPSHOT.jar
+CMD java -Dse.jobtechdev.tmp=/tmp -jar target/profile2hropen-0.0.1-SNAPSHOT.jar
