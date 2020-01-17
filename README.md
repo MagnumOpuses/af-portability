@@ -43,7 +43,7 @@ Available environment:
 ````bash
 1. /profile 
 GET Request
-gets CV data with the help of token added in the header as 'X-JWT_Assertion'
+gets CV data with the help of Cookie added in the header as 'AMV-SSO-COOKIE'
 
 2. /token?api-key=<apikey>
 GET Request
