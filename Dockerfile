@@ -1,4 +1,4 @@
-FROM openjdk:13-alpine
+FROM openjdk:8-alpine
 
 ARG SPRING_PROFILE_URL=http://af-connect.local:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler
 ARG SPRING_KUNDGIFT_URL=http://af-connect.local:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
@@ -28,6 +28,8 @@ WORKDIR build
 COPY pom.xml pom.xml
 COPY src/ src
 
+COPY tmp/ /tmp/portability-tmp
+
 # maven is sensitive to man in the middle attacks
 RUN mvn install -DskipTests
 
@@ -35,8 +37,6 @@ RUN chgrp -R 0 /build && chmod -R g=u /build
 RUN chgrp -R 0 /tmp && chmod -R g=u /tmp
 RUN  chmod -R a+rw /tmp
 RUN  chmod -R a+rw /build
-
-COPY tmp/ /tmp/portability-tmp
 
 #RUN  chmod -R a+rw /.javacpp
 USER 10000
