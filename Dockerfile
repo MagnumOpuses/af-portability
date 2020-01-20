@@ -1,5 +1,6 @@
-FROM openjdk:13-alpine
+FROM openjdk:8-alpine
 
+ARG SPRING_IDP_URL=http://af-connect-mock:9998/jwt/rest/idp/v0/klientID
 ARG SPRING_PROFILE_URL=http://af-connect.local:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler
 ARG SPRING_KUNDGIFT_URL=http://af-connect.local:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
 ARG SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/apimanager
@@ -7,6 +8,7 @@ ARG SPRING_OUTBOX_HOST=127.0.0.1
 
 
 
+ENV spring.idp.url=$SPRING_IDP_URL
 ENV spring.profile.url=$SPRING_PROFILE_URL
 ENV spring.kundgift.url=$SPRING_KUNDGIFT_URL
 ENV spring.datasource.url=$SPRING_DATASOURCE_URL
@@ -28,6 +30,8 @@ WORKDIR build
 COPY pom.xml pom.xml
 COPY src/ src
 
+COPY tmp/ /tmp/portability-tmp
+
 # maven is sensitive to man in the middle attacks
 RUN mvn install -DskipTests
 
@@ -39,5 +43,6 @@ RUN  chmod -R a+rw /build
 #RUN  chmod -R a+rw /.javacpp
 USER 10000
 EXPOSE 8080
+
 WORKDIR /build/target
-CMD java -jar ./profile2hropen-*-SNAPSHOT.jar
+CMD java -Dse.jobtechdev.tmp=/tmp/portability-tmp -jar ./profile2hropen-*-SNAPSHOT.jar
