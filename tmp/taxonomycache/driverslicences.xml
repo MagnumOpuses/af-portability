@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetAllDrivingLicencesResponse xmlns="urn:ams.se:Taxonomy"><GetAllDrivingLicencesResult><DrivingLicence><DrivingLicenceID>2</DrivingLicenceID><Term>A1</Term><Description>Lätt två- eller trehjulig motorcykel med högst 125 cm³ och högst 11 kW samt högst 0,1 kW/kg.
+
+Körkortsålder: 16 år.</Description><DrivingLicenceCode>A1</DrivingLicenceCode><SortOrder>3</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>3</DrivingLicenceID><Term>B</Term><Description>Bilar med en tillåten totalvikt som inte överstiger 3 500 kg och som inte har 
+fler än åtta sittplatser utöver förarsätet. Till en bil i denna kategori får kopplas 
+en lätt släpvagn med en tillåten totalvikt som inte överstiger 750 kg men även tyngre släp än 750 kg totalvikt (till exempel 1 500 kg), förutsatt att dragfordonets och släpvagnens sammanlagda totalvikter inte överstiger 3 500 kg.
+
+Behörigheten B ger rätt att köra terrängvagn, motorredskap klass 1 samt tre- och fyrhjuliga motorcyklar.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>B</DrivingLicenceCode><SortOrder>6</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>4</DrivingLicenceID><Term>C</Term><Description>Bilar med en tillåten totalvikt över 3 500 kg med undantag av sådana som avses i kategori D. Till en bil i denna kategori får kopplas en lätt släpvagn med en tillåten totalvikt av högst 750 kg.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>C</DrivingLicenceCode><SortOrder>11</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>5</DrivingLicenceID><Term>D</Term><Description>Bilar avsedda för persontransporter och som utöver förarsätet har fler än åtta sittplatser. Till en bil i denna kategori får kopplas en lätt släpvagn med en tillåten totalvikt som inte överstiger 750 kg.
+
+Körkortsålder: 21 år</Description><DrivingLicenceCode>D</DrivingLicenceCode><SortOrder>15</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>6</DrivingLicenceID><Term>BE</Term><Description>Personbil som omfattas av behörighet B och ett eller flera släpfordon som har totalvikt högst 3,5 ton.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>BE</DrivingLicenceCode><SortOrder>8</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>7</DrivingLicenceID><Term>CE</Term><Description>Tung lastbil som omfattar behörighet C med ett eller flera tunga släpfordon, oavsett vikt.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>CE</DrivingLicenceCode><SortOrder>12</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>8</DrivingLicenceID><Term>DE</Term><Description>Buss som omfattar behörighet D med ett eller flera tunga släpfordon oavsett vikt som är kopplade till ett sådant fordon.
+
+Körkortsålder: 21 år</Description><DrivingLicenceCode>DE</DrivingLicenceCode><SortOrder>16</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>10</DrivingLicenceID><Term>A</Term><Description>Tvåhjulig motorcykel oavsett slagvolym eller motoreffekt.
+
+Körkortsålder: 24 år eller 20 år för den som har haft behörigheten A2 i minst 
+två år (endast körprov för den som redan har A1 eller A2).</Description><DrivingLicenceCode>A</DrivingLicenceCode><SortOrder>5</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>12</DrivingLicenceID><Term>C1</Term><Description>Tung lastbil med en totalvikt av högst 7 500 kg och personbil med en totalvikt över 3 500 kg men inte över 7 500 kg. Till ett sådant fordon får kopplas en släpvagn med en totalvikt av högst 750 kg.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>C1</DrivingLicenceCode><SortOrder>9</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>14</DrivingLicenceID><Term>C1E</Term><Description>Bil som omfattas av behörighet C1 eller B och ett eller flera släpfordon som 
+är kopplade till sådan bil, om bilens och släpfordonens sammanlagda totalvikt inte överstiger 12 000 kg.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>C1E</DrivingLicenceCode><SortOrder>10</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>15</DrivingLicenceID><Term>D1E</Term><Description>Buss som omfattas av behörighet D1 och ett eller flera släpfordon, oavsett vikt, som är kopplade till sådan buss.
+
+Körkortsålder: 21 år</Description><DrivingLicenceCode>D1E</DrivingLicenceCode><SortOrder>14</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>16</DrivingLicenceID><Term>AM</Term><Description>Körkortsbehörighet för moped klass I, den så kallade EU-mopeden. Den är konstruerad för en hastighet av högst 45 km/tim och för att köra den krävs att man har körkort, traktorkort (utfärdat före den 1 oktober 2009), eller AM-körkort 
+(eller ett förarbevis för moped klass I som man har tagit före den 1 februari 2009).
+
+Körkortsålder: 15 år</Description><DrivingLicenceCode>AM</DrivingLicenceCode><SortOrder>2</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>17</DrivingLicenceID><Term>A2</Term><Description>1. Tvåhjulig motorcykel med högst 35 kW och högst 0,2 kW/kg.
+Om motorcykelns originalutförande har ändrats, får motorcykeln inte ha sitt ursprung i ett fordon med en nettoeffekt högre än 70 kW.
+
+2. Lätt trehjulig motorcykel
+
+Körkortsålder: 18 år (endast körprov för den som har A1).</Description><DrivingLicenceCode>A2</DrivingLicenceCode><SortOrder>4</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>18</DrivingLicenceID><Term>Utökad B</Term><Description>Personbil med en totalvikt av högst 3 500 kg och lätt lastbil. Till ett sådant fordon får kopplas en släpvagn
+1. med en totalvikt som inte överstiger 750 kg, eller
+2. med en totalvikt som överstiger 750 kg, om fordonskombinationens
+totalvikt inte överstiger 4 250 kg.
+
+Körkortsålder: 18 år</Description><DrivingLicenceCode>BU</DrivingLicenceCode><SortOrder>7</SortOrder></DrivingLicence><DrivingLicence><DrivingLicenceID>19</DrivingLicenceID><Term>D1</Term><Description>Buss som är konstruerad och tillverkad för högst 16 passagerare utöver föraren och med en längd som inte överstiger 8 meter. Till ett sådant fordon får kopplas en lätt släpvagn med en totalvikt av högst 750 kg.
+
+Körkortsålder: 21 år</Description><DrivingLicenceCode>D1</DrivingLicenceCode><SortOrder>13</SortOrder></DrivingLicence></GetAllDrivingLicencesResult></GetAllDrivingLicencesResponse></soap:Body></soap:Envelope>
