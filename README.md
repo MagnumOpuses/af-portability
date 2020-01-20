@@ -52,6 +52,13 @@ gets a session token and the api-key in the query parameter define the authentic
 3. /cv?sessionToken=<sessionToken>
 GET Request
 gets cv from the outbox using the session token
+
+4. /store
+POST Request 
+Post body = {token: string, value: string}
+Here token is the session token and value is CV string.
+Stores CV data as string against session token in AF-Connect-Outbox.
+Stored value only last for 5 minutes.
 ````
 
 ## Test
