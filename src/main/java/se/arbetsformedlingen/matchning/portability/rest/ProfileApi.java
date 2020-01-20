@@ -19,6 +19,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.WebUtils;
 import se.arbetsformedlingen.matchning.portability.model.hropen.Candidate;
@@ -35,7 +36,11 @@ import java.net.URISyntaxException;
 @RestController
 public class ProfileApi {
 
-    private static String idpUrl = "http://jwt.arbetsformedlingen.se/jwt/rest/idp/v0/klientID";
+    private static String idpUrl;
+    ProfileApi(@Value("${spring.idp.url}") String idpUrl) {
+        ProfileApi.idpUrl = idpUrl;
+    }
+
     @Autowired
     AspRespository aspRespository;
 
@@ -48,6 +53,7 @@ public class ProfileApi {
             @RequestHeader("AMV_SSO_COOKIE") String ssoCookie
     ) {
 
+        LOG.info("IDP url: " + idpUrl);
         Token jwtToken = null;
         try {
             jwtToken = this.requestJWTToken("AMV_SSO_COOKIE", ssoCookie);
@@ -70,12 +76,12 @@ public class ProfileApi {
 
     private Token requestJWTToken(String cookieName, String cookieValue) throws IOException, URISyntaxException {
         HttpClient instance = HttpClientBuilder.create().build();
-        HttpGet request = new HttpGet(ProfileApi.idpUrl);
+        HttpGet request = new HttpGet(idpUrl);
         request.setHeader("cookie", cookieName + "=" + cookieValue);
 
         HttpResponse response = instance.execute(request);
         if (response.getStatusLine().getStatusCode() != 200) {
-            throw new HttpException(response.getStatusLine().getStatusCode(), ProfileApi.idpUrl);
+            throw new HttpException(response.getStatusLine().getStatusCode(), idpUrl);
         }
 
         Token token = this.mapper.readValue(response.getEntity().getContent(), Token.class);
