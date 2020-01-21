@@ -69,7 +69,7 @@ public class StoreApi {
         }
 
 
-        StringEntity entity = new StringEntity(json);
+        StringEntity entity = new StringEntity(json, "UTF-8");
         postRequest.setEntity(entity);
         postRequest.setHeader("Content-type", "application/json");
         HttpResponse response = client.execute(postRequest);
