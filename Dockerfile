@@ -45,4 +45,4 @@ USER 10000
 EXPOSE 8080
 
 WORKDIR /build/target
-CMD java -Dse.jobtechdev.tmp=/tmp/portability-tmp -jar ./profile2hropen-*-SNAPSHOT.jar
+CMD java -Dse.jobtechdev.tmp=/tmp/portability-tmp -jar ./profile2hropen-*.jar
