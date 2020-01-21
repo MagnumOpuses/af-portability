@@ -1,6 +1,7 @@
 ![alt text][logo]
 
 [logo]: https://github.com/MagnumOpuses/project-meta/blob/master/img/jobtechdev_black.png "JobTech dev logo"
+
 [A JobTech Project](https://www.jobtechdev.se)
 
 # AF Portability
@@ -9,15 +10,18 @@ AF Portability is the web service that enables the end-user to extract/export th
 
 ## Versions, current dev state and future
 
-No versions yet.
+v0.0.2
 
 ## Getting started
-### Docker 
+
+### Docker
+
 spring.profile.url=mock
-spring.profile.url=http://af-connect.local:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler 
+spring.profile.url=http://af-connect.local:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler
 spring.kundgift.url=http://af-connect.local:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
 
 More getting started guidelines.
+
 ### Prerequisites
 
 Java version 8 >
@@ -30,18 +34,23 @@ git clone https://github.com/MagnumOpuses/af-portability.git
 cd af-portability
 ```
 
-## Run 
+## Run
+
 To run the project on different environment:
+
 ```bash
 mvn spring-boot:run -Dspring.profiles.active=<env_name>
 ```
+
 Available environment:
+
 1. local = used for local development
 2. mock = used for mocking the service
 
 ## API Specifications
-````bash
-1. /profile 
+
+```bash
+1. /profile
 GET Request
 gets CV data with the help of Cookie added in the header as 'AMV-SSO-COOKIE'
 
@@ -54,12 +63,12 @@ GET Request
 gets cv from the outbox using the session token
 
 4. /store
-POST Request 
+POST Request
 Post body = {token: string, value: string}
 Here token is the session token and value is CV string.
 Stores CV data as string against session token in AF-Connect-Outbox.
 Stored value only last for 5 minutes.
-````
+```
 
 ## Test
 
