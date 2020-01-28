@@ -53,10 +53,9 @@ public class SessionTokenApi {
 
         UUID uuid = UUID.randomUUID();
         Token t = new Token(uuid.toString());
-        System.out.println(SessionTokenApi.registerTokenUrl + "  env >> " + SessionTokenApi.envMessage);
 
         try {
-            String result = this.registerTokenToRedis(t);
+            this.registerTokenToRedis(t);
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
             throw he;
@@ -67,11 +66,10 @@ public class SessionTokenApi {
         return t;
     }
 
-    public String registerTokenToRedis(Token t) throws IOException {
+    public void registerTokenToRedis(Token t) throws IOException {
 
         HttpClient client = HttpClients.createDefault();
 
-        System.out.println("outboxurl: " + SessionTokenApi.registerTokenUrl);
         HttpPost postRequest = new HttpPost(SessionTokenApi.registerTokenUrl + "/store");
 
         String json = "";
@@ -87,15 +85,12 @@ public class SessionTokenApi {
         postRequest.setHeader("Content-type", "application/json");
         HttpResponse response = client.execute(postRequest);
 
-        System.out.println(response);
         if (response.getStatusLine().getStatusCode() != 200) {
             throw new HttpException(response.getStatusLine().getStatusCode(), SessionTokenApi.registerTokenUrl + "/store");
         }
         HttpEntity responseEntity = response.getEntity();
         String results = EntityUtils.toString(responseEntity);
         System.out.println("RESULTS: " + results);
-        return results;
-
     }
 
 }

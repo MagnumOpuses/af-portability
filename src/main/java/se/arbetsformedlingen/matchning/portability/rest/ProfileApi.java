@@ -2,6 +2,7 @@ package se.arbetsformedlingen.matchning.portability.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiParam;
+import jdk.nashorn.api.scripting.JSObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -16,8 +17,9 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.util.Strings;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +34,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class ProfileApi {
@@ -44,7 +48,7 @@ public class ProfileApi {
     @Autowired
     AspRespository aspRespository;
 
-    private Logger LOG = LoggerFactory.getLogger(ProfileApi.class);
+    private Logger LOG = LogManager.getLogger(ProfileApi.class);
     private ObjectMapper mapper = new ObjectMapper();
 
     @CrossOrigin
@@ -52,15 +56,16 @@ public class ProfileApi {
     public Candidate fetchCandidate(
             @RequestHeader("AMV_SSO_COOKIE") String ssoCookie
     ) {
+        if (Strings.isEmpty(ssoCookie)) {
+            throw new UnauthorizedException("Cookie is missing or invalid");
+        }
 
-        LOG.info("IDP url: " + idpUrl);
         Token jwtToken = null;
         try {
             jwtToken = this.requestJWTToken("AMV_SSO_COOKIE", ssoCookie);
         } catch (URISyntaxException ue) {
             ue.printStackTrace();
         }catch (HttpException he) {
-            System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
             throw new HttpNotFoundException("Invalid token");
         } catch (IOException e) {
             throw new RuntimeException(e);
