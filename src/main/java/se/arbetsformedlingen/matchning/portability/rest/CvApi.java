@@ -40,7 +40,6 @@ public class CvApi {
     @CrossOrigin
     @GetMapping(value = "/cv")
     public JsonNode getCv(@RequestParam("sessionToken") String token) throws IOException {
-        System.out.println(token);
         String results = null;
         try {
             results = this.requestCvWithSessionToken(token);
@@ -53,12 +52,10 @@ public class CvApi {
             throw new RuntimeException(e);
         }
 
-        System.out.println(results);
         ObjectMapper mapper = new ObjectMapper();
         Response res = mapper.readValue(results, Response.class);
 
         if (res.value == "") {
-            System.out.println("value not found");
             ObjectNode emptyNode = mapper.createObjectNode();
             emptyNode.put("status", 204);
             emptyNode.put("message", "Content Not found");
@@ -66,10 +63,7 @@ public class CvApi {
         }
 
         JsonNode jsonNode = mapper.readTree(results);
-        JsonNode valueNode = mapper.readTree(jsonNode.get("value").asText());
-        System.out.println("JSON: " + valueNode);
-        ObjectNode o = (ObjectNode) valueNode;
-        o.put("status", 200);
+        ObjectNode o = (ObjectNode) jsonNode;
         return o;
     }
 
