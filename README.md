@@ -10,7 +10,7 @@ AF Portability is the web service that enables the end-user to extract/export th
 
 ## Versions, current dev state and future
 
-v0.0.2
+1.0.0-beta
 
 ## Getting started
 

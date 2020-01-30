@@ -5,3 +5,4 @@ target/
 *.iml
 .mvn/
 .settings/
+logs/
