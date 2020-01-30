@@ -8,7 +8,7 @@ Gravity Portability is the web service that enables the end-user to extract/expo
 
 ##### Versions, current dev state and future
 
-No versions yet.
+1.0.0-beta
 
 ##### Getting started
 
