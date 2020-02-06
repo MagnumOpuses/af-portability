@@ -76,7 +76,6 @@ public class AspRespository {
     private Candidate createCandidate(PersonUppgifter personUppgifter, List<ArbetsSokandeProfil> profiler) {
         Candidate candidate = new Candidate()
                 .withDocumentId(personUppgifter.getKundnummer(), "AF Kundnummer")
-                .withPersonnummer(personUppgifter.getPersonnummer())
                 .withName(personUppgifter.getFornamn() + " " + personUppgifter.getEfternamn())
                 .withEmail(personUppgifter.getEpostadress())
                 .withPhone(personUppgifter.getTelefonnummerHem(), "hem")
