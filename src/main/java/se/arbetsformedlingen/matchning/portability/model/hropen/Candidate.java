@@ -137,11 +137,6 @@ public class Candidate {
         return this;
     }
 
-    public Candidate withPersonnummer(String personnummer) {
-        getCreatePerson().withPersonnummer(personnummer);
-        return this;
-    }
-
     public Candidate withProfile(Profile profile) {
         getCreateProfiles().add(profile);
         return this;

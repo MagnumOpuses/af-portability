@@ -203,14 +203,6 @@ public class Person {
         return this;
     }
 
-    public Person withPersonnummer(String personnummer) {
-        Identifier personNummer = new Identifier();
-        personNummer.setValueId(personnummer);
-        personNummer.setSchemeId("Personnummer");
-        personNummer.setDescription("Svenskt personnummer");
-        setLegalId(personNummer);
-        return this;
-    }
     public Person withWebpage(String hemsida) {
         createGetCommunication().addWeb(hemsida);
         return this;
