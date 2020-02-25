@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>profile2hropen</name>
-	<description>Demo project for Spring Boot</description>
+	<descriptions>Demo project for Spring Boot</descriptions>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

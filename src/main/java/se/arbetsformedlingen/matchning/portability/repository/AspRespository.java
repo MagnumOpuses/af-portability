@@ -14,12 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
-import se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad;
-import se.arbetsformedlingen.matchning.portability.model.hropen.Candidate;
-import se.arbetsformedlingen.matchning.portability.model.hropen.Profile;
-import se.arbetsformedlingen.matchning.portability.model.hropen.types.Education;
-import se.arbetsformedlingen.matchning.portability.model.hropen.types.Employment;
-import se.arbetsformedlingen.matchning.portability.model.hropen.types.Qualification;
+import se.arbetsformedlingen.matchning.portability.model.hropen.common.base.*;
+import se.arbetsformedlingen.matchning.portability.model.hropen.recruiting.*;
 import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 import se.arbetsformedlingen.matchning.taxonomy.repository.Taxonomies;
 
@@ -51,10 +47,12 @@ public class AspRespository {
         KUNDUPPGIFT_URL = kundgiftUrl;
     }
 
-    public Candidate getCandidateForToken(String token) {
-        Candidate candidate = null;
+    public CandidateType getCandidateForToken(String token) {
+        CandidateType candidate = null;
+
         LOG.info("Profile url: " + PROFIL_URL);
         LOG.info("Kundgift url: " + KUNDUPPGIFT_URL);
+
         try {
             String results = readFromAPI(PROFIL_URL, token);
             List<ArbetsSokandeProfil> profiler = mapper.readValue(results, new TypeReference<List<ArbetsSokandeProfil>>() {
@@ -63,7 +61,9 @@ public class AspRespository {
             results = readFromAPI(KUNDUPPGIFT_URL, token);
             PersonUppgifter personUppgifter = mapper.readValue(results, PersonUppgifter.class);
             LOG.info("Got " + personUppgifter.getFornamn() + " " + personUppgifter.getEfternamn());
-            candidate = createCandidate(personUppgifter, profiler);
+
+            candidate = candidateMapper(personUppgifter, profiler);
+
         } catch (HttpException he) {
             LOG.error("Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
 
@@ -73,96 +73,114 @@ public class AspRespository {
         return candidate;
     }
 
-    private Candidate createCandidate(PersonUppgifter personUppgifter, List<ArbetsSokandeProfil> profiler) {
-        Candidate candidate = new Candidate()
-                .withDocumentId(personUppgifter.getKundnummer(), "AF Kundnummer")
-                .withPersonnummer(personUppgifter.getPersonnummer())
-                .withName(personUppgifter.getFornamn() + " " + personUppgifter.getEfternamn())
-                .withEmail(personUppgifter.getEpostadress())
-                .withPhone(personUppgifter.getTelefonnummerHem(), "hem")
-                .withPhone(personUppgifter.getTelefonnummerMobil(), "mobil")
-                .withPhone(personUppgifter.getTelefonnummerOvrig(), "övrigt")
-                .withWebpage(personUppgifter.getHemsida())
-                .withAddress("hemadress", personUppgifter.getAdress(), personUppgifter.getCo(), personUppgifter.getPostnummer(), personUppgifter.getPostort(), personUppgifter.getLand());
 
-        for (ArbetsSokandeProfil profil : profiler) {
-            Profile profile = new Profile();
-            profile.setProfileName(profil.getNamn());
-            profile.setDescription(profil.getBeskrivning());
-            profile.setExecutiveSummary(profil.getPresentation());
+    private CandidateType candidateMapper(PersonUppgifter personUppgifter, List<ArbetsSokandeProfil> profiler) {
+        CandidateType candidate = null;
 
-            if (profil.getKortkort() != null) {
-                for (String kkklass : profil.getKortkort().getKorkortsklasser()) {
-                    profile.withDriversLicence(kkklass, "Körkort klass " + kkklass);
+
+        candidate.setDocumentId(new IdentifierType().withValue(personUppgifter.getKundnummer())); //Mapping the account number of the incoming document.
+        candidate.withPersonBaseInfo(personUppgifter.getFornamn(),
+                personUppgifter.getEfternamn(),
+                personUppgifter.getAdress(),
+                personUppgifter.getCo(),
+                personUppgifter.getLand(), //TODO fix mapping to the codelist.
+                personUppgifter.getPostort(),
+                personUppgifter.getPostnummer(),
+                personUppgifter.getEpostadress(),
+                personUppgifter.getHemsida());
+        candidate.withPersonPhone(personUppgifter.getTelefonnummerHem(), "Home");
+        candidate.withPersonPhone(personUppgifter.getTelefonnummerMobil(), "Mobile");
+        candidate.withPersonPhone(personUppgifter.getTelefonnummerOvrig(), "Other");
+
+        for (ArbetsSokandeProfil profil : profiler){
+            candidate.withProfiles(profil.getNamn(), (profil.getBeskrivning()), profil.getPresentation());
+
+            if (profil.getKortkort() != null){
+                for (String korkortklas : profil.getKortkort().getKorkortsklasser()){
+                    candidate.withProfilesLicense(korkortklas, new String(String.valueOf(profil.getKortkort().getSenastUppdaterad())));
                 }
             }
-            if (profil.getKompetenser() != null) {
-                for (Kompetens kompetens : profil.getKompetenser()) {
-                    profile.withConcept(taxonomyRepository.getConcept(""+kompetens.getTaxonomiId(), Concept.EntityType.skill));
+
+            if (profil.getKompetenser() != null){
+                for (Kompetens kompetens : profil.getKompetenser()){
+                    candidate.withProfilesCompetence(new String(String.valueOf(kompetens.getTaxonomiId())), new String(String.valueOf(Concept.EntityType.skill)));
                 }
             }
+
             if (profil.getYrkeserfarenheter() != null) {
                 for (Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
-                    profile.withConcept(taxonomyRepository.getConcept("" + yrkeserfarenhet.getYrkesbenamning(), Concept.EntityType.jobterm));
+                    //TODO Adjust this to use the new taxonomy.
+                    candidate.withProfilesWorkExperienceLevels(new String(String.valueOf(yrkeserfarenhet.getYrkesbenamning())), new String(String.valueOf(Concept.EntityType.jobterm)));
                 }
             }
-            if (profil.getAnstallningar() != null) {
-                for (Anstallning anstallning : profil.getAnstallningar()) {
-                    Employment employment = new Employment().withTitle(anstallning.getRubrik()).withOrganization(anstallning.getArbetsgivare());
-                    ArManad startdatum = anstallning.getStartdatum();
-                    ArManad slutdatum = anstallning.getSlutdatum();
-                    if (startdatum != null) {
-                        employment.withEmploymentFrom("" + startdatum.getArtal(), "" + startdatum.getManad());
-                    }
-                    if (slutdatum != null) {
-                        employment.withEmploymentTo("" + slutdatum.getArtal(), "" + slutdatum.getManad());
-                    }
 
-                    employment.setDescription(anstallning.getBeskrivning());
-                    profile.withEmployment(employment);
-                }
-            }
-            if (profil.getUtbildningar() != null) {
-                for (Utbildning utbildning : profil.getUtbildningar()) {
-                    Education education = new Education().withSchool(utbildning.getSkola()).withProgram(utbildning.getInriktning());
-                    ArManad startdatum = utbildning.getStartdatum();
-                    ArManad slutdatum = utbildning.getSlutdatum();
-                    String fromYear = null;
-                    String fromMonth = null;
-                    String toYear = null;
-                    String toMonth = null;
-                    if (startdatum != null) {
-                        fromYear  = "" + startdatum.getArtal();
-                        fromMonth = "" + startdatum.getManad();
-                    }
-                    if (slutdatum != null) {
-                        toYear = "" + slutdatum.getArtal();
-                        toMonth = "" + slutdatum.getManad();
-                    }
-                    education.setDescription(utbildning.getBeskrivning());
-                    profile.withEducation(education.withAttendancePeriod(fromYear, fromMonth, toYear, toMonth));
-                }
-
-            }
-            if (profil.getOvrigaMeriter() != null) {
-                for (Merit merit : profil.getOvrigaMeriter()) {
-                    profile.withQualification(new Qualification().withCompetencyName(merit.getRubrik()).withDescription(merit.getBeskrivning()));
-                }
-            }
             if (profil.getYrkesroller() != null) {
                 for (Yrkesroll yrkesroll : profil.getYrkesroller()) {
-                    profile.withWantedConcept(taxonomyRepository.getConcept("" + yrkesroll.getKod(), Concept.EntityType.jobterm));
+                    candidate.withProfilesWorkExperienceLevels(yrkesroll.getKod(), new String(String.valueOf(Concept.EntityType.jobterm)));
                 }
             }
+
+            if (profil.getAnstallningar() != null) {
+                for (Anstallning anstallning : profil.getAnstallningar()) {
+                    if (anstallning.getSlutdatum() != null){
+                        candidate.withProfilesWorkExperience(anstallning.getRubrik(),
+                                anstallning.getArbetsgivare(),
+                                new String(String.valueOf(anstallning.getStartdatum())),
+                                new String(String.valueOf(anstallning.getSlutdatum())),
+                                Boolean.FALSE,
+                                anstallning.getBeskrivning());
+                    }
+                    else if (anstallning.getSlutdatum() == null) {
+                        candidate.withProfilesWorkExperience(anstallning.getRubrik(),
+                                anstallning.getArbetsgivare(),
+                                new String(String.valueOf(anstallning.getStartdatum())),
+                                new String(String.valueOf(anstallning.getSlutdatum())),
+                                Boolean.TRUE,
+                                anstallning.getBeskrivning());
+                    }
+                }
+            }
+
+            if (profil.getUtbildningar() != null) {
+                for (Utbildning utbildning : profil.getUtbildningar()) {
+                    if (utbildning.getSlutdatum() != null){
+                        candidate.withProfilesEducation(utbildning.getSkola(),
+                                utbildning.getInriktning(),
+                                new String(String.valueOf(utbildning.getStartdatum())),
+                                new String(String.valueOf(utbildning.getSlutdatum())),
+                                Boolean.FALSE,
+                                utbildning.getBeskrivning());
+                    }
+                    else if (utbildning.getSlutdatum() == null) {
+                        candidate.withProfilesEducation(utbildning.getSkola(),
+                                utbildning.getInriktning(),
+                                new String(String.valueOf(utbildning.getStartdatum())),
+                                new String(String.valueOf(utbildning.getSlutdatum())),
+                                Boolean.TRUE,
+                                utbildning.getBeskrivning());
+                    }
+                }
+            }
+
+            if (profil.getOvrigaMeriter() != null) {
+                for (Merit merit : profil.getOvrigaMeriter()) {
+                    candidate.withProfilesMerit(merit.getRubrik(), merit.getBeskrivning());
+                }
+            }
+
             if (profil.getArbetsorter() != null) {
                 for (Arbetsort arbetsort : profil.getArbetsorter()) {
-                    profile.withWantedLocation(arbetsort.getVarde1());
+                    candidate.withProfilesPositionPreference(arbetsort.getVarde1()); //TODO make sure this is the correct mapping
                 }
             }
-            candidate.withProfile(profile);
+
+
+
+
         }
         return candidate;
     }
+
 
 
     private String readFromAPI(String apiUrl, String token) throws IOException {

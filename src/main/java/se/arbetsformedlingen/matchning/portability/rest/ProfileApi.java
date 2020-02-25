@@ -1,41 +1,23 @@
 package se.arbetsformedlingen.matchning.portability.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.annotations.ApiParam;
-import jdk.nashorn.api.scripting.JSObject;
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.protocol.HttpClientContext;
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.cookie.BasicClientCookie;
-import org.apache.http.protocol.BasicHttpContext;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.util.Strings;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.WebUtils;
-import se.arbetsformedlingen.matchning.portability.model.hropen.Candidate;
-import se.arbetsformedlingen.matchning.portability.model.hropen.Profile;
+import se.arbetsformedlingen.matchning.portability.model.hropen.recruiting.CandidateType;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
 import se.arbetsformedlingen.matchning.portability.repository.AspRespository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 public class ProfileApi {
@@ -53,7 +35,7 @@ public class ProfileApi {
 
     @CrossOrigin
     @RequestMapping(value="/profile", method = RequestMethod.GET, produces = "application/json")
-    public Candidate fetchCandidate(
+    public CandidateType fetchCandidate(
             @RequestHeader("AMV_SSO_COOKIE") String ssoCookie
     ) {
         if (Strings.isEmpty(ssoCookie)) {
@@ -71,7 +53,7 @@ public class ProfileApi {
             throw new RuntimeException(e);
         }
 
-        Candidate candidate = aspRespository.getCandidateForToken(jwtToken.getToken());
+        CandidateType candidate = aspRespository.getCandidateForToken(jwtToken.getToken());
         if (candidate == null) {
             throw new UnauthorizedException(Strings.isEmpty(jwtToken.getToken()) ? "Missing JWT token" : "JWT token is invalid");
         }
