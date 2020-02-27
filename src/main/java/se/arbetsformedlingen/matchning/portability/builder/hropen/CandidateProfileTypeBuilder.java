@@ -2,7 +2,6 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
-import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 
 public class CandidateProfileTypeBuilder {
     private String profileName;
@@ -234,15 +233,11 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getOvrigaMeriter() != null) {
-            for (Merit merit : profil.getOvrigaMeriter()) {
-                candidate.withProfilesMerit(merit.getRubrik(), merit.getBeskrivning());
-            }
+            setCertifications(new CertificationsBuilder().withOvrigaMeriter(profil.getOvrigaMeriter()).createCertifications());
         }
 
         if (profil.getArbetsorter() != null) {
-            for (Arbetsort arbetsort : profil.getArbetsorter()) {
-                candidate.withProfilesPositionPreference(arbetsort.getVarde1()); //TODO make sure this is the correct mapping
-            }
+            setPositionPreferences(new PositionPreferencesBuilder().withArbetsorter(profil.getArbetsorter()).createPositionPreferences());
         }
 
 

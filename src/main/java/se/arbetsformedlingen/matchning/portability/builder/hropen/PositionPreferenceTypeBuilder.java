@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Arbetsort;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class PositionPreferenceTypeBuilder {
@@ -90,5 +91,20 @@ public class PositionPreferenceTypeBuilder {
 
     public PositionPreferenceType createPositionPreferenceType() {
         return new PositionPreferenceType(locations, jobCategories, positionTitles, positionOfferingTypeCodes, positionScheduleTypeCodes, shiftSchedules, shiftDescriptions, remoteWork, careerLevelCodes, jobGradeCode, offeredRemunerationPackage, travel, relocation, workingLanguageCodes);
+    }
+
+    public PositionPreferenceTypeBuilder withArbetsort(Arbetsort arbetsort) {
+
+        final AddressType addressType = new AddressTypeBuilder().setCity(arbetsort.getVarde1()).createAddressType();
+
+        final PreferredLocationType preferredLocationType = new PreferredLocationType();
+        preferredLocationType.setReferenceLocation(addressType);
+
+        final PositionPreferenceType.Locations locations = new PositionPreferenceType.Locations();
+        locations.getItem().add(preferredLocationType);
+
+        setLocations(locations);
+
+        return this;
     }
 }
