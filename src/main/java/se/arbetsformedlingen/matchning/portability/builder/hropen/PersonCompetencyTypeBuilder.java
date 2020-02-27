@@ -1,9 +1,13 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Kompetens;
 import se.arbetsformedlingen.matchning.portability.model.hropen.BaseScoreType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.CompetencyEvidenceType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.MeasureType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.PersonCompetencyType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonCompetencyTypeBuilder {
     private PersonCompetencyType.CompetencyIds competencyIds;
@@ -17,18 +21,6 @@ public class PersonCompetencyTypeBuilder {
     private CompetencyEvidenceType competencyEvidence;
     private PersonCompetencyType.AttachmentReferences attachmentReferences;
 
-    public PersonCompetencyTypeBuilder(PersonCompetencyType.CompetencyIds competencyIds, String competencyName, String description, BaseScoreType proficiencyLevel, String lastUsedDate, MeasureType experienceMeasure, BaseScoreType interestLevel, PersonCompetencyType.CompetencyDimensions competencyDimensions, CompetencyEvidenceType competencyEvidence, PersonCompetencyType.AttachmentReferences attachmentReferences) {
-        this.competencyIds = competencyIds;
-        this.competencyName = competencyName;
-        this.description = description;
-        this.proficiencyLevel = proficiencyLevel;
-        this.lastUsedDate = lastUsedDate;
-        this.experienceMeasure = experienceMeasure;
-        this.interestLevel = interestLevel;
-        this.competencyDimensions = competencyDimensions;
-        this.competencyEvidence = competencyEvidence;
-        this.attachmentReferences = attachmentReferences;
-    }
 
     public PersonCompetencyTypeBuilder setCompetencyIds(PersonCompetencyType.CompetencyIds competencyIds) {
         this.competencyIds = competencyIds;
@@ -83,4 +75,5 @@ public class PersonCompetencyTypeBuilder {
     public PersonCompetencyType createPersonCompetencyType() {
         return new PersonCompetencyType(competencyIds, competencyName, description, proficiencyLevel, lastUsedDate, experienceMeasure, interestLevel, competencyDimensions, competencyEvidence, attachmentReferences);
     }
+
 }

@@ -188,26 +188,28 @@ public class CandidateProfileTypeBuilder {
 
         if (profil.getKompetenser() != null){
             for (Kompetens kompetens : profil.getKompetenser()){
+                //TODO Adjust this to use the new taxonomy.
                 setQualifications(new QualificationsBuilder().withKompetenser(profil.getKompetenser()).createQualifications());
-            //withProfilesCompetence(new String(String.valueOf(kompetens.getTaxonomiId())), new String(String.valueOf(Concept.EntityType.skill)));
             }
         }
 
         if (profil.getYrkeserfarenheter() != null) {
             for (Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
                 //TODO Adjust this to use the new taxonomy.
-                candidate.withProfilesWorkExperienceLevels(new String(String.valueOf(yrkeserfarenhet.getYrkesbenamning())), new String(String.valueOf(Concept.EntityType.jobterm)));
+                setEmployment(new EmploymentBuilder().withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).createEmployment());
             }
         }
 
         if (profil.getYrkesroller() != null) {
             for (Yrkesroll yrkesroll : profil.getYrkesroller()) {
-                candidate.withProfilesWorkExperienceLevels(yrkesroll.getKod(), new String(String.valueOf(Concept.EntityType.jobterm)));
+                setEmployment(new EmploymentBuilder().withCodes(yrkesroll.getKod()).createEmployment());
             }
         }
 
         if (profil.getAnstallningar() != null) {
             for (Anstallning anstallning : profil.getAnstallningar()) {
+                setEmployment();
+
                 if (anstallning.getSlutdatum() != null){
                     candidate.withProfilesWorkExperience(anstallning.getRubrik(),
                             anstallning.getArbetsgivare(),
