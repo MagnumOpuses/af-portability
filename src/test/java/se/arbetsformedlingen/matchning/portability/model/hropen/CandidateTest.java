@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
+import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.hropen.recruiting.CandidateType;
 
 import java.util.Date;
@@ -21,7 +22,7 @@ public class CandidateTest {
 
     @Test
     public void testCreatingCandidateWithWithMethods() throws JsonProcessingException {
-        CandidateType candidate = new CandidateType()
+        CandidateType candidate = new CandidateTypeBuilder().createCandidateType()
                 .withName("Lastname, Firstname")
                 .withBirthDate(new Date())
                 .withEmail("firstname.lastname@workplace.se")

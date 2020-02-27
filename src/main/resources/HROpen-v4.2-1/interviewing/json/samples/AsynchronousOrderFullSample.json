@@ -1,0 +1,56 @@
+{
+    "documentId": { "value": "" },
+    "alternateIds": [ { "value": "" } ],
+    "dataProtectionPolicy": {},
+    "language": "en-US",
+
+    "positionId": { "value": "" },
+    "positionTitle": "",
+    "externalPositionId": { "value": "" },
+    "externalInterviewOrderId": { "value": "" },
+    "interviewOrderId": { "value": "" },
+    "interviewFormatType": "",
+    "recruiter": {
+        "id": { "value": "" },
+        "code": "",
+        "name": "",
+
+        "recruiterName": {
+            "formattedName": ""
+        },
+        "recruiterContact": {
+            "phone": [
+                {
+                    "formattedNumber": "+1 2675551212"
+                }
+            ]
+        }
+    },
+    "candidate": {
+        "id": { "value": "" },
+        "code": "",
+        "name": "",
+
+        "candidateName": {
+            "formattedName": ""
+        },
+        "candidateContact": {
+            "phone": [
+                {
+                    "formattedNumber": "+1 2155551212"
+                }
+            ]
+        }
+    },
+    "submissionDeadline": "2017-10-03",
+    "languageCode": "en-US",
+    "question": {
+        "id": { "value": "" },
+        "code": "",
+        "name": "",
+
+        "interviewFormatType": "",
+        "questions": [],
+        "defaultRerecordCount": 0
+    }
+}

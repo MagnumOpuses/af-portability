@@ -1,0 +1,13 @@
+{
+    "accomodationTypeCodes": [ "" ],
+    "communication": {
+        "email": [ { "address": "name@domain.com" } ]
+    },
+    "subjectId": { "value": "" },
+    "internalCandidateIndicator": true,
+    "name": {
+        "formattedName": "",
+        "family": "",
+        "given": ""
+    }
+}

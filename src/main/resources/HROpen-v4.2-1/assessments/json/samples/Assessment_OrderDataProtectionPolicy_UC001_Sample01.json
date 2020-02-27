@@ -1,0 +1,29 @@
+{
+    "order": {
+        "documentId": { "schemeId": "orderId", "value": "001-136" },
+        "alternateIds": [{ "value": "a1" }],
+        "language": "en-US",
+        "dataProtectionPolicy": {
+            "retentionDate": "2017-05-10",
+            "retentionDays": 90,
+            "geoRestrictions": [{ "country": "US", "policy": "Read" }]
+        },
+
+        "party": {
+            "customer": { "id": { "value": "00000123" }, "name": "ABC Company" },
+            "requester": { "id": { "value": "00000456" }, "name": "ATS, Inc." },
+            "provider": { "id": { "value": "00000789" }, "name": "AP, Inc." }
+        },
+
+        "subject": {
+            "id": { "value": "Subject01" },
+            "disablity": {
+                "indicator": true,
+                "summary": "Limited Hearing"
+            }
+        },
+
+        "packageId": { "value": "P0001-AH1" },
+        "assessmentAccessURL": { "uri": "http://api-inc.com/api/p0001-ah1?token=ABC" }
+    }
+}

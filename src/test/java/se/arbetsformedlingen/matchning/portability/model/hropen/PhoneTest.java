@@ -1,13 +1,14 @@
 package se.arbetsformedlingen.matchning.portability.model.hropen;
 
 import org.junit.Test;
+import se.arbetsformedlingen.matchning.portability.builder.hropen.PhoneTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.hropen.common.communication.PhoneType;
 
 public class PhoneTest {
 
     @Test
     public void FormattingWithCountryPrefix() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "+46 8-12345678";
         phone.setFormattedNumber(phoneNumber);
 
@@ -23,7 +24,7 @@ public class PhoneTest {
 
     @Test
     public void FormattingWithCountryPrefixAndParenthesis() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "+46(0)8-12345678";
         phone.setFormattedNumber(phoneNumber);
 
@@ -39,7 +40,7 @@ public class PhoneTest {
 
     @Test
     public void FormattingWithCountryPrefixAndParenthesisAndSpaces() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "+46  (0)8 - 12345678";
         phone.setFormattedNumber(phoneNumber);
 
@@ -55,7 +56,7 @@ public class PhoneTest {
 
     @Test
     public void FormattingWithoutCountryPrefix() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "0290-123456";
         phone.setFormattedNumber(phoneNumber);
         assert(phone.getFormattedNumber() != null);
@@ -69,7 +70,7 @@ public class PhoneTest {
 
     @Test
     public void FormattingWithoutCountryPrefixAndRandomSpaces() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "0290 - 123 456";
         phone.setFormattedNumber(phoneNumber);
         assert(phone.getFormattedNumber() != null);
@@ -84,7 +85,7 @@ public class PhoneTest {
 
     @Test
     public void FormattingPhoneNumberInOneNumberSequence() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         String phoneNumber = "0707774411";
         phone.setFormattedNumber(phoneNumber);
         assert(phone.getFormattedNumber() != null);
@@ -96,7 +97,7 @@ public class PhoneTest {
 
     @Test
     public void NullPhoneNumber() {
-        PhoneType phone = new PhoneType();
+        PhoneType phone = new PhoneTypeBuilder().createPhoneType();
         phone.setFormattedNumber(null);
         assert (phone.getFormattedNumber() == null);
         assert(phone.getCountryDialingCode() == null);

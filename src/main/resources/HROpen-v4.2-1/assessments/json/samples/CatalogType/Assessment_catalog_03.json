@@ -1,0 +1,39 @@
+{
+    "catalog": {
+        "party": {
+            "requester": {
+                "id": {
+                    "value": "00000123"
+                },
+                "name": "Company ABC",
+                "personContacts": [
+                    {
+                        "communication": {
+                            "email": [
+                                {
+                                    "address": "jane.smith@companyabc.com",
+                                    "name": "work"
+                                }
+                            ],
+                            "phone": [
+                                {
+                                    "formattedNumber": "888-555-1234",
+                                    "name": "work"
+                                }
+                            ],
+                            "web": [
+                                {
+                                    "url": "www.companyabc.com"
+                                }
+                            ]
+                        },
+                        "name": {
+                            "preferred": "Jane Smith"
+                        },
+                        "roleCode": "Hiring Manager"
+                    }
+                ]
+            }
+        }
+    }
+}

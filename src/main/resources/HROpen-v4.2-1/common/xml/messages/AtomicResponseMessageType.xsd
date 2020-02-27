@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hropen="https://hropenstandards.org/schema/xml/" elementFormDefault="qualified" targetNamespace="https://hropenstandards.org/schema/xml/" version="4.2.0" id="AtomicResponseMessageType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="MessageInclusion.xsd" />
+  <xsd:include schemaLocation="ResponseMessageBaseInclusion.xsd" />
+  <xsd:include schemaLocation="ResultStatusCodeList.xsd" />
+  <xsd:complexType name="AtomicResponseMessageType">
+    <xsd:annotation>
+      <xsd:documentation>A response message for communicating processing results of a request to process a single resource, an atomic request.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="requestResultStatusCode" type="hropen:ResultStatusCodeList">
+        <xsd:annotation>
+          <xsd:documentation>The result status code for the request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="messages">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>A list of messages concerning the processing of an atomic request.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hropen:MessageInclusion" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="AtomicResponseMessage" type="hropen:AtomicResponseMessageType" />
+</xsd:schema>

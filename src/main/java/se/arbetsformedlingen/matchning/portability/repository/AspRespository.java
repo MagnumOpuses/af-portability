@@ -13,9 +13,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
+import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.builder.hropen.IdentifierTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
-import se.arbetsformedlingen.matchning.portability.model.hropen.common.base.*;
-import se.arbetsformedlingen.matchning.portability.model.hropen.recruiting.*;
+import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 import se.arbetsformedlingen.matchning.taxonomy.repository.Taxonomies;
 
@@ -63,6 +64,10 @@ public class AspRespository {
             LOG.info("Got " + personUppgifter.getFornamn() + " " + personUppgifter.getEfternamn());
 
             candidate = candidateMapper(personUppgifter, profiler);
+            candidate = new CandidateTypeBuilder()
+                    .withPersonUppgifter(personUppgifter)
+                    .withProfiles(profiler)
+                    .createCandidateType();
 
         } catch (HttpException he) {
             LOG.error("Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
@@ -78,7 +83,7 @@ public class AspRespository {
         CandidateType candidate = null;
 
 
-        candidate.setDocumentId(new IdentifierType().withValue(personUppgifter.getKundnummer())); //Mapping the account number of the incoming document.
+        candidate.setDocumentId(new IdentifierTypeBuilder().createIdentifierType().withValue(personUppgifter.getKundnummer())); //Mapping the account number of the incoming document.
         candidate.withPersonBaseInfo(personUppgifter.getFornamn(),
                 personUppgifter.getEfternamn(),
                 personUppgifter.getAdress(),
