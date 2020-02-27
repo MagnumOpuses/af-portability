@@ -228,24 +228,7 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getUtbildningar() != null) {
-            for (Utbildning utbildning : profil.getUtbildningar()) {
-                if (utbildning.getSlutdatum() != null){
-                    candidate.withProfilesEducation(utbildning.getSkola(),
-                            utbildning.getInriktning(),
-                            new String(String.valueOf(utbildning.getStartdatum())),
-                            new String(String.valueOf(utbildning.getSlutdatum())),
-                            Boolean.FALSE,
-                            utbildning.getBeskrivning());
-                }
-                else if (utbildning.getSlutdatum() == null) {
-                    candidate.withProfilesEducation(utbildning.getSkola(),
-                            utbildning.getInriktning(),
-                            new String(String.valueOf(utbildning.getStartdatum())),
-                            new String(String.valueOf(utbildning.getSlutdatum())),
-                            Boolean.TRUE,
-                            utbildning.getBeskrivning());
-                }
-            }
+            setEducation(new EducationBuilder().withUtbildningar(profil.getUtbildningar()).createEducation());
         }
 
         if (profil.getOvrigaMeriter() != null) {

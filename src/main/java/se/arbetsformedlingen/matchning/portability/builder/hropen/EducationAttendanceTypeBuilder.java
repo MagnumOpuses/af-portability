@@ -1,9 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen.EducationAttendanceType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.OrganizationType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.StringTypeArray;
+import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
+import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class EducationAttendanceTypeBuilder {
     private IdentifierType id;
@@ -93,5 +91,18 @@ public class EducationAttendanceTypeBuilder {
 
     public EducationAttendanceType createEducationAttendanceType() {
         return new EducationAttendanceType(id, start, end, current, attachmentReferences, descriptions, institution, department, programs, educationLevelCodes, currentlyAttendingIndicator, goodStandingIndicator, educationDegrees, otherAttendancePeriods);
+    }
+
+    public EducationAttendanceTypeBuilder withUtbildning(Utbildning utbildning) {
+        setInstitution(new OrganizationTypeBuilder().withUtbildning(utbildning).createOrganizationType());
+        setStart(String.valueOf(utbildning.getStartdatum()));
+        setEnd(String.valueOf(utbildning.getSlutdatum()));
+        setCurrent(utbildning.isPagaende());
+
+        StringTypeArray descriptions = new StringTypeArray();
+        descriptions.getItem().add(utbildning.getInriktning());
+        setDescriptions(descriptions);
+
+        return this;
     }
 }
