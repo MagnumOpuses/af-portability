@@ -206,26 +206,7 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getAnstallningar() != null) {
-            for (Anstallning anstallning : profil.getAnstallningar()) {
-                setEmployment();
-
-                if (anstallning.getSlutdatum() != null){
-                    candidate.withProfilesWorkExperience(anstallning.getRubrik(),
-                            anstallning.getArbetsgivare(),
-                            new String(String.valueOf(anstallning.getStartdatum())),
-                            new String(String.valueOf(anstallning.getSlutdatum())),
-                            Boolean.FALSE,
-                            anstallning.getBeskrivning());
-                }
-                else if (anstallning.getSlutdatum() == null) {
-                    candidate.withProfilesWorkExperience(anstallning.getRubrik(),
-                            anstallning.getArbetsgivare(),
-                            new String(String.valueOf(anstallning.getStartdatum())),
-                            new String(String.valueOf(anstallning.getSlutdatum())),
-                            Boolean.TRUE,
-                            anstallning.getBeskrivning());
-                }
-            }
+            setEmployment(new EmploymentBuilder().withAnstallningar(profil.getAnstallningar()).createEmployment());
         }
 
         if (profil.getUtbildningar() != null) {

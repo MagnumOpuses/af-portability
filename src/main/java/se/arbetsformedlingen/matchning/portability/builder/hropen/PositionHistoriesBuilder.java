@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EmployerHistoryType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EntityType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
@@ -24,6 +25,7 @@ public class PositionHistoriesBuilder {
     public PositionHistoriesBuilder withCodes(String valueOf) {
         List<PositionHistoryType> list = new ArrayList<>();
         List<EntityType> entityList = new ArrayList<>();
+
         EntityType entityType = new EntityTypeBuilder()
                 .setId(new IdentifierTypeBuilder()
                         .setValue(valueOf).createIdentifierType())
@@ -33,6 +35,15 @@ public class PositionHistoriesBuilder {
         list.add(new PositionHistoryTypeBuilder()
                 .setJobLevels(new JobLevelsBuilder().setItem(entityList)
                         .createJobLevels()).createPositionHistoryType());
+        return this;
+    }
+
+
+    public PositionHistoriesBuilder withAnstallning(Anstallning anstallning) {
+        List<PositionHistoryType> list = new ArrayList<>();
+
+        list.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).createPositionHistoryType());
+
         return this;
     }
 }

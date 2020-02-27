@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EmployerHistoryType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.OrganizationType;
@@ -57,5 +58,19 @@ public class EmployerHistoryTypeBuilder {
 
     public EmployerHistoryType createEmployerHistoryType() {
         return new EmployerHistoryType(id, start, end, current, attachmentReferences, descriptions, organization, positionHistories);
+    }
+
+    public EmployerHistoryTypeBuilder withAnstallning(Anstallning anstallning) {
+        setOrganization(new OrganizationTypeBuilder().withAnstelning(anstallning).createOrganizationType());
+        setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).createPositionHistories());
+        setStart(String.valueOf(anstallning.getStartdatum()));
+        setEnd(String.valueOf(anstallning.getSlutdatum()));
+        setCurrent(anstallning.isPagaende());
+
+        StringTypeArray descriptions = new StringTypeArray();
+        descriptions.getItem().add(anstallning.getBeskrivning());
+        setDescriptions(descriptions);
+
+        return this;
     }
 }

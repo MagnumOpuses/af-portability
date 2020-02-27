@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class PositionHistoryTypeBuilder {

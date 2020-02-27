@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
+import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
@@ -91,6 +92,11 @@ public class OrganizationTypeBuilder {
 
     public OrganizationTypeBuilder withUtbildning(Utbildning utbildning) {
         setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).createIdentifierType());
+        return this;
+    }
+
+    public OrganizationTypeBuilder withAnstelning(Anstallning anstallning) {
+        setLegalId(new IdentifierTypeBuilder().setValue(anstallning.getArbetsgivare()).createIdentifierType());
         return this;
     }
 }
