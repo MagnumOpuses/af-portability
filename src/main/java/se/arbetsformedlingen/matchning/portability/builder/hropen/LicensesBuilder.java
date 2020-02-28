@@ -4,6 +4,7 @@ import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil
 import se.arbetsformedlingen.matchning.portability.model.hropen.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.LicenseType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LicensesBuilder {
@@ -18,12 +19,11 @@ public class LicensesBuilder {
         return new CandidateProfileType.Licenses(item);
     }
 
-    /*
+
     public LicensesBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
-
-        new LicenseTypeBuilder().withKorkortKlasser(korkort).createLicenseType();
-
+        List<LicenseType> list = new ArrayList<>();
+        list.add(new LicenseTypeBuilder().withKorkort(korkort).createLicenseType());
         return this;
     }
-    */
+
 }

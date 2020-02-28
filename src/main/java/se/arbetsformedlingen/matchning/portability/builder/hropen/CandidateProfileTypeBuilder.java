@@ -182,7 +182,7 @@ public class CandidateProfileTypeBuilder {
 
         if (profil.getKortkort() != null){
             //TODO the license thingy!
-            //setLicenses(new LicensesBuilder().withKorkort(profil.getKortkort()).createLicenses());
+            setLicenses(new LicensesBuilder().withKorkort(profil.getKortkort()).createLicenses());
         }
 
         if (profil.getKompetenser() != null){

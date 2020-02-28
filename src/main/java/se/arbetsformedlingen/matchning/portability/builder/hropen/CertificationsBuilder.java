@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CertificationsBuilder {
-    private List<CertificationType> item;
+    private CandidateProfileType.Certifications certifications = new CandidateProfileType.Certifications();
 
     public CertificationsBuilder setItem(List<CertificationType> item) {
-        this.item = item;
+        certifications.getItem().addAll(item);
         return this;
     }
 
     public CandidateProfileType.Certifications createCertifications() {
-        return new CandidateProfileType.Certifications(item);
+        return certifications;
     }
 
     public CertificationsBuilder withOvrigaMeriter(List<Merit> ovrigaMeriter) {
@@ -25,6 +25,7 @@ public class CertificationsBuilder {
         for (Merit merit : ovrigaMeriter) {
             list.add(new CertificationTypeBuilder().withMerit(merit).createCertificationType());
         }
+        setItem(list);
         return this;
     }
 }

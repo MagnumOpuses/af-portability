@@ -14,10 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
-import se.arbetsformedlingen.matchning.portability.builder.hropen.IdentifierTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
-import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 import se.arbetsformedlingen.matchning.taxonomy.repository.Taxonomies;
 
 import java.io.IOException;
@@ -76,7 +74,7 @@ public class AspRespository {
         }
         return candidate;
     }
-    
+
 
 
     private String readFromAPI(String apiUrl, String token) throws IOException {

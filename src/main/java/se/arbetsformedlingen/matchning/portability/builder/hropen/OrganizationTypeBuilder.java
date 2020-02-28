@@ -7,87 +7,75 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 import java.math.BigDecimal;
 
 public class OrganizationTypeBuilder {
-    private IdentifierType taxId;
-    private IdentifierType legalId;
-    private OrganizationType.IndustryCodes industryCodes;
-    private OrganizationType.IndustryIdentifiers industryIdentifiers;
-    private BigDecimal headCount;
-    private AmountType revenue;
-    private TextType description;
-    private GeographicResponsibilityCodeList geographicResponsibilityCode;
-    private OwnershipTypeCodeList ownershipType;
-    private String stockSymbol;
-    private String workEnvironmentCode;
-    private OrganizationType.Contacts contacts;
-    private String domainName;
+    private OrganizationType organizationType = new OrganizationType();
 
     public OrganizationTypeBuilder setTaxId(IdentifierType taxId) {
-        this.taxId = taxId;
+        organizationType.setTaxId(taxId);
         return this;
     }
 
     public OrganizationTypeBuilder setLegalId(IdentifierType legalId) {
-        this.legalId = legalId;
+        organizationType.setLegalId(legalId);
         return this;
     }
 
     public OrganizationTypeBuilder setIndustryCodes(OrganizationType.IndustryCodes industryCodes) {
-        this.industryCodes = industryCodes;
+        organizationType.setIndustryCodes(industryCodes);
         return this;
     }
 
     public OrganizationTypeBuilder setIndustryIdentifiers(OrganizationType.IndustryIdentifiers industryIdentifiers) {
-        this.industryIdentifiers = industryIdentifiers;
+        organizationType.setIndustryIdentifiers(industryIdentifiers);
         return this;
     }
 
     public OrganizationTypeBuilder setHeadCount(BigDecimal headCount) {
-        this.headCount = headCount;
+        organizationType.setHeadCount(headCount);
         return this;
     }
 
     public OrganizationTypeBuilder setRevenue(AmountType revenue) {
-        this.revenue = revenue;
+        organizationType.setRevenue(revenue);
         return this;
     }
 
     public OrganizationTypeBuilder setDescription(TextType description) {
-        this.description = description;
+        organizationType.setDescription(description);
         return this;
     }
 
     public OrganizationTypeBuilder setGeographicResponsibilityCode(GeographicResponsibilityCodeList geographicResponsibilityCode) {
-        this.geographicResponsibilityCode = geographicResponsibilityCode;
+        organizationType.setGeographicResponsibilityCode(geographicResponsibilityCode);
         return this;
     }
 
     public OrganizationTypeBuilder setOwnershipType(OwnershipTypeCodeList ownershipType) {
-        this.ownershipType = ownershipType;
+        organizationType.setOwnershipType(ownershipType);
         return this;
     }
 
     public OrganizationTypeBuilder setStockSymbol(String stockSymbol) {
-        this.stockSymbol = stockSymbol;
+        organizationType.setStockSymbol(stockSymbol);
         return this;
     }
 
     public OrganizationTypeBuilder setWorkEnvironmentCode(String workEnvironmentCode) {
-        this.workEnvironmentCode = workEnvironmentCode;
+        organizationType.setWorkEnvironmentCode(workEnvironmentCode);
         return this;
     }
 
     public OrganizationTypeBuilder setContacts(OrganizationType.Contacts contacts) {
-        this.contacts = contacts;
+        organizationType.setContacts(contacts);
         return this;
     }
 
     public OrganizationTypeBuilder setDomainName(String domainName) {
-        this.domainName = domainName;
+        organizationType.setDomainName(domainName);
         return this;
     }
 
     public OrganizationType createOrganizationType() {
-        return new OrganizationType(taxId, legalId, industryCodes, industryIdentifiers, headCount, revenue, description, geographicResponsibilityCode, ownershipType, stockSymbol, workEnvironmentCode, contacts, domainName);
+        return organizationType;
     }
 
     public OrganizationTypeBuilder withUtbildning(Utbildning utbildning) {

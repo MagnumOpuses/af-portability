@@ -3,6 +3,7 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
+import java.awt.*;
 import java.util.List;
 
 public class LicenseTypeBuilder {
@@ -89,13 +90,11 @@ public class LicenseTypeBuilder {
         return new LicenseType(id, name, type, status, effectiveTimePeriod, issued, firstIssued, issuingAuthority, attachmentReferences, descriptions, endorsements, restrictions, violations);
     }
 
-   /* TODO: make list of string to sting with space delim and dump it into type.id
-   public LicenseTypeBuilder withKorkortKlasser(ArbetsSokandeProfil.Korkort korkort) {
-        setName("Körkort");
-        setType(new EntityTypeBuilder().setName(korkort.getKorkortsklasser()));
+    public LicenseTypeBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
+        setType(new EntityTypeBuilder().setId(new IdentifierTypeBuilder().setValue(String.join(" ", korkort.getKorkortsklasser())).createIdentifierType()).createEntityType());
         setIssued(String.valueOf(korkort.getSenastUppdaterad()));
         return this;
     }
 
-    */
+
 }
