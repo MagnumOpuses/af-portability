@@ -7,10 +7,10 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.LocationType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountrySubDivisionsBuilder {
+public class LocationTypeCountrySubDivisionsBuilder {
     private LocationType.CountrySubDivisions countrySubDivisions = new LocationType.CountrySubDivisions();
 
-    public CountrySubDivisionsBuilder setItem(List<AddressComponentType> item) {
+    public LocationTypeCountrySubDivisionsBuilder setItem(List<AddressComponentType> item) {
         countrySubDivisions.getItem().addAll(item);
         return this;
     }
@@ -19,7 +19,7 @@ public class CountrySubDivisionsBuilder {
         return countrySubDivisions;
     }
 
-    public CountrySubDivisionsBuilder withArbetsort(Arbetsort arbetsort) {
+    public LocationTypeCountrySubDivisionsBuilder withArbetsort(Arbetsort arbetsort) {
         List<AddressComponentType> list = new ArrayList<>();
         list.add(new AddressComponentTypeBuilder().setValue(arbetsort.getArbetsortTyp()).build());
         setItem(list);
