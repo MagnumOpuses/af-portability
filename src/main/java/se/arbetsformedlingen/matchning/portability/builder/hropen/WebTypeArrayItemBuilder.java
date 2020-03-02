@@ -33,7 +33,7 @@ public class WebTypeArrayItemBuilder {
         return this;
     }
 
-    public WebTypeArray.Item createItem() {
+    public WebTypeArray.Item build() {
         return webTypeArrayItem;
     }
 }

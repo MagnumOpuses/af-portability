@@ -62,7 +62,7 @@ public class PersonCompetencyTypeBuilder {
         return this;
     }
 
-    public PersonCompetencyType createPersonCompetencyType() {
+    public PersonCompetencyType build() {
         return personCompetencyType;
     }
 

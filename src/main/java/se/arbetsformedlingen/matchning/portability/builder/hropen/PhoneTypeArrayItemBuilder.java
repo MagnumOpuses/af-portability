@@ -58,7 +58,7 @@ public class PhoneTypeArrayItemBuilder {
         return this;
     }
 
-    public PhoneTypeArray.Item createItem() {
+    public PhoneTypeArray.Item build() {
         return phoneTypeArrayItem;
     }
 }

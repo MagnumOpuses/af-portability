@@ -1,7 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
-import se.arbetsformedlingen.matchning.portability.model.hropen.EmailTypeArray;
 import se.arbetsformedlingen.matchning.portability.model.hropen.WebTypeArray;
 
 import java.util.ArrayList;
@@ -15,13 +14,13 @@ public class WebTypeArrayBuilder {
         return this;
     }
 
-    public WebTypeArray createWebTypeArray() {
+    public WebTypeArray build() {
         return webTypeArray;
     }
 
     public WebTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<WebTypeArray.Item> list = new ArrayList<>();
-        list.add(new WebTypeArrayItemBuilder().setUrl(personUppgifter.getAdress()).createItem());
+        list.add(new WebTypeArrayItemBuilder().setUrl(personUppgifter.getAdress()).build());
         setItem(list);
         return this;
     }

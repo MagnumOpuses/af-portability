@@ -1,9 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.Kompetens;
-import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 import se.arbetsformedlingen.matchning.portability.model.hropen.CandidateProfileType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.EmailTypeArray;
 import se.arbetsformedlingen.matchning.portability.model.hropen.PersonCompetencyType;
 import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 
@@ -18,7 +16,7 @@ public class QualificationsBuilder {
         return this;
     }
 
-    public CandidateProfileType.Qualifications createQualifications() {
+    public CandidateProfileType.Qualifications build() {
         return candidateProfileTyQequalifications;
     }
 
@@ -28,9 +26,9 @@ public class QualificationsBuilder {
             list.add(new PersonCompetencyTypeBuilder()
                     .setCompetencyIds(new CompetencyIdsBuilder()
                             .withCompetencyId(String.valueOf(kompetens.getTaxonomiId()))
-                            .createCompetencyIds())
+                            .build())
                     .setDescription(String.valueOf(Concept.EntityType.skill))
-                    .createPersonCompetencyType());
+                    .build());
         }
         setItem(list);
         return this;

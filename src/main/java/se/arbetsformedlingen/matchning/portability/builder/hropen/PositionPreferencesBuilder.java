@@ -2,7 +2,6 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.Arbetsort;
 import se.arbetsformedlingen.matchning.portability.model.hropen.CandidateProfileType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.CandidateType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.PositionPreferenceType;
 
 import java.util.ArrayList;
@@ -16,14 +15,14 @@ public class PositionPreferencesBuilder {
         return this;
     }
 
-    public CandidateProfileType.PositionPreferences createPositionPreferences() {
+    public CandidateProfileType.PositionPreferences build() {
         return candidateProfileTypePositionPreferences;
     }
 
     public PositionPreferencesBuilder withArbetsorter(List<Arbetsort> arbetsorter) {
         List<PositionPreferenceType> list = new ArrayList<>();
         for (Arbetsort arbetsort : arbetsorter) {
-            list.add(new PositionPreferenceTypeBuilder().withArbetsort(arbetsort).createPositionPreferenceType());
+            list.add(new PositionPreferenceTypeBuilder().withArbetsort(arbetsort).build());
         }
         setItem(list);
         return this;

@@ -76,12 +76,12 @@ public class EducationAttendanceTypeBuilder {
         return this;
     }
 
-    public EducationAttendanceType createEducationAttendanceType() {
+    public EducationAttendanceType build() {
         return educationAttendanceType;
     }
 
     public EducationAttendanceTypeBuilder withUtbildning(Utbildning utbildning) {
-        setInstitution(new OrganizationTypeBuilder().withUtbildning(utbildning).createOrganizationType());
+        setInstitution(new OrganizationTypeBuilder().withUtbildning(utbildning).build());
         setStart(String.valueOf(utbildning.getStartdatum()));
         setEnd(String.valueOf(utbildning.getSlutdatum()));
         setCurrent(utbildning.isPagaende());

@@ -15,7 +15,7 @@ public class AddressComponentTypeBuilder {
         return this;
     }
 
-    public AddressComponentType createAddressComponentType() {
+    public AddressComponentType build() {
         return addressComponentType;
     }
 }

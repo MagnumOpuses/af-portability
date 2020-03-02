@@ -35,7 +35,7 @@ public class PhoneTypeBuilder {
         return this;
     }
 
-    public PhoneType createPhoneType() {
+    public PhoneType build() {
         return phoneType;
     }
 }

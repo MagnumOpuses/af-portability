@@ -10,7 +10,7 @@ public class EmailTypeBuilder {
         return this;
     }
 
-    public EmailType createEmailType() {
+    public EmailType build() {
         return emailType;
     }
 }

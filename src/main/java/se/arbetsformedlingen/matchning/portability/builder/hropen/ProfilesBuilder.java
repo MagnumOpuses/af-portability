@@ -15,14 +15,14 @@ public class ProfilesBuilder {
         return this;
     }
 
-    public CandidateType.Profiles createProfiles() {
+    public CandidateType.Profiles build() {
         return candidateTypeProfiles;
     }
 
     public ProfilesBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
         List<CandidateProfileType> list = new ArrayList<>();
         for (ArbetsSokandeProfil profil : profiler){
-            new CandidateProfileTypeBuilder().withProfile(profil).createCandidateProfileType();
+            new CandidateProfileTypeBuilder().withProfile(profil).build();
         }
         setItem(list);
         return this;

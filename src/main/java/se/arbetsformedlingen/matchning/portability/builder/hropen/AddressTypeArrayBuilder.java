@@ -1,7 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
-import se.arbetsformedlingen.matchning.portability.model.hropen.AddressComponentType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.AddressTypeArray;
 
 import java.util.ArrayList;
@@ -15,13 +14,13 @@ public class AddressTypeArrayBuilder {
         return this;
     }
 
-    public AddressTypeArray createAddressTypeArray() {
+    public AddressTypeArray build() {
         return addressTypeArray;
     }
 
     public AddressTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<AddressTypeArray.Item> list = new ArrayList<>();
-        list.add(new AddressTypeArrayItemBuilder().withPersonUppgifter(personUppgifter).createItem());
+        list.add(new AddressTypeArrayItemBuilder().withPersonUppgifter(personUppgifter).build());
         setItem(list);
         return this;
     }

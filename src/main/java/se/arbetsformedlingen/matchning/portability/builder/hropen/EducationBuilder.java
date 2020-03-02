@@ -15,14 +15,14 @@ public class EducationBuilder {
         return this;
     }
 
-    public CandidateProfileType.Education createEducation() {
+    public CandidateProfileType.Education build() {
         return education;
     }
 
     public EducationBuilder withUtbildningar(List<Utbildning> utbildningar) {
         List<EducationAttendanceType> list = new ArrayList<>();
         for (Utbildning utbildning : utbildningar) {
-            list.add(new EducationAttendanceTypeBuilder().withUtbildning(utbildning).createEducationAttendanceType());
+            list.add(new EducationAttendanceTypeBuilder().withUtbildning(utbildning).build());
         }
         setItem(list);
 

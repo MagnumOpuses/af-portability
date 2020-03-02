@@ -52,7 +52,7 @@ public class AddressTypeBuilder {
         return this;
     }
 
-    public AddressType createAddressType() {
+    public AddressType build() {
         return addressType;
     }
 }

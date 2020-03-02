@@ -34,7 +34,7 @@ public class EmailTypeArrayItemBuilder {
     }
 
 
-    public EmailTypeArray.Item createItem() {
+    public EmailTypeArray.Item build() {
         return emailTypeArrayItem;
     }
 }

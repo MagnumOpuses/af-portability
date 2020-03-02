@@ -56,7 +56,7 @@ public class CertificationTypeBuilder {
         return this;
     }
 
-    public CertificationType createCertificationType() {
+    public CertificationType build() {
         return certificationType;
     }
 

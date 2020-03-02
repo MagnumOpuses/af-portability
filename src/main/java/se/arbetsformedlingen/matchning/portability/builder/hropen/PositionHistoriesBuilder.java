@@ -3,7 +3,6 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EmployerHistoryType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EntityType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.PositionHistoryType;
 import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
 
@@ -18,7 +17,7 @@ public class PositionHistoriesBuilder {
         return this;
     }
 
-    public EmployerHistoryType.PositionHistories createPositionHistories() {
+    public EmployerHistoryType.PositionHistories build() {
         return employerHistoryTypePositionHistories;
     }
 
@@ -28,13 +27,13 @@ public class PositionHistoriesBuilder {
 
         EntityType entityType = new EntityTypeBuilder()
                 .setId(new IdentifierTypeBuilder()
-                        .setValue(valueOf).createIdentifierType())
-                .setName(String.valueOf(Concept.EntityType.jobterm)).createEntityType();
+                        .setValue(valueOf).build())
+                .setName(String.valueOf(Concept.EntityType.jobterm)).build();
 
         entityList.add(entityType);
         list.add(new PositionHistoryTypeBuilder()
                 .setJobLevels(new JobLevelsBuilder().setItem(entityList)
-                        .createJobLevels()).createPositionHistoryType());
+                        .build()).build());
         return this;
     }
 
@@ -42,7 +41,7 @@ public class PositionHistoriesBuilder {
     public PositionHistoriesBuilder withAnstallning(Anstallning anstallning) {
         List<PositionHistoryType> list = new ArrayList<>();
 
-        list.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).createPositionHistoryType());
+        list.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).build());
         setItem(list);
         return this;
     }

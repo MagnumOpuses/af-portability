@@ -64,7 +64,7 @@ public class AspRespository {
             candidate = new CandidateTypeBuilder()
                     .withPersonUppgifter(personUppgifter)
                     .withProfiles(profiler)
-                    .createCandidateType();
+                    .build();
 
         } catch (HttpException he) {
             LOG.error("Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");

@@ -22,7 +22,7 @@ public class CandidateTest {
 
     @Test
     public void testCreatingCandidateWithWithMethods() throws JsonProcessingException {
-        CandidateType candidate = new CandidateTypeBuilder().createCandidateType()
+        CandidateType candidate = new CandidateTypeBuilder().build()
                 .withName("Lastname, Firstname")
                 .withBirthDate(new Date())
                 .withEmail("firstname.lastname@workplace.se")

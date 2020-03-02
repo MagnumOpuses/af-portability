@@ -45,7 +45,7 @@ public class CandidateTypeBuilder {
     }
 
     public CandidateTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter){
-        setPerson(new CandidatePersonTypeBuilder().withPersonUppgifter(personUppgifter).createCandidatePersonType());
+        setPerson(new CandidatePersonTypeBuilder().withPersonUppgifter(personUppgifter).build());
         return this;
     }
 
@@ -54,12 +54,12 @@ public class CandidateTypeBuilder {
         return this;
     }
 
-    public CandidateType createCandidateType() {
+    public CandidateType build() {
         return candidateType;
     }
 
     public CandidateTypeBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
-        setProfiles(new ProfilesBuilder().withProfiles(profiler).createProfiles());
+        setProfiles(new ProfilesBuilder().withProfiles(profiler).build());
         return this;
     }
 }

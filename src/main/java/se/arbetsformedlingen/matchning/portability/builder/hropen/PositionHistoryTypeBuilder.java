@@ -67,7 +67,7 @@ public class PositionHistoryTypeBuilder {
         return this;
     }
 
-    public PositionHistoryType createPositionHistoryType() {
+    public PositionHistoryType build() {
         return positionHistoryType;
     }
 }

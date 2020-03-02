@@ -2,9 +2,7 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EmailTypeArray;
-import se.arbetsformedlingen.matchning.portability.model.hropen.PhoneTypeArray;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +15,13 @@ public class EmailTypeArrayBuilder {
         return this;
     }
 
-    public EmailTypeArray createEmailTypeArray() {
+    public EmailTypeArray build() {
         return emailTypeArray;
     }
 
     public EmailTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<EmailTypeArray.Item> list = new ArrayList<>();
-        list.add(new EmailTypeArrayItemBuilder().setAddress(personUppgifter.getAdress()).createItem());
+        list.add(new EmailTypeArrayItemBuilder().setAddress(personUppgifter.getAdress()).build());
         setItem(list);
         return this;
     }

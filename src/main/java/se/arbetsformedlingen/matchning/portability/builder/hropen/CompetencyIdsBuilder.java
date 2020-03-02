@@ -14,14 +14,14 @@ public class CompetencyIdsBuilder {
         return this;
     }
 
-    public PersonCompetencyType.CompetencyIds createCompetencyIds() {
+    public PersonCompetencyType.CompetencyIds build() {
         return competencyIds;
     }
 
 
     public CompetencyIdsBuilder withCompetencyId(String identifierValue) {
         List<IdentifierType> list = new ArrayList<>();
-        list.add(new IdentifierTypeBuilder().setValue(identifierValue).createIdentifierType());
+        list.add(new IdentifierTypeBuilder().setValue(identifierValue).build());
         setItem(list);
         return this;
     }

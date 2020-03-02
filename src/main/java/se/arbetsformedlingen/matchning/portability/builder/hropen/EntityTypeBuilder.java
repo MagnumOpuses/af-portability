@@ -21,7 +21,7 @@ public class EntityTypeBuilder {
         return this;
     }
 
-    public EntityType createEntityType() {
+    public EntityType build() {
         return entityType;
     }
 }

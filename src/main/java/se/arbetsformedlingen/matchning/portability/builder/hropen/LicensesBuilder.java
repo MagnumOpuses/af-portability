@@ -15,14 +15,14 @@ public class LicensesBuilder {
         return this;
     }
 
-    public CandidateProfileType.Licenses createLicenses() {
+    public CandidateProfileType.Licenses build() {
         return licenses;
     }
 
 
     public LicensesBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
         List<LicenseType> list = new ArrayList<>();
-        list.add(new LicenseTypeBuilder().withKorkort(korkort).createLicenseType());
+        list.add(new LicenseTypeBuilder().withKorkort(korkort).build());
         setItem(list);
         return this;
     }

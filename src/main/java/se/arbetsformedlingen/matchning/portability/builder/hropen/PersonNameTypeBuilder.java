@@ -86,7 +86,7 @@ public class PersonNameTypeBuilder {
         return this;
     }
 
-    public PersonNameType createPersonNameType() {
+    public PersonNameType build() {
         return personNameType;
     }
 }

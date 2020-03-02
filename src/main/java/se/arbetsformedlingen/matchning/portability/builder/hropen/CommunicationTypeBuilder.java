@@ -26,15 +26,15 @@ public class CommunicationTypeBuilder {
         return this;
     }
 
-    public CommunicationType createCommunicationType() {
+    public CommunicationType build() {
         return communicationType;
     }
 
     public CommunicationTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
-        setAddress(new AddressTypeArrayBuilder().withPersonUppgifter(personUppgifter).createAddressTypeArray());
-        setPhone(new PhoneTypeArrayBuilder().withPersonUppgifter(personUppgifter).createPhoneTypeArray());
-        setEmail(new EmailTypeArrayBuilder().withPersonUppgifter(personUppgifter).createEmailTypeArray());
-        setWeb(new WebTypeArrayBuilder().withPersonUppgifter(personUppgifter).createWebTypeArray());
+        setAddress(new AddressTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
+        setPhone(new PhoneTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
+        setEmail(new EmailTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
+        setWeb(new WebTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
         return this;
     }
 }

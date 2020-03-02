@@ -13,7 +13,7 @@ public class JobLevelsBuilder {
         return this;
     }
 
-    public PositionHistoryType.JobLevels createJobLevels() {
+    public PositionHistoryType.JobLevels build() {
         return jobLevels;
     }
 }

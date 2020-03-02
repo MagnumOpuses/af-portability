@@ -10,7 +10,7 @@ public class WebTypeBuilder {
         return this;
     }
 
-    public WebType createWebType() {
+    public WebType build() {
         return webType;
     }
 }

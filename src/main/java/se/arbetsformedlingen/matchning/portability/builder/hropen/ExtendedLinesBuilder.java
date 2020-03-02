@@ -2,7 +2,6 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 import se.arbetsformedlingen.matchning.portability.model.hropen.AddressComponentType;
-import se.arbetsformedlingen.matchning.portability.model.hropen.AddressType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.AddressTypeArray;
 
 import java.util.ArrayList;
@@ -17,14 +16,14 @@ public class ExtendedLinesBuilder {
         return this;
     }
 
-    public AddressTypeArray.Item.ExtendedLines createExtendedLines() {
+    public AddressTypeArray.Item.ExtendedLines build() {
         return extendedLines;
     }
 
 
     public ExtendedLinesBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<AddressComponentType> list = new ArrayList<>();
-        list.add(new AddressComponentTypeBuilder().setValue(personUppgifter.getCo()).createAddressComponentType());
+        list.add(new AddressComponentTypeBuilder().setValue(personUppgifter.getCo()).build());
         setAddressComponentTypeList(list);
         return this;
     }

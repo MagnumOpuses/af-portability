@@ -76,13 +76,13 @@ public class AddressTypeArrayItemBuilder {
         return this;
     }
 
-    public AddressTypeArray.Item createItem() {
+    public AddressTypeArray.Item build() {
         return addressTypeArrayItem;
     }
 
     public AddressTypeArrayItemBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         setLine(personUppgifter.getAdress());
-        setExtendedLines(new ExtendedLinesBuilder().withPersonUppgifter(personUppgifter).createExtendedLines());
+        setExtendedLines(new ExtendedLinesBuilder().withPersonUppgifter(personUppgifter).build());
         setCity(personUppgifter.getPostort());
         setCountryCode(CountryCodeList.valueOf(personUppgifter.getLand()));
         setPostalCode(personUppgifter.getPersonnummer());

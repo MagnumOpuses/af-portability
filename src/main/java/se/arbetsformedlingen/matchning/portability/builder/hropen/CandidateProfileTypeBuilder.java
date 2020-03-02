@@ -146,7 +146,7 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileType createCandidateProfileType() {
+    public CandidateProfileType build() {
         return candidateProfileType;
     }
 
@@ -155,43 +155,43 @@ public class CandidateProfileTypeBuilder {
 
         if (profil.getKortkort() != null){
             //TODO the license thingy!
-            setLicenses(new LicensesBuilder().withKorkort(profil.getKortkort()).createLicenses());
+            setLicenses(new LicensesBuilder().withKorkort(profil.getKortkort()).build());
         }
 
         if (profil.getKompetenser() != null){
             for (Kompetens kompetens : profil.getKompetenser()){
                 //TODO Adjust this to use the new taxonomy.
-                setQualifications(new QualificationsBuilder().withKompetenser(profil.getKompetenser()).createQualifications());
+                setQualifications(new QualificationsBuilder().withKompetenser(profil.getKompetenser()).build());
             }
         }
 
         if (profil.getYrkeserfarenheter() != null) {
             for (Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
                 //TODO Adjust this to use the new taxonomy.
-                setEmployment(new EmploymentBuilder().withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).createEmployment());
+                setEmployment(new EmploymentBuilder().withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).build());
             }
         }
 
         if (profil.getYrkesroller() != null) {
             for (Yrkesroll yrkesroll : profil.getYrkesroller()) {
-                setEmployment(new EmploymentBuilder().withCodes(yrkesroll.getKod()).createEmployment());
+                setEmployment(new EmploymentBuilder().withCodes(yrkesroll.getKod()).build());
             }
         }
 
         if (profil.getAnstallningar() != null) {
-            setEmployment(new EmploymentBuilder().withAnstallningar(profil.getAnstallningar()).createEmployment());
+            setEmployment(new EmploymentBuilder().withAnstallningar(profil.getAnstallningar()).build());
         }
 
         if (profil.getUtbildningar() != null) {
-            setEducation(new EducationBuilder().withUtbildningar(profil.getUtbildningar()).createEducation());
+            setEducation(new EducationBuilder().withUtbildningar(profil.getUtbildningar()).build());
         }
 
         if (profil.getOvrigaMeriter() != null) {
-            setCertifications(new CertificationsBuilder().withOvrigaMeriter(profil.getOvrigaMeriter()).createCertifications());
+            setCertifications(new CertificationsBuilder().withOvrigaMeriter(profil.getOvrigaMeriter()).build());
         }
 
         if (profil.getArbetsorter() != null) {
-            setPositionPreferences(new PositionPreferencesBuilder().withArbetsorter(profil.getArbetsorter()).createPositionPreferences());
+            setPositionPreferences(new PositionPreferencesBuilder().withArbetsorter(profil.getArbetsorter()).build());
         }
 
 

@@ -74,17 +74,17 @@ public class OrganizationTypeBuilder {
         return this;
     }
 
-    public OrganizationType createOrganizationType() {
+    public OrganizationType build() {
         return organizationType;
     }
 
     public OrganizationTypeBuilder withUtbildning(Utbildning utbildning) {
-        setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).createIdentifierType());
+        setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).build());
         return this;
     }
 
     public OrganizationTypeBuilder withAnstallning(Anstallning anstallning) {
-        setLegalId(new IdentifierTypeBuilder().setValue(anstallning.getArbetsgivare()).createIdentifierType());
+        setLegalId(new IdentifierTypeBuilder().setValue(anstallning.getArbetsgivare()).build());
         return this;
     }
 }

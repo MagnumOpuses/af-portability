@@ -189,7 +189,7 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonType createCandidatePersonType() {
+    public CandidatePersonType build() {
         return candidatePersonType;
     }
 
@@ -197,8 +197,8 @@ public class CandidatePersonTypeBuilder {
         setName(new PersonNameTypeBuilder()
                 .setGiven(personUppgifter.getFornamn())
                 .setFamily(personUppgifter.getEfternamn())
-                .createPersonNameType());
-        setCommunication(new CommunicationTypeBuilder().withPersonUppgifter(personUppgifter).createCommunicationType());
+                .build());
+        setCommunication(new CommunicationTypeBuilder().withPersonUppgifter(personUppgifter).build());
         return this;
     }
 }

@@ -40,7 +40,7 @@ public class IdentifierTypeBuilder {
         return this;
     }
 
-    public IdentifierType createIdentifierType() {
+    public IdentifierType build() {
         return identifierType;
     }
 }

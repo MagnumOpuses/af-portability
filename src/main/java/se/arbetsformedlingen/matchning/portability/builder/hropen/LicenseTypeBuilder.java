@@ -3,9 +3,6 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
-import java.awt.*;
-import java.util.List;
-
 public class LicenseTypeBuilder {
     private LicenseType licenseType = new LicenseType();
 
@@ -74,12 +71,12 @@ public class LicenseTypeBuilder {
         return this;
     }
 
-    public LicenseType createLicenseType() {
+    public LicenseType build() {
         return licenseType;
     }
 
     public LicenseTypeBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
-        setType(new EntityTypeBuilder().setId(new IdentifierTypeBuilder().setValue(String.join(" ", korkort.getKorkortsklasser())).createIdentifierType()).createEntityType());
+        setType(new EntityTypeBuilder().setId(new IdentifierTypeBuilder().setValue(String.join(" ", korkort.getKorkortsklasser())).build()).build());
         setIssued(String.valueOf(korkort.getSenastUppdaterad()));
         return this;
     }

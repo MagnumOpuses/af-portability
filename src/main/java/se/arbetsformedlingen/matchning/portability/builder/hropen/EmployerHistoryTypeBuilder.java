@@ -49,13 +49,13 @@ public class EmployerHistoryTypeBuilder {
         return this;
     }
 
-    public EmployerHistoryType createEmployerHistoryType() {
+    public EmployerHistoryType build() {
         return employerHistoryType;
     }
 
     public EmployerHistoryTypeBuilder withAnstallning(Anstallning anstallning) {
-        setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).createOrganizationType());
-        setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).createPositionHistories());
+        setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build());
+        setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).build());
         setStart(String.valueOf(anstallning.getStartdatum()));
         setEnd(String.valueOf(anstallning.getSlutdatum()));
         setCurrent(anstallning.isPagaende());
