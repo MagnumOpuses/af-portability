@@ -30,8 +30,8 @@ public class EmploymentBuilder {
         List<EmployerHistoryType> list = new ArrayList<>();
         for (Anstallning anstallning : anstallningar) {
             list.add(new EmployerHistoryTypeBuilder().withAnstallning(anstallning).build());
-
         }
+        setItem(list);
         return this;
     }
 }

@@ -82,7 +82,15 @@ public class PositionPreferenceTypeBuilder {
 
     public PositionPreferenceTypeBuilder withArbetsort(Arbetsort arbetsort) {
 
-        final AddressType addressType = new AddressTypeBuilder().setCity(arbetsort.getVarde1()).build();
+        final LocationType locationType = new LocationTypeBuilder()
+                .setCity(arbetsort.getVarde1())
+                .setCountrySubDivisions(new CountrySubDivisionsBuilder().withArbetsort(arbetsort).build())
+                .build();
+
+        final AddressType addressType = new AddressTypeBuilder()
+                .setCity(arbetsort.getVarde1())
+                .setCountrySubDivisions(new CountrySubDivisionsBuilder().build())
+                .build();
 
         final PreferredLocationType preferredLocationType = new PreferredLocationType();
         preferredLocationType.setReferenceLocation(addressType);

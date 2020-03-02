@@ -69,21 +69,32 @@ public class CandidateTest {
         assertEquals(arbetsSokandeProfil.getNamn(), profileType.getProfileName());
         assertEquals(arbetsSokandeProfil.getBeskrivning(), profileType.getObjective());
         assertEquals(arbetsSokandeProfil.getPresentation(), profileType.getExecutiveSummary());
- //       Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
-   //     assertEquals(utbildning.getSkola(), candidateType.getProfiles().getItem());
+
+        final Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
+        final EducationAttendanceType educationAttendanceType = candidateType.getProfiles().getItem().get(0).getEducation().getItem().get(0);
+        assertEquals(utbildning.getSkola(), educationAttendanceType.getInstitution().getLegalId().getValue());
+        assertEquals(String.valueOf(utbildning.getStartdatum()), educationAttendanceType.getStart());
+        assertEquals(String.valueOf(utbildning.getSlutdatum()), educationAttendanceType.getEnd());
+        assertEquals(utbildning.isPagaende(), educationAttendanceType.isCurrent());
+        assertEquals(utbildning.getInriktning(), educationAttendanceType.getDescriptions().getItem().get(0));
 
         Anstallning anstallning = arbetsSokandeProfil.getAnstallningar().get(0);
         EmployerHistoryType employerHistoryType = candidateType.getProfiles().getItem().get(0).getEmployment().getItem().get(0);
-        assertEquals(anstallning.getArbetsgivare(), employerHistoryType.getOrganization().getLegalId());
+        assertEquals(anstallning.getArbetsgivare(), employerHistoryType.getOrganization().getLegalId().getValue());
         assertEquals(anstallning.getRubrik(), employerHistoryType.getPositionHistories().getItem().get(0).getTitle());
-        assertEquals(anstallning.getStartdatum(), employerHistoryType.getStart());
-        assertEquals(anstallning.getSlutdatum(), employerHistoryType.getEnd());
+        assertEquals(String.valueOf(anstallning.getStartdatum()), employerHistoryType.getStart());
+        assertEquals(String.valueOf(anstallning.getSlutdatum()), employerHistoryType.getEnd());
         assertEquals(anstallning.isPagaende(), employerHistoryType.isCurrent());
         assertEquals(anstallning.getBeskrivning(), employerHistoryType.getDescriptions().getItem().get(0));
 
         Merit merit = arbetsSokandeProfil.getOvrigaMeriter().get(0);
         CertificationType certificationType = candidateType.getProfiles().getItem().get(0).getCertifications().getItem().get(0);
-        assertEquals(merit.getBeskrivning(), certificationType.getName());
+        assertEquals(merit.getRubrik(), certificationType.getName());
+        assertEquals(merit.getBeskrivning(), certificationType.getDescriptions().getItem().get(0));
+
+        Arbetsort ort = arbetsSokandeProfil.getArbetsorter().get(0);
+        PositionPreferenceType city = candidateType.getProfiles().getItem().get(0).getPositionPreferences().getItem().get(0);
+        assertEquals(ort.getVarde1(), city.getLocations().getItem().get(0).getReferenceLocation().getCity());
 
     }
 

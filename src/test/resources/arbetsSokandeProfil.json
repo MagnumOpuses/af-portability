@@ -10,7 +10,23 @@
     "profilstatus": null,
     "presentation": "Jag är en duktig system utvecklare!",
     "styrka": 0,
-    "utbildningar": [],
+    "utbildningar": [
+      {
+        "skola": "Test skola",
+        "niva": "Test nivå",
+        "inriktning": "Test inriktning",
+        "beskrivning": "Test beskrivning",
+        "startdatum": {
+          "artal": 2000,
+          "manad": 5
+        },
+        "slutdatum": {
+          "artal": 2001,
+          "manad": 6
+        },
+        "pagaende": false
+      }
+    ],
     "sprak": [],
     "anstallningar": [
       {
@@ -34,7 +50,11 @@
         "yrkeserfarenhetIdLista": [397897]
       }
     ],
-    "ovrigaMeriter": [],
+    "ovrigaMeriter": [
+      {
+        "beskrivning": "LOOOOREM IPSUM!!!!"
+      }
+    ],
     "anstallningsvillkor": {
       "anstallningstyper": [],
       "omfattningMin": null,
