@@ -22,7 +22,7 @@ public class ProfilesBuilder {
     public ProfilesBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
         List<CandidateProfileType> list = new ArrayList<>();
         for (ArbetsSokandeProfil profil : profiler){
-            new CandidateProfileTypeBuilder().withProfile(profil).build();
+            list.add(new CandidateProfileTypeBuilder().withProfile(profil).build());
         }
         setItem(list);
         return this;

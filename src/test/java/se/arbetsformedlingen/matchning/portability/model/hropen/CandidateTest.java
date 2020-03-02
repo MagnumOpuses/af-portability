@@ -72,8 +72,15 @@ public class CandidateTest {
         assertEquals(arbetsSokandeProfil.getNamn(), profileType.getProfileName());
         assertEquals(arbetsSokandeProfil.getBeskrivning(), profileType.getObjective());
         assertEquals(arbetsSokandeProfil.getPresentation(), profileType.getExecutiveSummary());
-        Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
-        assertEquals(utbildning.getSkola(), candidateType.getProfiles().getItem());
+
+        final Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
+        final EducationAttendanceType educationAttendanceType = candidateType.getProfiles().getItem().get(0).getEducation().getItem().get(0);
+        assertEquals(utbildning.getSkola(), educationAttendanceType.getInstitution().getLegalId().getValue());
+        assertEquals(String.valueOf(utbildning.getStartdatum()), educationAttendanceType.getStart());
+        assertEquals(String.valueOf(utbildning.getSlutdatum()), educationAttendanceType.getEnd());
+        assertEquals(utbildning.isPagaende(), educationAttendanceType.isCurrent());
+        assertEquals(utbildning.getInriktning(), educationAttendanceType.getDescriptions().getItem().get(0));
+
 
         Anstallning anstallning = arbetsSokandeProfil.getAnstallningar().get(0);
 
