@@ -21,7 +21,7 @@ public class EmailTypeArrayBuilder {
 
     public EmailTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<EmailTypeArray.Item> list = new ArrayList<>();
-        list.add(new EmailTypeArrayItemBuilder().setAddress(personUppgifter.getAdress()).build());
+        list.add(new EmailTypeArrayItemBuilder().setAddress(personUppgifter.getEpostadress()).build());
         setItem(list);
         return this;
     }

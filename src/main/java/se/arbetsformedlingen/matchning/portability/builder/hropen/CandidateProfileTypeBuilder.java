@@ -153,9 +153,9 @@ public class CandidateProfileTypeBuilder {
     public CandidateProfileTypeBuilder withProfile(ArbetsSokandeProfil profil) {
         setProfileName(profil.getNamn());
 
-        if (profil.getKortkort() != null){
+        if (profil.getKorkort() != null){
             //TODO the license thingy!
-            setLicenses(new LicensesBuilder().withKorkort(profil.getKortkort()).build());
+            setLicenses(new LicensesBuilder().withKorkort(profil.getKorkort()).build());
         }
 
         if (profil.getKompetenser() != null){
