@@ -10,20 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmploymentBuilder {
-    private List<EmployerHistoryType> item;
+    private CandidateProfileType.Employment employment = new CandidateProfileType.Employment();
 
     public EmploymentBuilder setItem(List<EmployerHistoryType> item) {
-        this.item = item;
+        employment.getItem().addAll(item);
         return this;
     }
 
     public CandidateProfileType.Employment createEmployment() {
-        return new CandidateProfileType.Employment(item);
+        return employment;
     }
 
     public EmploymentBuilder withCodes(String valueOf) {
         List<EmployerHistoryType> list = new ArrayList<>();
         list.add(new EmployerHistoryTypeBuilder().setPositionHistories(new PositionHistoriesBuilder().withCodes(valueOf).createPositionHistories()).createEmployerHistoryType());
+        setItem(list);
         return this;
     }
 

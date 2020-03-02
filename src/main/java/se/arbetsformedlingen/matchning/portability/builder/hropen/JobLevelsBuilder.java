@@ -6,14 +6,14 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.PositionHistoryT
 import java.util.List;
 
 public class JobLevelsBuilder {
-    private List<EntityType> item;
+    private PositionHistoryType.JobLevels jobLevels = new PositionHistoryType.JobLevels();
 
     public JobLevelsBuilder setItem(List<EntityType> item) {
-        this.item = item;
+        jobLevels.getItem().addAll(item);
         return this;
     }
 
     public PositionHistoryType.JobLevels createJobLevels() {
-        return new PositionHistoryType.JobLevels(item);
+        return jobLevels;
     }
 }

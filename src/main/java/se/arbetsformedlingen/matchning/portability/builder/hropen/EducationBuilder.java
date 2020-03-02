@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EducationBuilder {
-    private List<EducationAttendanceType> item;
+    private CandidateProfileType.Education education = new CandidateProfileType.Education();
 
     public EducationBuilder setItem(List<EducationAttendanceType> item) {
-        this.item = item;
+        education.getItem().addAll(item);
         return this;
     }
 
     public CandidateProfileType.Education createEducation() {
-        return new CandidateProfileType.Education(item);
+        return education;
     }
 
     public EducationBuilder withUtbildningar(List<Utbildning> utbildningar) {
@@ -24,6 +24,7 @@ public class EducationBuilder {
         for (Utbildning utbildning : utbildningar) {
             list.add(new EducationAttendanceTypeBuilder().withUtbildning(utbildning).createEducationAttendanceType());
         }
+        setItem(list);
 
         return this;
     }

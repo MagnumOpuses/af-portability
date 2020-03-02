@@ -83,7 +83,7 @@ public class OrganizationTypeBuilder {
         return this;
     }
 
-    public OrganizationTypeBuilder withAnstelning(Anstallning anstallning) {
+    public OrganizationTypeBuilder withAnstallning(Anstallning anstallning) {
         setLegalId(new IdentifierTypeBuilder().setValue(anstallning.getArbetsgivare()).createIdentifierType());
         return this;
     }

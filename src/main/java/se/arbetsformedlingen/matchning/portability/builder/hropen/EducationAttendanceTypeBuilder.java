@@ -4,93 +4,80 @@ import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class EducationAttendanceTypeBuilder {
-    private IdentifierType id;
-    private String start;
-    private String end;
-    private Boolean current;
-    private EducationAttendanceType.AttachmentReferences attachmentReferences;
-    private StringTypeArray descriptions;
-    private OrganizationType institution;
-    private OrganizationType department;
-    private StringTypeArray programs;
-    private EducationAttendanceType.EducationLevelCodes educationLevelCodes;
-    private Boolean currentlyAttendingIndicator;
-    private Boolean goodStandingIndicator;
-    private EducationAttendanceType.EducationDegrees educationDegrees;
-    private EducationAttendanceType.OtherAttendancePeriods otherAttendancePeriods;
+    private EducationAttendanceType educationAttendanceType = new EducationAttendanceType();
 
     public EducationAttendanceTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        educationAttendanceType.setId(id);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setStart(String start) {
-        this.start = start;
+        educationAttendanceType.setStart(start);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setEnd(String end) {
-        this.end = end;
+        educationAttendanceType.setEnd(end);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setCurrent(Boolean current) {
-        this.current = current;
+        educationAttendanceType.setCurrent(current);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setAttachmentReferences(EducationAttendanceType.AttachmentReferences attachmentReferences) {
-        this.attachmentReferences = attachmentReferences;
+        educationAttendanceType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        this.descriptions = descriptions;
+        educationAttendanceType.setDescriptions(descriptions);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setInstitution(OrganizationType institution) {
-        this.institution = institution;
+        educationAttendanceType.setInstitution(institution);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setDepartment(OrganizationType department) {
-        this.department = department;
+        educationAttendanceType.setDepartment(department);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setPrograms(StringTypeArray programs) {
-        this.programs = programs;
+        educationAttendanceType.setPrograms(programs);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setEducationLevelCodes(EducationAttendanceType.EducationLevelCodes educationLevelCodes) {
-        this.educationLevelCodes = educationLevelCodes;
+        educationAttendanceType.setEducationLevelCodes(educationLevelCodes);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setCurrentlyAttendingIndicator(Boolean currentlyAttendingIndicator) {
-        this.currentlyAttendingIndicator = currentlyAttendingIndicator;
+        educationAttendanceType.setCurrentlyAttendingIndicator(currentlyAttendingIndicator);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setGoodStandingIndicator(Boolean goodStandingIndicator) {
-        this.goodStandingIndicator = goodStandingIndicator;
+        educationAttendanceType.setGoodStandingIndicator(goodStandingIndicator);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setEducationDegrees(EducationAttendanceType.EducationDegrees educationDegrees) {
-        this.educationDegrees = educationDegrees;
+        educationAttendanceType.setEducationDegrees(educationDegrees);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setOtherAttendancePeriods(EducationAttendanceType.OtherAttendancePeriods otherAttendancePeriods) {
-        this.otherAttendancePeriods = otherAttendancePeriods;
+        educationAttendanceType.setOtherAttendancePeriods(otherAttendancePeriods);
         return this;
     }
 
     public EducationAttendanceType createEducationAttendanceType() {
-        return new EducationAttendanceType(id, start, end, current, attachmentReferences, descriptions, institution, department, programs, educationLevelCodes, currentlyAttendingIndicator, goodStandingIndicator, educationDegrees, otherAttendancePeriods);
+        return educationAttendanceType;
     }
 
     public EducationAttendanceTypeBuilder withUtbildning(Utbildning utbildning) {

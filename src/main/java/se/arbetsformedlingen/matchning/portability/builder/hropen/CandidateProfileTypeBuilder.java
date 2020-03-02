@@ -4,177 +4,150 @@ import se.arbetsformedlingen.matchning.portability.model.asp.*;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class CandidateProfileTypeBuilder {
-    private String profileName;
-    private LanguageCodeList languageCode;
-    private CandidateProfileType.Education education;
-    private CandidateProfileType.Employment employment;
-    private CandidateProfileType.MilitaryService militaryService;
-    private CandidateProfileType.Licenses licenses;
-    private CandidateProfileType.Certifications certifications;
-    private CandidateProfileType.Patents patents;
-    private CandidateProfileType.Publications publications;
-    private CandidateProfileType.Qualifications qualifications;
-    private CandidateProfileType.Affiliations affiliations;
-    private CandidateProfileType.SecurityCredentials securityCredentials;
-    private CandidateProfileType.References references;
-    private CandidateProfileType.Attachments attachments;
-    private IdentifierType profileId;
-    private CandidateProfileType.AlternateIds alternateIds;
-    private PersonAvailabilityType personAvailability;
-    private String processingInformation;
-    private DistributionGuidelinesType distributionGuidelines;
-    private CandidateProfileType.AssociatedPositionOpenings associatedPositionOpenings;
-    private String objective;
-    private String executiveSummary;
-    private CandidateProfileType.EmployerPreferences employerPreferences;
-    private CandidateProfileType.PositionPreferences positionPreferences;
-    private CandidateProfileType.CandidateRelationships candidateRelationships;
-    private CandidateProfileType.CandidateSources candidateSources;
-    private ProcessHistoryType applicationProcessHistory;
-    private CandidateProfileType.WorkLifeCycles workLifeCycles;
+    private CandidateProfileType candidateProfileType = new CandidateProfileType();
 
     public CandidateProfileTypeBuilder setProfileName(String profileName) {
-        this.profileName = profileName;
+        candidateProfileType.setProfileName(profileName);
         return this;
     }
 
     public CandidateProfileTypeBuilder setLanguageCode(LanguageCodeList languageCode) {
-        this.languageCode = languageCode;
+        candidateProfileType.setLanguageCode(languageCode);
         return this;
     }
 
     public CandidateProfileTypeBuilder setEducation(CandidateProfileType.Education education) {
-        this.education = education;
+        candidateProfileType.setEducation(education);
         return this;
     }
 
     public CandidateProfileTypeBuilder setEmployment(CandidateProfileType.Employment employment) {
-        this.employment = employment;
+        candidateProfileType.setEmployment(employment);
         return this;
     }
 
     public CandidateProfileTypeBuilder setMilitaryService(CandidateProfileType.MilitaryService militaryService) {
-        this.militaryService = militaryService;
+        candidateProfileType.setMilitaryService(militaryService);
         return this;
     }
 
     public CandidateProfileTypeBuilder setLicenses(CandidateProfileType.Licenses licenses) {
-        this.licenses = licenses;
+        candidateProfileType.setLicenses(licenses);
         return this;
     }
 
     public CandidateProfileTypeBuilder setCertifications(CandidateProfileType.Certifications certifications) {
-        this.certifications = certifications;
+        candidateProfileType.setCertifications(certifications);
         return this;
     }
 
     public CandidateProfileTypeBuilder setPatents(CandidateProfileType.Patents patents) {
-        this.patents = patents;
+        candidateProfileType.setPatents(patents);
         return this;
     }
 
     public CandidateProfileTypeBuilder setPublications(CandidateProfileType.Publications publications) {
-        this.publications = publications;
+        candidateProfileType.setPublications(publications);
         return this;
     }
 
     public CandidateProfileTypeBuilder setQualifications(CandidateProfileType.Qualifications qualifications) {
-        this.qualifications = qualifications;
+        candidateProfileType.setQualifications(qualifications);
         return this;
     }
 
     public CandidateProfileTypeBuilder setAffiliations(CandidateProfileType.Affiliations affiliations) {
-        this.affiliations = affiliations;
+        candidateProfileType.setAffiliations(affiliations);
         return this;
     }
 
     public CandidateProfileTypeBuilder setSecurityCredentials(CandidateProfileType.SecurityCredentials securityCredentials) {
-        this.securityCredentials = securityCredentials;
+        candidateProfileType.setSecurityCredentials(securityCredentials);
         return this;
     }
 
     public CandidateProfileTypeBuilder setReferences(CandidateProfileType.References references) {
-        this.references = references;
+        candidateProfileType.setReferences(references);
         return this;
     }
 
     public CandidateProfileTypeBuilder setAttachments(CandidateProfileType.Attachments attachments) {
-        this.attachments = attachments;
+        candidateProfileType.setAttachments(attachments);
         return this;
     }
 
     public CandidateProfileTypeBuilder setProfileId(IdentifierType profileId) {
-        this.profileId = profileId;
+        candidateProfileType.setProfileId(profileId);
         return this;
     }
 
     public CandidateProfileTypeBuilder setAlternateIds(CandidateProfileType.AlternateIds alternateIds) {
-        this.alternateIds = alternateIds;
+        candidateProfileType.setAlternateIds(alternateIds);
         return this;
     }
 
     public CandidateProfileTypeBuilder setPersonAvailability(PersonAvailabilityType personAvailability) {
-        this.personAvailability = personAvailability;
+        candidateProfileType.setPersonAvailability(personAvailability);
         return this;
     }
 
     public CandidateProfileTypeBuilder setProcessingInformation(String processingInformation) {
-        this.processingInformation = processingInformation;
+        candidateProfileType.setProcessingInformation(processingInformation);
         return this;
     }
 
     public CandidateProfileTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
-        this.distributionGuidelines = distributionGuidelines;
+        candidateProfileType.setDistributionGuidelines(distributionGuidelines);
         return this;
     }
 
     public CandidateProfileTypeBuilder setAssociatedPositionOpenings(CandidateProfileType.AssociatedPositionOpenings associatedPositionOpenings) {
-        this.associatedPositionOpenings = associatedPositionOpenings;
+        candidateProfileType.setAssociatedPositionOpenings(associatedPositionOpenings);
         return this;
     }
 
     public CandidateProfileTypeBuilder setObjective(String objective) {
-        this.objective = objective;
+        candidateProfileType.setObjective(objective);
         return this;
     }
 
     public CandidateProfileTypeBuilder setExecutiveSummary(String executiveSummary) {
-        this.executiveSummary = executiveSummary;
+        candidateProfileType.setExecutiveSummary(executiveSummary);
         return this;
     }
 
     public CandidateProfileTypeBuilder setEmployerPreferences(CandidateProfileType.EmployerPreferences employerPreferences) {
-        this.employerPreferences = employerPreferences;
+        candidateProfileType.setEmployerPreferences(employerPreferences);
         return this;
     }
 
     public CandidateProfileTypeBuilder setPositionPreferences(CandidateProfileType.PositionPreferences positionPreferences) {
-        this.positionPreferences = positionPreferences;
+        candidateProfileType.setPositionPreferences(positionPreferences);
         return this;
     }
 
     public CandidateProfileTypeBuilder setCandidateRelationships(CandidateProfileType.CandidateRelationships candidateRelationships) {
-        this.candidateRelationships = candidateRelationships;
+        candidateProfileType.setCandidateRelationships(candidateRelationships);
         return this;
     }
 
     public CandidateProfileTypeBuilder setCandidateSources(CandidateProfileType.CandidateSources candidateSources) {
-        this.candidateSources = candidateSources;
+        candidateProfileType.setCandidateSources(candidateSources);
         return this;
     }
 
     public CandidateProfileTypeBuilder setApplicationProcessHistory(ProcessHistoryType applicationProcessHistory) {
-        this.applicationProcessHistory = applicationProcessHistory;
+        candidateProfileType.setApplicationProcessHistory(applicationProcessHistory);
         return this;
     }
 
     public CandidateProfileTypeBuilder setWorkLifeCycles(CandidateProfileType.WorkLifeCycles workLifeCycles) {
-        this.workLifeCycles = workLifeCycles;
+        candidateProfileType.setWorkLifeCycles(workLifeCycles);
         return this;
     }
 
     public CandidateProfileType createCandidateProfileType() {
-        return new CandidateProfileType(profileName, languageCode, education, employment, militaryService, licenses, certifications, patents, publications, qualifications, affiliations, securityCredentials, references, attachments, profileId, alternateIds, personAvailability, processingInformation, distributionGuidelines, associatedPositionOpenings, objective, executiveSummary, employerPreferences, positionPreferences, candidateRelationships, candidateSources, applicationProcessHistory, workLifeCycles);
+        return candidateProfileType;
     }
 
     public CandidateProfileTypeBuilder withProfile(ArbetsSokandeProfil profil) {

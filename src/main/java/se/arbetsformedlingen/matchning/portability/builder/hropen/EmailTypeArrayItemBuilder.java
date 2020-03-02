@@ -6,38 +6,35 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.EmailTypeArray;
 import java.math.BigInteger;
 
 public class EmailTypeArrayItemBuilder {
-    private String address;
-    private String name;
-    private String useCode;
-    private BigInteger preference;
-    private DateTimePeriodType availablePeriod;
+    private EmailTypeArray.Item emailTypeArrayItem = new EmailTypeArray.Item();
 
     public EmailTypeArrayItemBuilder setAddress(String address) {
-        this.address = address;
+        emailTypeArrayItem.setAddress(address);
         return this;
     }
 
     public EmailTypeArrayItemBuilder setName(String name) {
-        this.name = name;
+        emailTypeArrayItem.setName(name);
         return this;
     }
 
     public EmailTypeArrayItemBuilder setUseCode(String useCode) {
-        this.useCode = useCode;
+        emailTypeArrayItem.setUseCode(useCode);
         return this;
     }
 
     public EmailTypeArrayItemBuilder setPreference(BigInteger preference) {
-        this.preference = preference;
+        emailTypeArrayItem.setPreference(preference);
         return this;
     }
 
     public EmailTypeArrayItemBuilder setAvailablePeriod(DateTimePeriodType availablePeriod) {
-        this.availablePeriod = availablePeriod;
+        emailTypeArrayItem.setAvailablePeriod(availablePeriod);
         return this;
     }
 
+
     public EmailTypeArray.Item createItem() {
-        return new EmailTypeArray.Item(address, name, useCode, preference, availablePeriod);
+        return emailTypeArrayItem;
     }
 }

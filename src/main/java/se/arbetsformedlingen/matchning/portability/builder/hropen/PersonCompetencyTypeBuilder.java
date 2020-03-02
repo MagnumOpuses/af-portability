@@ -10,70 +10,60 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonCompetencyTypeBuilder {
-    private PersonCompetencyType.CompetencyIds competencyIds;
-    private String competencyName;
-    private String description;
-    private BaseScoreType proficiencyLevel;
-    private String lastUsedDate;
-    private MeasureType experienceMeasure;
-    private BaseScoreType interestLevel;
-    private PersonCompetencyType.CompetencyDimensions competencyDimensions;
-    private CompetencyEvidenceType competencyEvidence;
-    private PersonCompetencyType.AttachmentReferences attachmentReferences;
-
+    private PersonCompetencyType personCompetencyType = new PersonCompetencyType();
 
     public PersonCompetencyTypeBuilder setCompetencyIds(PersonCompetencyType.CompetencyIds competencyIds) {
-        this.competencyIds = competencyIds;
+        personCompetencyType.setCompetencyIds(competencyIds);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyName(String competencyName) {
-        this.competencyName = competencyName;
+        personCompetencyType.setCompetencyName(competencyName);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setDescription(String description) {
-        this.description = description;
+        personCompetencyType.setDescription(description);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setProficiencyLevel(BaseScoreType proficiencyLevel) {
-        this.proficiencyLevel = proficiencyLevel;
+        personCompetencyType.setProficiencyLevel(proficiencyLevel);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setLastUsedDate(String lastUsedDate) {
-        this.lastUsedDate = lastUsedDate;
+        personCompetencyType.setLastUsedDate(lastUsedDate);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setExperienceMeasure(MeasureType experienceMeasure) {
-        this.experienceMeasure = experienceMeasure;
+        personCompetencyType.setExperienceMeasure(experienceMeasure);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setInterestLevel(BaseScoreType interestLevel) {
-        this.interestLevel = interestLevel;
+        personCompetencyType.setInterestLevel(interestLevel);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyDimensions(PersonCompetencyType.CompetencyDimensions competencyDimensions) {
-        this.competencyDimensions = competencyDimensions;
+        personCompetencyType.setCompetencyDimensions(competencyDimensions);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyEvidence(CompetencyEvidenceType competencyEvidence) {
-        this.competencyEvidence = competencyEvidence;
+        personCompetencyType.setCompetencyEvidence(competencyEvidence);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setAttachmentReferences(PersonCompetencyType.AttachmentReferences attachmentReferences) {
-        this.attachmentReferences = attachmentReferences;
+        personCompetencyType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public PersonCompetencyType createPersonCompetencyType() {
-        return new PersonCompetencyType(competencyIds, competencyName, description, proficiencyLevel, lastUsedDate, experienceMeasure, interestLevel, competencyDimensions, competencyEvidence, attachmentReferences);
+        return personCompetencyType;
     }
 
 }

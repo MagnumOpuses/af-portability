@@ -4,33 +4,30 @@ import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class CommunicationTypeBuilder {
-    private AddressTypeArray address;
-    private PhoneTypeArray phone;
-    private EmailTypeArray email;
-    private WebTypeArray web;
+    private CommunicationType communicationType = new CommunicationType();
 
     public CommunicationTypeBuilder setAddress(AddressTypeArray address) {
-        this.address = address;
+        communicationType.setAddress(address);
         return this;
     }
 
     public CommunicationTypeBuilder setPhone(PhoneTypeArray phone) {
-        this.phone = phone;
+        communicationType.setPhone(phone);
         return this;
     }
 
     public CommunicationTypeBuilder setEmail(EmailTypeArray email) {
-        this.email = email;
+        communicationType.setEmail(email);
         return this;
     }
 
     public CommunicationTypeBuilder setWeb(WebTypeArray web) {
-        this.web = web;
+        communicationType.setWeb(web);
         return this;
     }
 
     public CommunicationType createCommunicationType() {
-        return new CommunicationType(address, phone, email, web);
+        return communicationType;
     }
 
     public CommunicationTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {

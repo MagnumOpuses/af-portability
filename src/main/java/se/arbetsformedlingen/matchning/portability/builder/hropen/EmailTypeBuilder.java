@@ -3,14 +3,14 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.hropen.EmailType;
 
 public class EmailTypeBuilder {
-    private String address;
+    private EmailType emailType = new EmailType();
 
     public EmailTypeBuilder setAddress(String address) {
-        this.address = address;
+        emailType.setAddress(address);
         return this;
     }
 
     public EmailType createEmailType() {
-        return new EmailType(address);
+        return emailType;
     }
 }

@@ -7,87 +7,75 @@ import java.awt.*;
 import java.util.List;
 
 public class LicenseTypeBuilder {
-    private IdentifierType id;
-    private String name;
-    private EntityType type;
-    private String status;
-    private EffectiveTimePeriodType effectiveTimePeriod;
-    private String issued;
-    private String firstIssued;
-    private OrganizationType issuingAuthority;
-    private LicenseType.AttachmentReferences attachmentReferences;
-    private StringTypeArray descriptions;
-    private LicenseType.Endorsements endorsements;
-    private LicenseType.Restrictions restrictions;
-    private LicenseType.Violations violations;
+    private LicenseType licenseType = new LicenseType();
 
     public LicenseTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        licenseType.setId(id);
         return this;
     }
 
     public LicenseTypeBuilder setName(String name) {
-        this.name = name;
+        licenseType.setName(name);
         return this;
     }
 
     public LicenseTypeBuilder setType(EntityType type) {
-        this.type = type;
+        licenseType.setType(type);
         return this;
     }
 
     public LicenseTypeBuilder setStatus(String status) {
-        this.status = status;
+        licenseType.setStatus(status);
         return this;
     }
 
     public LicenseTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
-        this.effectiveTimePeriod = effectiveTimePeriod;
+        licenseType.setEffectiveTimePeriod(effectiveTimePeriod);
         return this;
     }
 
     public LicenseTypeBuilder setIssued(String issued) {
-        this.issued = issued;
+        licenseType.setIssued(issued);
         return this;
     }
 
     public LicenseTypeBuilder setFirstIssued(String firstIssued) {
-        this.firstIssued = firstIssued;
+        licenseType.setFirstIssued(firstIssued);
         return this;
     }
 
     public LicenseTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
-        this.issuingAuthority = issuingAuthority;
+        licenseType.setIssuingAuthority(issuingAuthority);
         return this;
     }
 
     public LicenseTypeBuilder setAttachmentReferences(LicenseType.AttachmentReferences attachmentReferences) {
-        this.attachmentReferences = attachmentReferences;
+        licenseType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public LicenseTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        this.descriptions = descriptions;
+        licenseType.setDescriptions(descriptions);
         return this;
     }
 
     public LicenseTypeBuilder setEndorsements(LicenseType.Endorsements endorsements) {
-        this.endorsements = endorsements;
+        licenseType.setEndorsements(endorsements);
         return this;
     }
 
     public LicenseTypeBuilder setRestrictions(LicenseType.Restrictions restrictions) {
-        this.restrictions = restrictions;
+        licenseType.setRestrictions(restrictions);
         return this;
     }
 
     public LicenseTypeBuilder setViolations(LicenseType.Violations violations) {
-        this.violations = violations;
+        licenseType.setViolations(violations);
         return this;
     }
 
     public LicenseType createLicenseType() {
-        return new LicenseType(id, name, type, status, effectiveTimePeriod, issued, firstIssued, issuingAuthority, attachmentReferences, descriptions, endorsements, restrictions, violations);
+        return licenseType;
     }
 
     public LicenseTypeBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {

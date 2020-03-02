@@ -3,50 +3,44 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
 
 public class IdentifierTypeBuilder {
-    private String value;
-    private String schemeId;
-    private String schemeVersionId;
-    private String schemeAgencyId;
-    private String description;
-    private String schemeLink;
-    private String agencyUri;
+    private IdentifierType identifierType = new IdentifierType();
 
     public IdentifierTypeBuilder setValue(String value) {
-        this.value = value;
+        identifierType.setValue(value);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeId(String schemeId) {
-        this.schemeId = schemeId;
+        identifierType.setSchemeId(schemeId);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeVersionId(String schemeVersionId) {
-        this.schemeVersionId = schemeVersionId;
+        identifierType.setSchemeVersionId(schemeVersionId);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeAgencyId(String schemeAgencyId) {
-        this.schemeAgencyId = schemeAgencyId;
+        identifierType.setSchemeAgencyId(schemeAgencyId);
         return this;
     }
 
     public IdentifierTypeBuilder setDescription(String description) {
-        this.description = description;
+        identifierType.setDescription(description);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeLink(String schemeLink) {
-        this.schemeLink = schemeLink;
+        identifierType.setSchemeLink(schemeLink);
         return this;
     }
 
     public IdentifierTypeBuilder setAgencyUri(String agencyUri) {
-        this.agencyUri = agencyUri;
+        identifierType.setAgencyUri(agencyUri);
         return this;
     }
 
     public IdentifierType createIdentifierType() {
-        return new IdentifierType(value, schemeId, schemeVersionId, schemeAgencyId, description, schemeLink, agencyUri);
+        return identifierType;
     }
 }

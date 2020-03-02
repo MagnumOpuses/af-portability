@@ -9,15 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmailTypeArrayBuilder {
+    private EmailTypeArray emailTypeArray = new EmailTypeArray();
     private List<EmailTypeArray.Item> item;
 
     public EmailTypeArrayBuilder setItem(List<EmailTypeArray.Item> item) {
-        this.item = item;
+        emailTypeArray.getItem().addAll(item);
         return this;
     }
 
     public EmailTypeArray createEmailTypeArray() {
-        return new EmailTypeArray(item);
+        return emailTypeArray;
     }
 
     public EmailTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {

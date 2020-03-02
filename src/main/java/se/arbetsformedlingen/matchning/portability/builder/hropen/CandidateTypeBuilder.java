@@ -7,47 +7,40 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 import java.util.List;
 
 public class CandidateTypeBuilder {
-    private IdentifierType documentId;
-    private CandidateType.AlternateIds alternateIds;
-    private LanguageCodeList language;
-    private CandidateType.DataProtectionPolicy dataProtectionPolicy;
-    private String uri;
-    private DistributionGuidelinesType distributionGuidelines;
-    private CandidatePersonType person;
-    private CandidateType.Profiles profiles;
+    private CandidateType candidateType = new CandidateType();
 
     public CandidateTypeBuilder setDocumentId(IdentifierType documentId) {
-        this.documentId = documentId;
+        candidateType.setDocumentId(documentId);
         return this;
     }
 
     public CandidateTypeBuilder setAlternateIds(CandidateType.AlternateIds alternateIds) {
-        this.alternateIds = alternateIds;
+        candidateType.setAlternateIds(alternateIds);
         return this;
     }
 
     public CandidateTypeBuilder setLanguage(LanguageCodeList language) {
-        this.language = language;
+        candidateType.setLanguage(language);
         return this;
     }
 
     public CandidateTypeBuilder setDataProtectionPolicy(CandidateType.DataProtectionPolicy dataProtectionPolicy) {
-        this.dataProtectionPolicy = dataProtectionPolicy;
+        candidateType.setDataProtectionPolicy(dataProtectionPolicy);
         return this;
     }
 
     public CandidateTypeBuilder setUri(String uri) {
-        this.uri = uri;
+        candidateType.setUri(uri);
         return this;
     }
 
     public CandidateTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
-        this.distributionGuidelines = distributionGuidelines;
+        candidateType.setDistributionGuidelines(distributionGuidelines);
         return this;
     }
 
     public CandidateTypeBuilder setPerson(CandidatePersonType person) {
-        this.person = person;
+        candidateType.setPerson(person);
         return this;
     }
 
@@ -57,16 +50,16 @@ public class CandidateTypeBuilder {
     }
 
     public CandidateTypeBuilder setProfiles(CandidateType.Profiles profiles) {
-        this.profiles = profiles;
+        candidateType.setProfiles(profiles);
         return this;
     }
 
-    public CandidateTypeBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
-         this.setProfiles(new ProfilesBuilder().withProfiles(profiler).createProfiles());
-         return this;
+    public CandidateType createCandidateType() {
+        return candidateType;
     }
 
-    public CandidateType createCandidateType() {
-        return new CandidateType(documentId, alternateIds, language, dataProtectionPolicy, uri, distributionGuidelines, person, profiles);
+    public CandidateTypeBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
+        setProfiles(new ProfilesBuilder().withProfiles(profiler).createProfiles());
+        return this;
     }
 }

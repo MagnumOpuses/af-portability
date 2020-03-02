@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddressTypeArrayBuilder {
-    private List<AddressTypeArray.Item> item;
+    private AddressTypeArray addressTypeArray = new AddressTypeArray();
 
     public AddressTypeArrayBuilder setItem(List<AddressTypeArray.Item> item) {
-        this.item = item;
+        addressTypeArray.getItem().addAll(item);
         return this;
     }
 
     public AddressTypeArray createAddressTypeArray() {
-        return new AddressTypeArray(item);
+        return addressTypeArray;
     }
 
     public AddressTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {

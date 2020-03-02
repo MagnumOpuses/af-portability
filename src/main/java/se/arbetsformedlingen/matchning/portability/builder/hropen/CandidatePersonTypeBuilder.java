@@ -7,233 +7,198 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 
 public class CandidatePersonTypeBuilder {
-    private IdentifierType legalId;
-    private XMLGregorianCalendar birthDate;
-    private GenderCodeList gender;
-    private CandidatePersonType.Citizenship citizenship;
-    private CandidatePersonType.ResidenceCountry residenceCountry;
-    private String militaryStatus;
-    private StringTypeArray ethnicity;
-    private IdentifierType id;
-    private PersonNameType name;
-    private CommunicationType communication;
-    private LanguageCodeList primaryLanguage;
-    private MeasureType height;
-    private MeasureType weight;
-    private DisabilityType disability;
-    private Boolean tobaccoUserIndicator;
-    private String hairColor;
-    private String eyeColor;
-    private StringTypeArray identifyingMarks;
-    private BigInteger age;
-    private String bloodType;
-    private IdentifierType passportId;
-    private String fatherName;
-    private String motherName;
-    private CandidatePersonType.Race race;
-    private String birthPlace;
-    private XMLGregorianCalendar deathDate;
-    private CandidatePersonType.Nationality nationality;
-    private String maritalStatus;
-    private XMLGregorianCalendar maritalStatusDate;
-    private CandidatePersonType.Visa visa;
-    private CandidatePersonType.Religion religion;
-    private String studentType;
-    private Boolean studentIndicator;
-    private String studentStatus;
-    private CandidatePersonType.LegalDocuments legalDocuments;
-    private CandidatePersonType.EmploymentPermits employmentPermits;
+    private CandidatePersonType candidatePersonType = new CandidatePersonType();
 
     public CandidatePersonTypeBuilder setLegalId(IdentifierType legalId) {
-        this.legalId = legalId;
+        candidatePersonType.setLegalId(legalId);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBirthDate(XMLGregorianCalendar birthDate) {
-        this.birthDate = birthDate;
+        candidatePersonType.setBirthDate(birthDate);
         return this;
     }
 
     public CandidatePersonTypeBuilder setGender(GenderCodeList gender) {
-        this.gender = gender;
+        candidatePersonType.setGender(gender);
         return this;
     }
 
     public CandidatePersonTypeBuilder setCitizenship(CandidatePersonType.Citizenship citizenship) {
-        this.citizenship = citizenship;
+        candidatePersonType.setCitizenship(citizenship);
         return this;
     }
 
     public CandidatePersonTypeBuilder setResidenceCountry(CandidatePersonType.ResidenceCountry residenceCountry) {
-        this.residenceCountry = residenceCountry;
+        candidatePersonType.setResidenceCountry(residenceCountry);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMilitaryStatus(String militaryStatus) {
-        this.militaryStatus = militaryStatus;
+        candidatePersonType.setMilitaryStatus(militaryStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEthnicity(StringTypeArray ethnicity) {
-        this.ethnicity = ethnicity;
+        candidatePersonType.setEthnicity(ethnicity);
         return this;
     }
 
     public CandidatePersonTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        candidatePersonType.setId(id);
         return this;
     }
 
     public CandidatePersonTypeBuilder setName(PersonNameType name) {
-        this.name = name;
+        candidatePersonType.setName(name);
         return this;
     }
 
-    public CandidatePersonTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter){
-
-        this.setName(new PersonNameTypeBuilder()
-                .setGiven(personUppgifter.getFornamn())
-                .setFamily(personUppgifter.getEfternamn())
-                .createPersonNameType());
-        this.setCommunication(new CommunicationTypeBuilder().withPersonUppgifter(personUppgifter).createCommunicationType());
-        return this;
-    }
     public CandidatePersonTypeBuilder setCommunication(CommunicationType communication) {
-        this.communication = communication;
+        candidatePersonType.setCommunication(communication);
         return this;
     }
 
     public CandidatePersonTypeBuilder setPrimaryLanguage(LanguageCodeList primaryLanguage) {
-        this.primaryLanguage = primaryLanguage;
+        candidatePersonType.setPrimaryLanguage(primaryLanguage);
         return this;
     }
 
     public CandidatePersonTypeBuilder setHeight(MeasureType height) {
-        this.height = height;
+        candidatePersonType.setHeight(height);
         return this;
     }
 
     public CandidatePersonTypeBuilder setWeight(MeasureType weight) {
-        this.weight = weight;
+        candidatePersonType.setWeight(weight);
         return this;
     }
 
     public CandidatePersonTypeBuilder setDisability(DisabilityType disability) {
-        this.disability = disability;
+        candidatePersonType.setDisability(disability);
         return this;
     }
 
     public CandidatePersonTypeBuilder setTobaccoUserIndicator(Boolean tobaccoUserIndicator) {
-        this.tobaccoUserIndicator = tobaccoUserIndicator;
+        candidatePersonType.setTobaccoUserIndicator(tobaccoUserIndicator);
         return this;
     }
 
     public CandidatePersonTypeBuilder setHairColor(String hairColor) {
-        this.hairColor = hairColor;
+        candidatePersonType.setHairColor(hairColor);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEyeColor(String eyeColor) {
-        this.eyeColor = eyeColor;
+        candidatePersonType.setEyeColor(eyeColor);
         return this;
     }
 
     public CandidatePersonTypeBuilder setIdentifyingMarks(StringTypeArray identifyingMarks) {
-        this.identifyingMarks = identifyingMarks;
+        candidatePersonType.setIdentifyingMarks(identifyingMarks);
         return this;
     }
 
     public CandidatePersonTypeBuilder setAge(BigInteger age) {
-        this.age = age;
+        candidatePersonType.setAge(age);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBloodType(String bloodType) {
-        this.bloodType = bloodType;
+        candidatePersonType.setBloodType(bloodType);
         return this;
     }
 
     public CandidatePersonTypeBuilder setPassportId(IdentifierType passportId) {
-        this.passportId = passportId;
+        candidatePersonType.setPassportId(passportId);
         return this;
     }
 
     public CandidatePersonTypeBuilder setFatherName(String fatherName) {
-        this.fatherName = fatherName;
+        candidatePersonType.setFatherName(fatherName);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMotherName(String motherName) {
-        this.motherName = motherName;
+        candidatePersonType.setMotherName(motherName);
         return this;
     }
 
     public CandidatePersonTypeBuilder setRace(CandidatePersonType.Race race) {
-        this.race = race;
+        candidatePersonType.setRace(race);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBirthPlace(String birthPlace) {
-        this.birthPlace = birthPlace;
+        candidatePersonType.setBirthPlace(birthPlace);
         return this;
     }
 
     public CandidatePersonTypeBuilder setDeathDate(XMLGregorianCalendar deathDate) {
-        this.deathDate = deathDate;
+        candidatePersonType.setDeathDate(deathDate);
         return this;
     }
 
     public CandidatePersonTypeBuilder setNationality(CandidatePersonType.Nationality nationality) {
-        this.nationality = nationality;
+        candidatePersonType.setNationality(nationality);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMaritalStatus(String maritalStatus) {
-        this.maritalStatus = maritalStatus;
+        candidatePersonType.setMaritalStatus(maritalStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMaritalStatusDate(XMLGregorianCalendar maritalStatusDate) {
-        this.maritalStatusDate = maritalStatusDate;
+        candidatePersonType.setMaritalStatusDate(maritalStatusDate);
         return this;
     }
 
     public CandidatePersonTypeBuilder setVisa(CandidatePersonType.Visa visa) {
-        this.visa = visa;
+        candidatePersonType.setVisa(visa);
         return this;
     }
 
     public CandidatePersonTypeBuilder setReligion(CandidatePersonType.Religion religion) {
-        this.religion = religion;
+        candidatePersonType.setReligion(religion);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentType(String studentType) {
-        this.studentType = studentType;
+        candidatePersonType.setStudentType(studentType);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentIndicator(Boolean studentIndicator) {
-        this.studentIndicator = studentIndicator;
+        candidatePersonType.setStudentIndicator(studentIndicator);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentStatus(String studentStatus) {
-        this.studentStatus = studentStatus;
+        candidatePersonType.setStudentStatus(studentStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setLegalDocuments(CandidatePersonType.LegalDocuments legalDocuments) {
-        this.legalDocuments = legalDocuments;
+        candidatePersonType.setLegalDocuments(legalDocuments);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEmploymentPermits(CandidatePersonType.EmploymentPermits employmentPermits) {
-        this.employmentPermits = employmentPermits;
+        candidatePersonType.setEmploymentPermits(employmentPermits);
         return this;
     }
 
     public CandidatePersonType createCandidatePersonType() {
-        return new CandidatePersonType(legalId, birthDate, gender, citizenship, residenceCountry, militaryStatus, ethnicity, id, name, communication, primaryLanguage, height, weight, disability, tobaccoUserIndicator, hairColor, eyeColor, identifyingMarks, age, bloodType, passportId, fatherName, motherName, race, birthPlace, deathDate, nationality, maritalStatus, maritalStatusDate, visa, religion, studentType, studentIndicator, studentStatus, legalDocuments, employmentPermits);
+        return candidatePersonType;
+    }
+
+    public CandidatePersonTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter){
+        setName(new PersonNameTypeBuilder()
+                .setGiven(personUppgifter.getFornamn())
+                .setFamily(personUppgifter.getEfternamn())
+                .createPersonNameType());
+        setCommunication(new CommunicationTypeBuilder().withPersonUppgifter(personUppgifter).createCommunicationType());
+        return this;
     }
 }

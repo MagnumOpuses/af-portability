@@ -5,62 +5,54 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.CountryCodeList;
 import se.arbetsformedlingen.matchning.portability.model.hropen.GeoType;
 
 public class AddressTypeBuilder {
-    private String line;
-    private AddressType.ExtendedLines extendedLines;
-    private CountryCodeList countryCode;
-    private AddressType.CountrySubDivisions countrySubDivisions;
-    private String city;
-    private String postalCode;
-    private String postOfficeBox;
-    private GeoType geoLocation;
-    private String formattedAddress;
+    private AddressType addressType = new AddressType();
 
     public AddressTypeBuilder setLine(String line) {
-        this.line = line;
+        addressType.setLine(line);
         return this;
     }
 
     public AddressTypeBuilder setExtendedLines(AddressType.ExtendedLines extendedLines) {
-        this.extendedLines = extendedLines;
+        addressType.setExtendedLines(extendedLines);
         return this;
     }
 
     public AddressTypeBuilder setCountryCode(CountryCodeList countryCode) {
-        this.countryCode = countryCode;
+        addressType.setCountryCode(countryCode);
         return this;
     }
 
     public AddressTypeBuilder setCountrySubDivisions(AddressType.CountrySubDivisions countrySubDivisions) {
-        this.countrySubDivisions = countrySubDivisions;
+        addressType.setCountrySubDivisions(countrySubDivisions);
         return this;
     }
 
     public AddressTypeBuilder setCity(String city) {
-        this.city = city;
+        addressType.setCity(city);
         return this;
     }
 
     public AddressTypeBuilder setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+        addressType.setPostalCode(postalCode);
         return this;
     }
 
     public AddressTypeBuilder setPostOfficeBox(String postOfficeBox) {
-        this.postOfficeBox = postOfficeBox;
+        addressType.setPostOfficeBox(postOfficeBox);
         return this;
     }
 
     public AddressTypeBuilder setGeoLocation(GeoType geoLocation) {
-        this.geoLocation = geoLocation;
+        addressType.setGeoLocation(geoLocation);
         return this;
     }
 
     public AddressTypeBuilder setFormattedAddress(String formattedAddress) {
-        this.formattedAddress = formattedAddress;
+        addressType.setFormattedAddress(formattedAddress);
         return this;
     }
 
     public AddressType createAddressType() {
-        return new AddressType(line, extendedLines, countryCode, countrySubDivisions, city, postalCode, postOfficeBox, geoLocation, formattedAddress);
+        return addressType;
     }
 }

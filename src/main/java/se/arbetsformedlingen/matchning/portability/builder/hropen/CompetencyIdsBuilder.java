@@ -7,21 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompetencyIdsBuilder {
-    private List<IdentifierType> item;
+    private PersonCompetencyType.CompetencyIds competencyIds = new PersonCompetencyType.CompetencyIds();
 
     public CompetencyIdsBuilder setItem(List<IdentifierType> item) {
-        this.item = item;
+        competencyIds.getItem().addAll(item);
         return this;
     }
 
     public PersonCompetencyType.CompetencyIds createCompetencyIds() {
-        return new PersonCompetencyType.CompetencyIds(item);
+        return competencyIds;
     }
 
 
     public CompetencyIdsBuilder withCompetencyId(String identifierValue) {
         List<IdentifierType> list = new ArrayList<>();
         list.add(new IdentifierTypeBuilder().setValue(identifierValue).createIdentifierType());
+        setItem(list);
         return this;
     }
 }

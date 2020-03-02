@@ -7,61 +7,54 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.OrganizationType
 import se.arbetsformedlingen.matchning.portability.model.hropen.StringTypeArray;
 
 public class EmployerHistoryTypeBuilder {
-    private IdentifierType id;
-    private String start;
-    private String end;
-    private Boolean current;
-    private EmployerHistoryType.AttachmentReferences attachmentReferences;
-    private StringTypeArray descriptions;
-    private OrganizationType organization;
-    private EmployerHistoryType.PositionHistories positionHistories;
+    private EmployerHistoryType employerHistoryType = new EmployerHistoryType();
 
     public EmployerHistoryTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        employerHistoryType.setId(id);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setStart(String start) {
-        this.start = start;
+        employerHistoryType.setStart(start);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setEnd(String end) {
-        this.end = end;
+        employerHistoryType.setEnd(end);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setCurrent(Boolean current) {
-        this.current = current;
+        employerHistoryType.setCurrent(current);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setAttachmentReferences(EmployerHistoryType.AttachmentReferences attachmentReferences) {
-        this.attachmentReferences = attachmentReferences;
+        employerHistoryType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        this.descriptions = descriptions;
+        employerHistoryType.setDescriptions(descriptions);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setOrganization(OrganizationType organization) {
-        this.organization = organization;
+        employerHistoryType.setOrganization(organization);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setPositionHistories(EmployerHistoryType.PositionHistories positionHistories) {
-        this.positionHistories = positionHistories;
+        employerHistoryType.setPositionHistories(positionHistories);
         return this;
     }
 
     public EmployerHistoryType createEmployerHistoryType() {
-        return new EmployerHistoryType(id, start, end, current, attachmentReferences, descriptions, organization, positionHistories);
+        return employerHistoryType;
     }
 
     public EmployerHistoryTypeBuilder withAnstallning(Anstallning anstallning) {
-        setOrganization(new OrganizationTypeBuilder().withAnstelning(anstallning).createOrganizationType());
+        setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).createOrganizationType());
         setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).createPositionHistories());
         setStart(String.valueOf(anstallning.getStartdatum()));
         setEnd(String.valueOf(anstallning.getSlutdatum()));

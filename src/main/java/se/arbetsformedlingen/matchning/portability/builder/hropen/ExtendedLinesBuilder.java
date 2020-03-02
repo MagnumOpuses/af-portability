@@ -9,22 +9,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtendedLinesBuilder {
-    private List<AddressComponentType> addressComponentTypeList;
+
+    private AddressTypeArray.Item.ExtendedLines extendedLines = new AddressTypeArray.Item.ExtendedLines();
 
     public ExtendedLinesBuilder setAddressComponentTypeList(List<AddressComponentType> item) {
-        this.addressComponentTypeList = item;
+        extendedLines.getItem().addAll(item);
         return this;
     }
 
     public AddressTypeArray.Item.ExtendedLines createExtendedLines() {
-        return new AddressTypeArray.Item.ExtendedLines(addressComponentTypeList);
+        return extendedLines;
     }
 
 
     public ExtendedLinesBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
         List<AddressComponentType> list = new ArrayList<>();
-        AddressComponentType addressComponentType = new AddressComponentTypeBuilder().setValue(personUppgifter.getCo()).createAddressComponentType();
-        list.add(addressComponentType);
+        list.add(new AddressComponentTypeBuilder().setValue(personUppgifter.getCo()).createAddressComponentType());
         setAddressComponentTypeList(list);
         return this;
     }

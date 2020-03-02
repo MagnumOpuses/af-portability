@@ -8,21 +8,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LicensesBuilder {
-    private List<LicenseType> item;
+    private CandidateProfileType.Licenses licenses = new CandidateProfileType.Licenses();
 
     public LicensesBuilder setItem(List<LicenseType> item) {
-        this.item = item;
+        licenses.getItem().addAll(item);
         return this;
     }
 
     public CandidateProfileType.Licenses createLicenses() {
-        return new CandidateProfileType.Licenses(item);
+        return licenses;
     }
 
 
     public LicensesBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
         List<LicenseType> list = new ArrayList<>();
         list.add(new LicenseTypeBuilder().withKorkort(korkort).createLicenseType());
+        setItem(list);
         return this;
     }
 
