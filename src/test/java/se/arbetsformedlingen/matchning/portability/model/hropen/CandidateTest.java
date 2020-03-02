@@ -2,6 +2,7 @@ package se.arbetsformedlingen.matchning.portability.model.hropen;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
 import org.apache.commons.io.IOUtils;
@@ -9,12 +10,15 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
+import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.List;
 
 public class CandidateTest {
 
@@ -39,15 +43,46 @@ public class CandidateTest {
     @Test
     public void asp2HROpenMappingCheck() throws IOException {
         final PersonUppgifter personUppgifter = loadPersonUppgifter("personUppgifter.json");
-        final CandidateType candidateType = new CandidateTypeBuilder().withPersonUppgifter(personUppgifter).build();
+        final List<ArbetsSokandeProfil> arbetsSokandeProfiler = loadArbetsSokandeProfil("arbetsSokandeProfil.json");
+        final CandidateType candidateType = new CandidateTypeBuilder().withPersonUppgifter(personUppgifter).withProfiles(arbetsSokandeProfiler).build();
 
         // Test person uppgifter
         assertEquals(personUppgifter.getKundnummer(), candidateType.getDocumentId().getValue());
         assertEquals(personUppgifter.getFornamn(), candidateType.getPerson().getName().getGiven());
         assertEquals(personUppgifter.getEfternamn(), candidateType.getPerson().getName().getFamily());
 
+        for(AddressTypeArray.Item item :  candidateType.getPerson().getCommunication().getAddress().getItem()) {
+            assertEquals(personUppgifter.getAdress(), item.getLine());
+            assertEquals(personUppgifter.getCo(), item.getExtendedLines().getItem().get(0).getValue());
+            assertEquals(personUppgifter.getPostort(), item.getCity());
+            assertEquals(personUppgifter.getPostnummer(), item.getPostalCode());
+            assertEquals(personUppgifter.getLand(), item.getCountryCode().value());
+        }
+        assertEquals(personUppgifter.getEpostadress(), candidateType.getPerson().getCommunication().getEmail().getItem().get(0).getAddress());
+        assertEquals(personUppgifter.getHemsida(), candidateType.getPerson().getCommunication().getWeb().getItem().get(0).getUrl());
+
+        assertEquals(personUppgifter.getTelefonnummerHem(), candidateType.getPerson().getCommunication().getPhone().getItem().get(0).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerMobil(), candidateType.getPerson().getCommunication().getPhone().getItem().get(1).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerOvrig(), candidateType.getPerson().getCommunication().getPhone().getItem().get(2).getFormattedNumber());
+
+
         // Test profiles
-        // TODO: Test stuff
+        ArbetsSokandeProfil arbetsSokandeProfil = arbetsSokandeProfiler.get(0);
+        CandidateProfileType profileType = candidateType.getProfiles().getItem().get(0);
+        assertEquals(arbetsSokandeProfil.getNamn(), profileType.getProfileName());
+        assertEquals(arbetsSokandeProfil.getBeskrivning(), profileType.getObjective());
+        assertEquals(arbetsSokandeProfil.getPresentation(), profileType.getExecutiveSummary());
+        Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
+        assertEquals(utbildning.getSkola(), candidateType.getProfiles().getItem());
+
+        Anstallning anstallning = arbetsSokandeProfil.getAnstallningar().get(0);
+
+        assertEquals(arbetsSokandeProfil.getAnstallningar(), candidateType.getProfiles().getItem());
+        assertEquals(arbetsSokandeProfil.getOvrigaMeriter(), candidateType.getProfiles().getItem());
+        assertEquals(arbetsSokandeProfil.getAnstallningsvillkor(), candidateType.getProfiles().getItem());
+        assertEquals(arbetsSokandeProfil.getStyrka(), candidateType.getProfiles().getItem());
+        }
+
     }
 
     @Test
@@ -82,9 +117,9 @@ public class CandidateTest {
         return mapper.readValue(json, PersonUppgifter.class);
     }
 
-    private ArbetsSokandeProfil loadArbetsSokandeProfil(String resourceName) throws IOException {
+    private List<ArbetsSokandeProfil> loadArbetsSokandeProfil(String resourceName) throws IOException {
         String json = Resources.toString(Resources.getResource(resourceName), Charset.forName("UTF-8"));
-        return mapper.readValue(json, ArbetsSokandeProfil.class);
+        return mapper.readValue(json, new TypeReference<List<ArbetsSokandeProfil>>() {});
     }
 }
 

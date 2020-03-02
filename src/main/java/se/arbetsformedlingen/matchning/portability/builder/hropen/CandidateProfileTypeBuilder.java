@@ -152,9 +152,11 @@ public class CandidateProfileTypeBuilder {
 
     public CandidateProfileTypeBuilder withProfile(ArbetsSokandeProfil profil) {
         setProfileName(profil.getNamn());
+        setObjective(profil.getBeskrivning());
+        setExecutiveSummary(profil.getPresentation());
+
 
         if (profil.getKorkort() != null){
-            //TODO the license thingy!
             setLicenses(new LicensesBuilder().withKorkort(profil.getKorkort()).build());
         }
 

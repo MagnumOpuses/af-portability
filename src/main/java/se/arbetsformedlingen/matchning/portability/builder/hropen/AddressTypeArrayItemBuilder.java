@@ -85,7 +85,7 @@ public class AddressTypeArrayItemBuilder {
         setExtendedLines(new ExtendedLinesBuilder().withPersonUppgifter(personUppgifter).build());
         setCity(personUppgifter.getPostort());
         setCountryCode(CountryCodeList.valueOf(personUppgifter.getLand()));
-        setPostalCode(personUppgifter.getPersonnummer());
+        setPostalCode(personUppgifter.getPostnummer());
         return this;
     }
 }
