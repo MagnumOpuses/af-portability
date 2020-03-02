@@ -11,15 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PositionHistoriesBuilder {
-    private List<PositionHistoryType> item;
+    private EmployerHistoryType.PositionHistories employerHistoryTypePositionHistories = new EmployerHistoryType.PositionHistories();
 
     public PositionHistoriesBuilder setItem(List<PositionHistoryType> item) {
-        this.item = item;
+        employerHistoryTypePositionHistories.getItem().addAll(item);
         return this;
     }
 
     public EmployerHistoryType.PositionHistories createPositionHistories() {
-        return new EmployerHistoryType.PositionHistories(item);
+        return employerHistoryTypePositionHistories;
     }
 
     public PositionHistoriesBuilder withCodes(String valueOf) {
@@ -43,7 +43,7 @@ public class PositionHistoriesBuilder {
         List<PositionHistoryType> list = new ArrayList<>();
 
         list.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).createPositionHistoryType());
-
+        setItem(list);
         return this;
     }
 }

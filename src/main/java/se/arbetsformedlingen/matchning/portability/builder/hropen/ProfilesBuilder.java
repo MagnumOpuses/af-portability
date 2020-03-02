@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfilesBuilder {
-    private List<CandidateProfileType> item;
+    private CandidateType.Profiles candidateTypeProfiles = new CandidateType.Profiles();
 
     public ProfilesBuilder setItem(List<CandidateProfileType> item) {
-        this.item = item;
+        candidateTypeProfiles.getItem().addAll(item);
         return this;
     }
 
     public CandidateType.Profiles createProfiles() {
-        return new CandidateType.Profiles(item);
+        return candidateTypeProfiles;
     }
 
     public ProfilesBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
@@ -24,7 +24,7 @@ public class ProfilesBuilder {
         for (ArbetsSokandeProfil profil : profiler){
             new CandidateProfileTypeBuilder().withProfile(profil).createCandidateProfileType();
         }
-
+        setItem(list);
         return this;
     }
 }

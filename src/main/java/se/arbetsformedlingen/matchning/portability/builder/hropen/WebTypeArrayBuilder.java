@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WebTypeArrayBuilder {
-    private List<WebTypeArray.Item> item;
+    private WebTypeArray webTypeArray = new WebTypeArray();
 
     public WebTypeArrayBuilder setItem(List<WebTypeArray.Item> item) {
-        this.item = item;
+        webTypeArray.getItem().addAll(item);
         return this;
     }
 
     public WebTypeArray createWebTypeArray() {
-        return new WebTypeArray(item);
+        return webTypeArray;
     }
 
     public WebTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {

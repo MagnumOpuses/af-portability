@@ -3,14 +3,14 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.hropen.WebType;
 
 public class WebTypeBuilder {
-    private String url;
+    private WebType webType = new WebType();
 
     public WebTypeBuilder setUrl(String url) {
-        this.url = url;
+        webType.setUrl(url);
         return this;
     }
 
     public WebType createWebType() {
-        return new WebType(url);
+        return webType;
     }
 }

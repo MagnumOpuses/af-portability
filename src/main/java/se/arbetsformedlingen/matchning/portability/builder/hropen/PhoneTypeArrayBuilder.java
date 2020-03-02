@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PhoneTypeArrayBuilder {
-    private List<PhoneTypeArray.Item> item;
+    private PhoneTypeArray phoneTypeArray = new PhoneTypeArray();
 
     public PhoneTypeArrayBuilder setItem(List<PhoneTypeArray.Item> item) {
-        this.item = item;
+        phoneTypeArray.getItem().addAll(item);
         return this;
     }
 
     public PhoneTypeArray createPhoneTypeArray() {
-        return new PhoneTypeArray(item);
+        return phoneTypeArray;
     }
 
     public PhoneTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {

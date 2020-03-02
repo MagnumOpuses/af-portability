@@ -11,15 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QualificationsBuilder {
-    private List<PersonCompetencyType> item;
+    private CandidateProfileType.Qualifications candidateProfileTyQequalifications = new CandidateProfileType.Qualifications();
 
     public QualificationsBuilder setItem(List<PersonCompetencyType> item) {
-        this.item = item;
+        candidateProfileTyQequalifications.getItem().addAll(item);
         return this;
     }
 
     public CandidateProfileType.Qualifications createQualifications() {
-        return new CandidateProfileType.Qualifications(item);
+        return candidateProfileTyQequalifications;
     }
 
     public QualificationsBuilder withKompetenser(List<Kompetens> kompetenser) {
