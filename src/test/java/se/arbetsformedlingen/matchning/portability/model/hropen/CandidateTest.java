@@ -42,12 +42,15 @@ public class CandidateTest {
         assertEquals(personUppgifter.getKundnummer(), candidateType.getDocumentId().getValue());
         assertEquals(personUppgifter.getFornamn(), candidateType.getPerson().getName().getGiven());
         assertEquals(personUppgifter.getEfternamn(), candidateType.getPerson().getName().getFamily());
-        assertEquals(personUppgifter.getEpostadress(), candidateType.getPerson().getCommunication().getEmail().getItem().get(0).getAddress());
-        assertEquals(personUppgifter.getHemsida(), candidateType.getPerson().getCommunication().getWeb().getItem().get(0).getUrl());
-        assertEquals(personUppgifter.getTelefonnummerHem(), candidateType.getPerson().getCommunication().getPhone().getItem().get(0).getFormattedNumber());
-        assertEquals(personUppgifter.getTelefonnummerMobil(), candidateType.getPerson().getCommunication().getPhone().getItem().get(1).getFormattedNumber());
-        assertEquals(personUppgifter.getTelefonnummerOvrig(), candidateType.getPerson().getCommunication().getPhone().getItem().get(2).getFormattedNumber());
-        for(AddressTypeArray.Item item :  candidateType.getPerson().getCommunication().getAddress().getItem()) {
+
+        final CommunicationType communication = candidateType.getPerson().getCommunication();
+        assertEquals(personUppgifter.getEpostadress(), communication.getEmail().getItem().get(0).getAddress());
+        assertEquals(personUppgifter.getHemsida(), communication.getWeb().getItem().get(0).getUrl());
+        assertEquals(personUppgifter.getTelefonnummerHem(), communication.getPhone().getItem().get(0).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerMobil(), communication.getPhone().getItem().get(1).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerOvrig(), communication.getPhone().getItem().get(2).getFormattedNumber());
+
+        for(AddressTypeArray.Item item : communication.getAddress().getItem()) {
             assertEquals(personUppgifter.getAdress(), item.getLine());
             assertEquals(personUppgifter.getCo(), item.getExtendedLines().getItem().get(0).getValue());
             assertEquals(personUppgifter.getPostort(), item.getCity());
