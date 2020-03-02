@@ -10,10 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
-import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
-import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
-import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
-import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
+import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -72,16 +69,21 @@ public class CandidateTest {
         assertEquals(arbetsSokandeProfil.getNamn(), profileType.getProfileName());
         assertEquals(arbetsSokandeProfil.getBeskrivning(), profileType.getObjective());
         assertEquals(arbetsSokandeProfil.getPresentation(), profileType.getExecutiveSummary());
-        Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
-        assertEquals(utbildning.getSkola(), candidateType.getProfiles().getItem());
+ //       Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
+   //     assertEquals(utbildning.getSkola(), candidateType.getProfiles().getItem());
 
         Anstallning anstallning = arbetsSokandeProfil.getAnstallningar().get(0);
+        EmployerHistoryType employerHistoryType = candidateType.getProfiles().getItem().get(0).getEmployment().getItem().get(0);
+        assertEquals(anstallning.getArbetsgivare(), employerHistoryType.getOrganization().getLegalId());
+        assertEquals(anstallning.getRubrik(), employerHistoryType.getPositionHistories().getItem().get(0).getTitle());
+        assertEquals(anstallning.getStartdatum(), employerHistoryType.getStart());
+        assertEquals(anstallning.getSlutdatum(), employerHistoryType.getEnd());
+        assertEquals(anstallning.isPagaende(), employerHistoryType.isCurrent());
+        assertEquals(anstallning.getBeskrivning(), employerHistoryType.getDescriptions().getItem().get(0));
 
-        assertEquals(arbetsSokandeProfil.getAnstallningar(), candidateType.getProfiles().getItem());
-        assertEquals(arbetsSokandeProfil.getOvrigaMeriter(), candidateType.getProfiles().getItem());
-        assertEquals(arbetsSokandeProfil.getAnstallningsvillkor(), candidateType.getProfiles().getItem());
-        assertEquals(arbetsSokandeProfil.getStyrka(), candidateType.getProfiles().getItem());
-        }
+        Merit merit = arbetsSokandeProfil.getOvrigaMeriter().get(0);
+        CertificationType certificationType = candidateType.getProfiles().getItem().get(0).getCertifications().getItem().get(0);
+        assertEquals(merit.getBeskrivning(), certificationType.getName());
 
     }
 
