@@ -4,80 +4,70 @@ import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
 public class PositionHistoryTypeBuilder {
-    private IdentifierType id;
-    private String start;
-    private String end;
-    private Boolean current;
-    private PositionHistoryType.AttachmentReferences attachmentReferences;
-    private StringTypeArray descriptions;
-    private String title;
-    private ResourceRelationshipCodeList resourceRelationshipCode;
-    private OrganizationType organization;
-    private LocationType location;
-    private PositionHistoryType.JobCategories jobCategories;
-    private PositionHistoryType.JobLevels jobLevels;
+    private PositionHistoryType positionHistoryType = new PositionHistoryType();
+
 
     public PositionHistoryTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        positionHistoryType.setId(id);
         return this;
     }
 
     public PositionHistoryTypeBuilder setStart(String start) {
-        this.start = start;
+        positionHistoryType.setStart(start);
         return this;
     }
 
     public PositionHistoryTypeBuilder setEnd(String end) {
-        this.end = end;
+        positionHistoryType.setEnd(end);
         return this;
     }
 
     public PositionHistoryTypeBuilder setCurrent(Boolean current) {
-        this.current = current;
+        positionHistoryType.setCurrent(current);
         return this;
     }
 
     public PositionHistoryTypeBuilder setAttachmentReferences(PositionHistoryType.AttachmentReferences attachmentReferences) {
-        this.attachmentReferences = attachmentReferences;
+        positionHistoryType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public PositionHistoryTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        this.descriptions = descriptions;
+        positionHistoryType.setDescriptions(descriptions);
         return this;
     }
 
     public PositionHistoryTypeBuilder setTitle(String title) {
-        this.title = title;
+        positionHistoryType.setTitle(title);
         return this;
     }
 
     public PositionHistoryTypeBuilder setResourceRelationshipCode(ResourceRelationshipCodeList resourceRelationshipCode) {
-        this.resourceRelationshipCode = resourceRelationshipCode;
+        positionHistoryType.setResourceRelationshipCode(resourceRelationshipCode);
         return this;
     }
 
     public PositionHistoryTypeBuilder setOrganization(OrganizationType organization) {
-        this.organization = organization;
+        positionHistoryType.setOrganization(organization);
         return this;
     }
 
     public PositionHistoryTypeBuilder setLocation(LocationType location) {
-        this.location = location;
+        positionHistoryType.setLocation(location);
         return this;
     }
 
     public PositionHistoryTypeBuilder setJobCategories(PositionHistoryType.JobCategories jobCategories) {
-        this.jobCategories = jobCategories;
+        positionHistoryType.setJobCategories(jobCategories);
         return this;
     }
 
     public PositionHistoryTypeBuilder setJobLevels(PositionHistoryType.JobLevels jobLevels) {
-        this.jobLevels = jobLevels;
+        positionHistoryType.setJobLevels(jobLevels);
         return this;
     }
 
     public PositionHistoryType createPositionHistoryType() {
-        return new PositionHistoryType(id, start, end, current, attachmentReferences, descriptions, title, resourceRelationshipCode, organization, location, jobCategories, jobLevels);
+        return positionHistoryType;
     }
 }

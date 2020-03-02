@@ -6,68 +6,59 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.PhoneTypeArray;
 import java.math.BigInteger;
 
 public class PhoneTypeArrayItemBuilder {
-    private String countryDialingCode;
-    private String areaDialingCode;
-    private String dialNumber;
-    private String phoneExtension;
-    private String access;
-    private String formattedNumber;
-    private String name;
-    private String useCode;
-    private BigInteger preference;
-    private DateTimePeriodType availablePeriod;
+    private PhoneTypeArray.Item phoneTypeArrayItem = new PhoneTypeArray.Item();
 
     public PhoneTypeArrayItemBuilder setCountryDialingCode(String countryDialingCode) {
-        this.countryDialingCode = countryDialingCode;
+        phoneTypeArrayItem.setCountryDialingCode(countryDialingCode);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setAreaDialingCode(String areaDialingCode) {
-        this.areaDialingCode = areaDialingCode;
+        phoneTypeArrayItem.setAreaDialingCode(areaDialingCode);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setDialNumber(String dialNumber) {
-        this.dialNumber = dialNumber;
+        phoneTypeArrayItem.setDialNumber(dialNumber);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setPhoneExtension(String phoneExtension) {
-        this.phoneExtension = phoneExtension;
+        phoneTypeArrayItem.setPhoneExtension(phoneExtension);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setAccess(String access) {
-        this.access = access;
+        phoneTypeArrayItem.setAccess(access);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setFormattedNumber(String formattedNumber) {
-        this.formattedNumber = formattedNumber;
+        phoneTypeArrayItem.setFormattedNumber(formattedNumber);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setName(String name) {
-        this.name = name;
+        phoneTypeArrayItem.setName(name);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setUseCode(String useCode) {
-        this.useCode = useCode;
+        phoneTypeArrayItem.setUseCode(useCode);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setPreference(BigInteger preference) {
-        this.preference = preference;
+        phoneTypeArrayItem.setPreference(preference);
         return this;
     }
 
     public PhoneTypeArrayItemBuilder setAvailablePeriod(DateTimePeriodType availablePeriod) {
-        this.availablePeriod = availablePeriod;
+        phoneTypeArrayItem.setAvailablePeriod(availablePeriod);
         return this;
     }
 
     public PhoneTypeArray.Item createItem() {
-        return new PhoneTypeArray.Item(countryDialingCode, areaDialingCode, dialNumber, phoneExtension, access, formattedNumber, name, useCode, preference, availablePeriod);
+        return phoneTypeArrayItem;
     }
 }
