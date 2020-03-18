@@ -1,0 +1,165 @@
+{
+    "documentId": {
+        "value": "4e4baf65-03e7-45c8-b4e6-cd9e4d85a1af",
+        "schemeId": "ATS"
+    },
+    "language": "en-US",
+    "statusCode": "Active",
+    "postingRequester": {
+        "id": {
+            "value": "1",
+            "schemeId": "atsRequesterId"
+        },
+        "code": "SC123",
+        "name": "Large Department Store LLC",
+        "personContacts": [
+            {
+                "name": {
+                    "given": "Rachel",
+                    "family": "Smith"
+                },
+                "roleCode": "Recruiter",
+                "communication": {
+                    "email": [
+                        {
+                            "address": "rachel.smith@largeds.co.uk"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "city": "London",
+                            "countryCode": "GB"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": {
+                    "given": "Donna",
+                    "family": "Williams"
+                },
+                "roleCode": "Hiring Manager",
+                "communication": {
+                    "email": [
+                        {
+                            "address": "donna.williams@largeds.co.uk"
+                        }
+                    ],
+                    "address": [
+                        {
+                            "city": "London",
+                            "countryCode": "GB"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "positionProfiles": [
+        {
+            "profileName": "Store Clerk",
+            "profileId": {
+                "value": "SC123",
+                "schemeId": "ATS"
+            },
+            "language": "en-US",
+            "postingInstructions": [
+                {
+                    "channelId": {
+                        "value": "JobCentrePlus"
+                    },
+                    "templateId": "",
+                    "brandingId": "",
+                    "applicationMethods": [
+                        {
+                            "instructions": "online application",
+                            "applicationUri": {
+                                "url": "http://careers.largeds.co.uk/jobs/111343-store-clerk"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "positionId": {
+                "value": "SC123",
+                "schemeId": "ATS"
+            },
+            "positionTitle": "Store Clerk",
+            "positionLocation": [
+                {
+                    "name": "Large Department Store Trafalgar Square",
+                    "line": "18-22 Haymarket, Mayfair",
+                    "city": "London",
+                    "postalCode": "SW1Y",
+                    "countryCode": "GB",
+                    "geoLocation": {
+                        "latitude": 51.5090655,
+                        "longitude": -0.1339889
+                    }
+                }
+            ],
+            "positionOrganizations": [
+                {
+                    "name": "Large Department Store LLC",
+                    "responsibilityCode": "Parent",
+                    "domainName": "http://www.largeds.co.uk"
+                }
+            ],
+            "positionOpenQuantity": 5,
+            "jobCategories": [
+                {
+                    "id": {
+                        "value": "11",
+                        "schemeId": "ATS"
+                    },
+                    "code": "Retail"
+                }
+            ],
+            "careerLevels": [
+                {
+                    "id": {
+                        "value": "1",
+                        "schemeId": "ATS"
+                    },
+                    "code": "Entry"
+                }
+            ],
+            "positionOfferingTypes": [
+                "DirectHire"
+            ],
+            "positionQualifications": [
+                {
+                    "educationRequirement": {
+                        "educationLevelCode": "",
+                        "iscedEducationLevelCode": "2"
+                    }
+                }
+            ],
+            "positionFormattedDescriptions": [
+                {
+                    "descriptionId": {
+                        "value": "job_description"
+                    },
+                    "title": "Job Description",
+                    "content": "NOW HIRING<br/><br/>Large Department Store - Trafalgar Square, London<br/><br/><ul><li>Full-time Store Clerks</li><li>Full-time Overnight Bakers</li><li>Full-time Overnight Grocery Staff</li><li>Day shifts, night shifts, overnights, and weekends</li></ul><br/>Job Type: Full-time"
+                }
+            ],
+            "positionScheduleTypeCodes": [
+                "FullTime"
+            ],
+            "offeredRemunerationPackage": {
+                "basisCode": "Salaried",
+                "ranges": [
+                    {
+                        "intervalCode": "Year",
+                        "referenceAmount": {
+                            "value": 25000,
+                            "currency": "GBP"
+                        },
+                        "typeCode": "BasePay"
+                    }
+                ]
+            }
+        }
+    ]
+}

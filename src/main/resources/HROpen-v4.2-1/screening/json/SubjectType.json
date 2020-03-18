@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "version": "4.2.0",
+    "title": "SubjectType",
+    "description": "Represents a subject (person or organization).",
+    "type": "object",
+    "allOf": [
+        { "$ref": "../../common/json/base/NounType.json#" }
+    ],
+    "oneOf": [{
+            "type": "object",
+            "title": "personObject",
+            "properties": {
+                "person": { "$ref": "#/definitions/ScreeningPersonType" }
+            },
+            "required": ["person"]
+        },
+        {
+            "type": "object",
+            "title": "organizationObject",
+            "properties": {
+                "organization": { "$ref": "../../common/json/organization/OrganizationType.json#" }
+            },
+            "required": ["organization"]
+        }
+    ],
+    "definitions": {
+        "ScreeningPersonType": {
+            "type": "object",
+            "properties": {
+                "names": {
+                    "description": "List of names associated with this person.",
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            { "$ref": "../../common/json/person/PersonNameType.json#" },
+                            { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
+                        ]
+                    }
+                },
+                "addresses": {
+                    "description": "List of addresses associated with this subject.",
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            { "$ref": "../../common/json/communication/AddressType.json#" },
+                            { "$ref": "../../common/json/base/EffectiveTimePeriodType.json#" }
+                        ]
+                    }
+                },
+                "profile": {
+                    "description": "Details about this person, such-as work history",
+                    "type": "object",
+                    "$ref": "../../common/json/profile/PersonProfileInclusion.json#"
+                },
+                "traits": {
+                    "description": "Traits about this person: SSN, DOB",
+                    "type": "object",
+                    "$ref": "../../common/json/person/PersonBaseType.json#"
+                },
+                "legal": {
+                    "description": "Legal properties about this person: mother's surname",
+                    "type": "object",
+                    "$ref": "../../common/json/person/PersonLegalInclusion.json#"
+                },
+		"attachments": {
+		     "description": "List of documents associated with this person",
+		     "type": "array",
+		     "items": {
+			"$ref": "../../common/json/base/AttachmentType.json"
+		     }
+		}
+            }
+        }
+    }
+}

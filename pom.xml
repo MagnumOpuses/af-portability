@@ -124,6 +124,26 @@
 				  <mainClass>se.arbetsformedlingen.matchning.ConvertProfileToHROpenApplication</mainClass>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <outputDirectory>target/generated-sources/jaxb</outputDirectory>
+                    <packageName>se.arbetsformedlingen.matchning.portability.model.hropen</packageName>
+                    <schemaDirectory>src/main/resources/HROpen-v4.2-1/recruiting/xml</schemaDirectory>
+                    <schemaFiles>CandidateType.xsd</schemaFiles>
+                    <bindingDirectory>src/main/resources/xjb</bindingDirectory>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 </project>

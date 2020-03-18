@@ -1,0 +1,36 @@
+{
+    "catalog": {
+        "party": {
+            "supplier": {
+                "id": {
+                    "value": "5000234"
+                },
+                "name": "Executive Assessments, Inc.",
+                "personContacts": [
+                    {
+                        "communication": {
+                            "email": [
+                                {
+                                    "address": "william.peterson@exectesters.com",
+                                    "name": "work"
+                                }
+                            ],
+                            "phone": [
+                                {
+                                    "formattedNumber": "555-9876",
+                                    "name": "work"
+                                }
+                            ]
+                        },
+                        "name": {
+                            "preferred": "Bill Peterson",
+                            "given": "William",
+                            "family": "Peterson"
+                        },
+                        "roleCode": "AP Account Representative"
+                    }
+                ]
+            }
+        }
+    }
+}

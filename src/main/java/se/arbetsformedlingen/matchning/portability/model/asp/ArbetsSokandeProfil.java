@@ -23,7 +23,7 @@ public class ArbetsSokandeProfil {
     private List<Kompetens> kompetenser;
     private List<Yrkeserfarenhet> yrkeserfarenheter;
     private List<Arbetsort> arbetsorter;
-    private Korkort kortkort;
+    private Korkort korkort;
     private Kontaktuppgiftmask kontaktuppgiftmask;
 
     public long getId() {
@@ -178,12 +178,12 @@ public class ArbetsSokandeProfil {
         this.arbetsorter = arbetsorter;
     }
 
-    public Korkort getKortkort() {
-        return kortkort;
+    public Korkort getKorkort() {
+        return korkort;
     }
 
-    public void setKortkort(Korkort kortkort) {
-        this.kortkort = kortkort;
+    public void setKorkort(Korkort korkort) {
+        this.korkort = korkort;
     }
 
     public Kontaktuppgiftmask getKontaktuppgiftmask() {
