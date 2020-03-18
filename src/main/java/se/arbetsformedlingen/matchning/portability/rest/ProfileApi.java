@@ -18,6 +18,8 @@ import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class ProfileApi {
