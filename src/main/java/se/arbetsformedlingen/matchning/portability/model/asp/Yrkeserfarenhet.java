@@ -9,7 +9,7 @@ public class Yrkeserfarenhet {
     private long yrkeserfarenhetGpId;
     private int yrkesbenamning;
     private int erfarenhet;
-    private List<Integer> anstallningsIdLista;
+    private List<Integer> anstallningIdLista;
     private Date senastUppdaterad;
 
     public long getId() {
@@ -52,12 +52,12 @@ public class Yrkeserfarenhet {
         this.yrkesbenamning = yrkesbenamning;
     }
 
-    public List<Integer> getAnstallningsIdLista() {
-        return anstallningsIdLista;
+    public List<Integer> getAnstallningIdLista() {
+        return anstallningIdLista;
     }
 
-    public void setAnstallningsIdLista(List<Integer> anstallningsIdLista) {
-        this.anstallningsIdLista = anstallningsIdLista;
+    public void setAnstallningIdLista(List<Integer> anstallningIdLista) {
+        this.anstallningIdLista = anstallningIdLista;
     }
 
     public Date getSenastUppdaterad() {

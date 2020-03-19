@@ -1,0 +1,22 @@
+{
+    "periodType_DatePeriodType": {
+        "end": "20161108",
+        "start": "20161021"
+    },
+    "periodType_DateTimePeriodType": {
+        "end": "2016-11-08T19:20+01:00",
+        "start": "2016-10-21T19:20+01:00"
+    },
+    "periodType_YearMonthPeriodType": {
+        "end": "2016-11",
+        "start": "2016-10"
+    },
+    "periodType_YearPeriodType": {
+        "end": "2016",
+        "start": "2015"
+    },
+    "periodType_FormattedDateTimeType": {
+        "end": "20161108",
+        "start": "20161021"
+    }
+}

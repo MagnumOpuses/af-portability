@@ -1,0 +1,22 @@
+{
+    "specifiedCompetencyType": {
+        "competencyIds": [
+            {
+                "value": "",
+                "schemeId": "",
+                "schemeVersionId": "",
+                "schemeAgencyId": ""
+            }
+        ],
+        "name": "",
+        "proficiencyLevel": {
+            "scoresText": [
+                {
+                    "value": "",
+                    "maximum": "100",
+                    "minimum": "0"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "documentId": { "value": "" },
+
+    "interviewId": { "value": "" },
+    "positionId": { "value": "" },
+    "externalPositionId": { "value": "" },
+    "externalInterviewId": { "value": "" },
+    "status": "In Progress",
+    "positionCategoryId": { "value": "" },
+    "questionScores": [
+        {
+            "questionScore": {
+                "scoresText": [
+                    {
+                        "scoreTextCode": "",
+                        "value": ""
+                    }
+                ]
+            },
+            "questionScoreNotes": {
+                "author": "",
+                "dateTime": "2017-10-03",
+                "note": "Required property for CommentType"
+            }
+        }
+    ],
+    "interviewScores": [{
+        "interviewScore": {
+            "scoresText": [
+                {
+                    "scoreTextCode": "",
+                    "value": ""
+                }
+            ]
+        },
+        "interviewScoreNotes": {
+            "author": "",
+            "datetime": "2017-10-03",
+            "note": ""
+        }
+    }],
+    "reviewer": {
+        "reviewerName": {
+            "formattedName": ""
+        },
+        "reviewerContact": [
+            {
+                "phone": [
+                    {
+                        "formattedNumber": "+1 8885551212"
+                    }
+                ]
+            }
+        ]
+    },
+    "reviewdateTime": "2017-10-03",
+    "comments": [
+        {
+            "language": "en-US",
+            "note": ""
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "id": 93860,
+    "anvandarId": 81994764,
+    "namn": "System Utvecklare",
+    "beskrivning": "Systemutvecklare som vill jobba i Stockholm",
+    "matchningsprofilId": 113685,
+    "senastUppdaterad": 1570189381026,
+    "publicerad": false,
+    "profilstatus": null,
+    "presentation": "Jag är en duktig system utvecklare!",
+    "styrka": 0,
+    "utbildningar": [
+      {
+        "skola": "Test skola",
+        "niva": "Test nivå",
+        "inriktning": "Test inriktning",
+        "beskrivning": "Test beskrivning",
+        "startdatum": {
+          "artal": 2000,
+          "manad": 5
+        },
+        "slutdatum": {
+          "artal": 2001,
+          "manad": 6
+        },
+        "pagaende": false
+      }
+    ],
+    "sprak": [],
+    "anstallningar": [
+      {
+        "id": 427327,
+        "arbetssokandeprofilId": 93860,
+        "grundmeritId": 427307,
+        "rubrik": "Systemutvecklare på mittmittjobbjobb.se",
+        "beskrivning": "Jag har utvecklat ett HR system och Demo verktyg.",
+        "senastUppdaterad": 1570189350351,
+        "sorteringsordning": 0,
+        "startdatum": {
+          "artal": 2018,
+          "manad": 7
+        },
+        "slutdatum": {
+          "artal": 2019,
+          "manad": 5
+        },
+        "pagaende": false,
+        "arbetsgivare": "Mittmittjobbjobb",
+        "yrkeserfarenhetIdLista": [397897]
+      }
+    ],
+    "ovrigaMeriter": [
+      {
+        "beskrivning": "LOOOOREM IPSUM!!!!"
+      }
+    ],
+    "anstallningsvillkor": {
+      "anstallningstyper": [],
+      "omfattningMin": null,
+      "omfattningMax": null
+    },
+    "yrkesroller": [
+      {
+        "id": 561390,
+        "arbetssokandeprofilId": 93860,
+        "kod": "7596",
+        "kodtyp": "YRKESBENAMNING",
+        "senastUppdaterad": 1568357531583
+      }
+    ],
+    "kompetenser": [
+      {
+        "id": 965311,
+        "arbetssokandeprofilId": 93860,
+        "taxonomiId": 609205,
+        "ovrigaMeriter": null,
+        "utbildningar": null,
+        "anstallningar": null,
+        "senastUppdaterad": 1570189100528
+      }
+    ],
+    "yrkeserfarenheter": [
+      {
+        "id": 397915,
+        "arbetssokandeprofilId": 93860,
+        "yrkeserfarenhetGpId": 397961,
+        "yrkesbenamning": 2918,
+        "erfarenhet": 3,
+        "anstallningIdLista": [427307],
+        "senastUppdaterad": 1570189237906
+      }
+    ],
+    "arbetsorter": [
+      {
+        "id": 256101,
+        "arbetssokandeprofilId": 93860,
+        "arbetsortTyp": "KOMMUN",
+        "varde1": "0180",
+        "varde2": null,
+        "senastUppdaterad": 1513069765712
+      }
+    ],
+    "korkort": {
+      "korkortsklasser": [],
+      "senastUppdaterad": 1570189381026
+    },
+    "kontaktuppgiftmask": {
+      "id": 93594,
+      "arbetssokandeprofilId": 93860,
+      "fornamn": true,
+      "efternamn": true,
+      "epostadress": true,
+      "telefonHem": true,
+      "telefonMobil": true,
+      "telefonOvrig": true,
+      "adress": true,
+      "postnummer": true,
+      "postort": true,
+      "coAdress": true,
+      "land": true,
+      "hemsidaUrl": true,
+      "senastUppdaterad": 1513069765712
+    }
+  }
+]

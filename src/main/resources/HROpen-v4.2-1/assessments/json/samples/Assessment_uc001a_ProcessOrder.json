@@ -1,0 +1,34 @@
+{
+    "order": {
+        "party": {
+            "customer": {
+                "id": {
+                    "value": "00000123"
+                },
+                "name": "Company ABC",
+                "personContacts": [{
+                    "name": {
+                        "preferred": "Jane Smith"
+                    }
+                }]
+            }
+        },
+        "subject": {
+            "ageMeasure": 57,
+            "communication": {
+                "email": [{
+                    "address": "clegan.sandor@gmail.com"
+                }]
+            },
+            "genderCode": "male",
+            "subjectId": {
+                "value": "C001211"
+            },
+            "name": {
+                "preferred": "Sandor Clegan"
+            }
+        },
+        "assessmentRequesterName": "Modern Recruiting ATS",
+        "packageId": { "value": "123456" }
+    }
+}
