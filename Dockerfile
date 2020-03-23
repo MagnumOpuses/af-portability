@@ -29,6 +29,7 @@ WORKDIR build
 # add the src
 COPY pom.xml pom.xml
 COPY src/ src
+COPY libs/ libs
 
 COPY tmp/ /tmp/portability-tmp
 
