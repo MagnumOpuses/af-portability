@@ -3,14 +3,13 @@ apiVersion: v1
 metadata:
     name: '${APPLICATION_NAME}'
     annotations:
-        openshift.io/display-name: 'AF-Connect Demo Site for Product Demonstration'
-        tags: 'af-connect-outbox,cache,redis,nodejs'
-        iconClass: icon-nodejs
+        openshift.io/display-name: 'AF-Connect Portability Site for transferring CV from AF'
+        tags: 'af-portability,java,spring-boot'
         openshift.io/provider-display-name: 'Red Hat, Inc.'
-        openshift.io/documentation-url: 'https://github.com/MagnumOpuses/af-connect-outbox'
+        openshift.io/documentation-url: '${SOURCE_REPOSITORY_URL}'
 labels:
-    template: af-connect-demo
-    app: af-connect-demo
+    template: '${APPLICATION_NAME}'
+    app: '${APPLICATION_NAME}'
 objects:
     -
         kind: ImageStream
