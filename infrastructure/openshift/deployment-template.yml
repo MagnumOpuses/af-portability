@@ -69,8 +69,16 @@ objects:
                                 - containerPort: 8080
                                   protocol: TCP
                             env: 
-                                - name: REDIS_HOST
-                                  value: '${REDIS_HOST}'
+                                - name: SPRING_IDP_URL
+                                  value: '${SPRING_IDP_URL}'
+                                - name: SPRING_PROFILE_URL
+                                  value: '${SPRING_PROFILE_URL}'
+                                - name: SPRING_KUNDGIFT_URL
+                                  value: '${SPRING_KUNDGIFT_URL}'
+                                - name: SPRING_DATASOURCE_URL
+                                  value: '${SPRING_DATASOURCE_URL}'
+                                - name: SPRING_OUTBOX_HOST
+                                  value: '${SPRING_OUTBOX_HOST}'
                     restartPolicy: Always
                     terminationGracePeriodSeconds: 30
                     dnsPolicy: ClusterFirst
