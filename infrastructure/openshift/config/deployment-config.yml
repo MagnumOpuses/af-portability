@@ -1,0 +1,64 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+    name: af-connect-outbox
+    namespace: af-connect-stage
+    labels:
+        app: af-connect-outbox
+spec:
+    strategy:
+        type: Rolling
+        rollingParams:
+            updatePeriodSeconds: 1
+            intervalSeconds: 1
+            timeoutSeconds: 600
+            maxUnavailable: 25%
+            maxSurge: 25%
+        resources: {}
+        activeDeadlineSeconds: 21600
+    triggers:
+        - type: ConfigChange
+        - type: ImageChange
+          imageChangeParams:
+              automatic: true
+              containerNames:
+                  - af-connect-outbox
+              from:
+                  kind: ImageStreamTag
+                  namespace: af-connect-cicd
+                  name: 'af-connect-outbox:latest'
+    replicas: 1
+    revisionHistoryLimit: 10
+    test: false
+    selector:
+        app: af-connect-outbox
+        deploymentconfig: af-connect-outbox
+    template:
+        metadata:
+            creationTimestamp: null
+            labels:
+                app: af-connect-outbox
+                deploymentconfig: af-connect-outbox
+            annotations:
+                openshift.io/generated-by: OpenShiftNewApp
+        spec:
+            containers:
+                - name: af-connect-outbox
+                  image: >-
+                      image-registry.openshift-image-registry.svc:5000/af-connect-cicd/af-connect-outbox
+                  ports:
+                      - containerPort: 8100
+                        protocol: TCP
+                  env:
+                      - name: REDIS_HOST
+                        value: redis-db
+                  resources: {}
+                  terminationMessagePath: /dev/termination-log
+                  terminationMessagePolicy: File
+                  imagePullPolicy: Always
+            restartPolicy: Always
+            terminationGracePeriodSeconds: 30
+            dnsPolicy: ClusterFirst
+            securityContext: {}
+            schedulerName: default-scheduler
+
