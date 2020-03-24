@@ -22,7 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Old mapping functions
 - Some of the output names have been altered
-
+- Removed 'personnummer' to 'legalId' mapping.
+- Added Actuator endpoint on separate port (default 9804). Actuator port is intended to be used in internal network, not exposed to the public.
 
 ## [1.0.0-beta]
 
