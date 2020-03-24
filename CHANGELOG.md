@@ -10,19 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - HROpen 4.2-1
-- Automatic generation of HROped schema
+- Automatic generation of HROpen DTOs
 - Builder functions for the needed HROpen classes
+- Added Actuator endpoint on separate port (default 9804). Actuator port is intended to be used in internal network, not exposed to the public.
 - New endpoint: "/checkCompatability"
-
-### Fixed
-
-- Mapping between the ASP and HROpen
-- Testing the mapping between ASP and HROpen
 
 ### Deprecated
 
 - Old mapping functions
 - Some of the output names have been altered
+- Removed 'personnummer' to 'legalId' mapping.
 
 ## [1.0.0-beta]
 

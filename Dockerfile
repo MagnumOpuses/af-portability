@@ -44,6 +44,7 @@ RUN  chmod -R a+rw /build
 #RUN  chmod -R a+rw /.javacpp
 USER 10000
 EXPOSE 8080
+EXPOSE 9804
 
 WORKDIR /build/target
 CMD java -Dse.jobtechdev.tmp=/tmp/portability-tmp -jar ./profile2hropen-*.jar
