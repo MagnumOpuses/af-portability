@@ -1,12 +1,11 @@
 kind: Template
 apiVersion: v1
 metadata:
-    name: af-connect-outbox
+    name: af-portability
     annotations:
-        openshift.io/display-name: 'AF-Connect Outbox with Redis'
-        description: "An Node.js application with a Redis database."
-        tags: 'nodejs,redis,cache'
-        iconClass: icon-nodejs
+        openshift.io/display-name: 'AF-Connect Portability'
+        description: "An Spring boot application for transferring CV data from AF"
+        tags: 'af-portability,java,spring-boot'
         openshift.io/documentation-url: '${SOURCE_REPOSITORY_URL}'
 labels:
     template: '${APPLICATION_NAME}'
@@ -23,9 +22,9 @@ objects:
             ports:
                 -
                     name: http
-                    port: 8100
+                    port: 8080
                     protocol: TCP
-                    targetPort: 8100
+                    targetPort: 8080
             selector:
                 deploymentconfig: '${APPLICATION_NAME}'
     -
@@ -67,7 +66,7 @@ objects:
                             image: >-
                                 image-registry.openshift-image-registry.svc:5000/'${NAMESPACE}'/'${APPLICATION_NAME}'
                             ports:
-                                - containerPort: 8100
+                                - containerPort: 8080
                                   protocol: TCP
                             env: 
                                 - name: REDIS_HOST
@@ -84,12 +83,7 @@ parameters:
         displayName: Name
         description: 'The name assigned to all of the frontend objects defined in this template.'
         required: true
-        value: af-connect-outbox
-    -
-        name: APPLICATION_PORT
-        displayName: Port
-        required: true
-        value: '8100'
+        value: af-portability
     -
         name: NAMESPACE
         displayName: Namespace
@@ -101,7 +95,7 @@ parameters:
         displayName: 'Git Repository URL'
         description: 'The URL of the repository with your application source code.'
         required: true
-        value: 'https://github.com/MagnumOpuses/af-connect-outbox.git'
+        value: 'https://github.com/MagnumOpuses/af-portability.git'
     -
         name: SOURCE_REPOSITORY_REF
         displayName: 'Git Reference'
@@ -125,7 +119,18 @@ parameters:
         description: 'A secret string used to configure the Generic webhook.'
         generate: expression
         from: '[a-zA-Z0-9]{40}'
-    -   
-        name: REDIS_HOST
-        description: 'Hostname to connect with the Redis DB service'
-        value: 'redis-db'
+    -
+        name: SPRING_IDP_URL
+        value: http://af-connect-mock:9998/jwt/rest/idp/v0/klientID
+    -
+        name: SPRING_PROFILE_URL
+        value: http://af-connect-mock:9998/arbetssokandeprofil/rest/af/v1/arbetssokandeprofil/arbetssokandeprofiler
+    -
+        name: SPRING_KUNDGIFT_URL
+        value: http://af-connect-mock:9998/arbetssokande/rest/af/v1/arbetssokande/externa-personuppgifter
+    -
+        name: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://apimanager-db:5432/apimanager?user=apimanager&password=kalle123
+    -
+        name: SPRING_OUTBOX_HOST
+        value: af-connect-outbox
