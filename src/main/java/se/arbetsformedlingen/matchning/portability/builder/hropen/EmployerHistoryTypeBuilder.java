@@ -6,6 +6,9 @@ import se.arbetsformedlingen.matchning.portability.model.hropen.IdentifierType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.OrganizationType;
 import se.arbetsformedlingen.matchning.portability.model.hropen.StringTypeArray;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class EmployerHistoryTypeBuilder {
     private EmployerHistoryType employerHistoryType = new EmployerHistoryType();
 
@@ -56,8 +59,23 @@ public class EmployerHistoryTypeBuilder {
     public EmployerHistoryTypeBuilder withAnstallning(Anstallning anstallning) {
         setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build());
         setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).build());
-        setStart(String.valueOf(anstallning.getStartdatum()));
-        setEnd(String.valueOf(anstallning.getSlutdatum()));
+
+        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+
+        try {
+            setStart(sdf.format(sdf.parse(anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            setEnd(sdf.format(sdf.parse(anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //setStart(String.valueOf(anstallning.getStartdatum()));
+
+        //setEnd(String.valueOf(anstallning.getSlutdatum()));
         setCurrent(anstallning.isPagaende());
 
         StringTypeArray descriptions = new StringTypeArray();

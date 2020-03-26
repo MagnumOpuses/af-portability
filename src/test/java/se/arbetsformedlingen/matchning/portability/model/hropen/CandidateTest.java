@@ -11,6 +11,7 @@ import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class CandidateTest {
@@ -68,8 +69,8 @@ public class CandidateTest {
         final Utbildning utbildning = arbetsSokandeProfil.getUtbildningar().get(0);
         final EducationAttendanceType educationAttendanceType = candidateType.getProfiles().getItem().get(0).getEducation().getItem().get(0);
         assertEquals(utbildning.getSkola(), educationAttendanceType.getInstitution().getLegalId().getValue());
-        assertEquals(String.valueOf(utbildning.getStartdatum()), educationAttendanceType.getStart());
-        assertEquals(String.valueOf(utbildning.getSlutdatum()), educationAttendanceType.getEnd());
+        assertEquals("2000-05", educationAttendanceType.getStart());
+        assertEquals("2001-06", educationAttendanceType.getEnd());
         assertEquals(utbildning.isPagaende(), educationAttendanceType.isCurrent());
         assertEquals(utbildning.getInriktning(), educationAttendanceType.getDescriptions().getItem().get(0));
 
@@ -77,8 +78,9 @@ public class CandidateTest {
         final EmployerHistoryType employerHistoryType = candidateType.getProfiles().getItem().get(0).getEmployment().getItem().get(0);
         assertEquals(anstallning.getArbetsgivare(), employerHistoryType.getOrganization().getLegalId().getValue());
         assertEquals(anstallning.getRubrik(), employerHistoryType.getPositionHistories().getItem().get(0).getTitle());
-        assertEquals(String.valueOf(anstallning.getStartdatum()), employerHistoryType.getStart());
-        assertEquals(String.valueOf(anstallning.getSlutdatum()), employerHistoryType.getEnd());
+
+        assertEquals("2018-07", employerHistoryType.getStart());
+        assertEquals("2019-05", employerHistoryType.getEnd());
         assertEquals(anstallning.isPagaende(), employerHistoryType.isCurrent());
         assertEquals(anstallning.getBeskrivning(), employerHistoryType.getDescriptions().getItem().get(0));
 

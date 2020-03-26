@@ -3,6 +3,9 @@ package se.arbetsformedlingen.matchning.portability.builder.hropen;
 import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
 import se.arbetsformedlingen.matchning.portability.model.hropen.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class EducationAttendanceTypeBuilder {
     private EducationAttendanceType educationAttendanceType = new EducationAttendanceType();
 
@@ -82,8 +85,21 @@ public class EducationAttendanceTypeBuilder {
 
     public EducationAttendanceTypeBuilder withUtbildning(Utbildning utbildning) {
         setInstitution(new OrganizationTypeBuilder().withUtbildning(utbildning).build());
-        setStart(String.valueOf(utbildning.getStartdatum()));
-        setEnd(String.valueOf(utbildning.getSlutdatum()));
+
+        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+
+        try {
+            setStart(sdf.format(sdf.parse(utbildning.getStartdatum().getArtal() + "-" + utbildning.getStartdatum().getManad())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            setEnd(sdf.format(sdf.parse(utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         setCurrent(utbildning.isPagaende());
 
         StringTypeArray descriptions = new StringTypeArray();
