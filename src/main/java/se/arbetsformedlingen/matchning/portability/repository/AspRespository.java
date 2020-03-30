@@ -48,18 +48,12 @@ public class AspRespository {
 
     public CandidateType getCandidateForToken(String token) {
         CandidateType candidate = null;
-
-        LOG.info("Profile url: " + PROFIL_URL);
-        LOG.info("Kundgift url: " + KUNDUPPGIFT_URL);
-
         try {
             String results = readFromAPI(PROFIL_URL, token);
             List<ArbetsSokandeProfil> profiler = mapper.readValue(results, new TypeReference<List<ArbetsSokandeProfil>>() {
             });
-            LOG.info("> Got " + profiler.size() + " number of profiles");
             results = readFromAPI(KUNDUPPGIFT_URL, token);
             PersonUppgifter personUppgifter = mapper.readValue(results, PersonUppgifter.class);
-            LOG.info("Got " + personUppgifter.getFornamn() + " " + personUppgifter.getEfternamn());
 
             candidate = new CandidateTypeBuilder()
                     .withPersonUppgifter(personUppgifter)
@@ -87,7 +81,6 @@ public class AspRespository {
         }
         HttpEntity entity = response.getEntity();
         String results = EntityUtils.toString(entity);
-        LOG.info("RESULTS: " + results);
         return results;
     }
 }

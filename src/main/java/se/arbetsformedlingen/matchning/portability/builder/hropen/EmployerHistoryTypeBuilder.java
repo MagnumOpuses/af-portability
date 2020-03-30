@@ -65,12 +65,12 @@ public class EmployerHistoryTypeBuilder {
         try {
             setStart(sdf.format(sdf.parse(anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())));
         } catch (Exception e) {
-            e.printStackTrace();
+            // No start date
         }
         try {
             setEnd(sdf.format(sdf.parse(anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())));
         } catch (Exception e) {
-            e.printStackTrace();
+            // No end date
         }
 
         //setStart(String.valueOf(anstallning.getStartdatum()));
