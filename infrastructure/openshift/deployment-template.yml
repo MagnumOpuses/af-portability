@@ -109,7 +109,7 @@ parameters:
         displayName: 'Git Reference'
         description: 'Set this to a branch name, tag or other ref of your repository if you are not using the default branch.'
         required: true
-        value: 'jenkins/deploy'
+        value: stage
     -
         name: APPLICATION_DOMAIN
         displayName: 'Application Hostname'
