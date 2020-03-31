@@ -53,23 +53,6 @@ public class LogFilter extends OncePerRequestFilter {
             sessionTokenFound = true;
         }
 
-        if (requestWrapper.getContentAsByteArray() != null) {
-            requestBody = new String(requestWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
-
-            if (requestBody.length() > 0) {
-                String value = JsonPath.using(nullConfiguration).parse(requestBody).read("token", String.class);
-                if (value != null && !sessionTokenFound) {
-                    logMap.put("SessionToken", value);
-                    sessionTokenFound = true;
-                }
-
-                if (requestBody.length() > 500) {
-                    requestBody = requestBody.substring(0, 497) + "[...]";
-                }
-                logMap.put("RequestBody", requestBody);
-            }
-        }
-
         Long duration = (Long)requestWrapper.getRequest().getAttribute("duration");
 
         logMap.put("Status code", String.valueOf(responseWrapper.getStatusCode()));
@@ -80,25 +63,6 @@ public class LogFilter extends OncePerRequestFilter {
         logMap.put("Content Type", responseWrapper.getContentType());
 
         logMap.put("Content Length", String.valueOf(responseWrapper.getContentAsByteArray().length) + " bytes");
-
-        if (responseWrapper.getContentType() != null &&
-                responseWrapper.getContentType().contains("application/json")) {
-            responseBody = new String(responseWrapper.getContentAsByteArray(), StandardCharsets.UTF_8);
-
-            if (responseBody.length() > 0) {
-                String value = JsonPath.using(nullConfiguration).parse(responseBody).read("token", String.class);
-                if (value != null && !sessionTokenFound) {
-                    logMap.put("SessionToken", value);
-                    sessionTokenFound = true;
-                }
-
-                if (responseBody.length() > 500) {
-                    responseBody = responseBody.substring(0, 497) + "[...]";
-                }
-            }
-
-            logMap.put("Response Body", responseBody);
-        }
 
         JSONObject message = new JSONObject(logMap);
         logger.info(message);

@@ -78,7 +78,6 @@ public class CvApi {
         }
         HttpEntity entity = response.getEntity();
         String results = EntityUtils.toString(entity);
-        System.out.println("RESULTS: " + results);
         return results;
     }
 

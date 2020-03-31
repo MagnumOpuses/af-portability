@@ -75,7 +75,6 @@ public class SessionTokenApi {
         String json = "";
         try {
             json = mapper.writeValueAsString(t);
-            System.out.println("ResultingJSONstring = " + json);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -90,7 +89,6 @@ public class SessionTokenApi {
         }
         HttpEntity responseEntity = response.getEntity();
         String results = EntityUtils.toString(responseEntity);
-        System.out.println("RESULTS: " + results);
     }
 
 }
