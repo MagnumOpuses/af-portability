@@ -1,0 +1,28 @@
+{
+    "catalog": {
+        "party": {
+            "customer": {
+                "name": "Hannah Marks",
+                "id": { "value": "C001" }
+            },
+            "requestor": {
+                "name": "Ed Richards",
+                "id": { "value": "R001" }
+            },
+            "supplier": {
+                "name": "Accurate Assessments, Inc",
+                "id": { "value": "S001" }
+            }
+        },
+        "packages": [{
+            "packageId": { "value": "P0000101" },
+            "applicability": {
+                "assessedCompetencies": [{
+                    "competencyIds": [
+                        { "value": "tools_and_technology.commodity_code='43232408'" }
+                    ]
+                }]
+            }
+        }]
+    }
+}

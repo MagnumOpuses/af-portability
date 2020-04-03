@@ -1,0 +1,47 @@
+{
+    "catalog": {
+        "party": {
+            "supplier": {
+                "id": {
+                    "value": "00000123"
+                },
+                "name": "Assessment Provider",
+                "communication": {
+                    "web": [{
+                        "url": "http://ap-domain.com/packages/"
+                    }]
+                }
+            }
+        },
+        "packages": [{
+            "packageId": { "value": "001" },
+            "name": "",
+            "packageCost": {
+                "baseAmount": {
+                    "value": 100,
+                    "currency": "CAD"
+                },
+                "totalAmount": {
+                    "value": 110
+                },
+                "additionalItems": [{
+                    "content": "This is the description of the additional item.",
+                    "id": {
+                        "value": "Item One"
+                    },
+                    "sequence": 1,
+                    "name": "The is the name of the additional item.",
+                    "typeCode": "Freeform type code goes here"
+                }],
+                "additionalAmounts": [{
+                    "id": {
+                        "value": "Item One"
+                    },
+                    "sequence": 1,
+                    "currency": "CAD",
+                    "value": 10
+                }]
+            }
+        }]
+    }
+}

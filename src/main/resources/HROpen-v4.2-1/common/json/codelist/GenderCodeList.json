@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "version": "4.2.0",
+    "title": "GenderCodeList",
+    "description": "Gender code list.",
+    "enum": [
+        "Male",
+        "Female"
+    ]
+}

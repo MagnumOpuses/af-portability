@@ -1,0 +1,32 @@
+{
+	"language": "en-US",
+	"dataProtectionPolicy": {
+		"retentionDate": "2017-10-26",
+		"retentionDays": 5,
+		"geoRestrictions": [
+			{
+				"country": "US",
+				"policy": "Read"
+			}
+		]
+	},
+	"personId": {
+		"schemeId": "HRIS",
+		"value": "50599",
+		"description": "Peter is given a shift allowance of 300."
+	},
+	"remunerationInstructions": [
+		{
+			"validFrom": "2018-12-06",
+			"validTo": "2019-02-06",
+			"id": {
+				"value": "Shift45"
+			},
+			"deploymentId": {
+				"value": "200-03"
+			},
+			"oneTimeIndicator": false,
+			"requestedAmount": 300
+		}
+	]
+}

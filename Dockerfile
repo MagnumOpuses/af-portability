@@ -29,6 +29,7 @@ WORKDIR build
 # add the src
 COPY pom.xml pom.xml
 COPY src/ src
+COPY libs/ libs
 
 COPY tmp/ /tmp/portability-tmp
 
@@ -43,6 +44,7 @@ RUN  chmod -R a+rw /build
 #RUN  chmod -R a+rw /.javacpp
 USER 10000
 EXPOSE 8080
+EXPOSE 9804
 
 WORKDIR /build/target
 CMD java -Dse.jobtechdev.tmp=/tmp/portability-tmp -jar ./profile2hropen-*.jar

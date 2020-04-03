@@ -1,0 +1,98 @@
+{
+    "order": {
+        "documentId": { "schemeId": "orderId", "value": "AP000001" },
+        "party": {
+            "customer": {
+                "id": {
+                    "value": "00000123"
+                },
+                "name": "Company ABC",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "jane.smith@companyabc.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-1234",
+                            "name": "work"
+                        }],
+                        "web": [{
+                            "url": "www.companyabc.com"
+                        }]
+                    },
+                    "name": {
+                        "preferred": "Jane Smith"
+                    },
+                    "roleCode": "Hiring Manager"
+                }]
+            },
+            "requester": {
+                "id": { "value": "5000234" },
+                "name": "Modern Recruiting ATS",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "robert.jones@ats.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-0123",
+                            "name": "work"
+                        }],
+                        "web": [{ "url": "www.ats.com" }]
+                    },
+                    "name": {
+                        "preferred": "Bob Jones",
+                        "given": "Robert",
+                        "family": "Jones"
+                    },
+                    "roleCode": "ATS Account Representative"
+                }]
+            },
+            "supplier": {
+                "id": { "value": "5000234" },
+                "name": "Executive Assessments, Inc.",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "william.peterson@exectesters.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-9876",
+                            "name": "work"
+                        }],
+                        "web": [{ "url": "www.exectesters.com" }]
+                    },
+                    "name": {
+                        "preferred": "Bill Peterson",
+                        "given": "William",
+                        "family": "Peterson"
+                    },
+                    "roleCode": "ATS Account Representative"
+                }]
+            }
+        },
+        "subject": {
+            "subjectId": {
+                "value": "C001211"
+            },
+            "name": {
+                "formattedName": "Sandor Clegan"
+            }
+        },
+        "assessmentRequesterName": "Modern Recruiting ATS",
+        "packageId": { "value": "123456" },
+        "assessmentAccessURL": {
+            "uri": "https://app.exectesters.com/v1/package/123456?documentId=AP000001&subjectId=C001211&auth=2016X!w7%key001",
+            "message": "Click here to begin your assessment."
+        },
+        "onCompletionURL": {
+            "uri": "https://app.modern-recruiters.com/thankyoupage.html"
+        },
+        "sendAssessmentResultsToURL": {
+            "uri": "https://app.modern-recruiters.com/webhook/subjectId=C001211"
+        }
+    }
+}

@@ -18,7 +18,7 @@ public class ArManad {
     }
 
     public void setManad(int manad) {
-        assert (manad > 0 && artal < 13);
+        assert (manad > 0 && manad < 13);
         this.manad = manad;
     }
 }

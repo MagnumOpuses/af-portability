@@ -1,0 +1,40 @@
+{
+    "order": {
+        "documentId": {
+            "value": "id_00001"
+        },
+        "party": {
+            "customer": {
+                "id": {
+                    "value": "123"
+                },
+
+                "accountingCode": "205",
+
+                "personContacts": [{
+                    "name": {
+                        "given": "Jane",
+                        "family": "Recruiter",
+                        "formattedName": "Jane Recruiter"
+                    }
+                }]
+            }
+        },
+        "subject": {
+            "communication": {
+                "email": [{
+                    "address": "joe.candidate@gmail.com"
+                }]
+            },
+            "subjectId": {
+                "value": "891647"
+            },
+            "name": {
+                "given": "Joe",
+                "family": "Candidate",
+                "formattedName": "Joe Candidate"
+            }
+        },
+        "packageId": { "value": "C000-15" }
+    }
+}

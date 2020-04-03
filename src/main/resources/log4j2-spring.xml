@@ -2,10 +2,10 @@
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <JSONLayout complete="true" compact="false"/>
+            <JSONLayout complete="true" compact="true" eventEol="true" endOfLine="\r" />
         </Console>
 
-        <RollingFile name="RollingFile"
+            <RollingFile name="RollingFile"
                      fileName="./logs/spring-boot-logger-log4j2.log"
                      filePattern="./logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">
             <PatternLayout>

@@ -1,0 +1,120 @@
+{
+    "catalog": {
+        "party": {
+            "customer": {
+                "id": { "value": "00000123" },
+                "name": "Company ABC",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "jane.smith@companyabc.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-1234",
+                            "name": "work"
+                        }],
+                        "web": [{ "url": "www.companyabc.com" }]
+                    },
+                    "name": { "preferred": "Jane Smith" },
+                    "roleCode": "Hiring Manager"
+                }]
+            },
+            "requester": {
+                "id": { "value": "5000234" },
+                "name": "Modern Recruiting ATS",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "robert.jones@ats.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-0123",
+                            "name": "work"
+                        }],
+                        "web": [{ "url": "www.ats.com" }]
+                    },
+                    "name": {
+                        "preferred": "Bob Jones",
+                        "given": "Robert",
+                        "family": "Jones"
+                    },
+                    "roleCode": "ATS Account Representative"
+                }]
+            },
+            "supplier": {
+                "id": { "value": "5000234" },
+                "name": "Executive Assessments, Inc.",
+                "personContacts": [{
+                    "communication": {
+                        "email": [{
+                            "address": "william.peterson@exectesters.com",
+                            "name": "work"
+                        }],
+                        "phone": [{
+                            "formattedNumber": "888-555-9876",
+                            "name": "work"
+                        }],
+                        "web": [{ "url": "www.exectesters.com" }]
+                    },
+                    "name": {
+                        "preferred": "Bill Peterson",
+                        "given": "William",
+                        "family": "Peterson"
+                    },
+                    "roleCode": "ATS Account Representative"
+                }]
+            }
+        },
+
+        "packages": [{
+
+            "packageId": { "value": "123456" },
+
+            "ids": [
+                { "value": "package_one" },
+                { "value": "package_001" }
+            ],
+            "name": "Executive Management Assessment Test One",
+
+            "descriptions": [
+                "Description for the executive management test one."
+            ],
+
+            "applicability": {
+                "assessedCompetencies": [{
+                    "name": "leadership"
+                }],
+                "jobCategoryCodes": [
+                    "11-1011"
+                ],
+                "careerLevelCode": "SeniorExecutive"
+            },
+
+            "administration": {
+                "timeEnforcedIndicator": true,
+                "testDuration": "PT10M",
+                "descriptions": [
+                    "Test one is a timed test that is taken online."
+                ]
+            },
+
+            "fulfillment": {
+                "effectivePeriodDescription": [{
+                    "unitCode": "L95",
+                    "value": 1
+                }],
+                "descriptions": [
+                    "Test one is an effective measurement within one year of assessment."
+                ],
+                "reportLanguageCodes": [
+                    "en"
+                ],
+                "scoreProfileNames": [
+                    "Score Profile Name One"
+                ]
+            }
+        }]
+    }
+}

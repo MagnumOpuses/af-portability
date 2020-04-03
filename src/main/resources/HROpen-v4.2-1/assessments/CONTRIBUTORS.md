@@ -1,0 +1,7 @@
+If you would like to contribute to the standards, contact us at info@hropenststandards.org.
+
+The following volunteers contributed to the HR Open 4.1 Assessment specification.   
+* David Steckbeck, Birkman International, Project Lead;  
+* Chris Pauley, Independent, Schema Editor;  
+* Jim Elder, DDI;  
+* Rick Barfoot, HRNX  

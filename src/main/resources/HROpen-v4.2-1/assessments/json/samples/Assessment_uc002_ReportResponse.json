@@ -1,0 +1,36 @@
+{
+    "report": {
+        "orderId": {
+            "value": "102911"
+        },
+        "party": {
+            "customer": {
+                "id": {
+                    "value": "1111"
+                }
+            }
+        },
+        "subject": {
+            "communication": {
+                "email": [{
+                    "address": "clegan.sandor@gmail.com"
+                }]
+            },
+            "subjectId": {
+                "value": "C001211"
+            },
+            "name": {
+                "formattedName": "Sandor Clegan",
+                "family": "Clegan",
+                "given": "Sandor"
+            }
+        },
+        "results": [{
+            "packageId": { "value": "pkg12345" },
+            "overallResult": {
+                "passedIndicator": true
+            },
+            "assessmentStatus": "OrderComplete"
+        }]
+    }
+}

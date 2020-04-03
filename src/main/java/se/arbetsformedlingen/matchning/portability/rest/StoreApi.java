@@ -36,8 +36,6 @@ public class StoreApi {
     @CrossOrigin
     @PostMapping("/store")
     private JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
-        System.out.println(body.token + ": " + body.value);
-
         String results;
         try {
             results = this.storeValueToRedis(body);
@@ -63,7 +61,6 @@ public class StoreApi {
         String json = "";
         try {
             json = mapper.writeValueAsString(body);
-            System.out.println("ResultingJSONstring = " + json);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -79,7 +76,6 @@ public class StoreApi {
         }
         HttpEntity responseEntity = response.getEntity();
         String results = EntityUtils.toString(responseEntity);
-        System.out.println("RESULTS: " + results);
         return results;
 
     }

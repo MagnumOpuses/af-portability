@@ -1,0 +1,41 @@
+{
+    "catalog": {
+        "party": {
+            "supplier": {
+                "id": { "value": "5000234" },
+                "name": "Executive Assessments, Inc."
+            }
+        },
+        "packages": [{
+            "packageId": { "value": "123456" },
+            "ids": [
+                { "value": "package_one" },
+                { "value": "package_001" }
+            ],
+            "name": "Executive Management Assessment Test One",
+            "descriptions": [
+                "Description for the executive management test one."
+            ],
+            "applicability": {
+                "assessedCompetencies": [{
+                    "name": "leadership"
+                }],
+                "jobCategoryCodes": ["11-1011"],
+                "careerLevelCode": "SeniorExecutive"
+            },
+            "administration": {
+                "timeEnforcedIndicator": true,
+                "descriptions": ["Test one is a timed test that is taken online."]
+            },
+            "fulfillment": {
+                "effectivePeriodDescription": [{
+                    "unitCode": "L95",
+                    "value": 1
+                }],
+                "descriptions": ["Test one is an effective measurement within one year of assessment."],
+                "reportLanguageCodes": ["en"],
+                "scoreProfileNames": ["Score Profile Name One"]
+            }
+        }]
+    }
+}
