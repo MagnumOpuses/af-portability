@@ -15,10 +15,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+
+import java.util.TimeZone;
 import java.util.regex.Pattern;
 
 /**
@@ -44,28 +49,41 @@ public class LogFilter extends OncePerRequestFilter {
 
         Configuration nullConfiguration = Configuration.builder().options(Option.DEFAULT_PATH_LEAF_TO_NULL).build();
 
-        logMap.put("Host", requestWrapper.getRemoteAddr() + " ---- " + requestWrapper.getRemoteHost());
-        logMap.put("Method", requestWrapper.getMethod());
-        logMap.put("URI", requestWrapper.getRequestURI());
+        logMap.put("host", requestWrapper.getRemoteAddr() + "/" + requestWrapper.getRemoteHost()); //This gets IPs not the service
+        logMap.put("method", requestWrapper.getMethod());
+        logMap.put("url", requestWrapper.getRequestURI());
 
         if (requestWrapper.getParameterValues("sessionToken") != null) {
-            logMap.put("SessionToken", requestWrapper.getParameterValues("sessionToken")[0]);
+            logMap.put("sessionToken", requestWrapper.getParameterValues("sessionToken")[0]);
             sessionTokenFound = true;
         }
 
         Long duration = (Long)requestWrapper.getRequest().getAttribute("duration");
 
-        logMap.put("Status code", String.valueOf(responseWrapper.getStatusCode()));
+        logMap.put("statusCode", String.valueOf(responseWrapper.getStatusCode()));
 
         if (duration != null) {
-            logMap.put("duration", String.valueOf(duration));
+            logMap.put("responseTime", String.valueOf(duration));
         }
-        logMap.put("Content Type", responseWrapper.getContentType());
+        logMap.put("contentType", responseWrapper.getContentType());
 
-        logMap.put("Content Length", String.valueOf(responseWrapper.getContentAsByteArray().length) + " bytes");
+        logMap.put("contentLength", String.valueOf(responseWrapper.getContentAsByteArray().length));
+
+        logMap.put("user-agent", requestWrapper.getHeader("user-agent"));
+        logMap.put("accept-encoding", requestWrapper.getHeader("accept"));
+        logMap.put("conneciton", requestWrapper.getHeader("connection"));
+        logMap.put("protocol", requestWrapper.getProtocol());
+
+        TimeZone tz = TimeZone.getTimeZone("UTC");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'"); // Quoted "Z" to indicate UTC, no timezone offset
+        df.setTimeZone(tz);
+        String time = df.format(new Date());
+        logMap.put("contentType", String.valueOf(time));
+
 
         JSONObject message = new JSONObject(logMap);
-        logger.info(message);
+        // System.out.println(logMap);
+        logger.info(logMap);
     }
 
     @Override
