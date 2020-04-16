@@ -3,6 +3,7 @@ package se.arbetsformedlingen.matchning.portability.logging;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.Option;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -44,46 +45,74 @@ public class LogFilter extends OncePerRequestFilter {
     protected void doLog(ContentCachingRequestWrapper requestWrapper, ContentCachingResponseWrapper responseWrapper) {
         String requestBody = "";
         String responseBody = "";
-        Map<String, String> logMap = new HashMap<>();
         boolean sessionTokenFound = false;
+        String sessionToken = " ";
+        String responseTime = " ";
+
 
         Configuration nullConfiguration = Configuration.builder().options(Option.DEFAULT_PATH_LEAF_TO_NULL).build();
 
-        logMap.put("host", requestWrapper.getRemoteAddr() + "/" + requestWrapper.getRemoteHost()); //This gets IPs not the service
-        logMap.put("method", requestWrapper.getMethod());
-        logMap.put("url", requestWrapper.getRequestURI());
+        String userAgent = requestWrapper.getHeader("user-agent");
+        String accept = requestWrapper.getHeader("accept");
+        String connection = requestWrapper.getHeader("connection");
+        String protocol = requestWrapper.getProtocol();
+
+        String host = requestWrapper.getRemoteAddr() + "/" + requestWrapper.getRemoteHost();
+        String method = requestWrapper.getMethod();
+        String url = requestWrapper.getRequestURI();
+        String statusCode = String.valueOf(responseWrapper.getStatusCode());
+        String contentType = responseWrapper.getContentType();
+        String contentLength = String.valueOf(responseWrapper.getContentAsByteArray().length);
+
+
 
         if (requestWrapper.getParameterValues("sessionToken") != null) {
-            logMap.put("sessionToken", requestWrapper.getParameterValues("sessionToken")[0]);
+            sessionToken = requestWrapper.getParameterValues("sessionToken")[0];
             sessionTokenFound = true;
         }
 
         Long duration = (Long)requestWrapper.getRequest().getAttribute("duration");
-
-        logMap.put("statusCode", String.valueOf(responseWrapper.getStatusCode()));
-
         if (duration != null) {
-            logMap.put("responseTime", String.valueOf(duration));
+            responseTime = String.valueOf(duration);
         }
-        logMap.put("contentType", responseWrapper.getContentType());
-
-        logMap.put("contentLength", String.valueOf(responseWrapper.getContentAsByteArray().length));
-
-        logMap.put("user-agent", requestWrapper.getHeader("user-agent"));
-        logMap.put("accept-encoding", requestWrapper.getHeader("accept"));
-        logMap.put("conneciton", requestWrapper.getHeader("connection"));
-        logMap.put("protocol", requestWrapper.getProtocol());
 
         TimeZone tz = TimeZone.getTimeZone("UTC");
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'"); // Quoted "Z" to indicate UTC, no timezone offset
         df.setTimeZone(tz);
         String time = df.format(new Date());
-        logMap.put("contentType", String.valueOf(time));
 
+        final String jsonString;
+        try {
+            jsonString = new JSONObject()
+                    .put("meta", new JSONObject()
+                            .put("req", new JSONObject()
+                                    .put("url", url)
+                                    .put("headers", new JSONObject()
+                                            .put("host", host)
+                                            .put("connection", connection)
+                                            .put("user-agent", userAgent)
+                                            .put("accept-encoding", accept))
+                                    .put("method", method)
+                                    .put("httpVersion", protocol)
+                                    .put("originalUrl", url)
+                                    .put("query", new JSONObject()
+                                            .put("sessionToken", sessionToken)))
+                            .put("res", new JSONObject()
+                                    .put("statusCode", statusCode))
+                            .put("responseTime", 123))
+                    .put("message", protocol +  method + url)
+                    .put("timestamp", time)
+                    .put("level", "info")
+                    .put("contentType", contentType)
+                    .put("contentLength", contentLength)
+                    .put("responseTime", responseTime)
+                    .toString();
 
-        JSONObject message = new JSONObject(logMap);
-        // System.out.println(logMap);
-        logger.info(logMap);
+            System.out.println(jsonString);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
