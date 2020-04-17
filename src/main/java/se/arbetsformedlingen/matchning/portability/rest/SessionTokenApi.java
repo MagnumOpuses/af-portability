@@ -49,7 +49,6 @@ public class SessionTokenApi {
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
         }
-        System.out.println(info.toString());
 
         UUID uuid = UUID.randomUUID();
         Token t = new Token(uuid.toString());
