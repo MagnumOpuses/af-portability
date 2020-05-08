@@ -1,5 +1,4 @@
 def cicdProjectNamespace = "af-connect-cicd"
-def template = "./infrastructure/openshift/build-template.yml"
 def applicationName = "af-portability"
 
 pipeline {
@@ -17,6 +16,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Create Application Template') {
             when {
                 expression {
@@ -31,7 +31,7 @@ pipeline {
                 script {
                     openshift.withCluster() {
                         openshift.withProject("${cicdProjectNamespace}") {
-                            openshift.newApp(template, "-p APPLICATION_NAME=${applicationName}")
+                            openshift.newApp("--template=${applicationName}")
                         }
                     }
                 }
@@ -45,6 +45,19 @@ pipeline {
                             openshift.selector("bc", "${applicationName}").startBuild("--wait=true")
                         }
                     }
+                }
+            }
+        }
+
+        stage('Tag Image') {
+            steps {
+                script {
+                    openshift.withCluster() {
+                        openshift.withProject("${cicdProjectNamespace}") {
+                            openshift.tag("${applicationName}:latest", "${applicationName}:build-${BUILD_NUMBER}")
+                        }
+                    }
+                    
                 }
             }
         }
