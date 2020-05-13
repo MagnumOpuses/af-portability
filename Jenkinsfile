@@ -1,5 +1,10 @@
 def cicdProjectNamespace = "af-connect-cicd"
 def applicationName = "af-portability"
+def COLOR_MAP = [
+    'SUCCESS': 'good', 
+    'FAILURE': 'danger',
+]
+def slackChannel = '#gravity-monitoring'
 
 pipeline {
     agent any
@@ -37,6 +42,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Change Source Ref to Stage') {
+            steps {
+                script {
+                    openshift.withCluster() {
+                        def p = openshift.selector("bc/${applicationName}").object()
+                        p.spec.source.git.ref = 'stage'
+                        openshift.apply(p)
+                    }
+                }
+            }
+        }
+
         stage('Build Image') {
             steps {
                 script {
@@ -60,6 +78,20 @@ pipeline {
                     
                 }
             }
+        }
+    }
+    // Post-build actions
+    post {
+        success {
+            slackSend channel: "${slackChannel}",
+                color: COLOR_MAP[currentBuild.currentResult],
+                message: "*${currentBuild.currentResult}:* Job ${applicationName} stage build \n Image tagged with build-${BUILD_NUMBER} tag \n More info at: ${env.BUILD_URL}"
+        }
+
+        failure {
+            slackSend channel: "${slackChannel}",
+                color: COLOR_MAP[currentBuild.currentResult],
+                message: "*${currentBuild.currentResult}:* Job ${applicationName} stage build\n More info at: ${env.BUILD_URL}"
         }
     }
 }
