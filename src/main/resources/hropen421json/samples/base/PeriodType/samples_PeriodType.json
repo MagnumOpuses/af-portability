@@ -1,0 +1,14 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.0.1",
+    "title": "samples_PeriodType",
+    "description": "Samples for PeriodType Schema",
+    "type": "object",
+    "properties": {
+        "periodType_FormattedDateTimeType": { "$ref": "../../../base/PeriodType.json#" },
+        "periodType_DateTimePeriodType": { "$ref": "../../../base/PeriodType.json#" },
+        "periodType_DatePeriodType": { "$ref": "../../../base/PeriodType.json#" },
+        "periodType_YearMonthPeriodType": { "$ref": "../../../base/PeriodType.json#" },
+        "periodType_YearPeriodType": { "$ref": "../../../base/PeriodType.json#" }
+    }
+}

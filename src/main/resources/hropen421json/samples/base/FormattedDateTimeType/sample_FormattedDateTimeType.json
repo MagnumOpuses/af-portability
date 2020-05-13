@@ -1,0 +1,11 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.0.1",
+    "title": "sample_FreeFormEffectivePeriodType",
+    "description": "A schema to demonstrate data type usage.",
+    "type": "object",
+    "properties": {
+        "formattedDateTimeType": { "$ref": "../../../base/FormattedDateTimeType.json#" },
+        "freeFormEffectivePeriodType2": { "$ref": "../../../base/FreeFormEffectivePeriodType.json#" }
+    }
+}

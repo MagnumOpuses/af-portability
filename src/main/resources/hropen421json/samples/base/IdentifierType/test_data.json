@@ -1,0 +1,38 @@
+{
+    "taxonomyId": {
+        "agencyUri": "http://www.onetcenter.org/",
+        "description": "Identifies the O*NET Competencies",
+        "schemeId": "ONET",
+        "schemeLink": "http://www.onetonline.org/link/summary/15-1141.00",
+        "schemeVersionId": "20.1",
+        "schemeAgencyId": "US Department of Labor",
+        "value": "15-1141.00"
+    },
+    "competencyId": {
+        "description": "ESCO Skill Reference",
+        "value": "ESCO ITM:22587",
+        "schemeId": "ESCO",
+        "schemeVersionId": "ESCO ITM:20150303191510054",
+        "schemeLink": "http://data.europa.eu/esco/skill/22587",
+        "schemeAgencyId": "EU"
+    },
+    "competencyIds": [
+        {
+            "agencyUri": "http://www.onetcenter.org/",
+            "description": "Identifies the O*NET Competencies",
+            "schemeId": "ONET",
+            "schemeLink": "http://www.onetonline.org/link/summary/15-1141.00",
+            "schemeVersionId": "20.1",
+            "schemeAgencyId": "US Department of Labor",
+            "value": "15-1141.00"
+        },
+        {
+            "description": "ESCO Skill Reference",
+            "value": "ESCO ITM:22587",
+            "schemeId": "ESCO",
+            "schemeVersionId": "ESCO ITM:20150303191510054",
+            "schemeLink": "http://data.europa.eu/esco/skill/22587",
+            "schemeAgencyId": "EU"
+        }
+    ]
+}
