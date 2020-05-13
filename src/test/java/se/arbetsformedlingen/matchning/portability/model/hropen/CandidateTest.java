@@ -5,13 +5,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import se.arbetsformedlingen.matchning.portability.builder.hropen.CandidateTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class CandidateTest {

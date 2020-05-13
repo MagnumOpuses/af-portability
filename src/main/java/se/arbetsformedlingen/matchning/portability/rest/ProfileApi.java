@@ -11,15 +11,13 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import se.arbetsformedlingen.matchning.portability.model.hropen.CandidateType;
+import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateType;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
 import se.arbetsformedlingen.matchning.portability.repository.AspRespository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 public class ProfileApi {
