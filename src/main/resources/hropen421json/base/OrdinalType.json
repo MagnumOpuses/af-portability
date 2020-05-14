@@ -1,7 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "version": "4.2.0",
-    "title": "OrdinalType",
-    "description": "An ordinal number is an assigned mathematical number that represents order or sequence.",
-    "type": "integer"
-}
