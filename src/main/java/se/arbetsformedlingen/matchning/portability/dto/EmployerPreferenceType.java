@@ -1,74 +1,88 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "EmployerPreferenceType", propOrder = {
+
+})
 public class EmployerPreferenceType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected StringTypeArray organizationNames;
+    protected StringTypeArray organizationTypes;
+    protected List<IdentifierType> industryCodes;
+    protected EmployerPreferenceType.HeadcountRange headcountRange;
+    protected StringTypeArray descriptions;
 
-    public String getDescription() {
-        return description;
+    public StringTypeArray getOrganizationNames() {
+        return organizationNames;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public void setOrganizationNames(StringTypeArray organizationNames) {
+        this.organizationNames = organizationNames;
     }
 
-    public String getTitle() {
-        return title;
+    public StringTypeArray getOrganizationTypes() {
+        return organizationTypes;
     }
 
-    public String getType() {
-        return type;
+    public void setOrganizationTypes(StringTypeArray organizationTypes) {
+        this.organizationTypes = organizationTypes;
     }
 
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public EmployerPreferenceType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
+    public List<IdentifierType> getIndustryCodes() {
+        if (industryCodes == null) {
+            industryCodes = new ArrayList<IdentifierType>();
         }
-
-        public EmployerPreferenceType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public EmployerPreferenceType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public EmployerPreferenceType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public EmployerPreferenceType build() {
-            EmployerPreferenceType employerPreferenceType = new EmployerPreferenceType();
-            employerPreferenceType.description = description;
-            employerPreferenceType.properties = properties;
-            employerPreferenceType.title = title;
-            employerPreferenceType.type = type;
-            return employerPreferenceType;
-        }
-
+        return this.industryCodes;
     }
+
+    public HeadcountRange getHeadcountRange() {
+        return headcountRange;
+    }
+
+    public void setHeadcountRange(HeadcountRange headcountRange) {
+        this.headcountRange = headcountRange;
+    }
+
+    public StringTypeArray getDescriptions() {
+        return descriptions;
+    }
+
+    public void setDescriptions(StringTypeArray descriptions) {
+        this.descriptions = descriptions;
+    }
+
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+
+    })
+    public static class HeadcountRange {
+
+        protected BigDecimal minimum;
+        protected BigDecimal maximum;
+
+        public BigDecimal getMinimum() {
+            return minimum;
+        }
+
+        public void setMinimum(BigDecimal minimum) {
+            this.minimum = minimum;
+        }
+
+        public BigDecimal getMaximum() {
+            return maximum;
+        }
+
+        public void setMaximum(BigDecimal maximum) {
+            this.maximum = maximum;
+        }
+    }
+
 
 }

@@ -1,9 +1,11 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
+import java.util.List;
 
 public class CandidatePersonTypeBuilder {
     private CandidatePersonType candidatePersonType = new CandidatePersonType();
@@ -23,25 +25,12 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setCitizenship(CandidatePersonType.Citizenship citizenship) {
-        candidatePersonType.setCitizenship(citizenship);
-        return this;
-    }
-
-    public CandidatePersonTypeBuilder setResidenceCountry(CandidatePersonType.ResidenceCountry residenceCountry) {
-        candidatePersonType.setResidenceCountry(residenceCountry);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setMilitaryStatus(String militaryStatus) {
         candidatePersonType.setMilitaryStatus(militaryStatus);
         return this;
     }
 
-    public CandidatePersonTypeBuilder setEthnicity(StringTypeArray ethnicity) {
-        candidatePersonType.setEthnicity(ethnicity);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setId(IdentifierType id) {
         candidatePersonType.setId(id);
@@ -93,10 +82,6 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setIdentifyingMarks(StringTypeArray identifyingMarks) {
-        candidatePersonType.setIdentifyingMarks(identifyingMarks);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setAge(BigInteger age) {
         candidatePersonType.setAge(age);
@@ -123,10 +108,6 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setRace(CandidatePersonType.Race race) {
-        candidatePersonType.setRace(race);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setBirthPlace(String birthPlace) {
         candidatePersonType.setBirthPlace(birthPlace);
@@ -138,10 +119,6 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setNationality(CandidatePersonType.Nationality nationality) {
-        candidatePersonType.setNationality(nationality);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setMaritalStatus(String maritalStatus) {
         candidatePersonType.setMaritalStatus(maritalStatus);
@@ -153,15 +130,6 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setVisa(CandidatePersonType.Visa visa) {
-        candidatePersonType.setVisa(visa);
-        return this;
-    }
-
-    public CandidatePersonTypeBuilder setReligion(CandidatePersonType.Religion religion) {
-        candidatePersonType.setReligion(religion);
-        return this;
-    }
 
     public CandidatePersonTypeBuilder setStudentType(String studentType) {
         candidatePersonType.setStudentType(studentType);
@@ -178,15 +146,6 @@ public class CandidatePersonTypeBuilder {
         return this;
     }
 
-    public CandidatePersonTypeBuilder setLegalDocuments(CandidatePersonType.LegalDocuments legalDocuments) {
-        candidatePersonType.setLegalDocuments(legalDocuments);
-        return this;
-    }
-
-    public CandidatePersonTypeBuilder setEmploymentPermits(CandidatePersonType.EmploymentPermits employmentPermits) {
-        candidatePersonType.setEmploymentPermits(employmentPermits);
-        return this;
-    }
 
     public CandidatePersonType build() {
         return candidatePersonType;

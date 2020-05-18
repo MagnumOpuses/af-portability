@@ -1,74 +1,67 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AssociatedPositionOpeningType", propOrder = {
+
+})
 public class AssociatedPositionOpeningType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected IdentifierType positionOpeningId;
+    protected IdentifierType staffingOrderId;
+    protected String positionTitle;
+    protected String positionUri;
+    protected Boolean candidateAppliedIndicator;
+    protected DispositionStatusType dispositionStatus;
 
-    public String getDescription() {
-        return description;
+    public IdentifierType getPositionOpeningId() {
+        return positionOpeningId;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public void setPositionOpeningId(IdentifierType positionOpeningId) {
+        this.positionOpeningId = positionOpeningId;
     }
 
-    public String getTitle() {
-        return title;
+    public IdentifierType getStaffingOrderId() {
+        return staffingOrderId;
     }
 
-    public String getType() {
-        return type;
+    public void setStaffingOrderId(IdentifierType staffingOrderId) {
+        this.staffingOrderId = staffingOrderId;
     }
 
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public AssociatedPositionOpeningType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public AssociatedPositionOpeningType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public AssociatedPositionOpeningType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public AssociatedPositionOpeningType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public AssociatedPositionOpeningType build() {
-            AssociatedPositionOpeningType associatedPositionOpeningType = new AssociatedPositionOpeningType();
-            associatedPositionOpeningType.description = description;
-            associatedPositionOpeningType.properties = properties;
-            associatedPositionOpeningType.title = title;
-            associatedPositionOpeningType.type = type;
-            return associatedPositionOpeningType;
-        }
-
+    public String getPositionTitle() {
+        return positionTitle;
     }
 
+    public void setPositionTitle(String positionTitle) {
+        this.positionTitle = positionTitle;
+    }
+
+    public String getPositionUri() {
+        return positionUri;
+    }
+
+    public void setPositionUri(String positionUri) {
+        this.positionUri = positionUri;
+    }
+
+    public Boolean getCandidateAppliedIndicator() {
+        return candidateAppliedIndicator;
+    }
+
+    public void setCandidateAppliedIndicator(Boolean candidateAppliedIndicator) {
+        this.candidateAppliedIndicator = candidateAppliedIndicator;
+    }
+
+    public DispositionStatusType getDispositionStatus() {
+        return dispositionStatus;
+    }
+
+    public void setDispositionStatus(DispositionStatusType dispositionStatus) {
+        this.dispositionStatus = dispositionStatus;
+    }
 }

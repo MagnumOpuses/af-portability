@@ -17,158 +17,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
-/**
- * Authoritative permission to hold a certain status or to do certain things, e.g. to practise some trade or profession. (OED license, n. a. A formal, usually a printed or written permission from a constituted authority to do something. b. The document embodying such a permission.)
- * 
- * <p>Java class for LicenseType complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="LicenseType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;all>
- *         &lt;element name="id" type="{https://hropenstandards.org/schema/xml/}IdentifierType" minOccurs="0"/>
- *         &lt;element name="name" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="type" type="{https://hropenstandards.org/schema/xml/}EntityType" minOccurs="0"/>
- *         &lt;element name="status" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="effectiveTimePeriod" type="{https://hropenstandards.org/schema/xml/}EffectiveTimePeriodType" minOccurs="0"/>
- *         &lt;element name="issued" type="{https://hropenstandards.org/schema/xml/}FormattedDateTimeType" minOccurs="0"/>
- *         &lt;element name="firstIssued" type="{https://hropenstandards.org/schema/xml/}FormattedDateTimeType" minOccurs="0"/>
- *         &lt;element name="issuingAuthority" type="{https://hropenstandards.org/schema/xml/}OrganizationType" minOccurs="0"/>
- *         &lt;element name="attachmentReferences" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="item" type="{https://hropenstandards.org/schema/xml/}AttachmentReferenceType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="descriptions" type="{https://hropenstandards.org/schema/xml/}StringTypeArray" minOccurs="0"/>
- *         &lt;element name="endorsements" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="item" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;all>
- *                             &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="value">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                             &lt;element name="description" minOccurs="0">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                           &lt;/all>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="restrictions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="item" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;all>
- *                             &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="value">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                             &lt;element name="description" minOccurs="0">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                           &lt;/all>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="violations" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="item" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;all>
- *                             &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
- *                             &lt;element name="value">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                             &lt;element name="description" minOccurs="0">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                           &lt;/all>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/all>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LicenseType", propOrder = {
 
@@ -183,430 +31,114 @@ public class LicenseType {
     protected String issued;
     protected String firstIssued;
     protected OrganizationType issuingAuthority;
-    protected AttachmentReferences attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<AttachmentReferenceType> attachmentReferences;
+    protected List<String> descriptions;
     protected Endorsements endorsements;
     protected Restrictions restrictions;
     protected Violations violations;
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link IdentifierType }
-     *     
-     */
     public IdentifierType getId() {
         return id;
     }
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link IdentifierType }
-     *     
-     */
-    public void setId(IdentifierType value) {
-        this.id = value;
+    public void setId(IdentifierType id) {
+        this.id = id;
     }
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityType }
-     *     
-     */
     public EntityType getType() {
         return type;
     }
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityType }
-     *     
-     */
-    public void setType(EntityType value) {
-        this.type = value;
+    public void setType(EntityType type) {
+        this.type = type;
     }
 
-    /**
-     * Gets the value of the status property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * Sets the value of the status property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStatus(String value) {
-        this.status = value;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    /**
-     * Gets the value of the effectiveTimePeriod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EffectiveTimePeriodType }
-     *     
-     */
     public EffectiveTimePeriodType getEffectiveTimePeriod() {
         return effectiveTimePeriod;
     }
 
-    /**
-     * Sets the value of the effectiveTimePeriod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EffectiveTimePeriodType }
-     *     
-     */
-    public void setEffectiveTimePeriod(EffectiveTimePeriodType value) {
-        this.effectiveTimePeriod = value;
+    public void setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
+        this.effectiveTimePeriod = effectiveTimePeriod;
     }
 
-    /**
-     * Gets the value of the issued property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
     public String getIssued() {
         return issued;
     }
 
-    /**
-     * Sets the value of the issued property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIssued(String value) {
-        this.issued = value;
+    public void setIssued(String issued) {
+        this.issued = issued;
     }
 
-    /**
-     * Gets the value of the firstIssued property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
     public String getFirstIssued() {
         return firstIssued;
     }
 
-    /**
-     * Sets the value of the firstIssued property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFirstIssued(String value) {
-        this.firstIssued = value;
+    public void setFirstIssued(String firstIssued) {
+        this.firstIssued = firstIssued;
     }
 
-    /**
-     * Gets the value of the issuingAuthority property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OrganizationType }
-     *     
-     */
     public OrganizationType getIssuingAuthority() {
         return issuingAuthority;
     }
 
-    /**
-     * Sets the value of the issuingAuthority property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OrganizationType }
-     *     
-     */
-    public void setIssuingAuthority(OrganizationType value) {
-        this.issuingAuthority = value;
+    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+        this.issuingAuthority = issuingAuthority;
     }
 
-    /**
-     * Gets the value of the attachmentReferences property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AttachmentReferences }
-     *     
-     */
-    public AttachmentReferences getAttachmentReferences() {
-        return attachmentReferences;
+    public List<AttachmentReferenceType> getAttachmentReferences() {
+        if (attachmentReferences == null) {
+            attachmentReferences = new ArrayList<AttachmentReferenceType>();
+        }
+        return this.attachmentReferences;
     }
 
-    /**
-     * Sets the value of the attachmentReferences property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AttachmentReferences }
-     *     
-     */
-    public void setAttachmentReferences(AttachmentReferences value) {
-        this.attachmentReferences = value;
+    public List<String> getDescriptions() {
+        if (descriptions == null) {
+            descriptions = new ArrayList<String>();
+        }
+        return this.descriptions;
     }
 
-    /**
-     * Gets the value of the descriptions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StringTypeArray }
-     *     
-     */
-    public StringTypeArray getDescriptions() {
-        return descriptions;
-    }
-
-    /**
-     * Sets the value of the descriptions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StringTypeArray }
-     *     
-     */
-    public void setDescriptions(StringTypeArray value) {
-        this.descriptions = value;
-    }
-
-    /**
-     * Gets the value of the endorsements property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Endorsements }
-     *     
-     */
     public Endorsements getEndorsements() {
         return endorsements;
     }
 
-    /**
-     * Sets the value of the endorsements property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Endorsements }
-     *     
-     */
-    public void setEndorsements(Endorsements value) {
-        this.endorsements = value;
+    public void setEndorsements(Endorsements endorsements) {
+        this.endorsements = endorsements;
     }
 
-    /**
-     * Gets the value of the restrictions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Restrictions }
-     *     
-     */
     public Restrictions getRestrictions() {
         return restrictions;
     }
 
-    /**
-     * Sets the value of the restrictions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Restrictions }
-     *     
-     */
-    public void setRestrictions(Restrictions value) {
-        this.restrictions = value;
+    public void setRestrictions(Restrictions restrictions) {
+        this.restrictions = restrictions;
     }
 
-    /**
-     * Gets the value of the violations property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Violations }
-     *     
-     */
     public Violations getViolations() {
         return violations;
     }
 
-    /**
-     * Sets the value of the violations property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Violations }
-     *     
-     */
-    public void setViolations(Violations value) {
-        this.violations = value;
+    public void setViolations(Violations violations) {
+        this.violations = violations;
     }
 
-
-    /**
-     * References to attachments in the message that provide evidence of the issue or the validity of the license.
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="item" type="{https://hropenstandards.org/schema/xml/}AttachmentReferenceType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "item"
-    })
-    public static class AttachmentReferences {
-
-        protected List<AttachmentReferenceType> item;
-
-        /**
-         * Gets the value of the item property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the item property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getItem().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link AttachmentReferenceType }
-         * 
-         * 
-         */
-        public List<AttachmentReferenceType> getItem() {
-            if (item == null) {
-                item = new ArrayList<AttachmentReferenceType>();
-            }
-            return this.item;
-        }
-
-    }
-
-
-    /**
-     * The modifications to the base license as authorized by the issuing authority that allow for additional access or grant additional qualifications. Examples include different variations of drivers or pilot licenses that allow for additional vehicles to be operated.
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="item" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;all>
-     *                   &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="value">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                   &lt;element name="description" minOccurs="0">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                 &lt;/all>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "item"
@@ -616,28 +148,7 @@ public class LicenseType {
         @XmlElement(required = true)
         protected List<Item> item;
 
-        /**
-         * Gets the value of the item property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the item property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getItem().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Item }
-         * 
-         * 
-         */
+
         public List<Item> getItem() {
             if (item == null) {
                 item = new ArrayList<Item>();
@@ -645,39 +156,6 @@ public class LicenseType {
             return this.item;
         }
 
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;all>
-         *         &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="value">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *         &lt;element name="description" minOccurs="0">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *       &lt;/all>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
 
@@ -690,151 +168,43 @@ public class LicenseType {
             protected String value;
             protected String description;
 
-            /**
-             * Gets the value of the validFrom property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidFrom() {
                 return validFrom;
             }
 
-            /**
-             * Sets the value of the validFrom property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidFrom(XMLGregorianCalendar value) {
-                this.validFrom = value;
+            public void setValidFrom(XMLGregorianCalendar validFrom) {
+                this.validFrom = validFrom;
             }
 
-            /**
-             * Gets the value of the validTo property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidTo() {
                 return validTo;
             }
 
-            /**
-             * Sets the value of the validTo property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidTo(XMLGregorianCalendar value) {
-                this.validTo = value;
+            public void setValidTo(XMLGregorianCalendar validTo) {
+                this.validTo = validTo;
             }
 
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getValue() {
                 return value;
             }
 
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
             public void setValue(String value) {
                 this.value = value;
             }
 
-            /**
-             * Gets the value of the description property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getDescription() {
                 return description;
             }
 
-            /**
-             * Sets the value of the description property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setDescription(String value) {
-                this.description = value;
+            public void setDescription(String description) {
+                this.description = description;
             }
-
         }
 
     }
 
 
-    /**
-     * The modifications to the base license as authorized by the issuing authority that restrict access or remove permissions or authority. Examples include requiring vision ware while operating a motor vehicle, or requiring an additional licensed operator to accompany the licensee while operating a vehicle.
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="item" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;all>
-     *                   &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="value">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                   &lt;element name="description" minOccurs="0">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                 &lt;/all>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
+
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "item"
@@ -844,28 +214,6 @@ public class LicenseType {
         @XmlElement(required = true)
         protected List<Item> item;
 
-        /**
-         * Gets the value of the item property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the item property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getItem().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Item }
-         * 
-         * 
-         */
         public List<Item> getItem() {
             if (item == null) {
                 item = new ArrayList<Item>();
@@ -874,38 +222,6 @@ public class LicenseType {
         }
 
 
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;all>
-         *         &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="value">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *         &lt;element name="description" minOccurs="0">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *       &lt;/all>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
 
@@ -918,151 +234,42 @@ public class LicenseType {
             protected String value;
             protected String description;
 
-            /**
-             * Gets the value of the validFrom property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidFrom() {
                 return validFrom;
             }
 
-            /**
-             * Sets the value of the validFrom property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidFrom(XMLGregorianCalendar value) {
-                this.validFrom = value;
+            public void setValidFrom(XMLGregorianCalendar validFrom) {
+                this.validFrom = validFrom;
             }
 
-            /**
-             * Gets the value of the validTo property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidTo() {
                 return validTo;
             }
 
-            /**
-             * Sets the value of the validTo property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidTo(XMLGregorianCalendar value) {
-                this.validTo = value;
+            public void setValidTo(XMLGregorianCalendar validTo) {
+                this.validTo = validTo;
             }
 
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getValue() {
                 return value;
             }
 
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
             public void setValue(String value) {
                 this.value = value;
             }
 
-            /**
-             * Gets the value of the description property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getDescription() {
                 return description;
             }
 
-            /**
-             * Sets the value of the description property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setDescription(String value) {
-                this.description = value;
+            public void setDescription(String description) {
+                this.description = description;
             }
-
         }
 
     }
 
 
-    /**
-     * The violations or transgressions against the license as per the licensing authority or other authorities. Examples include points violations on a drivers license due to speeding.
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="item" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;all>
-     *                   &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-     *                   &lt;element name="value">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                   &lt;element name="description" minOccurs="0">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                 &lt;/all>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "item"
@@ -1072,28 +279,7 @@ public class LicenseType {
         @XmlElement(required = true)
         protected List<Item> item;
 
-        /**
-         * Gets the value of the item property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the item property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getItem().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link Item }
-         * 
-         * 
-         */
+
         public List<Item> getItem() {
             if (item == null) {
                 item = new ArrayList<Item>();
@@ -1101,39 +287,6 @@ public class LicenseType {
             return this.item;
         }
 
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;all>
-         *         &lt;element name="validFrom" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="validTo" type="{https://hropenstandards.org/schema/xml/}DateTimeType" minOccurs="0"/>
-         *         &lt;element name="value">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *         &lt;element name="description" minOccurs="0">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *       &lt;/all>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
 
@@ -1146,102 +299,37 @@ public class LicenseType {
             protected String value;
             protected String description;
 
-            /**
-             * Gets the value of the validFrom property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidFrom() {
                 return validFrom;
             }
 
-            /**
-             * Sets the value of the validFrom property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidFrom(XMLGregorianCalendar value) {
-                this.validFrom = value;
+            public void setValidFrom(XMLGregorianCalendar validFrom) {
+                this.validFrom = validFrom;
             }
 
-            /**
-             * Gets the value of the validTo property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
             public XMLGregorianCalendar getValidTo() {
                 return validTo;
             }
 
-            /**
-             * Sets the value of the validTo property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
-             */
-            public void setValidTo(XMLGregorianCalendar value) {
-                this.validTo = value;
+            public void setValidTo(XMLGregorianCalendar validTo) {
+                this.validTo = validTo;
             }
 
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getValue() {
                 return value;
             }
 
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
             public void setValue(String value) {
                 this.value = value;
             }
 
-            /**
-             * Gets the value of the description property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
             public String getDescription() {
                 return description;
             }
 
-            /**
-             * Sets the value of the description property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setDescription(String value) {
-                this.description = value;
+            public void setDescription(String description) {
+                this.description = description;
             }
-
         }
 
     }

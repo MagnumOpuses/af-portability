@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.Merit;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CertificationType;
@@ -15,7 +16,7 @@ public class CertificationsBuilder {
         return this;
     }
 
-    public CandidateProfileType.Certifications build() {
+    public CandidateProfileType build() {
         return certifications;
     }
 

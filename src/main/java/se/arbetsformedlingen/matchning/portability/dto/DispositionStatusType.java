@@ -1,74 +1,67 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DispositionStatusType", propOrder = {
+
+})
 public class DispositionStatusType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected String name;
+    protected String code;
+    protected String description;
+    protected String reasonCode;
+    protected String reasonDescription;
+    protected String date;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getDescription() {
         return description;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getTitle() {
-        return title;
+    public String getReasonCode() {
+        return reasonCode;
     }
 
-    public String getType() {
-        return type;
+    public void setReasonCode(String reasonCode) {
+        this.reasonCode = reasonCode;
     }
 
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public DispositionStatusType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public DispositionStatusType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public DispositionStatusType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public DispositionStatusType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public DispositionStatusType build() {
-            DispositionStatusType dispositionStatusType = new DispositionStatusType();
-            dispositionStatusType.description = description;
-            dispositionStatusType.properties = properties;
-            dispositionStatusType.title = title;
-            dispositionStatusType.type = type;
-            return dispositionStatusType;
-        }
-
+    public String getReasonDescription() {
+        return reasonDescription;
     }
 
+    public void setReasonDescription(String reasonDescription) {
+        this.reasonDescription = reasonDescription;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

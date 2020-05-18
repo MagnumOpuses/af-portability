@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 public class CandidateProfileTypeBuilder {
@@ -15,55 +16,37 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEducation(CandidateProfileType.Education education) {
-        candidateProfileType.setEducation(education);
+    public CandidateProfileTypeBuilder setEducation(CandidateProfileType education) {
+        candidateProfileType.getEducation(education);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployment(CandidateProfileType.Employment employment) {
-        candidateProfileType.setEmployment(employment);
+    public CandidateProfileTypeBuilder setEmployment(CandidateProfileType employment) {
+        candidateProfileType.getEmployment(employment);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setMilitaryService(CandidateProfileType.MilitaryService militaryService) {
-        candidateProfileType.setMilitaryService(militaryService);
+
+    public CandidateProfileTypeBuilder setLicenses(CandidateProfileType licenses) {
+        candidateProfileType.getLicenses(licenses);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setLicenses(CandidateProfileType.Licenses licenses) {
-        candidateProfileType.setLicenses(licenses);
+    public CandidateProfileTypeBuilder setCertifications(CandidateProfileType certifications) {
+        candidateProfileType.getCertifications(certifications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCertifications(CandidateProfileType.Certifications certifications) {
-        candidateProfileType.setCertifications(certifications);
+    public CandidateProfileTypeBuilder setPublications(CandidateProfileType publications) {
+        candidateProfileType.getPublications(publications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPatents(CandidateProfileType.Patents patents) {
-        candidateProfileType.setPatents(patents);
+    public CandidateProfileTypeBuilder setQualifications(CandidateProfileType qualifications) {
+        candidateProfileType.getQualifications(qualifications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPublications(CandidateProfileType.Publications publications) {
-        candidateProfileType.setPublications(publications);
-        return this;
-    }
-
-    public CandidateProfileTypeBuilder setQualifications(CandidateProfileType.Qualifications qualifications) {
-        candidateProfileType.setQualifications(qualifications);
-        return this;
-    }
-
-    public CandidateProfileTypeBuilder setAffiliations(CandidateProfileType.Affiliations affiliations) {
-        candidateProfileType.setAffiliations(affiliations);
-        return this;
-    }
-
-    public CandidateProfileTypeBuilder setSecurityCredentials(CandidateProfileType.SecurityCredentials securityCredentials) {
-        candidateProfileType.setSecurityCredentials(securityCredentials);
-        return this;
-    }
 
     public CandidateProfileTypeBuilder setReferences(CandidateProfileType.References references) {
         candidateProfileType.setReferences(references);
@@ -80,8 +63,8 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAlternateIds(CandidateProfileType.AlternateIds alternateIds) {
-        candidateProfileType.setAlternateIds(alternateIds);
+    public CandidateProfileTypeBuilder setAlternateIds(CandidateProfileType alternateIds) {
+        candidateProfileType.getAlternateIds(alternateIds);
         return this;
     }
 
@@ -100,10 +83,6 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAssociatedPositionOpenings(CandidateProfileType.AssociatedPositionOpenings associatedPositionOpenings) {
-        candidateProfileType.setAssociatedPositionOpenings(associatedPositionOpenings);
-        return this;
-    }
 
     public CandidateProfileTypeBuilder setObjective(String objective) {
         candidateProfileType.setObjective(objective);
@@ -115,23 +94,23 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployerPreferences(CandidateProfileType.EmployerPreferences employerPreferences) {
-        candidateProfileType.setEmployerPreferences(employerPreferences);
+    public CandidateProfileTypeBuilder setEmployerPreferences(CandidateProfileType employerPreferences) {
+        candidateProfileType.getEmployerPreferences(employerPreferences);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPositionPreferences(CandidateProfileType.PositionPreferences positionPreferences) {
-        candidateProfileType.setPositionPreferences(positionPreferences);
+    public CandidateProfileTypeBuilder setPositionPreferences(CandidateProfileType positionPreferences) {
+        candidateProfileType.getPositionPreferences(positionPreferences);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCandidateRelationships(CandidateProfileType.CandidateRelationships candidateRelationships) {
-        candidateProfileType.setCandidateRelationships(candidateRelationships);
+    public CandidateProfileTypeBuilder setCandidateRelationships(CandidateProfileType candidateRelationships) {
+        candidateProfileType.getCandidateRelationships(candidateRelationships);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCandidateSources(CandidateProfileType.CandidateSources candidateSources) {
-        candidateProfileType.setCandidateSources(candidateSources);
+    public CandidateProfileTypeBuilder setCandidateSources(CandidateProfileType candidateSources) {
+        candidateProfileType.getCandidateSources(candidateSources);
         return this;
     }
 
@@ -140,8 +119,8 @@ public class CandidateProfileTypeBuilder {
         return this;
     }
 
-    public CandidateProfileTypeBuilder setWorkLifeCycles(CandidateProfileType.WorkLifeCycles workLifeCycles) {
-        candidateProfileType.setWorkLifeCycles(workLifeCycles);
+    public CandidateProfileTypeBuilder setWorkLifeCycles(CandidateProfileType workLifeCycles) {
+        candidateProfileType.getWorkLifeCycles(workLifeCycles);
         return this;
     }
 

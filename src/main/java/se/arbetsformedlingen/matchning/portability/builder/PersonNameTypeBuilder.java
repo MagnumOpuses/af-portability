@@ -1,7 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.LanguageCodeList;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.PersonNameType;
+import se.arbetsformedlingen.matchning.portability.dto.LanguageCodeList;
+import se.arbetsformedlingen.matchning.portability.dto.PersonNameType;
 
 public class PersonNameTypeBuilder {
     private PersonNameType personNameType = new PersonNameType();

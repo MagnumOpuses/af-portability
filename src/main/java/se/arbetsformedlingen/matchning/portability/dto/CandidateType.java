@@ -31,11 +31,10 @@ public class CandidateType {
     }
 
     public List<IdentifierType> getAlternateIds() {
-        return alternateIds;
-    }
-
-    public void setAlternateIds(List<IdentifierType> alternateIds) {
-        this.alternateIds = alternateIds;
+        if (alternateIds == null) {
+            alternateIds = new ArrayList<IdentifierType>();
+        }
+        return this.alternateIds;
     }
 
     public LanguageCodeList getLanguage() {
@@ -71,10 +70,9 @@ public class CandidateType {
     }
 
     public List<CandidateProfileType> getProfiles() {
-        return profiles;
-    }
-
-    public void setProfiles(List<CandidateProfileType> profiles) {
-        this.profiles = profiles;
+        if (profiles == null) {
+            profiles = new ArrayList<CandidateProfileType>();
+        }
+        return this.profiles;
     }
 }

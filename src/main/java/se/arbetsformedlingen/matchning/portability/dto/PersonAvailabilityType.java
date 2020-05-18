@@ -1,74 +1,42 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PersonAvailabilityType", propOrder = {
+
+})
 public class PersonAvailabilityType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected List<AvailabilityDatesType> availabilityDates;
+    protected MeasureType noticePeriodMeasure;
+    protected Boolean immediateStartIndicator;
 
-    public String getDescription() {
-        return description;
+    public List<AvailabilityDatesType> getAvailabilityDates() {
+        if (availabilityDates == null) {
+            availabilityDates = new ArrayList<AvailabilityDatesType>();
+        }
+        return this.availabilityDates;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public MeasureType getNoticePeriodMeasure() {
+        return noticePeriodMeasure;
     }
 
-    public String getTitle() {
-        return title;
+    public void setNoticePeriodMeasure(MeasureType noticePeriodMeasure) {
+        this.noticePeriodMeasure = noticePeriodMeasure;
     }
 
-    public String getType() {
-        return type;
+    public Boolean getImmediateStartIndicator() {
+        return immediateStartIndicator;
     }
 
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public PersonAvailabilityType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public PersonAvailabilityType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public PersonAvailabilityType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public PersonAvailabilityType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public PersonAvailabilityType build() {
-            PersonAvailabilityType personAvailabilityType = new PersonAvailabilityType();
-            personAvailabilityType.description = description;
-            personAvailabilityType.properties = properties;
-            personAvailabilityType.title = title;
-            personAvailabilityType.type = type;
-            return personAvailabilityType;
-        }
-
+    public void setImmediateStartIndicator(Boolean immediateStartIndicator) {
+        this.immediateStartIndicator = immediateStartIndicator;
     }
-
 }

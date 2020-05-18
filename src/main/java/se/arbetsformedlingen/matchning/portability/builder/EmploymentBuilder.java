@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.EmployerHistoryType;
@@ -15,7 +16,7 @@ public class EmploymentBuilder {
         return this;
     }
 
-    public CandidateProfileType.Employment build() {
+    public CandidateProfileType build() {
         return employment;
     }
 

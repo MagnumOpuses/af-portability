@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
@@ -9,12 +10,12 @@ public class CandidateTypeBuilder {
     private CandidateType candidateType = new CandidateType();
 
     public CandidateTypeBuilder setDocumentId(IdentifierType documentId) {
-        candidateType.setDocumentId(documentId);
+        candidateType.getDocumentId(documentId);
         return this;
     }
 
-    public CandidateTypeBuilder setAlternateIds(CandidateType.AlternateIds alternateIds) {
-        candidateType.setAlternateIds(alternateIds);
+    public CandidateTypeBuilder setAlternateIds(CandidateType alternateIds) {
+        candidateType.getAlternateIds(alternateIds);
         return this;
     }
 
@@ -23,10 +24,6 @@ public class CandidateTypeBuilder {
         return this;
     }
 
-    public CandidateTypeBuilder setDataProtectionPolicy(CandidateType.DataProtectionPolicy dataProtectionPolicy) {
-        candidateType.setDataProtectionPolicy(dataProtectionPolicy);
-        return this;
-    }
 
     public CandidateTypeBuilder setUri(String uri) {
         candidateType.setUri(uri);
@@ -43,8 +40,8 @@ public class CandidateTypeBuilder {
         return this;
     }
 
-    public CandidateTypeBuilder setProfiles(CandidateType.Profiles profiles) {
-        candidateType.setProfiles(profiles);
+    public CandidateTypeBuilder setProfiles(CandidateType profiles) {
+        candidateType.getProfiles(profiles);
         return this;
     }
 

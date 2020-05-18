@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.Arbetsort;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.PositionPreferenceType;
@@ -15,7 +16,7 @@ public class PositionPreferencesBuilder {
         return this;
     }
 
-    public CandidateProfileType.PositionPreferences build() {
+    public CandidateProfileType build() {
         return candidateProfileTypePositionPreferences;
     }
 

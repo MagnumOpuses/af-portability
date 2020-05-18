@@ -1,74 +1,40 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DistributionGuidelinesType", propOrder = {
+
+})
 public class DistributionGuidelinesType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected Boolean doNotRedistributeIndicator;
+    protected List<DistributeToType> distributeTo;
+    protected List<DoNotDistributeToType> doNotDistributeTo;
 
-    public String getDescription() {
-        return description;
+    public Boolean getDoNotRedistributeIndicator() {
+        return doNotRedistributeIndicator;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public void setDoNotRedistributeIndicator(Boolean doNotRedistributeIndicator) {
+        this.doNotRedistributeIndicator = doNotRedistributeIndicator;
     }
 
-    public String getTitle() {
-        return title;
+    public List<DistributeToType> getDistributeTo() {
+        if (distributeTo == null) {
+            distributeTo = new ArrayList<DistributeToType>();
+        }
+        return this.distributeTo;
     }
 
-    public String getType() {
-        return type;
+    public List<DoNotDistributeToType> getDoNotDistributeTo() {
+        if (doNotDistributeTo == null) {
+            doNotDistributeTo = new ArrayList<DoNotDistributeToType>();
+        }
+        return this.doNotDistributeTo;
     }
-
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public DistributionGuidelinesType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public DistributionGuidelinesType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public DistributionGuidelinesType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public DistributionGuidelinesType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public DistributionGuidelinesType build() {
-            DistributionGuidelinesType distributionGuidelinesType = new DistributionGuidelinesType();
-            distributionGuidelinesType.description = description;
-            distributionGuidelinesType.properties = properties;
-            distributionGuidelinesType.title = title;
-            distributionGuidelinesType.type = type;
-            return distributionGuidelinesType;
-        }
-
-    }
-
 }

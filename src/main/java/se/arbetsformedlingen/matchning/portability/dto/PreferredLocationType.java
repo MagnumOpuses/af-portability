@@ -1,74 +1,41 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PreferredLocationType", propOrder = {
+
+})
 public class PreferredLocationType {
 
-    @Expose
-    private String description;
-    @Expose
-    private Properties properties;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected MeasureType maximumCommuteDuration;
+    protected MeasureType maximumCommuteDistance;
+    protected AddressType referenceLocation;
 
-    public String getDescription() {
-        return description;
+    public MeasureType getMaximumCommuteDuration() {
+        return maximumCommuteDuration;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public void setMaximumCommuteDuration(MeasureType maximumCommuteDuration) {
+        this.maximumCommuteDuration = maximumCommuteDuration;
     }
 
-    public String getTitle() {
-        return title;
+    public MeasureType getMaximumCommuteDistance() {
+        return maximumCommuteDistance;
     }
 
-    public String getType() {
-        return type;
+    public void setMaximumCommuteDistance(MeasureType maximumCommuteDistance) {
+        this.maximumCommuteDistance = maximumCommuteDistance;
     }
 
-    public static class Builder {
-
-        private String description;
-        private Properties properties;
-        private String title;
-        private String type;
-
-        public PreferredLocationType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public PreferredLocationType.Builder withProperties(Properties properties) {
-            this.properties = properties;
-            return this;
-        }
-
-        public PreferredLocationType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public PreferredLocationType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public PreferredLocationType build() {
-            PreferredLocationType preferredLocationType = new PreferredLocationType();
-            preferredLocationType.description = description;
-            preferredLocationType.properties = properties;
-            preferredLocationType.title = title;
-            preferredLocationType.type = type;
-            return preferredLocationType;
-        }
-
+    public AddressType getReferenceLocation() {
+        return referenceLocation;
     }
 
+    public void setReferenceLocation(AddressType referenceLocation) {
+        this.referenceLocation = referenceLocation;
+    }
 }

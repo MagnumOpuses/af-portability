@@ -3,6 +3,7 @@ package se.arbetsformedlingen.matchning.portability.dto;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -17,34 +18,30 @@ public class CommunicationType {
     protected List<WebType> web;
 
     public List<AddressType> getAddress() {
-        return address;
-    }
-
-    public void setAddress(List<AddressType> address) {
-        this.address = address;
+        if (address == null) {
+            address = new ArrayList<AddressType>();
+        }
+        return this.address;
     }
 
     public List<PhoneType> getPhone() {
-        return phone;
-    }
-
-    public void setPhone(List<PhoneType> phone) {
-        this.phone = phone;
+        if (phone == null) {
+            phone = new ArrayList<PhoneType>();
+        }
+        return this.phone;
     }
 
     public List<EmailType> getEmail() {
-        return email;
-    }
-
-    public void setEmail(List<EmailType> email) {
-        this.email = email;
+        if (email == null) {
+            email = new ArrayList<EmailType>();
+        }
+        return this.email;
     }
 
     public List<WebType> getWeb() {
-        return web;
-    }
-
-    public void setWeb(List<WebType> web) {
-        this.web = web;
+        if (web == null) {
+            web = new ArrayList<WebType>();
+        }
+        return this.web;
     }
 }

@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.Utbildning;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.EducationAttendanceType;
@@ -15,7 +16,7 @@ public class EducationBuilder {
         return this;
     }
 
-    public CandidateProfileType.Education build() {
+    public CandidateProfileType build() {
         return education;
     }
 

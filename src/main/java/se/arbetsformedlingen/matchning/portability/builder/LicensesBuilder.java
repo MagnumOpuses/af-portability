@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.LicenseType;
@@ -15,7 +16,7 @@ public class LicensesBuilder {
         return this;
     }
 
-    public CandidateProfileType.Licenses build() {
+    public CandidateProfileType build() {
         return licenses;
     }
 

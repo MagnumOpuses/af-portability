@@ -1,75 +1,76 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.List;
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DistributeToType", propOrder = {
+
+})
 public class DistributeToType {
 
-    @Expose
-    private List<AllOf> allOf;
-    @Expose
-    private String description;
-    @Expose
-    private String title;
-    @Expose
-    private String type;
+    protected String startDate;
+    protected String endDate;
+    protected String duration;
+    protected EntityType person;
+    protected OrganizationType organization;
+    protected CommunicationType communication;
+    protected StringTypeArray descriptions;
 
-    public List<AllOf> getAllOf() {
-        return allOf;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public String getDescription() {
-        return description;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public String getTitle() {
-        return title;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public String getType() {
-        return type;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
-    public static class Builder {
-
-        private List<AllOf> allOf;
-        private String description;
-        private String title;
-        private String type;
-
-        public DistributeToType.Builder withAllOf(List<AllOf> allOf) {
-            this.allOf = allOf;
-            return this;
-        }
-
-        public DistributeToType.Builder withDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public DistributeToType.Builder withTitle(String title) {
-            this.title = title;
-            return this;
-        }
-
-        public DistributeToType.Builder withType(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public DistributeToType build() {
-            DistributeToType distributeToType = new DistributeToType();
-            distributeToType.allOf = allOf;
-            distributeToType.description = description;
-            distributeToType.title = title;
-            distributeToType.type = type;
-            return distributeToType;
-        }
-
+    public String getDuration() {
+        return duration;
     }
 
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public EntityType getPerson() {
+        return person;
+    }
+
+    public void setPerson(EntityType person) {
+        this.person = person;
+    }
+
+    public OrganizationType getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(OrganizationType organization) {
+        this.organization = organization;
+    }
+
+    public CommunicationType getCommunication() {
+        return communication;
+    }
+
+    public void setCommunication(CommunicationType communication) {
+        this.communication = communication;
+    }
+
+    public StringTypeArray getDescriptions() {
+        return descriptions;
+    }
+
+    public void setDescriptions(StringTypeArray descriptions) {
+        this.descriptions = descriptions;
+    }
 }

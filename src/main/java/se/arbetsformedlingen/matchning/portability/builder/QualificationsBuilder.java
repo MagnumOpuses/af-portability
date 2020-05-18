@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.asp.Kompetens;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
 import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.PersonCompetencyType;
@@ -16,7 +17,7 @@ public class QualificationsBuilder {
         return this;
     }
 
-    public CandidateProfileType.Qualifications build() {
+    public CandidateProfileType build() {
         return candidateProfileTyQequalifications;
     }
 

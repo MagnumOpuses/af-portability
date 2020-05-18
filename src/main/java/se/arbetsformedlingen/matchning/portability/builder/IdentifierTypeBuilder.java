@@ -1,6 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.IdentifierType;
+import se.arbetsformedlingen.matchning.portability.dto.IdentifierType;
 
 public class IdentifierTypeBuilder {
     private IdentifierType identifierType = new IdentifierType();

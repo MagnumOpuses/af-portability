@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
 public class CommunicationTypeBuilder {
@@ -20,8 +21,8 @@ public class CommunicationTypeBuilder {
         return this;
     }
 
-    public CommunicationTypeBuilder setWeb(WebTypeArray web) {
-        communicationType.setWeb(web);
+    public CommunicationTypeBuilder setWeb(WebType web) {
+        communicationType.getWeb(web);
         return this;
     }
 
@@ -36,4 +37,5 @@ public class CommunicationTypeBuilder {
         setWeb(new WebTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
         return this;
     }
+
 }

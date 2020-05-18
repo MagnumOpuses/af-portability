@@ -19,8 +19,8 @@ public class WebTypeArrayBuilder {
     }
 
     public WebTypeArrayBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
-        List<WebTypeArray.Item> list = new ArrayList<>();
-        list.add(new WebTypeArrayItemBuilder().setUrl(personUppgifter.getHemsida()).build());
+        List<WebType> list = new ArrayList<>();
+        list.add(new WebTypeBuilder().setUrl(personUppgifter.getHemsida()).build());
         setItem(list);
         return this;
     }
