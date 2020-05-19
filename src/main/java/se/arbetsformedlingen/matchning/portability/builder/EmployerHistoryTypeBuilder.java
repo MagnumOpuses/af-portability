@@ -1,53 +1,52 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.asp.Anstallning;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.EmployerHistoryType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.IdentifierType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.OrganizationType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.StringTypeArray;
 
-import java.text.SimpleDateFormat;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployerHistoryTypeBuilder {
     private EmployerHistoryType employerHistoryType = new EmployerHistoryType();
 
     public EmployerHistoryTypeBuilder setId(IdentifierType id) {
-        employerHistoryType.setId(id);
+        employerHistoryType.id = id;
         return this;
     }
 
     public EmployerHistoryTypeBuilder setStart(String start) {
-        employerHistoryType.setStart(start);
+        employerHistoryType.start = start;
         return this;
     }
 
     public EmployerHistoryTypeBuilder setEnd(String end) {
-        employerHistoryType.setEnd(end);
+        employerHistoryType.end = end;
         return this;
     }
 
     public EmployerHistoryTypeBuilder setCurrent(Boolean current) {
-        employerHistoryType.setCurrent(current);
+        employerHistoryType.current = current;
         return this;
     }
 
-    public EmployerHistoryTypeBuilder setAttachmentReferences(EmployerHistoryType.AttachmentReferences attachmentReferences) {
-        employerHistoryType.setAttachmentReferences(attachmentReferences);
+    public EmployerHistoryTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        employerHistoryType.attachmentReferences = attachmentReferences;
         return this;
     }
 
-    public EmployerHistoryTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        employerHistoryType.setDescriptions(descriptions);
+    public EmployerHistoryTypeBuilder setDescriptions(List<String> descriptions) {
+        employerHistoryType.descriptions = descriptions;
         return this;
     }
 
     public EmployerHistoryTypeBuilder setOrganization(OrganizationType organization) {
-        employerHistoryType.setOrganization(organization);
+        employerHistoryType.organization = organization;
         return this;
     }
 
-    public EmployerHistoryTypeBuilder setPositionHistories(EmployerHistoryType.PositionHistories positionHistories) {
-        employerHistoryType.setPositionHistories(positionHistories);
+    public EmployerHistoryTypeBuilder setPositionHistories(List<PositionHistoryType> positionHistories) {
+        employerHistoryType.positionHistories = positionHistories;
         return this;
     }
 
@@ -55,32 +54,15 @@ public class EmployerHistoryTypeBuilder {
         return employerHistoryType;
     }
 
-    public EmployerHistoryTypeBuilder withAnstallning(Anstallning anstallning) {
-        setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build());
-        setPositionHistories(new PositionHistoriesBuilder().withAnstallning(anstallning).build());
 
-        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
-
-        try {
-            setStart(sdf.format(sdf.parse(anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())));
-        } catch (Exception e) {
-            // No start date
-        }
-        try {
-            setEnd(sdf.format(sdf.parse(anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())));
-        } catch (Exception e) {
-            // No end date
-        }
-
-        //setStart(String.valueOf(anstallning.getStartdatum()));
-
-        //setEnd(String.valueOf(anstallning.getSlutdatum()));
-        setCurrent(anstallning.isPagaende());
-
-        StringTypeArray descriptions = new StringTypeArray();
-        descriptions.getItem().add(anstallning.getBeskrivning());
-        setDescriptions(descriptions);
+    public EmployerHistoryTypeBuilder withCodes(String yrkesbenamning) {
+        List<PositionHistoryType> list = new ArrayList<>();
+        List<EntityType> joblevels = new ArrayList<>();
+        joblevels.add(new EntityTypeBuilder().setCode(yrkesbenamning).setName(String.valueOf(Concept.EntityType.jobterm)).build());
+        list.add(new PositionHistoryTypeBuilder().setJobLevels(joblevels).build());
 
         return this;
     }
+
+
 }

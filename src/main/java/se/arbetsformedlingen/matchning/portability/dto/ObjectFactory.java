@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import se.arbetsformedlingen.matchning.portability.builder.*;
+
 import java.math.BigDecimal;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -239,7 +241,7 @@ public class ObjectFactory {
      * 
      */
     public PositionPreferenceType createPositionPreferenceType() {
-        return new PositionPreferenceType();
+        return new PositionPreferenceTypeBuilder().createPositionPreferenceType();
     }
 
     /**
@@ -303,7 +305,7 @@ public class ObjectFactory {
      * 
      */
     public PreferredLocationType createPreferredLocationType() {
-        return new PreferredLocationType();
+        return new PreferredLocationTypeBuilder().createPreferredLocationType();
     }
 
     /**
@@ -679,7 +681,7 @@ public class ObjectFactory {
      * 
      */
     public PersonCompetencyType createPersonCompetencyType() {
-        return new PersonCompetencyType();
+        return new PersonCompetencyTypeBuilder().createPersonCompetencyType();
     }
 
     /**

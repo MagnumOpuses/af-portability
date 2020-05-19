@@ -11,9 +11,10 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PreferredLocationType {
 
-    protected MeasureType maximumCommuteDuration;
-    protected MeasureType maximumCommuteDistance;
-    protected AddressType referenceLocation;
+    public MeasureType maximumCommuteDuration;
+    public MeasureType maximumCommuteDistance;
+    public AddressType referenceLocation;
+
 
     public MeasureType getMaximumCommuteDuration() {
         return maximumCommuteDuration;

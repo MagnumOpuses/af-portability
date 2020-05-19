@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class EntityType {
 
-    protected IdentifierType id;
-    protected String name;
-    protected String code;
+    public IdentifierType id;
+    public String name;
+    public String code;
 
     public IdentifierType getId() {
         return id;

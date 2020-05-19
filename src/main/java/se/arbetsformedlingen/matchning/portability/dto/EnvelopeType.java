@@ -58,7 +58,7 @@ public class EnvelopeType {
         return this.data;
     }
 
-    private class Sink {
+    public class Sink {
         protected String sinkId;
         protected String sinkName;
         protected String sourceDescription;
@@ -96,7 +96,7 @@ public class EnvelopeType {
         }
     }
 
-    private class Source {
+    public class Source {
         protected String sinkId;
         protected String sinkName;
         protected String sinkDescription;
@@ -135,7 +135,7 @@ public class EnvelopeType {
         }
     }
 
-    private class Consent {
+    public class Consent {
         protected XMLGregorianCalendar consentTimestamp;
         protected String consentStatus;
         protected XMLGregorianCalendar consentRevokedTimestamp;

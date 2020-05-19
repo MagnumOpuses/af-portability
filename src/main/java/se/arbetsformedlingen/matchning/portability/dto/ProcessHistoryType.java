@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ProcessHistoryType {
 
-    protected List<ProcessHistoryItemType> item;
+    public List<ProcessHistoryItemType> item;
 
     public List<ProcessHistoryItemType> getItem() {
         if (item == null) {

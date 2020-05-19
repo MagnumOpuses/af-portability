@@ -1,40 +1,39 @@
-package se.arbetsformedlingen.matchning.portability.dto;
+package se.arbetsformedlingen.matchning.portability.builder;
+
+import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
+import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
 
 import java.util.List;
 
 public class EnvelopeTypeBuilder {
-    private String sessionToken;
-    private EnvelopeType.Source source;
-    private EnvelopeType.Sink sink;
-    private EnvelopeType.Consent consent;
-    private List<CandidateType> data;
+    private EnvelopeType envelopeType = new EnvelopeType();
 
     public EnvelopeTypeBuilder setSessionToken(String sessionToken) {
-        this.sessionToken = sessionToken;
+        envelopeType.sessionToken = sessionToken;
         return this;
     }
 
     public EnvelopeTypeBuilder setSource(EnvelopeType.Source source) {
-        this.source = source;
+        envelopeType.source = source;
         return this;
     }
 
     public EnvelopeTypeBuilder setSink(EnvelopeType.Sink sink) {
-        this.sink = sink;
+        envelopeType.sink = sink;
         return this;
     }
 
     public EnvelopeTypeBuilder setConsent(EnvelopeType.Consent consent) {
-        this.consent = consent;
+        envelopeType.consent = consent;
         return this;
     }
 
     public EnvelopeTypeBuilder setData(List<CandidateType> data) {
-        this.data = data;
+        envelopeType.data = data;
         return this;
     }
 
-    public EnvelopeType createEnvelopeType() {
-        return new EnvelopeType(sessionToken, source, sink, consent, data);
+    public EnvelopeType build() {
+        return envelopeType;
     }
 }

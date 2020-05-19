@@ -1,72 +1,75 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
+
+import java.util.List;
 
 public class LicenseTypeBuilder {
     private LicenseType licenseType = new LicenseType();
 
     public LicenseTypeBuilder setId(IdentifierType id) {
-        licenseType.setId(id);
+        licenseType.id = id;
         return this;
     }
 
     public LicenseTypeBuilder setName(String name) {
-        licenseType.setName(name);
+        licenseType.name = name;
         return this;
     }
 
     public LicenseTypeBuilder setType(EntityType type) {
-        licenseType.setType(type);
+        licenseType.type = type;
         return this;
     }
 
     public LicenseTypeBuilder setStatus(String status) {
-        licenseType.setStatus(status);
+        licenseType.status = status;
         return this;
     }
 
     public LicenseTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
-        licenseType.setEffectiveTimePeriod(effectiveTimePeriod);
+        licenseType.effectiveTimePeriod = effectiveTimePeriod;
         return this;
     }
 
     public LicenseTypeBuilder setIssued(String issued) {
-        licenseType.setIssued(issued);
+        licenseType.issued = issued;
         return this;
     }
 
     public LicenseTypeBuilder setFirstIssued(String firstIssued) {
-        licenseType.setFirstIssued(firstIssued);
+        licenseType.firstIssued = firstIssued;
         return this;
     }
 
     public LicenseTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
-        licenseType.setIssuingAuthority(issuingAuthority);
+        licenseType.issuingAuthority = issuingAuthority;
         return this;
     }
 
-    public LicenseTypeBuilder setAttachmentReferences(LicenseType.AttachmentReferences attachmentReferences) {
-        licenseType.setAttachmentReferences(attachmentReferences);
+    public LicenseTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        licenseType.attachmentReferences = attachmentReferences;
         return this;
     }
 
-    public LicenseTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        licenseType.setDescriptions(descriptions);
+    public LicenseTypeBuilder setDescriptions(List<String> descriptions) {
+        licenseType.descriptions = descriptions;
         return this;
     }
 
     public LicenseTypeBuilder setEndorsements(LicenseType.Endorsements endorsements) {
-        licenseType.setEndorsements(endorsements);
+        licenseType.endorsements = endorsements;
         return this;
     }
 
     public LicenseTypeBuilder setRestrictions(LicenseType.Restrictions restrictions) {
-        licenseType.setRestrictions(restrictions);
+        licenseType.restrictions = restrictions;
         return this;
     }
 
     public LicenseTypeBuilder setViolations(LicenseType.Violations violations) {
-        licenseType.setViolations(violations);
+        licenseType.violations = violations;
         return this;
     }
 
@@ -79,6 +82,4 @@ public class LicenseTypeBuilder {
         setIssued(String.valueOf(korkort.getSenastUppdaterad()));
         return this;
     }
-
-
 }

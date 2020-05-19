@@ -12,9 +12,9 @@ import javax.xml.bind.annotation.XmlType;
 public class AddressComponentType {
 
     @XmlElement(required = true)
-    protected String type;
+    public String type;
     @XmlElement(required = true)
-    protected String value;
+    public String value;
 
 
     public String getType() {

@@ -1,77 +1,69 @@
-package se.arbetsformedlingen.matchning.portability.dto;
+package se.arbetsformedlingen.matchning.portability.builder;
+
+import se.arbetsformedlingen.matchning.portability.dto.*;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.List;
 
 public class PersonBaseTypeBuilder {
-    private IdentifierType id;
-    private PersonNameType name;
-    private CommunicationType communication;
-    private LanguageCodeList primaryLanguage;
-    private IdentifierType legalId;
-    private XMLGregorianCalendar birthDate;
-    private GenderCodeList gender;
-    private List<CountryCodeList> citizenship;
-    private List<CountryCodeList> residenceCountry;
-    private String militaryStatus;
-    private StringTypeArray ethnicity;
+    private PersonBaseType personBaseType = new PersonBaseType();
 
     public PersonBaseTypeBuilder setId(IdentifierType id) {
-        this.id = id;
+        personBaseType.id = id;
         return this;
     }
 
     public PersonBaseTypeBuilder setName(PersonNameType name) {
-        this.name = name;
+        personBaseType.name = name;
         return this;
     }
 
     public PersonBaseTypeBuilder setCommunication(CommunicationType communication) {
-        this.communication = communication;
+        personBaseType.communication = communication;
         return this;
     }
 
     public PersonBaseTypeBuilder setPrimaryLanguage(LanguageCodeList primaryLanguage) {
-        this.primaryLanguage = primaryLanguage;
+        personBaseType.primaryLanguage = primaryLanguage;
         return this;
     }
 
     public PersonBaseTypeBuilder setLegalId(IdentifierType legalId) {
-        this.legalId = legalId;
+        personBaseType.legalId = legalId;
         return this;
     }
 
     public PersonBaseTypeBuilder setBirthDate(XMLGregorianCalendar birthDate) {
-        this.birthDate = birthDate;
+        personBaseType.birthDate = birthDate;
         return this;
     }
 
     public PersonBaseTypeBuilder setGender(GenderCodeList gender) {
-        this.gender = gender;
+        personBaseType.gender = gender;
         return this;
     }
 
     public PersonBaseTypeBuilder setCitizenship(List<CountryCodeList> citizenship) {
-        this.citizenship = citizenship;
+        personBaseType.citizenship = citizenship;
         return this;
     }
 
     public PersonBaseTypeBuilder setResidenceCountry(List<CountryCodeList> residenceCountry) {
-        this.residenceCountry = residenceCountry;
+        personBaseType.residenceCountry = residenceCountry;
         return this;
     }
 
     public PersonBaseTypeBuilder setMilitaryStatus(String militaryStatus) {
-        this.militaryStatus = militaryStatus;
+        personBaseType.militaryStatus = militaryStatus;
         return this;
     }
 
     public PersonBaseTypeBuilder setEthnicity(StringTypeArray ethnicity) {
-        this.ethnicity = ethnicity;
+        personBaseType.ethnicity = ethnicity;
         return this;
     }
 
-    public PersonBaseType createPersonBaseType() {
-        return new PersonBaseType(id, name, communication, primaryLanguage, legalId, birthDate, gender, citizenship, residenceCountry, militaryStatus, ethnicity);
+    public PersonBaseType build() {
+        return personBaseType;
     }
 }

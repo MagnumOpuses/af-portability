@@ -1,57 +1,60 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.asp.Merit;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+
+import java.util.List;
 
 public class CertificationTypeBuilder {
     private CertificationType certificationType = new CertificationType();
 
+
     public CertificationTypeBuilder setId(IdentifierType id) {
-        certificationType.setId(id);
+        certificationType.id = id;
         return this;
     }
 
     public CertificationTypeBuilder setName(String name) {
-        certificationType.setName(name);
+        certificationType.name = name;
         return this;
     }
 
     public CertificationTypeBuilder setType(EntityType type) {
-        certificationType.setType(type);
+        certificationType.type = type;
         return this;
     }
 
     public CertificationTypeBuilder setStatus(String status) {
-        certificationType.setStatus(status);
+        certificationType.status = status;
         return this;
     }
 
     public CertificationTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
-        certificationType.setEffectiveTimePeriod(effectiveTimePeriod);
+        certificationType.effectiveTimePeriod = effectiveTimePeriod;
         return this;
     }
 
     public CertificationTypeBuilder setIssued(String issued) {
-        certificationType.setIssued(issued);
+        certificationType.issued = issued;
         return this;
     }
 
     public CertificationTypeBuilder setFirstIssued(String firstIssued) {
-        certificationType.setFirstIssued(firstIssued);
+        certificationType.firstIssued = firstIssued;
         return this;
     }
 
     public CertificationTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
-        certificationType.setIssuingAuthority(issuingAuthority);
+        certificationType.issuingAuthority = issuingAuthority;
         return this;
     }
 
-    public CertificationTypeBuilder setAttachmentReferences(CertificationType.AttachmentReferences attachmentReferences) {
-        certificationType.setAttachmentReferences(attachmentReferences);
+    public CertificationTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        certificationType.attachmentReferences = attachmentReferences;
         return this;
     }
 
-    public CertificationTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        certificationType.setDescriptions(descriptions);
+    public CertificationTypeBuilder setDescriptions(List<String> descriptions) {
+        certificationType.descriptions = descriptions;
         return this;
     }
 
@@ -59,12 +62,4 @@ public class CertificationTypeBuilder {
         return certificationType;
     }
 
-    public CertificationTypeBuilder withMerit(Merit merit) {
-        final StringTypeArray stringTypeArray = new StringTypeArray();
-        stringTypeArray.getItem().add(merit.getBeskrivning());
-
-        setName(merit.getRubrik());
-        setDescriptions(stringTypeArray);
-        return this;
-    }
 }

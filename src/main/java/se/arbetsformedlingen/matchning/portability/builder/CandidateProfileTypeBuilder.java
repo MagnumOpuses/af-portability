@@ -2,125 +2,152 @@ package se.arbetsformedlingen.matchning.portability.builder;
 
 import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
+import se.arbetsformedlingen.matchning.taxonomy.model.Concept;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CandidateProfileTypeBuilder {
-    private CandidateProfileType candidateProfileType = new se.arbetsformedlingen.matchning.portability.dto.CandidateProfileTypeBuilder().createCandidateProfileType();
+    private CandidateProfileType candidateProfileType = new CandidateProfileType();
 
     public CandidateProfileTypeBuilder setProfileName(String profileName) {
-        candidateProfileType.setProfileName(profileName);
+        candidateProfileType.profileName = profileName;
         return this;
     }
 
     public CandidateProfileTypeBuilder setLanguageCode(LanguageCodeList languageCode) {
-        candidateProfileType.setLanguageCode(languageCode);
+        candidateProfileType.languageCode = languageCode;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEducation(CandidateProfileType education) {
-        candidateProfileType.getEducation(education);
+    public CandidateProfileTypeBuilder setEducation(List<EducationAttendanceType> education) {
+        candidateProfileType.education = education;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployment(CandidateProfileType employment) {
-        candidateProfileType.getEmployment(employment);
+    public CandidateProfileTypeBuilder setEmployment(List<EmployerHistoryType> employment) {
+        candidateProfileType.employment = employment;
         return this;
     }
 
-
-    public CandidateProfileTypeBuilder setLicenses(CandidateProfileType licenses) {
-        candidateProfileType.getLicenses(licenses);
+    public CandidateProfileTypeBuilder setMilitaryService(List<MilitaryServiceType> militaryService) {
+        candidateProfileType.militaryService = militaryService;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCertifications(CandidateProfileType certifications) {
-        candidateProfileType.getCertifications(certifications);
+    public CandidateProfileTypeBuilder setLicenses(List<LicenseType> licenses) {
+        candidateProfileType.licenses = licenses;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPublications(CandidateProfileType publications) {
-        candidateProfileType.getPublications(publications);
+    public CandidateProfileTypeBuilder setCertifications(List<CertificationType> certifications) {
+        candidateProfileType.certifications = certifications;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setQualifications(CandidateProfileType qualifications) {
-        candidateProfileType.getQualifications(qualifications);
+    public CandidateProfileTypeBuilder setPatents(List<PatentType> patents) {
+        candidateProfileType.patents = patents;
         return this;
     }
 
-
-    public CandidateProfileTypeBuilder setReferences(CandidateProfileType.References references) {
-        candidateProfileType.setReferences(references);
+    public CandidateProfileTypeBuilder setPublications(List<PublicationType> publications) {
+        candidateProfileType.publications = publications;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAttachments(CandidateProfileType.Attachments attachments) {
-        candidateProfileType.setAttachments(attachments);
+    public CandidateProfileTypeBuilder setQualifications(List<PersonCompetencyType> qualifications) {
+        candidateProfileType.qualifications = qualifications;
+        return this;
+    }
+
+    public CandidateProfileTypeBuilder setAffiliations(List<OrganizationAffiliationType> affiliations) {
+        candidateProfileType.affiliations = affiliations;
+        return this;
+    }
+
+    public CandidateProfileTypeBuilder setSecurityCredentials(List<CertificationType> securityCredentials) {
+        candidateProfileType.securityCredentials = securityCredentials;
+        return this;
+    }
+
+    public CandidateProfileTypeBuilder setReferences(List<RefereeType> references) {
+        candidateProfileType.references = references;
+        return this;
+    }
+
+    public CandidateProfileTypeBuilder setAttachments(List<AttachmentType> attachments) {
+        candidateProfileType.attachments = attachments;
         return this;
     }
 
     public CandidateProfileTypeBuilder setProfileId(IdentifierType profileId) {
-        candidateProfileType.setProfileId(profileId);
+        candidateProfileType.profileId = profileId;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAlternateIds(CandidateProfileType alternateIds) {
-        candidateProfileType.getAlternateIds(alternateIds);
+    public CandidateProfileTypeBuilder setAlternateIds(List<IdentifierType> alternateIds) {
+        candidateProfileType.alternateIds = alternateIds;
         return this;
     }
 
     public CandidateProfileTypeBuilder setPersonAvailability(PersonAvailabilityType personAvailability) {
-        candidateProfileType.setPersonAvailability(personAvailability);
+        candidateProfileType.personAvailability = personAvailability;
         return this;
     }
 
     public CandidateProfileTypeBuilder setProcessingInformation(String processingInformation) {
-        candidateProfileType.setProcessingInformation(processingInformation);
+        candidateProfileType.processingInformation = processingInformation;
         return this;
     }
 
     public CandidateProfileTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
-        candidateProfileType.setDistributionGuidelines(distributionGuidelines);
+        candidateProfileType.distributionGuidelines = distributionGuidelines;
         return this;
     }
 
+    public CandidateProfileTypeBuilder setAssociatedPositionOpenings(List<AssociatedPositionOpeningType> associatedPositionOpenings) {
+        candidateProfileType.associatedPositionOpenings = associatedPositionOpenings;
+        return this;
+    }
 
     public CandidateProfileTypeBuilder setObjective(String objective) {
-        candidateProfileType.setObjective(objective);
+        candidateProfileType.objective = objective;
         return this;
     }
 
     public CandidateProfileTypeBuilder setExecutiveSummary(String executiveSummary) {
-        candidateProfileType.setExecutiveSummary(executiveSummary);
+        candidateProfileType.executiveSummary = executiveSummary;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployerPreferences(CandidateProfileType employerPreferences) {
-        candidateProfileType.getEmployerPreferences(employerPreferences);
+    public CandidateProfileTypeBuilder setEmployerPreferences(List<EmployerPreferenceType> employerPreferences) {
+        candidateProfileType.employerPreferences = employerPreferences;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPositionPreferences(CandidateProfileType positionPreferences) {
-        candidateProfileType.getPositionPreferences(positionPreferences);
+    public CandidateProfileTypeBuilder setPositionPreferences(List<PositionPreferenceType> positionPreferences) {
+        candidateProfileType.positionPreferences = positionPreferences;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCandidateRelationships(CandidateProfileType candidateRelationships) {
-        candidateProfileType.getCandidateRelationships(candidateRelationships);
+    public CandidateProfileTypeBuilder setCandidateRelationships(List<CandidateRelationshipType> candidateRelationships) {
+        candidateProfileType.candidateRelationships = candidateRelationships;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCandidateSources(CandidateProfileType candidateSources) {
-        candidateProfileType.getCandidateSources(candidateSources);
+    public CandidateProfileTypeBuilder setCandidateSources(List<CandidateSourceType> candidateSources) {
+        candidateProfileType.candidateSources = candidateSources;
         return this;
     }
 
     public CandidateProfileTypeBuilder setApplicationProcessHistory(ProcessHistoryType applicationProcessHistory) {
-        candidateProfileType.setApplicationProcessHistory(applicationProcessHistory);
+        candidateProfileType.applicationProcessHistory = applicationProcessHistory;
         return this;
     }
 
-    public CandidateProfileTypeBuilder setWorkLifeCycles(CandidateProfileType workLifeCycles) {
-        candidateProfileType.getWorkLifeCycles(workLifeCycles);
+    public CandidateProfileTypeBuilder setWorkLifeCycles(List<WorkLifeCycleType> workLifeCycles) {
+        candidateProfileType.workLifeCycles = workLifeCycles;
         return this;
     }
 
@@ -128,53 +155,122 @@ public class CandidateProfileTypeBuilder {
         return candidateProfileType;
     }
 
-    public CandidateProfileTypeBuilder withProfile(ArbetsSokandeProfil profil) {
+    public CandidateProfileTypeBuilder withProfiles(ArbetsSokandeProfil profil) {
         setProfileName(profil.getNamn());
         setObjective(profil.getBeskrivning());
         setExecutiveSummary(profil.getPresentation());
 
 
         if (profil.getKorkort() != null){
-            setLicenses(new LicensesBuilder().withKorkort(profil.getKorkort()).build());
+            List<LicenseType> licenses = new ArrayList<>();
+            licenses.add(new LicenseTypeBuilder().withKorkort(profil.getKorkort()).build());
+            setLicenses(licenses);
         }
 
         if (profil.getKompetenser() != null){
+            List<PersonCompetencyType> qualifications = new ArrayList<>();
             for (Kompetens kompetens : profil.getKompetenser()){
                 //TODO Adjust this to use the new taxonomy.
-                setQualifications(new QualificationsBuilder().withKompetenser(profil.getKompetenser()).build());
+                qualifications.add(new PersonCompetencyTypeBuilder().withKompetens(String.valueOf(kompetens.getTaxonomiId())).setDescription(String.valueOf(Concept.EntityType.skill)).build());
+                }
+                setQualifications(qualifications);
             }
-        }
 
         if (profil.getYrkeserfarenheter() != null) {
+            List<EmployerHistoryType> employment = new ArrayList<>();
             for (Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
                 //TODO Adjust this to use the new taxonomy.
-                setEmployment(new EmploymentBuilder().withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).build());
+                employment.add(new EmployerHistoryTypeBuilder().withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).build());
             }
+            setEmployment(employment);
         }
 
+
         if (profil.getYrkesroller() != null) {
+            List<EmployerHistoryType> employment = new ArrayList<>();
             for (Yrkesroll yrkesroll : profil.getYrkesroller()) {
-                setEmployment(new EmploymentBuilder().withCodes(yrkesroll.getKod()).build());
+                employment.add(new EmployerHistoryTypeBuilder().withCodes(yrkesroll.getKod()).build());
             }
+            setEmployment(employment);
         }
 
         if (profil.getAnstallningar() != null) {
-            setEmployment(new EmploymentBuilder().withAnstallningar(profil.getAnstallningar()).build());
+            List<EmployerHistoryType> emplyments = new ArrayList<>();
+            for (Anstallning anstallning : profil.getAnstallningar()) {
+                List<PositionHistoryType> positions = new ArrayList<>();
+                List<String> descriptions = new ArrayList<>();
+                final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+
+                try {
+                    positions.add(new PositionHistoryTypeBuilder().setStart(sdf.format(sdf.parse(anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad()))).build());
+                } catch (Exception e) {
+                    // No start date
+                }
+                try {
+                    positions.add(new PositionHistoryTypeBuilder().setEnd(sdf.format(sdf.parse(anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad()))).build());
+                } catch (Exception e) {
+                    // No end date
+                }
+                positions.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).build());
+                descriptions.add(new String(anstallning.getBeskrivning()));
+                emplyments.add(new EmployerHistoryTypeBuilder()
+                        .setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build())
+                        .setPositionHistories(positions)
+                        .setCurrent(anstallning.isPagaende())
+                        .setDescriptions(descriptions).build());
+
+            }
+            setEmployment(emplyments);
         }
 
         if (profil.getUtbildningar() != null) {
-            setEducation(new EducationBuilder().withUtbildningar(profil.getUtbildningar()).build());
+            List<EducationAttendanceType> education = new ArrayList<>();
+            for (Utbildning utbildning : profil.getUtbildningar()){
+                List<String> descriptions = new ArrayList<>();
+
+                education.add(new EducationAttendanceTypeBuilder().setInstitution(new OrganizationTypeBuilder().setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).build()).build()).build());
+
+                final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+                try {
+                    education.add(new EducationAttendanceTypeBuilder().setStart(sdf.format(sdf.parse(utbildning.getStartdatum().getArtal() + "-" + utbildning.getStartdatum().getManad()))).build());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    education.add(new EducationAttendanceTypeBuilder().setEnd(sdf.format(sdf.parse(utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad()))).build());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                descriptions.add(new String(utbildning.getInriktning()));
+                education.add(new EducationAttendanceTypeBuilder().setCurrent(utbildning.isPagaende()).setDescriptions(descriptions).build());
+
+            }
+            setEducation(education);
         }
 
         if (profil.getOvrigaMeriter() != null) {
-            setCertifications(new CertificationsBuilder().withOvrigaMeriter(profil.getOvrigaMeriter()).build());
+            List<CertificationType> certifications = new ArrayList<>();
+            for (Merit merit : profil.getOvrigaMeriter()) {
+                List<String> descriptions = new ArrayList<>();
+                descriptions.add(new String(merit.getBeskrivning()));
+                certifications.add(new CertificationTypeBuilder().setName(merit.getRubrik()).setDescriptions(descriptions).build());
+            }
+            setCertifications(certifications);
         }
 
         if (profil.getArbetsorter() != null) {
-            setPositionPreferences(new PositionPreferencesBuilder().withArbetsorter(profil.getArbetsorter()).build());
+            List<PositionPreferenceType> positionPreferences = new ArrayList<>();
+            List<PreferredLocationType> preferredLocations = new ArrayList<>();
+            List<AddressComponentType> countrySubDivisions = new ArrayList<>();
+
+            for (Arbetsort arbetsort : profil.getArbetsorter()){
+                countrySubDivisions.add(new AddressComponentTypeBuilder().setValue("Kommun").build());
+                preferredLocations.add(new PreferredLocationTypeBuilder().setReferenceLocation(new AddressTypeBuilder().setCity(arbetsort.getVarde1()).setCountrySubDivisions(countrySubDivisions).build()).build());
+                positionPreferences.add(new PositionPreferenceTypeBuilder().setLocations(preferredLocations).build());
+            }
+            setPositionPreferences(positionPreferences);
         }
-
-
 
         return this;
     }

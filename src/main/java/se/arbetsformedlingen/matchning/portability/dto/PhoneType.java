@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PhoneType {
 
-    protected String countryDialingCode;
-    protected String areaDialingCode;
-    protected String dialNumber;
-    protected String phoneExtension;
-    protected String access;
+    public String countryDialingCode;
+    public String areaDialingCode;
+    public String dialNumber;
+    public String phoneExtension;
+    public String access;
     @XmlElement(required = true)
-    protected String formattedNumber;
+    public String formattedNumber;
 
     public String getCountryDialingCode() {
         return countryDialingCode;

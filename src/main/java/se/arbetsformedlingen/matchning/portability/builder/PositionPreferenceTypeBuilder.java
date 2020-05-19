@@ -1,99 +1,83 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.asp.Arbetsort;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+
+import java.util.List;
 
 public class PositionPreferenceTypeBuilder {
     private PositionPreferenceType positionPreferenceType = new PositionPreferenceType();
 
-    public PositionPreferenceTypeBuilder setLocations(PositionPreferenceType.Locations locations) {
-        positionPreferenceType.setLocations(locations);
+    public PositionPreferenceTypeBuilder setLocations(List<PreferredLocationType> locations) {
+        positionPreferenceType.locations = locations;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setJobCategories(PositionPreferenceType.JobCategories jobCategories) {
-        positionPreferenceType.setJobCategories(jobCategories);
+    public PositionPreferenceTypeBuilder setJobCategories(List<EntityType> jobCategories) {
+        positionPreferenceType.jobCategories = jobCategories;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setPositionTitles(StringTypeArray positionTitles) {
-        positionPreferenceType.setPositionTitles(positionTitles);
+    public PositionPreferenceTypeBuilder setPositionTitles(List<String> positionTitles) {
+        positionPreferenceType.positionTitles = positionTitles;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setPositionOfferingTypeCodes(PositionPreferenceType.PositionOfferingTypeCodes positionOfferingTypeCodes) {
-        positionPreferenceType.setPositionOfferingTypeCodes(positionOfferingTypeCodes);
+    public PositionPreferenceTypeBuilder setPositionOfferingTypeCodes(List<PositionTypeCodeList> positionOfferingTypeCodes) {
+        positionPreferenceType.positionOfferingTypeCodes = positionOfferingTypeCodes;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setPositionScheduleTypeCodes(PositionPreferenceType.PositionScheduleTypeCodes positionScheduleTypeCodes) {
-        positionPreferenceType.setPositionScheduleTypeCodes(positionScheduleTypeCodes);
+    public PositionPreferenceTypeBuilder setPositionScheduleTypeCodes(List<PositionScheduleTypeCodeList> positionScheduleTypeCodes) {
+        positionPreferenceType.positionScheduleTypeCodes = positionScheduleTypeCodes;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setShiftSchedules(PositionPreferenceType.ShiftSchedules shiftSchedules) {
-        positionPreferenceType.setShiftSchedules(shiftSchedules);
+    public PositionPreferenceTypeBuilder setShiftSchedules(List<ScheduleType> shiftSchedules) {
+        positionPreferenceType.shiftSchedules = shiftSchedules;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setShiftDescriptions(StringTypeArray shiftDescriptions) {
-        positionPreferenceType.setShiftDescriptions(shiftDescriptions);
+    public PositionPreferenceTypeBuilder setShiftDescriptions(List<String> shiftDescriptions) {
+        positionPreferenceType.shiftDescriptions = shiftDescriptions;
         return this;
     }
 
     public PositionPreferenceTypeBuilder setRemoteWork(RemoteWorkType remoteWork) {
-        positionPreferenceType.setRemoteWork(remoteWork);
+        positionPreferenceType.remoteWork = remoteWork;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setCareerLevelCodes(PositionPreferenceType.CareerLevelCodes careerLevelCodes) {
-        positionPreferenceType.setCareerLevelCodes(careerLevelCodes);
+    public PositionPreferenceTypeBuilder setCareerLevelCodes(List<CareerLevelCodeList> careerLevelCodes) {
+        positionPreferenceType.careerLevelCodes = careerLevelCodes;
         return this;
     }
 
     public PositionPreferenceTypeBuilder setJobGradeCode(EntityType jobGradeCode) {
-        positionPreferenceType.setJobGradeCode(jobGradeCode);
+        positionPreferenceType.jobGradeCode = jobGradeCode;
         return this;
     }
 
     public PositionPreferenceTypeBuilder setOfferedRemunerationPackage(RemunerationPackageType offeredRemunerationPackage) {
-        positionPreferenceType.setOfferedRemunerationPackage(offeredRemunerationPackage);
+        positionPreferenceType.offeredRemunerationPackage = offeredRemunerationPackage;
         return this;
     }
 
     public PositionPreferenceTypeBuilder setTravel(TravelType travel) {
-        positionPreferenceType.setTravel(travel);
+        positionPreferenceType.travel = travel;
         return this;
     }
 
     public PositionPreferenceTypeBuilder setRelocation(RelocationType relocation) {
-        positionPreferenceType.setRelocation(relocation);
+        positionPreferenceType.relocation = relocation;
         return this;
     }
 
-    public PositionPreferenceTypeBuilder setWorkingLanguageCodes(PositionPreferenceType.WorkingLanguageCodes workingLanguageCodes) {
-        positionPreferenceType.setWorkingLanguageCodes(workingLanguageCodes);
+    public PositionPreferenceTypeBuilder setWorkingLanguageCodes(List<LanguageCodeList> workingLanguageCodes) {
+        positionPreferenceType.workingLanguageCodes = workingLanguageCodes;
         return this;
     }
 
     public PositionPreferenceType build() {
         return positionPreferenceType;
-    }
-
-    public PositionPreferenceTypeBuilder withArbetsort(Arbetsort arbetsort) {
-
-        final AddressType addressType = new AddressTypeBuilder()
-                .setCity(arbetsort.getVarde1())
-                .setCountrySubDivisions(new AddressTypeCountrySubDivisionsBuilder().build())
-                .build();
-
-        final PreferredLocationType preferredLocationType = new PreferredLocationType();
-        preferredLocationType.setReferenceLocation(addressType);
-
-        final PositionPreferenceType.Locations locations = new PositionPreferenceType.Locations();
-        locations.getItem().add(preferredLocationType);
-
-        setLocations(locations);
-
-        return this;
     }
 }

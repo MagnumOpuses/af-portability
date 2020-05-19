@@ -1,23 +1,23 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.EntityType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.IdentifierType;
+import se.arbetsformedlingen.matchning.portability.dto.EntityType;
+import se.arbetsformedlingen.matchning.portability.dto.IdentifierType;
 
 public class EntityTypeBuilder {
     private EntityType entityType = new EntityType();
 
     public EntityTypeBuilder setId(IdentifierType id) {
-        entityType.setId(id);
+        entityType.id = id;
         return this;
     }
 
     public EntityTypeBuilder setName(String name) {
-        entityType.setName(name);
+        entityType.name = name;
         return this;
     }
 
     public EntityTypeBuilder setCode(String code) {
-        entityType.setCode(code);
+        entityType.code = code;
         return this;
     }
 

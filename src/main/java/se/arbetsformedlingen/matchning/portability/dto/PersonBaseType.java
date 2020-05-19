@@ -14,17 +14,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class PersonBaseType {
 
-    protected IdentifierType id;
-    protected PersonNameType name;
-    protected CommunicationType communication;
-    protected LanguageCodeList primaryLanguage;
-    protected IdentifierType legalId;
-    protected XMLGregorianCalendar birthDate;
-    protected GenderCodeList gender;
-    protected List<CountryCodeList> citizenship;
-    protected List<CountryCodeList> residenceCountry;
-    protected String militaryStatus;
-    protected StringTypeArray ethnicity;
+    public IdentifierType id;
+    public PersonNameType name;
+    public CommunicationType communication;
+    public LanguageCodeList primaryLanguage;
+    public IdentifierType legalId;
+    public XMLGregorianCalendar birthDate;
+    public GenderCodeList gender;
+    public List<CountryCodeList> citizenship;
+    public List<CountryCodeList> residenceCountry;
+    public String militaryStatus;
+    public StringTypeArray ethnicity;
 
     public IdentifierType getId() {
         return id;

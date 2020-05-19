@@ -17,7 +17,7 @@ public class EmployerHistoryType {
     protected String end;
     protected Boolean current;
     protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
     protected OrganizationType organization;
     protected List<PositionHistoryType> positionHistories;
 
@@ -61,12 +61,11 @@ public class EmployerHistoryType {
         return this.attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
-        return descriptions;
-    }
-
-    public void setDescriptions(StringTypeArray descriptions) {
-        this.descriptions = descriptions;
+    public List<String> getDescriptions() {
+        if (descriptions == null) {
+            descriptions = new ArrayList<String>();
+        }
+        return this.descriptions;
     }
 
     public OrganizationType getOrganization() {

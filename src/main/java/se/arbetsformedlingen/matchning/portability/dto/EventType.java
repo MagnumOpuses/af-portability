@@ -11,12 +11,12 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class EventType {
 
-    protected IdentifierType id;
-    protected String name;
-    protected String code;
-    protected String venue;
-    protected LocationType location;
-    protected DateOpenEndPeriodType when;
+    public IdentifierType id;
+    public String name;
+    public String code;
+    public String venue;
+    public LocationType location;
+    public DateOpenEndPeriodType when;
 
 
     public IdentifierType getId() {

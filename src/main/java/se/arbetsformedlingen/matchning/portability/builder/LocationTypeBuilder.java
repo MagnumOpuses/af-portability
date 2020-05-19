@@ -1,60 +1,59 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CountryCodeList;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.GeoType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.IdentifierType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.LocationType;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+
+import java.util.List;
 
 public class LocationTypeBuilder {
     private LocationType locationType = new LocationType();
 
     public LocationTypeBuilder setLine(String line) {
-        locationType.setLine(line);
+        locationType.line = line;
         return this;
     }
 
-    public LocationTypeBuilder setExtendedLines(LocationType.ExtendedLines extendedLines) {
-        locationType.setExtendedLines(extendedLines);
+    public LocationTypeBuilder setExtendedLines(List<AddressComponentType> extendedLines) {
+        locationType.extendedLines = extendedLines;
         return this;
     }
 
     public LocationTypeBuilder setCountryCode(CountryCodeList countryCode) {
-        locationType.setCountryCode(countryCode);
+        locationType.countryCode = countryCode;
         return this;
     }
 
-    public LocationTypeBuilder setCountrySubDivisions(LocationType.CountrySubDivisions countrySubDivisions) {
-        locationType.setCountrySubDivisions(countrySubDivisions);
+    public LocationTypeBuilder setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
+        locationType.countrySubDivisions = countrySubDivisions;
         return this;
     }
 
     public LocationTypeBuilder setCity(String city) {
-        locationType.setCity(city);
+        locationType.city = city;
         return this;
     }
 
     public LocationTypeBuilder setPostalCode(String postalCode) {
-        locationType.setPostalCode(postalCode);
+        locationType.postalCode = postalCode;
         return this;
     }
 
     public LocationTypeBuilder setPostOfficeBox(String postOfficeBox) {
-        locationType.setPostOfficeBox(postOfficeBox);
+        locationType.postOfficeBox = postOfficeBox;
         return this;
     }
 
     public LocationTypeBuilder setGeoLocation(GeoType geoLocation) {
-        locationType.setGeoLocation(geoLocation);
+        locationType.geoLocation = geoLocation;
         return this;
     }
 
     public LocationTypeBuilder setFormattedAddress(String formattedAddress) {
-        locationType.setFormattedAddress(formattedAddress);
+        locationType.formattedAddress = formattedAddress;
         return this;
     }
 
     public LocationTypeBuilder setId(IdentifierType id) {
-        locationType.setId(id);
+        locationType.id = id;
         return this;
     }
 

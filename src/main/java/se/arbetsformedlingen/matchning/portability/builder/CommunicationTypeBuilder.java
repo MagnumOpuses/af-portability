@@ -3,26 +3,29 @@ package se.arbetsformedlingen.matchning.portability.builder;
 import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CommunicationTypeBuilder {
-    private CommunicationType communicationType = new se.arbetsformedlingen.matchning.portability.dto.CommunicationTypeBuilder().createCommunicationType();
+    private CommunicationType communicationType = new CommunicationType();
 
-    public CommunicationTypeBuilder setAddress(AddressTypeArray address) {
-        communicationType.setAddress(address);
+    public CommunicationTypeBuilder setAddress(List<AddressType> address) {
+        communicationType.getAddress().addAll(address);
         return this;
     }
 
-    public CommunicationTypeBuilder setPhone(PhoneTypeArray phone) {
-        communicationType.setPhone(phone);
+    public CommunicationTypeBuilder setPhone(List<PhoneType> phone) {
+        communicationType.phone = phone;
         return this;
     }
 
-    public CommunicationTypeBuilder setEmail(EmailTypeArray email) {
-        communicationType.setEmail(email);
+    public CommunicationTypeBuilder setEmail(List<EmailType> email) {
+        communicationType.email = email;
         return this;
     }
 
-    public CommunicationTypeBuilder setWeb(WebType web) {
-        communicationType.getWeb(web);
+    public CommunicationTypeBuilder setWeb(List<WebType> web) {
+        communicationType.web = web;
         return this;
     }
 
@@ -31,11 +34,20 @@ public class CommunicationTypeBuilder {
     }
 
     public CommunicationTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
-        setAddress(new AddressTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
-        setPhone(new PhoneTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
-        setEmail(new EmailTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
-        setWeb(new WebTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
-        return this;
-    }
+        List<AddressType> address = new ArrayList<>();
+        address.add(new AddressTypeBuilder().withPersonUppgifter(personUppgifter).build());
+        setAddress(address);
 
-}
+        List<PhoneType> phone = new ArrayList<>();
+        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
+        setPhone(phone);
+
+        List<EmailType> email = new ArrayList<>();
+        email.add(new EmailTypeBuilder().setAddress(personUppgifter.getAdress()).build());
+        setEmail(email);
+
+        List<WebType> web = new ArrayList<>();
+        web.add(new WebTypeBuilder().setUrl(personUppgifter.getHemsida()).build());
+        setWeb(web);
+        return this;
+    }}

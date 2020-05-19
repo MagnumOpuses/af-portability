@@ -10,22 +10,22 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PersonNameType {
 
-    protected LanguageCodeList language;
-    protected String formattedName;
-    protected String legal;
-    protected String given;
-    protected String preferred;
-    protected String middle;
-    protected String family;
-    protected String familyPrefix;
-    protected String alias;
-    protected String formerFamily;
-    protected String formerFamilyPrefix;
-    protected String preferredSalutationCode;
-    protected String generationAffixCode;
-    protected String qualificationAffixCode;
-    protected String titleAffixCode;
-    protected String initials;
+    public LanguageCodeList language;
+    public String formattedName;
+    public String legal;
+    public String given;
+    public String preferred;
+    public String middle;
+    public String family;
+    public String familyPrefix;
+    public String alias;
+    public String formerFamily;
+    public String formerFamilyPrefix;
+    public String preferredSalutationCode;
+    public String generationAffixCode;
+    public String qualificationAffixCode;
+    public String titleAffixCode;
+    public String initials;
 
     public LanguageCodeList getLanguage() {
         return language;

@@ -12,20 +12,21 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PositionPreferenceType {
 
-    protected List<PreferredLocationType> locations;
-    protected List<EntityType> jobCategories;
-    protected List<String> positionTitles;
-    protected List<PositionTypeCodeList> positionOfferingTypeCodes;
-    protected List<PositionScheduleTypeCodeList> positionScheduleTypeCodes;
-    protected List<ScheduleType> shiftSchedules;
-    protected List<String> shiftDescriptions;
-    protected RemoteWorkType remoteWork; //Not used in current implementation
-    protected List<CareerLevelCodeList> careerLevelCodes;
-    protected EntityType jobGradeCode;
-    protected RemunerationPackageType offeredRemunerationPackage; //Not used in current implementation
-    protected TravelType travel; //Not used in current implementation
-    protected RelocationType relocation; //Not used in current implementation
-    protected List<LanguageCodeList> workingLanguageCodes; //Not used in current implementation
+    public List<PreferredLocationType> locations;
+    public List<EntityType> jobCategories;
+    public List<String> positionTitles;
+    public List<PositionTypeCodeList> positionOfferingTypeCodes;
+    public List<PositionScheduleTypeCodeList> positionScheduleTypeCodes;
+    public List<ScheduleType> shiftSchedules;
+    public List<String> shiftDescriptions;
+    public RemoteWorkType remoteWork; //Not used in current implementation
+    public List<CareerLevelCodeList> careerLevelCodes;
+    public EntityType jobGradeCode;
+    public RemunerationPackageType offeredRemunerationPackage; //Not used in current implementation
+    public TravelType travel; //Not used in current implementation
+    public RelocationType relocation; //Not used in current implementation
+    public List<LanguageCodeList> workingLanguageCodes; //Not used in current implementation
+
 
     public List<PreferredLocationType> getLocations() {
         return locations;

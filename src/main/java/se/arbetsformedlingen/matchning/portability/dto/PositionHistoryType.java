@@ -13,18 +13,18 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PositionHistoryType {
 
-    protected IdentifierType id;
-    protected String start;
-    protected String end;
-    protected Boolean current;
-    protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
-    protected String title;
-    protected ResourceRelationshipCodeList resourceRelationshipCode;
-    protected OrganizationType organization;
-    protected LocationType location;
-    protected List<EntityType> jobCategories;
-    protected List<EntityType> jobLevels;
+    public IdentifierType id;
+    public String start;
+    public String end;
+    public Boolean current;
+    public List<AttachmentReferenceType> attachmentReferences;
+    public StringTypeArray descriptions;
+    public String title;
+    public ResourceRelationshipCodeList resourceRelationshipCode;
+    public OrganizationType organization;
+    public LocationType location;
+    public List<EntityType> jobCategories;
+    public List<EntityType> jobLevels;
 
     public IdentifierType getId() {
         return id;

@@ -4,85 +4,86 @@ import se.arbetsformedlingen.matchning.portability.dto.LanguageCodeList;
 import se.arbetsformedlingen.matchning.portability.dto.PersonNameType;
 
 public class PersonNameTypeBuilder {
-    private PersonNameType personNameType = new se.arbetsformedlingen.matchning.portability.dto.PersonNameTypeBuilder().createPersonNameType();
+    private PersonNameType personNameType = new PersonNameType();
+
 
     public PersonNameTypeBuilder setLanguage(LanguageCodeList language) {
-        personNameType.setLanguage(language);
+        personNameType.language = language;
         return this;
     }
 
     public PersonNameTypeBuilder setFormattedName(String formattedName) {
-        personNameType.setFormattedName(formattedName);
+        personNameType.formattedName = formattedName;
         return this;
     }
 
     public PersonNameTypeBuilder setLegal(String legal) {
-        personNameType.setLegal(legal);
+        personNameType.legal = legal;
         return this;
     }
 
     public PersonNameTypeBuilder setGiven(String given) {
-        personNameType.setGiven(given);
+        personNameType.given = given;
         return this;
     }
 
     public PersonNameTypeBuilder setPreferred(String preferred) {
-        personNameType.setPreferred(preferred);
+        personNameType.preferred = preferred;
         return this;
     }
 
     public PersonNameTypeBuilder setMiddle(String middle) {
-        personNameType.setMiddle(middle);
+        personNameType.middle = middle;
         return this;
     }
 
     public PersonNameTypeBuilder setFamily(String family) {
-        personNameType.setFamily(family);
+        personNameType.family = family;
         return this;
     }
 
     public PersonNameTypeBuilder setFamilyPrefix(String familyPrefix) {
-        personNameType.setFamilyPrefix(familyPrefix);
+        personNameType.familyPrefix = familyPrefix;
         return this;
     }
 
     public PersonNameTypeBuilder setAlias(String alias) {
-        personNameType.setAlias(alias);
+        personNameType.alias = alias;
         return this;
     }
 
     public PersonNameTypeBuilder setFormerFamily(String formerFamily) {
-        personNameType.setFormerFamily(formerFamily);
+        personNameType.formerFamily = formerFamily;
         return this;
     }
 
     public PersonNameTypeBuilder setFormerFamilyPrefix(String formerFamilyPrefix) {
-        personNameType.setFormerFamilyPrefix(formerFamilyPrefix);
+        personNameType.formerFamilyPrefix = formerFamilyPrefix;
         return this;
     }
 
     public PersonNameTypeBuilder setPreferredSalutationCode(String preferredSalutationCode) {
-        personNameType.setPreferredSalutationCode(preferredSalutationCode);
+        personNameType.preferredSalutationCode = preferredSalutationCode;
         return this;
     }
 
     public PersonNameTypeBuilder setGenerationAffixCode(String generationAffixCode) {
-        personNameType.setGenerationAffixCode(generationAffixCode);
+        personNameType.generationAffixCode = generationAffixCode;
         return this;
     }
 
     public PersonNameTypeBuilder setQualificationAffixCode(String qualificationAffixCode) {
-        personNameType.setQualificationAffixCode(qualificationAffixCode);
+        personNameType.qualificationAffixCode = qualificationAffixCode;
         return this;
     }
 
     public PersonNameTypeBuilder setTitleAffixCode(String titleAffixCode) {
-        personNameType.setTitleAffixCode(titleAffixCode);
+        personNameType.titleAffixCode = titleAffixCode;
         return this;
     }
 
     public PersonNameTypeBuilder setInitials(String initials) {
-        personNameType.setInitials(initials);
+        personNameType.initials = initials;
         return this;
     }
 

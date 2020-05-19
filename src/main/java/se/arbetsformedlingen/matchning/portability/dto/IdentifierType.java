@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
 public class IdentifierType {
 
     @XmlElement(required = true)
-    protected String value;
-    protected String schemeId;
-    protected String schemeVersionId;
-    protected String schemeAgencyId;
-    protected String description;
-    protected String schemeLink;
-    protected String agencyUri;
+    public String value;
+    public String schemeId;
+    public String schemeVersionId;
+    public String schemeAgencyId;
+    public String description;
+    public String schemeLink;
+    public String agencyUri;
 
 
     public String getValue() {

@@ -1,60 +1,60 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.BaseScoreType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CompetencyEvidenceType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.MeasureType;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.PersonCompetencyType;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonCompetencyTypeBuilder {
     private PersonCompetencyType personCompetencyType = new PersonCompetencyType();
 
-    public PersonCompetencyTypeBuilder setCompetencyIds(PersonCompetencyType.CompetencyIds competencyIds) {
-        personCompetencyType.setCompetencyIds(competencyIds);
+    public PersonCompetencyTypeBuilder setCompetencyIds(List<IdentifierType> competencyIds) {
+        personCompetencyType.competencyIds = competencyIds;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyName(String competencyName) {
-        personCompetencyType.setCompetencyName(competencyName);
+        personCompetencyType.competencyName = competencyName;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setDescription(String description) {
-        personCompetencyType.setDescription(description);
+        personCompetencyType.description = description;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setProficiencyLevel(BaseScoreType proficiencyLevel) {
-        personCompetencyType.setProficiencyLevel(proficiencyLevel);
+        personCompetencyType.proficiencyLevel = proficiencyLevel;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setLastUsedDate(String lastUsedDate) {
-        personCompetencyType.setLastUsedDate(lastUsedDate);
+        personCompetencyType.lastUsedDate = lastUsedDate;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setExperienceMeasure(MeasureType experienceMeasure) {
-        personCompetencyType.setExperienceMeasure(experienceMeasure);
+        personCompetencyType.experienceMeasure = experienceMeasure;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setInterestLevel(BaseScoreType interestLevel) {
-        personCompetencyType.setInterestLevel(interestLevel);
+        personCompetencyType.interestLevel = interestLevel;
         return this;
     }
 
-    public PersonCompetencyTypeBuilder setCompetencyDimensions(PersonCompetencyType.CompetencyDimensions competencyDimensions) {
-        personCompetencyType.setCompetencyDimensions(competencyDimensions);
+    public PersonCompetencyTypeBuilder setCompetencyDimensions(List<CompetencyDimensionType> competencyDimensions) {
+        personCompetencyType.competencyDimensions = competencyDimensions;
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyEvidence(CompetencyEvidenceType competencyEvidence) {
-        personCompetencyType.setCompetencyEvidence(competencyEvidence);
+        personCompetencyType.competencyEvidence = competencyEvidence;
         return this;
     }
 
-    public PersonCompetencyTypeBuilder setAttachmentReferences(PersonCompetencyType.AttachmentReferences attachmentReferences) {
-        personCompetencyType.setAttachmentReferences(attachmentReferences);
+    public PersonCompetencyTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        personCompetencyType.attachmentReferences = attachmentReferences;
         return this;
     }
 
@@ -62,4 +62,11 @@ public class PersonCompetencyTypeBuilder {
         return personCompetencyType;
     }
 
+
+    public PersonCompetencyTypeBuilder withKompetens(String kompetenseId) {
+        List<IdentifierType> list = new ArrayList<>();
+        list.add(new IdentifierTypeBuilder().setValue(kompetenseId).build());
+        setCompetencyIds(list);
+        return this;
+    }
 }
