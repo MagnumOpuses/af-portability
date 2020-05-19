@@ -27,6 +27,7 @@ public class EducationAttendanceType {
     protected List<EducationDegreeType> educationDegrees;
     protected FormattedDateTimeType otherAttendancePeriods;
 
+
     public IdentifierType getId() {
         return id;
     }

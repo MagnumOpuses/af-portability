@@ -16,6 +16,7 @@ public class AddressComponentType {
     @XmlElement(required = true)
     protected String value;
 
+
     public String getType() {
         return type;
     }

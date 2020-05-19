@@ -18,6 +18,7 @@ public class EventType {
     protected LocationType location;
     protected DateOpenEndPeriodType when;
 
+
     public IdentifierType getId() {
         return id;
     }

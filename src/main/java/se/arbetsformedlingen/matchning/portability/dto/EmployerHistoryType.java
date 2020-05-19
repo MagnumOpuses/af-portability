@@ -21,6 +21,7 @@ public class EmployerHistoryType {
     protected OrganizationType organization;
     protected List<PositionHistoryType> positionHistories;
 
+
     public IdentifierType getId() {
         return id;
     }

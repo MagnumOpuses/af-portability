@@ -158,7 +158,7 @@ public class ObjectFactory {
      * 
      */
     public EmployerHistoryType createEmployerHistoryType() {
-        return new EmployerHistoryType();
+        return new EmployerHistoryTypeBuilder().createEmployerHistoryType();
     }
 
     /**
@@ -182,7 +182,7 @@ public class ObjectFactory {
      * 
      */
     public EventType createEventType() {
-        return new EventType();
+        return new EventTypeBuilder().createEventType();
     }
 
     /**
@@ -255,7 +255,7 @@ public class ObjectFactory {
      * 
      */
     public LocationType createLocationType() {
-        return new LocationType();
+        return new LocationTypeBuilder().createLocationType();
     }
 
     /**
@@ -279,7 +279,7 @@ public class ObjectFactory {
      * 
      */
     public CommunicationType createCommunicationType() {
-        return new CommunicationType();
+        return new CommunicationTypeBuilder().createCommunicationType();
     }
 
     /**
@@ -327,7 +327,7 @@ public class ObjectFactory {
      * 
      */
     public IdentifierType createIdentifierType() {
-        return new IdentifierType();
+        return new IdentifierTypeBuilder().createIdentifierType();
     }
 
     /**
@@ -351,7 +351,7 @@ public class ObjectFactory {
      * 
      */
     public LicenseType createLicenseType() {
-        return new LicenseType();
+        return new LicenseTypeBuilder().createLicenseType();
     }
 
     /**
@@ -383,7 +383,7 @@ public class ObjectFactory {
      * 
      */
     public EntityType createEntityType() {
-        return new EntityType();
+        return new EntityTypeBuilder().createEntityType();
     }
 
     /**
@@ -463,7 +463,7 @@ public class ObjectFactory {
      * 
      */
     public PersonBaseType createPersonBaseType() {
-        return new PersonBaseType();
+        return new PersonBaseTypeBuilder().createPersonBaseType();
     }
 
     /**
@@ -495,7 +495,7 @@ public class ObjectFactory {
      * 
      */
     public CandidateType createCandidateType() {
-        return new CandidateType();
+        return new CandidateTypeBuilder().createCandidateType();
     }
 
     /**
@@ -511,7 +511,7 @@ public class ObjectFactory {
      * 
      */
     public WebType createWebType() {
-        return new WebType();
+        return new WebTypeBuilder().createWebType();
     }
 
     /**
@@ -527,7 +527,7 @@ public class ObjectFactory {
      * 
      */
     public EducationAttendanceType createEducationAttendanceType() {
-        return new EducationAttendanceType();
+        return new EducationAttendanceTypeBuilder().createEducationAttendanceType();
     }
 
     /**
@@ -551,7 +551,7 @@ public class ObjectFactory {
      * 
      */
     public PhoneType createPhoneType() {
-        return new PhoneType();
+        return new PhoneTypeBuilder().createPhoneType();
     }
 
     /**
@@ -711,7 +711,7 @@ public class ObjectFactory {
      * 
      */
     public CandidateProfileType createCandidateProfileType() {
-        return new CandidateProfileType();
+        return new CandidateProfileTypeBuilder().createCandidateProfileType();
     }
 
     /**
@@ -759,7 +759,7 @@ public class ObjectFactory {
      * 
      */
     public EmailType createEmailType() {
-        return new EmailType();
+        return new EmailTypeBuilder().createEmailType();
     }
 
     /**
@@ -847,7 +847,7 @@ public class ObjectFactory {
      * 
      */
     public PersonNameType createPersonNameType() {
-        return new PersonNameType();
+        return new PersonNameTypeBuilder().createPersonNameType();
     }
 
     /**
@@ -879,7 +879,7 @@ public class ObjectFactory {
      * 
      */
     public PositionHistoryType createPositionHistoryType() {
-        return new PositionHistoryType();
+        return new PositionHistoryTypeBuilder().createPositionHistoryType();
     }
 
     /**
@@ -991,7 +991,7 @@ public class ObjectFactory {
      * 
      */
     public CertificationType createCertificationType() {
-        return new CertificationType();
+        return new CertificationTypeBuilder().createCertificationType();
     }
 
     /**
@@ -999,7 +999,7 @@ public class ObjectFactory {
      * 
      */
     public OrganizationType createOrganizationType() {
-        return new OrganizationType();
+        return new OrganizationTypeBuilder().createOrganizationType();
     }
 
     /**
@@ -1055,7 +1055,7 @@ public class ObjectFactory {
      * 
      */
     public CandidatePersonType createCandidatePersonType() {
-        return new CandidatePersonType();
+        return new CandidatePersonTypeBuilder().createCandidatePersonType();
     }
 
     /**
@@ -1159,7 +1159,7 @@ public class ObjectFactory {
      * 
      */
     public TextType createTextType() {
-        return new TextType();
+        return new TextTypeBuilder().createTextType();
     }
 
     /**
@@ -1175,7 +1175,7 @@ public class ObjectFactory {
      * 
      */
     public AddressComponentType createAddressComponentType() {
-        return new AddressComponentType();
+        return new AddressComponentTypeBuilder().createAddressComponentType();
     }
 
     /**
@@ -1183,7 +1183,7 @@ public class ObjectFactory {
      * 
      */
     public AddressType createAddressType() {
-        return new AddressType();
+        return new AddressTypeBuilder().createAddressType();
     }
 
     /**

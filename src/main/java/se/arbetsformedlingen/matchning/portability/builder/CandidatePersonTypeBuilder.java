@@ -5,10 +5,9 @@ import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
-import java.util.List;
 
 public class CandidatePersonTypeBuilder {
-    private CandidatePersonType candidatePersonType = new CandidatePersonType();
+    private CandidatePersonType candidatePersonType = new se.arbetsformedlingen.matchning.portability.dto.CandidatePersonTypeBuilder().createCandidatePersonType();
 
     public CandidatePersonTypeBuilder setLegalId(IdentifierType legalId) {
         candidatePersonType.setLegalId(legalId);

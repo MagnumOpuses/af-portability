@@ -22,6 +22,7 @@ public class CandidateType {
     protected CandidatePersonType person;
     protected List<CandidateProfileType> profiles;
 
+
     public IdentifierType getDocumentId() {
         return documentId;
     }

@@ -23,6 +23,7 @@ public class AddressType {
     protected GeoType geoLocation;
     protected String formattedAddress;
 
+
     public String getLine() {
         return line;
     }

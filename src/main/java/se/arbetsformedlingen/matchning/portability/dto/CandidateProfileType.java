@@ -41,6 +41,7 @@ public class CandidateProfileType {
     protected ProcessHistoryType applicationProcessHistory; //Not used in current implementation
     protected List<WorkLifeCycleType> workLifeCycles;
 
+
     public String getProfileName() {
         return profileName;
     }

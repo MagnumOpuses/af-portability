@@ -12,7 +12,7 @@ public class TextType {
 
     protected String value;
     protected LanguageCodeList languageCode;
-
+    
     public String getValue() {
         return value;
     }

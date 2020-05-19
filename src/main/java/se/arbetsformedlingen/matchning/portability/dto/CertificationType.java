@@ -24,6 +24,7 @@ public class CertificationType {
     protected List<AttachmentReferenceType> attachmentReferences;
     protected List<String> descriptions;
 
+
     public IdentifierType getId() {
         return id;
     }

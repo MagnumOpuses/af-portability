@@ -1,46 +1,50 @@
-package se.arbetsformedlingen.matchning.portability.builder;
-
-import se.arbetsformedlingen.matchning.portability.dto.IdentifierType;
+package se.arbetsformedlingen.matchning.portability.dto;
 
 public class IdentifierTypeBuilder {
-    private IdentifierType identifierType = new se.arbetsformedlingen.matchning.portability.dto.IdentifierTypeBuilder().createIdentifierType();
+    private String value;
+    private String schemeId;
+    private String schemeVersionId;
+    private String schemeAgencyId;
+    private String description;
+    private String schemeLink;
+    private String agencyUri;
 
     public IdentifierTypeBuilder setValue(String value) {
-        identifierType.setValue(value);
+        this.value = value;
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeId(String schemeId) {
-        identifierType.setSchemeId(schemeId);
+        this.schemeId = schemeId;
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeVersionId(String schemeVersionId) {
-        identifierType.setSchemeVersionId(schemeVersionId);
+        this.schemeVersionId = schemeVersionId;
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeAgencyId(String schemeAgencyId) {
-        identifierType.setSchemeAgencyId(schemeAgencyId);
+        this.schemeAgencyId = schemeAgencyId;
         return this;
     }
 
     public IdentifierTypeBuilder setDescription(String description) {
-        identifierType.setDescription(description);
+        this.description = description;
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeLink(String schemeLink) {
-        identifierType.setSchemeLink(schemeLink);
+        this.schemeLink = schemeLink;
         return this;
     }
 
     public IdentifierTypeBuilder setAgencyUri(String agencyUri) {
-        identifierType.setAgencyUri(agencyUri);
+        this.agencyUri = agencyUri;
         return this;
     }
 
-    public IdentifierType build() {
-        return identifierType;
+    public IdentifierType createIdentifierType() {
+        return new IdentifierType(value, schemeId, schemeVersionId, schemeAgencyId, description, schemeLink, agencyUri);
     }
 }

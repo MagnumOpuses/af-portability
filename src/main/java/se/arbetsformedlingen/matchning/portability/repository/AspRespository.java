@@ -13,7 +13,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
+import se.arbetsformedlingen.matchning.portability.dto.CandidateTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 import se.arbetsformedlingen.matchning.taxonomy.repository.Taxonomies;
 

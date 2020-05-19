@@ -4,7 +4,7 @@ import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 public class CandidateProfileTypeBuilder {
-    private CandidateProfileType candidateProfileType = new CandidateProfileType();
+    private CandidateProfileType candidateProfileType = new se.arbetsformedlingen.matchning.portability.dto.CandidateProfileTypeBuilder().createCandidateProfileType();
 
     public CandidateProfileTypeBuilder setProfileName(String profileName) {
         candidateProfileType.setProfileName(profileName);

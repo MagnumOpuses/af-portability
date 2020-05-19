@@ -17,6 +17,7 @@ public class CommunicationType {
     protected List<EmailType> email;
     protected List<WebType> web;
 
+
     public List<AddressType> getAddress() {
         if (address == null) {
             address = new ArrayList<AddressType>();

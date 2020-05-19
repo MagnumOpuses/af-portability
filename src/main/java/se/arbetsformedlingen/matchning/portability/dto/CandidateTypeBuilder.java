@@ -1,47 +1,48 @@
-package se.arbetsformedlingen.matchning.portability.builder;
+package se.arbetsformedlingen.matchning.portability.dto;
 
-import se.arbetsformedlingen.matchning.portability.dto.*;
+import se.arbetsformedlingen.matchning.portability.builder.CandidatePersonTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.builder.IdentifierTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.builder.ProfilesBuilder;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 import se.arbetsformedlingen.matchning.portability.model.asp.PersonUppgifter;
 
 import java.util.List;
 
 public class CandidateTypeBuilder {
-    private CandidateType candidateType = new se.arbetsformedlingen.matchning.portability.dto.CandidateTypeBuilder().createCandidateType();
+    private CandidateType candidateType = new CandidateTypeBuilder();
 
     public CandidateTypeBuilder setDocumentId(IdentifierType documentId) {
-        candidateType.getDocumentId(documentId);
+        candidateType.documentId = documentId;
         return this;
     }
 
-    public CandidateTypeBuilder setAlternateIds(CandidateType alternateIds) {
-        candidateType.getAlternateIds(alternateIds);
+    public CandidateTypeBuilder setAlternateIds(List<IdentifierType> alternateIds) {
+        candidateType.alternateIds = alternateIds;
         return this;
     }
 
     public CandidateTypeBuilder setLanguage(LanguageCodeList language) {
-        candidateType.setLanguage(language);
+        candidateType.language = language;
         return this;
     }
 
-
     public CandidateTypeBuilder setUri(String uri) {
-        candidateType.setUri(uri);
+        this.uri = uri;
         return this;
     }
 
     public CandidateTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
-        candidateType.setDistributionGuidelines(distributionGuidelines);
+        candidateType.distributionGuidelines = distributionGuidelines;
         return this;
     }
 
     public CandidateTypeBuilder setPerson(CandidatePersonType person) {
-        candidateType.setPerson(person);
+        candidateType.person = person;
         return this;
     }
 
-    public CandidateTypeBuilder setProfiles(CandidateType profiles) {
-        candidateType.getProfiles(profiles);
+    public CandidateTypeBuilder setProfiles(List<CandidateProfileType> profiles) {
+        candidateType.profiles = profiles;
         return this;
     }
 
@@ -49,14 +50,15 @@ public class CandidateTypeBuilder {
         return candidateType;
     }
 
-    public CandidateTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter){
+    public se.arbetsformedlingen.matchning.portability.builder.CandidateTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter){
         setDocumentId(new IdentifierTypeBuilder().setValue(personUppgifter.getKundnummer()).build());
         setPerson(new CandidatePersonTypeBuilder().withPersonUppgifter(personUppgifter).build());
         return this;
     }
 
-    public CandidateTypeBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
+    public se.arbetsformedlingen.matchning.portability.builder.CandidateTypeBuilder withProfiles(List<ArbetsSokandeProfil> profiler) {
         setProfiles(new ProfilesBuilder().withProfiles(profiler).build());
         return this;
     }
+
 }

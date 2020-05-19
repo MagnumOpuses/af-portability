@@ -52,6 +52,7 @@ public class CandidatePersonType {
     protected List<LegalDocumentType> legalDocuments;
     protected List<EmploymentPermitType> employmentPermits;
 
+
     public IdentifierType getLegalId() {
         return legalId;
     }

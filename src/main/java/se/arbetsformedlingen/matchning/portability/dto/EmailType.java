@@ -15,6 +15,7 @@ public class EmailType {
     @XmlElement(required = true)
     protected String address;
 
+
     public String getAddress() {
         return address;
     }

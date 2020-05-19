@@ -20,6 +20,7 @@ public class IdentifierType {
     protected String schemeLink;
     protected String agencyUri;
 
+
     public String getValue() {
         return value;
     }
