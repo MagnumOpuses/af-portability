@@ -12,14 +12,14 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class EmployerHistoryType {
 
-    protected IdentifierType id;
-    protected String start;
-    protected String end;
-    protected Boolean current;
-    protected List<AttachmentReferenceType> attachmentReferences;
-    protected List<String> descriptions;
-    protected OrganizationType organization;
-    protected List<PositionHistoryType> positionHistories;
+    public IdentifierType id;
+    public String start;
+    public String end;
+    public Boolean current;
+    public List<AttachmentReferenceType> attachmentReferences;
+    public List<String> descriptions;
+    public OrganizationType organization;
+    public List<PositionHistoryType> positionHistories;
 
 
     public IdentifierType getId() {

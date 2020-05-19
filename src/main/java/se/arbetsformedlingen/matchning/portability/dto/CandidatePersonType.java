@@ -15,42 +15,42 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class CandidatePersonType {
 
-    protected IdentifierType legalId;
-    protected XMLGregorianCalendar birthDate;
-    protected GenderCodeList gender;
-    protected List<CountryCodeList> citizenship;
-    protected List<CountryCodeList> residenceCountry;
-    protected String militaryStatus;
-    protected List<String> ethnicity;
-    protected IdentifierType id;
-    protected PersonNameType name;
-    protected CommunicationType communication;
-    protected LanguageCodeList primaryLanguage;
-    protected MeasureType height;
-    protected MeasureType weight;
-    protected DisabilityType disability; //Not used in current implementation
-    protected Boolean tobaccoUserIndicator; //Not used in current implementation
-    protected String hairColor; //Not used in current implementation
-    protected String eyeColor; //Not used in current implementation
-    protected List<String> identifyingMarks; //Not used in current implementation
-    protected BigInteger age; //Not used in current implementation
-    protected String bloodType; //Not used in current implementation
-    protected IdentifierType passportId; //Not used in current implementation
-    protected String fatherName; //Not used in current implementation
-    protected String motherName; //Not used in current implementation
-    protected List<String> race; //Not used in current implementation
-    protected String birthPlace; //Not used in current implementation
-    protected XMLGregorianCalendar deathDate; //Not used in current implementation
-    protected List<String> nationality; //Not used in current implementation
-    protected String maritalStatus; //Not used in current implementation
-    protected XMLGregorianCalendar maritalStatusDate; //Not used in current implementation
-    protected List<String> visa; //Not used in current implementation
-    protected List<String> religion; //Not used in current implementation
-    protected String studentType; //Not used in current implementation
-    protected Boolean studentIndicator; //Not used in current implementation
-    protected String studentStatus; //Not used in current implementation
-    protected List<LegalDocumentType> legalDocuments;
-    protected List<EmploymentPermitType> employmentPermits;
+    public IdentifierType legalId;
+    public XMLGregorianCalendar birthDate;
+    public GenderCodeList gender;
+    public List<CountryCodeList> citizenship;
+    public List<CountryCodeList> residenceCountry;
+    public String militaryStatus;
+    public List<String> ethnicity;
+    public IdentifierType id;
+    public PersonNameType name;
+    public CommunicationType communication;
+    public LanguageCodeList primaryLanguage;
+    public MeasureType height;
+    public MeasureType weight;
+    public DisabilityType disability; //Not used in current implementation
+    public Boolean tobaccoUserIndicator; //Not used in current implementation
+    public String hairColor; //Not used in current implementation
+    public String eyeColor; //Not used in current implementation
+    public List<String> identifyingMarks; //Not used in current implementation
+    public BigInteger age; //Not used in current implementation
+    public String bloodType; //Not used in current implementation
+    public IdentifierType passportId; //Not used in current implementation
+    public String fatherName; //Not used in current implementation
+    public String motherName; //Not used in current implementation
+    public List<String> race; //Not used in current implementation
+    public String birthPlace; //Not used in current implementation
+    public XMLGregorianCalendar deathDate; //Not used in current implementation
+    public List<String> nationality; //Not used in current implementation
+    public String maritalStatus; //Not used in current implementation
+    public XMLGregorianCalendar maritalStatusDate; //Not used in current implementation
+    public List<String> visa; //Not used in current implementation
+    public List<String> religion; //Not used in current implementation
+    public String studentType; //Not used in current implementation
+    public Boolean studentIndicator; //Not used in current implementation
+    public String studentStatus; //Not used in current implementation
+    public List<LegalDocumentType> legalDocuments;
+    public List<EmploymentPermitType> employmentPermits;
 
 
     public IdentifierType getLegalId() {

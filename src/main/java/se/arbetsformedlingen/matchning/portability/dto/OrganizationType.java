@@ -13,19 +13,19 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class OrganizationType {
 
-    protected IdentifierType taxId;
-    protected IdentifierType legalId;
-    protected List<String> industryCodes;
-    protected List<IdentifierType> industryIdentifiers;
-    protected BigDecimal headCount;
-    protected AmountType revenue;
-    protected TextType description;
-    protected GeographicResponsibilityCodeList geographicResponsibilityCode;
-    protected OwnershipTypeCodeList ownershipType;
-    protected String stockSymbol;
-    protected String workEnvironmentCode;
-    protected List<SpecifiedPersonType> contacts;
-    protected String domainName;
+    public IdentifierType taxId;
+    public IdentifierType legalId;
+    public List<String> industryCodes;
+    public List<IdentifierType> industryIdentifiers;
+    public BigDecimal headCount;
+    public AmountType revenue;
+    public TextType description;
+    public GeographicResponsibilityCodeList geographicResponsibilityCode;
+    public OwnershipTypeCodeList ownershipType;
+    public String stockSymbol;
+    public String workEnvironmentCode;
+    public List<SpecifiedPersonType> contacts;
+    public String domainName;
 
     public IdentifierType getTaxId() {
         return taxId;

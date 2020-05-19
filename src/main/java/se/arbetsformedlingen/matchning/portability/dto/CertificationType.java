@@ -13,16 +13,16 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CertificationType {
 
-    protected IdentifierType id;
-    protected String name;
-    protected EntityType type;
-    protected String status;
-    protected EffectiveTimePeriodType effectiveTimePeriod;
-    protected String issued;
-    protected String firstIssued;
-    protected OrganizationType issuingAuthority;
-    protected List<AttachmentReferenceType> attachmentReferences;
-    protected List<String> descriptions;
+    public IdentifierType id;
+    public String name;
+    public EntityType type;
+    public String status;
+    public EffectiveTimePeriodType effectiveTimePeriod;
+    public String issued;
+    public String firstIssued;
+    public OrganizationType issuingAuthority;
+    public List<AttachmentReferenceType> attachmentReferences;
+    public List<String> descriptions;
 
 
     public IdentifierType getId() {

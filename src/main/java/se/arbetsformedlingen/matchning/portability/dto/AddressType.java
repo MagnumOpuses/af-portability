@@ -13,15 +13,15 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AddressType {
 
-    protected String line;
-    protected List<AddressComponentType> extendedLines;
-    protected CountryCodeList countryCode;
-    protected List<AddressComponentType> countrySubDivisions;
-    protected String city;
-    protected String postalCode;
-    protected String postOfficeBox;
-    protected GeoType geoLocation;
-    protected String formattedAddress;
+    public String line;
+    public List<AddressComponentType> extendedLines;
+    public CountryCodeList countryCode;
+    public List<AddressComponentType> countrySubDivisions;
+    public String city;
+    public String postalCode;
+    public String postOfficeBox;
+    public GeoType geoLocation;
+    public String formattedAddress;
 
 
     public String getLine() {

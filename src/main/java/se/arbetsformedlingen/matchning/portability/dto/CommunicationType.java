@@ -12,10 +12,10 @@ import java.util.List;
 })
 public class CommunicationType {
 
-    protected List<AddressType> address;
-    protected List<PhoneType> phone;
-    protected List<EmailType> email;
-    protected List<WebType> web;
+    public List<AddressType> address;
+    public List<PhoneType> phone;
+    public List<EmailType> email;
+    public List<WebType> web;
 
 
     public List<AddressType> getAddress() {

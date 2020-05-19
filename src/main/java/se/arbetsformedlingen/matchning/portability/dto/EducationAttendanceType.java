@@ -12,20 +12,20 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class EducationAttendanceType {
 
-    protected IdentifierType id;
-    protected String start;
-    protected String end;
-    protected Boolean current;
-    protected List<AttachmentReferenceType> attachmentReferences;
-    protected List<String> descriptions;
-    protected OrganizationType institution;
-    protected OrganizationType department;
-    protected StringTypeArray programs;
-    protected List<EntityType> educationLevelCodes;
-    protected Boolean currentlyAttendingIndicator;
-    protected Boolean goodStandingIndicator;
-    protected List<EducationDegreeType> educationDegrees;
-    protected FormattedDateTimeType otherAttendancePeriods;
+    public IdentifierType id;
+    public String start;
+    public String end;
+    public Boolean current;
+    public List<AttachmentReferenceType> attachmentReferences;
+    public List<String> descriptions;
+    public OrganizationType institution;
+    public OrganizationType department;
+    public StringTypeArray programs;
+    public List<EntityType> educationLevelCodes;
+    public Boolean currentlyAttendingIndicator;
+    public Boolean goodStandingIndicator;
+    public List<EducationDegreeType> educationDegrees;
+    public FormattedDateTimeType otherAttendancePeriods;
 
 
     public IdentifierType getId() {

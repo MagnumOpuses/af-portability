@@ -12,34 +12,34 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CandidateProfileType {
 
-    protected String profileName;
-    protected LanguageCodeList languageCode;
-    protected List<EducationAttendanceType> education;
-    protected List<EmployerHistoryType> employment;
-    protected List<MilitaryServiceType> militaryService; //Not used in current implementation
-    protected List<LicenseType> licenses;
-    protected List<CertificationType> certifications;
-    protected List<PatentType> patents; //Not used in current implementation
-    protected List<PublicationType> publications; //Not used in current implementation
-    protected List<PersonCompetencyType> qualifications;
-    protected List<OrganizationAffiliationType> affiliations;
-    protected List<CertificationType> securityCredentials; //Not used in current implementation
-    protected List<RefereeType> references; //Not used in current implementation
-    protected List<AttachmentType> attachments;
-    protected IdentifierType profileId;
-    protected List<IdentifierType> alternateIds;
-    protected PersonAvailabilityType personAvailability;
-    protected String processingInformation;
-    protected DistributionGuidelinesType distributionGuidelines; //Not used in current implementation
-    protected List<AssociatedPositionOpeningType> associatedPositionOpenings;
-    protected String objective;
-    protected String executiveSummary;
-    protected List<EmployerPreferenceType> employerPreferences;
-    protected List<PositionPreferenceType> positionPreferences;
-    protected List<CandidateRelationshipType> candidateRelationships; //Not used in current implementation
-    protected List<CandidateSourceType> candidateSources; //Not used in current implementation
-    protected ProcessHistoryType applicationProcessHistory; //Not used in current implementation
-    protected List<WorkLifeCycleType> workLifeCycles;
+    public String profileName;
+    public LanguageCodeList languageCode;
+    public List<EducationAttendanceType> education;
+    public List<EmployerHistoryType> employment;
+    public List<MilitaryServiceType> militaryService; //Not used in current implementation
+    public List<LicenseType> licenses;
+    public List<CertificationType> certifications;
+    public List<PatentType> patents; //Not used in current implementation
+    public List<PublicationType> publications; //Not used in current implementation
+    public List<PersonCompetencyType> qualifications;
+    public List<OrganizationAffiliationType> affiliations;
+    public List<CertificationType> securityCredentials; //Not used in current implementation
+    public List<RefereeType> references; //Not used in current implementation
+    public List<AttachmentType> attachments;
+    public IdentifierType profileId;
+    public List<IdentifierType> alternateIds;
+    public PersonAvailabilityType personAvailability;
+    public String processingInformation;
+    public DistributionGuidelinesType distributionGuidelines; //Not used in current implementation
+    public List<AssociatedPositionOpeningType> associatedPositionOpenings;
+    public String objective;
+    public String executiveSummary;
+    public List<EmployerPreferenceType> employerPreferences;
+    public List<PositionPreferenceType> positionPreferences;
+    public List<CandidateRelationshipType> candidateRelationships; //Not used in current implementation
+    public List<CandidateSourceType> candidateSources; //Not used in current implementation
+    public ProcessHistoryType applicationProcessHistory; //Not used in current implementation
+    public List<WorkLifeCycleType> workLifeCycles;
 
 
     public String getProfileName() {

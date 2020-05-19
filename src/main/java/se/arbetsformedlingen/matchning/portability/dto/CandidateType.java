@@ -14,13 +14,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class CandidateType {
 
-    protected IdentifierType documentId;
-    protected List<IdentifierType> alternateIds;
-    protected LanguageCodeList language;
-    protected String uri;
-    protected DistributionGuidelinesType distributionGuidelines;
-    protected CandidatePersonType person;
-    protected List<CandidateProfileType> profiles;
+    public IdentifierType documentId;
+    public List<IdentifierType> alternateIds;
+    public LanguageCodeList language;
+    public String uri;
+    public DistributionGuidelinesType distributionGuidelines;
+    public CandidatePersonType person;
+    public List<CandidateProfileType> profiles;
 
 
     public IdentifierType getDocumentId() {

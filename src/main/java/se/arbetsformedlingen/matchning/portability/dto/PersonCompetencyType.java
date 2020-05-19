@@ -13,16 +13,16 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PersonCompetencyType {
 
-    protected List<IdentifierType> competencyIds;
-    protected String competencyName;
-    protected String description;
-    protected BaseScoreType proficiencyLevel;
-    protected String lastUsedDate;
-    protected MeasureType experienceMeasure;
-    protected BaseScoreType interestLevel;
-    protected List<CompetencyDimensionType> competencyDimensions;
-    protected CompetencyEvidenceType competencyEvidence;
-    protected List<AttachmentReferenceType> attachmentReferences;
+    public List<IdentifierType> competencyIds;
+    public String competencyName;
+    public String description;
+    public BaseScoreType proficiencyLevel;
+    public String lastUsedDate;
+    public MeasureType experienceMeasure;
+    public BaseScoreType interestLevel;
+    public List<CompetencyDimensionType> competencyDimensions;
+    public CompetencyEvidenceType competencyEvidence;
+    public List<AttachmentReferenceType> attachmentReferences;
 
     public List<IdentifierType> getCompetencyIds() {
         if (competencyIds == null) {

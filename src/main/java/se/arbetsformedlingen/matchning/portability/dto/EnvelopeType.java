@@ -13,11 +13,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 
 public class EnvelopeType {
-    protected String sessionToken;
-    protected Source source;
-    protected Sink sink;
-    protected Consent consent;
-    protected List<CandidateType> data;
+    public String sessionToken;
+    public Source source;
+    public Sink sink;
+    public Consent consent;
+    public List<CandidateType> data;
 
     public String getSessionToken() {
         return sessionToken;
@@ -59,10 +59,10 @@ public class EnvelopeType {
     }
 
     public class Sink {
-        protected String sinkId;
-        protected String sinkName;
-        protected String sourceDescription;
-        protected List<String> purposeOfUse;
+        public String sinkId;
+        public String sinkName;
+        public String sourceDescription;
+        public List<String> purposeOfUse;
 
         public String getSinkId() {
             return sinkId;
@@ -97,10 +97,10 @@ public class EnvelopeType {
     }
 
     public class Source {
-        protected String sinkId;
-        protected String sinkName;
-        protected String sinkDescription;
-        protected List<String> purposeOfUse;
+        public String sinkId;
+        public String sinkName;
+        public String sinkDescription;
+        public List<String> purposeOfUse;
 
         public String getSinkId() {
             return sinkId;
@@ -136,12 +136,12 @@ public class EnvelopeType {
     }
 
     public class Consent {
-        protected XMLGregorianCalendar consentTimestamp;
-        protected String consentStatus;
-        protected XMLGregorianCalendar consentRevokedTimestamp;
-        protected String consentedTimePeriod;
-        protected List<String> acceptedTerms;
-        protected List<String> acceptedPurposes;
+        public XMLGregorianCalendar consentTimestamp;
+        public String consentStatus;
+        public XMLGregorianCalendar consentRevokedTimestamp;
+        public String consentedTimePeriod;
+        public List<String> acceptedTerms;
+        public List<String> acceptedPurposes;
 
         public XMLGregorianCalendar getConsentTimestamp() {
             return consentTimestamp;
