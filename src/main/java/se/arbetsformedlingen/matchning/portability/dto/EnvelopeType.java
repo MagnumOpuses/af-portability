@@ -100,7 +100,7 @@ public class EnvelopeType {
         public String sinkId;
         public String sinkName;
         public String sinkDescription;
-        public List<String> purposeOfUse;
+        public List<String> termsAndConditions;
 
         public String getSinkId() {
             return sinkId;
@@ -128,10 +128,10 @@ public class EnvelopeType {
 
         public List<String> getPurposeOfUse() {
 
-            if (purposeOfUse == null) {
-                purposeOfUse = new ArrayList<String>();
+            if (termsAndConditions == null) {
+                termsAndConditions = new ArrayList<String>();
             }
-            return this.purposeOfUse;
+            return this.termsAndConditions;
         }
     }
 
