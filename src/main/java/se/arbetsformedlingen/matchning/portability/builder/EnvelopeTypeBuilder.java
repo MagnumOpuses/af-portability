@@ -9,27 +9,27 @@ public class EnvelopeTypeBuilder {
     private EnvelopeType envelopeType = new EnvelopeType();
 
     public EnvelopeTypeBuilder setSessionToken(String sessionToken) {
-        envelopeType.sessionToken = sessionToken;
+        envelopeType.setSessionToken(sessionToken);
         return this;
     }
 
     public EnvelopeTypeBuilder setSource(EnvelopeType.Source source) {
-        envelopeType.source = source;
+        envelopeType.setSource(source);
         return this;
     }
 
     public EnvelopeTypeBuilder setSink(EnvelopeType.Sink sink) {
-        envelopeType.sink = sink;
+        envelopeType.setSink(sink);
         return this;
     }
 
     public EnvelopeTypeBuilder setConsent(EnvelopeType.Consent consent) {
-        envelopeType.consent = consent;
+        envelopeType.setConsent(consent);
         return this;
     }
 
     public EnvelopeTypeBuilder setData(List<CandidateType> data) {
-        envelopeType.data = data;
+        envelopeType.setData(data);
         return this;
     }
 

@@ -58,6 +58,14 @@ public class EnvelopeType {
         return this.data;
     }
 
+    public void setData(List<CandidateType> data) {
+        this.data = data;
+    }
+
+    public void setSinkPurpose(List<String> purposeList) {
+        this.sink.setPurposeOfUse(purposeList);
+    }
+
     public class Sink {
         public String sinkId;
         public String sinkName;
@@ -93,6 +101,10 @@ public class EnvelopeType {
                 purposeOfUse = new ArrayList<String>();
             }
             return this.purposeOfUse;
+        }
+
+        public void setPurposeOfUse(List<String> purposeOfUse) {
+            this.purposeOfUse = purposeOfUse;
         }
     }
 
