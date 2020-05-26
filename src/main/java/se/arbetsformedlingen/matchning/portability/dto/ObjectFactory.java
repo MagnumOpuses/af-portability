@@ -155,13 +155,6 @@ public class ObjectFactory {
         return new WebTypeArray();
     }
 
-    /**
-     * Create an instance of {@link EmployerHistoryType }
-     * 
-     */
-    public EmployerHistoryType createEmployerHistoryType() {
-        return new EmployerHistoryTypeBuilder().createEmployerHistoryType();
-    }
 
     /**
      * Create an instance of {@link MeasureType }
@@ -177,14 +170,6 @@ public class ObjectFactory {
      */
     public PhoneTypeArray createPhoneTypeArray() {
         return new PhoneTypeArray();
-    }
-
-    /**
-     * Create an instance of {@link EventType }
-     * 
-     */
-    public EventType createEventType() {
-        return new EventTypeBuilder().createEventType();
     }
 
     /**
@@ -213,14 +198,6 @@ public class ObjectFactory {
 
 
     /**
-     * Create an instance of {@link PersonLegalInclusion.Religion }
-     * 
-     */
-    public PersonLegalInclusion.Religion createPersonLegalInclusionReligion() {
-        return new PersonLegalInclusion.Religion();
-    }
-
-    /**
      * Create an instance of {@link TravelType }
      * 
      */
@@ -237,27 +214,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PositionPreferenceType }
-     * 
-     */
-    public PositionPreferenceType createPositionPreferenceType() {
-        return new PositionPreferenceTypeBuilder().createPositionPreferenceType();
-    }
-
-    /**
      * Create an instance of {@link OpenEndPeriodType }
      * 
      */
     public OpenEndPeriodType createOpenEndPeriodType() {
         return new OpenEndPeriodType();
-    }
-
-    /**
-     * Create an instance of {@link LocationType }
-     * 
-     */
-    public LocationType createLocationType() {
-        return new LocationTypeBuilder().createLocationType();
     }
 
     /**
@@ -277,14 +238,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CommunicationType }
-     * 
-     */
-    public CommunicationType createCommunicationType() {
-        return new CommunicationTypeBuilder().createCommunicationType();
-    }
-
-    /**
      * Create an instance of {@link ScoreNumericType }
      * 
      */
@@ -298,14 +251,6 @@ public class ObjectFactory {
      */
     public DataProtectionPolicyInclusion createDataProtectionPolicyInclusion() {
         return new DataProtectionPolicyInclusion();
-    }
-
-    /**
-     * Create an instance of {@link PreferredLocationType }
-     * 
-     */
-    public PreferredLocationType createPreferredLocationType() {
-        return new PreferredLocationTypeBuilder().createPreferredLocationType();
     }
 
     /**
@@ -325,14 +270,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link IdentifierType }
-     * 
-     */
-    public IdentifierType createIdentifierType() {
-        return new IdentifierTypeBuilder().createIdentifierType();
-    }
-
-    /**
      * Create an instance of {@link CommentType }
      * 
      */
@@ -346,14 +283,6 @@ public class ObjectFactory {
      */
     public PublicationType.Copyrights createPublicationTypeCopyrights() {
         return new PublicationType.Copyrights();
-    }
-
-    /**
-     * Create an instance of {@link LicenseType }
-     * 
-     */
-    public LicenseType createLicenseType() {
-        return new LicenseTypeBuilder().createLicenseType();
     }
 
     /**
@@ -378,22 +307,6 @@ public class ObjectFactory {
      */
     public PersonPhysicalInclusion createPersonPhysicalInclusion() {
         return new PersonPhysicalInclusion();
-    }
-
-    /**
-     * Create an instance of {@link EntityType }
-     * 
-     */
-    public EntityType createEntityType() {
-        return new EntityTypeBuilder().createEntityType();
-    }
-
-    /**
-     * Create an instance of {@link PersonLegalInclusion.Visa }
-     * 
-     */
-    public PersonLegalInclusion.Visa createPersonLegalInclusionVisa() {
-        return new PersonLegalInclusion.Visa();
     }
 
     /**
@@ -446,7 +359,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessPartyType }
-     * 
+     *
      */
     public ProcessPartyType createProcessPartyType() {
         return new ProcessPartyType();
@@ -454,23 +367,15 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompetencyEvidenceType }
-     * 
+     *
      */
     public CompetencyEvidenceType createCompetencyEvidenceType() {
         return new CompetencyEvidenceType();
     }
 
     /**
-     * Create an instance of {@link PersonBaseType }
-     * 
-     */
-    public PersonBaseType createPersonBaseType() {
-        return new PersonBaseTypeBuilder().createPersonBaseType();
-    }
-
-    /**
      * Create an instance of {@link NounType.DataProtectionPolicy.GeoRestrictions }
-     * 
+     *
      */
     public NounType.DataProtectionPolicy.GeoRestrictions createNounTypeDataProtectionPolicyGeoRestrictions() {
         return new NounType.DataProtectionPolicy.GeoRestrictions();
@@ -478,7 +383,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessActionType }
-     * 
+     *
      */
     public ProcessActionType createProcessActionType() {
         return new ProcessActionType();
@@ -501,35 +406,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PersonLegalInclusion.Race }
-     * 
-     */
-    public PersonLegalInclusion.Race createPersonLegalInclusionRace() {
-        return new PersonLegalInclusion.Race();
-    }
-
-    /**
-     * Create an instance of {@link WebType }
-     * 
-     */
-    public WebType createWebType() {
-        return new WebTypeBuilder().createWebType();
-    }
-
-    /**
      * Create an instance of {@link WorkLifeCycleType }
      * 
      */
     public WorkLifeCycleType createWorkLifeCycleType() {
         return new WorkLifeCycleType();
-    }
-
-    /**
-     * Create an instance of {@link EducationAttendanceType }
-     * 
-     */
-    public EducationAttendanceType createEducationAttendanceType() {
-        return new EducationAttendanceTypeBuilder().createEducationAttendanceType();
     }
 
     /**
@@ -541,35 +422,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RemunerationPackageType.Ranges }
-     * 
-     */
-    public RemunerationPackageType.Ranges createRemunerationPackageTypeRanges() {
-        return new RemunerationPackageType.Ranges();
-    }
-
-    /**
-     * Create an instance of {@link PhoneType }
-     * 
-     */
-    public PhoneType createPhoneType() {
-        return new PhoneTypeBuilder().createPhoneType();
-    }
-
-    /**
      * Create an instance of {@link DateTimeOpenEndPeriodType }
      * 
      */
     public DateTimeOpenEndPeriodType createDateTimeOpenEndPeriodType() {
         return new DateTimeOpenEndPeriodType();
-    }
-
-    /**
-     * Create an instance of {@link PersonLegalInclusion.LegalDocuments }
-     * 
-     */
-    public PersonLegalInclusion.LegalDocuments createPersonLegalInclusionLegalDocuments() {
-        return new PersonLegalInclusion.LegalDocuments();
     }
 
     /**
@@ -677,14 +534,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PersonCompetencyType }
-     * 
-     */
-    public PersonCompetencyType createPersonCompetencyType() {
-        return new PersonCompetencyTypeBuilder().createPersonCompetencyType();
-    }
-
-    /**
      * Create an instance of {@link RefereeType }
      * 
      */
@@ -709,27 +558,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CandidateProfileType }
-     * 
-     */
-    public CandidateProfileType createCandidateProfileType() {
-        return new CandidateProfileTypeBuilder().createCandidateProfileType();
-    }
-
-    /**
      * Create an instance of {@link MilitaryServiceType }
      * 
      */
     public MilitaryServiceType createMilitaryServiceType() {
         return new MilitaryServiceType();
-    }
-
-    /**
-     * Create an instance of {@link PersonLegalInclusion.Nationality }
-     * 
-     */
-    public PersonLegalInclusion.Nationality createPersonLegalInclusionNationality() {
-        return new PersonLegalInclusion.Nationality();
     }
 
     /**
@@ -754,14 +587,6 @@ public class ObjectFactory {
      */
     public DistributionType createDistributionType() {
         return new DistributionType();
-    }
-
-    /**
-     * Create an instance of {@link EmailType }
-     * 
-     */
-    public EmailType createEmailType() {
-        return new EmailTypeBuilder().createEmailType();
     }
 
     /**
@@ -845,14 +670,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PersonNameType }
-     * 
-     */
-    public PersonNameType createPersonNameType() {
-        return new PersonNameTypeBuilder().createPersonNameType();
-    }
-
-    /**
      * Create an instance of {@link RelocationType }
      * 
      */
@@ -877,27 +694,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PositionHistoryType }
-     * 
-     */
-    public PositionHistoryType createPositionHistoryType() {
-        return new PositionHistoryTypeBuilder().createPositionHistoryType();
-    }
-
-    /**
      * Create an instance of {@link PersonAvailabilityType }
      * 
      */
     public PersonAvailabilityType createPersonAvailabilityType() {
         return new PersonAvailabilityType();
-    }
-
-    /**
-     * Create an instance of {@link PersonBaseType.ResidenceCountry }
-     * 
-     */
-    public PersonBaseType.ResidenceCountry createPersonBaseTypeResidenceCountry() {
-        return new PersonBaseType.ResidenceCountry();
     }
 
     /**
@@ -989,22 +790,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CertificationType }
-     * 
-     */
-    public CertificationType createCertificationType() {
-        return new CertificationTypeBuilder().createCertificationType();
-    }
-
-    /**
-     * Create an instance of {@link OrganizationType }
-     * 
-     */
-    public OrganizationType createOrganizationType() {
-        return new OrganizationTypeBuilder().createOrganizationType();
-    }
-
-    /**
      * Create an instance of {@link ProcessHistoryItemType }
      * 
      */
@@ -1053,27 +838,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CandidatePersonType }
-     * 
-     */
-    public CandidatePersonType createCandidatePersonType() {
-        return new CandidatePersonTypeBuilder().createCandidatePersonType();
-    }
-
-    /**
      * Create an instance of {@link DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions }
      * 
      */
     public DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions createDataProtectionPolicyInclusionDataProtectionPolicyGeoRestrictions() {
         return new DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions();
-    }
-
-    /**
-     * Create an instance of {@link PersonLegalInclusion.EmploymentPermits }
-     * 
-     */
-    public PersonLegalInclusion.EmploymentPermits createPersonLegalInclusionEmploymentPermits() {
-        return new PersonLegalInclusion.EmploymentPermits();
     }
 
     /**
@@ -1106,14 +875,6 @@ public class ObjectFactory {
      */
     public DoNotDistributeToType createDoNotDistributeToType() {
         return new DoNotDistributeToType();
-    }
-
-    /**
-     * Create an instance of {@link PersonBaseType.Citizenship }
-     * 
-     */
-    public PersonBaseType.Citizenship createPersonBaseTypeCitizenship() {
-        return new PersonBaseType.Citizenship();
     }
 
     /**
@@ -1157,35 +918,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TextType }
-     * 
-     */
-    public TextType createTextType() {
-        return new TextTypeBuilder().createTextType();
-    }
-
-    /**
      * Create an instance of {@link LicenseType.Restrictions.Item }
      * 
      */
     public LicenseType.Restrictions.Item createLicenseTypeRestrictionsItem() {
         return new LicenseType.Restrictions.Item();
-    }
-
-    /**
-     * Create an instance of {@link AddressComponentType }
-     * 
-     */
-    public AddressComponentType createAddressComponentType() {
-        return new AddressComponentTypeBuilder().createAddressComponentType();
-    }
-
-    /**
-     * Create an instance of {@link AddressType }
-     * 
-     */
-    public AddressType createAddressType() {
-        return new AddressTypeBuilder().createAddressType();
     }
 
     /**

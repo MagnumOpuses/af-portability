@@ -139,64 +139,64 @@
                     <mainClass>se.arbetsformedlingen.matchning.ConvertProfileToHROpenApplication</mainClass>
                 </configuration>
             </plugin>
+            <!--           <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>jaxb2-maven-plugin</artifactId>
+               <version>1.5</version>
+               <executions>
+                   <execution>
+                       <id>xjc</id>
+                       <goals>
+                           <goal>xjc</goal>
+                       </goals>
+                   </execution>
+               </executions>
+               <configuration>
+                   <outputDirectory>target/generated-sources/jaxb</outputDirectory>
+                   <packageName>se.arbetsformedlingen.matchning.portability.model.hropen421xsd</packageName>
+                   <schemaDirectory>src/main/resources/HROpen-v4.2-1/recruiting/xml</schemaDirectory>
+                   <schemaFiles>CandidateType.xsd</schemaFiles>
+                   <bindingDirectory>src/main/resources/xjb</bindingDirectory>
+               </configuration>
+           </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxb2-maven-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <id>xjc</id>
-                        <goals>
-                            <goal>xjc</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <outputDirectory>target/generated-sources/jaxb</outputDirectory>
-                    <packageName>se.arbetsformedlingen.matchning.portability.model.hropen421xsd</packageName>
-                    <schemaDirectory>src/main/resources/HROpen-v4.2-1/recruiting/xml</schemaDirectory>
-                    <schemaFiles>CandidateType.xsd</schemaFiles>
-                    <bindingDirectory>src/main/resources/xjb</bindingDirectory>
-                </configuration>
-            </plugin>
-            <!-- <plugin>
-                <groupId>org.jsonschema2pojo</groupId>
-                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.34</version>
-                <configuration>
-                    <sourceDirectory>src/main/resources/HROpen-v4.2-1/recruiting/json</sourceDirectory>
-                    <targetPackage>se.arbetsformedlingen.matchning.portability.model.hropen421json</targetPackage>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-recrutment</id>
-                    </execution>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.jsonschema2pojo</groupId>
-                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.34</version>
-                <configuration>
-                    <sourceDirectory>src/main/resources/HROpen-v4.2-1/common/json</sourceDirectory>
-                    <targetPackage>se.arbetsformedlingen.matchning.portability.model.hropen421json</targetPackage>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-common</id>
-                    </execution>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin> -->
+               <groupId>org.jsonschema2pojo</groupId>
+               <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+               <version>0.4.34</version>
+               <configuration>
+                   <sourceDirectory>src/main/resources/HROpen-v4.2-1/recruiting/json</sourceDirectory>
+                   <targetPackage>se.arbetsformedlingen.matchning.portability.model.hropen421json</targetPackage>
+               </configuration>
+               <executions>
+                   <execution>
+                       <id>make-recrutment</id>
+                   </execution>
+                   <execution>
+                       <goals>
+                           <goal>generate</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+           <plugin>
+               <groupId>org.jsonschema2pojo</groupId>
+               <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+               <version>0.4.34</version>
+               <configuration>
+                   <sourceDirectory>src/main/resources/HROpen-v4.2-1/common/json</sourceDirectory>
+                   <targetPackage>se.arbetsformedlingen.matchning.portability.model.hropen421json</targetPackage>
+               </configuration>
+               <executions>
+                   <execution>
+                       <id>make-common</id>
+                   </execution>
+                   <execution>
+                       <goals>
+                           <goal>generate</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin> -->
         </plugins>
     </build>
 </project>

@@ -45,7 +45,7 @@ public class CandidateTypeBuilder {
         return this;
     }
 
-    public CandidateType createCandidateType() {
+    public CandidateType build() {
         return candidateType;
     }
 
