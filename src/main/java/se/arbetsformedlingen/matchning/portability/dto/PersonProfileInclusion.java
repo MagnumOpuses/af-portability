@@ -1,6 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateProfileType;
+import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
 
 import java.util.ArrayList;
 import java.util.List;

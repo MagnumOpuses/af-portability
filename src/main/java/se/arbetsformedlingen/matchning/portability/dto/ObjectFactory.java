@@ -402,7 +402,7 @@ public class ObjectFactory {
      * 
      */
     public CandidateType createCandidateType() {
-        return new CandidateTypeBuilder().createCandidateType();
+        return new CandidateTypeBuilder().build();
     }
 
     /**

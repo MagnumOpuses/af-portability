@@ -5,7 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
 import org.junit.Before;
 import org.junit.Test;
-import se.arbetsformedlingen.matchning.portability.model.hropen421xsd.CandidateTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.dto.*;
+import se.arbetsformedlingen.matchning.portability.builder.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 import java.io.IOException;

@@ -31,7 +31,7 @@ public class RemoteWorkType {
         if (workLocationCodes == null) {
             workLocationCodes = new ArrayList<WorkLocationCodeList>();
         }
-        return this.workLocationCodes;;
+        return this.workLocationCodes;
     }
 
     public List<RestrictionCodeList> getRestrictionCodes() {
