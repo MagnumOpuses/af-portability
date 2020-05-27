@@ -43,7 +43,7 @@ public class CommunicationTypeBuilder {
         setPhone(phone);
 
         List<EmailType> email = new ArrayList<>();
-        email.add(new EmailTypeBuilder().setAddress(personUppgifter.getAdress()).build());
+        email.add(new EmailTypeBuilder().setAddress(personUppgifter.getEpostadress()).build());
         setEmail(email);
 
         List<WebType> web = new ArrayList<>();

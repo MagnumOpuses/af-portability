@@ -29,7 +29,10 @@ public class PositionPreferenceType {
 
 
     public List<PreferredLocationType> getLocations() {
-        return locations;
+        if (locations == null) {
+            locations = new ArrayList<PreferredLocationType>();
+        }
+        return this.locations;
     }
 
     public void setLocations(List<PreferredLocationType> locations) {

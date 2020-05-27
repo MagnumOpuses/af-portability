@@ -94,7 +94,7 @@ public class ProfileApi {
                                 .setSessionToken(sessionToken)
                                 .setData(candidates)
                                 .build();
-        envelop.setSinkPurpose(this.decodeStringToList(encodedPurpose));
+        envelop.getSink().setPurposeOfUse(this.decodeStringToList(encodedPurpose));
 
         return envelop;
     }

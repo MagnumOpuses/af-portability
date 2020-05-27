@@ -6,7 +6,7 @@ public class EmailTypeBuilder {
     private EmailType emailType = new EmailType();
 
     public EmailTypeBuilder setAddress(String address) {
-        emailType.address = address;
+        emailType.setAddress(address);
         return this;
     }
 
