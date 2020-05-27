@@ -46,11 +46,11 @@ public class CandidateTest {
         assertEquals(personUppgifter.getEfternamn(), candidateType.getPerson().getName().getFamily());
 
         final CommunicationType communication = candidateType.getPerson().getCommunication();
-        assertEquals(personUppgifter.getEpostadress(), communication.getEmail());
-        assertEquals(personUppgifter.getHemsida(), communication.getWeb());
-        assertEquals(personUppgifter.getTelefonnummerHem(), communication.getPhone());
-        assertEquals(personUppgifter.getTelefonnummerMobil(), communication.getPhone());
-        assertEquals(personUppgifter.getTelefonnummerOvrig(), communication.getPhone());
+        assertEquals(personUppgifter.getEpostadress(), communication.getEmail().get(0).getAddress());
+        assertEquals(personUppgifter.getHemsida(), communication.getWeb().get(0).getUrl());
+        assertEquals(personUppgifter.getTelefonnummerHem(), communication.getPhone().get(0).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerMobil(), communication.getPhone().get(1).getFormattedNumber());
+        assertEquals(personUppgifter.getTelefonnummerOvrig(), communication.getPhone().get(2).getFormattedNumber());
 
         for(AddressType item : communication.getAddress()) {
             assertEquals(personUppgifter.getAdress(), item.getLine());
