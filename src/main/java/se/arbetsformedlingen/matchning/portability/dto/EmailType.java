@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 public class EmailType {
 
     @XmlElement(required = true)
-    protected String address;
+    public String address;
 
 
     public String getAddress() {

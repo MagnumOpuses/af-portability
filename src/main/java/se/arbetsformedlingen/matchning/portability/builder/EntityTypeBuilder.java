@@ -7,17 +7,17 @@ public class EntityTypeBuilder {
     private EntityType entityType = new EntityType();
 
     public EntityTypeBuilder setId(IdentifierType id) {
-        entityType.id = id;
+        entityType.setId(id);
         return this;
     }
 
     public EntityTypeBuilder setName(String name) {
-        entityType.name = name;
+        entityType.setName(name);
         return this;
     }
 
     public EntityTypeBuilder setCode(String code) {
-        entityType.code = code;
+        entityType.setCode(code);
         return this;
     }
 

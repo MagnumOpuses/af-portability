@@ -45,6 +45,10 @@ public class EducationDegreeType {
         return this.codes;
     }
 
+    public void setCodes(List<String> codes) {
+        this.codes = codes;
+    }
+
     public String getDate() {
         return date;
     }
@@ -60,6 +64,10 @@ public class EducationDegreeType {
         return this.specializations;
     }
 
+    public void setSpecializations(List<EducationSpecializationType> specializations) {
+        this.specializations = specializations;
+    }
+
     public ScoreType getScore() {
         return score;
     }
@@ -73,6 +81,10 @@ public class EducationDegreeType {
             academicHonors = new ArrayList<String>();
         }
         return this.academicHonors;
+    }
+
+    public void setAcademicHonors(List<String> academicHonors) {
+        this.academicHonors = academicHonors;
     }
 
     public EducationDegreeGrantedStatusCodeList getDegreeGrantedStatus() {

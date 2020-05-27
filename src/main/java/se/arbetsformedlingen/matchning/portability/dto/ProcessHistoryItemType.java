@@ -70,6 +70,18 @@ public class ProcessHistoryItemType {
         return this.primaryParties;
     }
 
+    public void setPrimaryParties(List<ProcessPartyType> primaryParties) {
+        this.primaryParties = primaryParties;
+    }
+
+    public void setAssociatedParties(List<ProcessPartyType> associatedParties) {
+        this.associatedParties = associatedParties;
+    }
+
+    public void setAttachments(List<AttachmentType> attachments) {
+        this.attachments = attachments;
+    }
+
     public List<ProcessPartyType> getAssociatedParties() {
         if (associatedParties == null) {
             associatedParties = new ArrayList<ProcessPartyType>();

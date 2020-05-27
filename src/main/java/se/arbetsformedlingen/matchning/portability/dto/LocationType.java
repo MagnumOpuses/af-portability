@@ -39,6 +39,10 @@ public class LocationType {
         return this.extendedLines;
     }
 
+    public void setExtendedLines(List<AddressComponentType> extendedLines) {
+        this.extendedLines = extendedLines;
+    }
+
     public CountryCodeList getCountryCode() {
         return countryCode;
     }
@@ -52,6 +56,10 @@ public class LocationType {
             countrySubDivisions = new ArrayList<AddressComponentType>();
         }
         return this.countrySubDivisions;
+    }
+
+    public void setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
+        this.countrySubDivisions = countrySubDivisions;
     }
 
     public String getCity() {

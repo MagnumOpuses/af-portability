@@ -7,37 +7,37 @@ public class IdentifierTypeBuilder {
 
 
     public IdentifierTypeBuilder setValue(String value) {
-        identifierType.value = value;
+        identifierType.setValue(value);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeId(String schemeId) {
-        identifierType.schemeId = schemeId;
+        identifierType.setSchemeId(schemeId);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeVersionId(String schemeVersionId) {
-        identifierType.schemeVersionId = schemeVersionId;
+        identifierType.setSchemeVersionId(schemeVersionId);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeAgencyId(String schemeAgencyId) {
-        identifierType.schemeAgencyId = schemeAgencyId;
+        identifierType.setSchemeAgencyId(schemeAgencyId);
         return this;
     }
 
     public IdentifierTypeBuilder setDescription(String description) {
-        identifierType.description = description;
+        identifierType.setDescription(description);
         return this;
     }
 
     public IdentifierTypeBuilder setSchemeLink(String schemeLink) {
-        identifierType.schemeLink = schemeLink;
+        identifierType.setSchemeLink(schemeLink);
         return this;
     }
 
     public IdentifierTypeBuilder setAgencyUri(String agencyUri) {
-        identifierType.agencyUri = agencyUri;
+        identifierType.setAgencyUri(agencyUri);
         return this;
     }
 

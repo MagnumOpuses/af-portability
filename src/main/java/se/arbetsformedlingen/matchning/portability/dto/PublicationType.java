@@ -102,6 +102,14 @@ public class PublicationType {
         return this.attachmentReferences;
     }
 
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
+
+    public void setComments(List<CommentType> comments) {
+        this.comments = comments;
+    }
+
     public LanguageCodeList getLanguageCode() {
         return languageCode;
     }

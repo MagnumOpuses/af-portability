@@ -47,4 +47,8 @@ public class AttachmentType {
         }
         return this.descriptions;
     }
+
+    public void setDescriptions(List<String> descriptions){
+        this.descriptions = descriptions;
+    }
 }

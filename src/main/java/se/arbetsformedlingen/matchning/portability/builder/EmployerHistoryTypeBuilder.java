@@ -11,42 +11,42 @@ public class EmployerHistoryTypeBuilder {
     private EmployerHistoryType employerHistoryType = new EmployerHistoryType();
 
     public EmployerHistoryTypeBuilder setId(IdentifierType id) {
-        employerHistoryType.id = id;
+        employerHistoryType.setId(id);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setStart(String start) {
-        employerHistoryType.start = start;
+        employerHistoryType.setStart(start);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setEnd(String end) {
-        employerHistoryType.end = end;
+        employerHistoryType.setEnd(end);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setCurrent(Boolean current) {
-        employerHistoryType.current = current;
+        employerHistoryType.setCurrent(current);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        employerHistoryType.attachmentReferences = attachmentReferences;
+        employerHistoryType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setDescriptions(List<String> descriptions) {
-        employerHistoryType.descriptions = descriptions;
+        employerHistoryType.getDescriptions().addAll(descriptions);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setOrganization(OrganizationType organization) {
-        employerHistoryType.organization = organization;
+        employerHistoryType.setOrganization(organization);
         return this;
     }
 
     public EmployerHistoryTypeBuilder setPositionHistories(List<PositionHistoryType> positionHistories) {
-        employerHistoryType.positionHistories = positionHistories;
+        employerHistoryType.getPositionHistories().addAll(positionHistories);
         return this;
     }
 

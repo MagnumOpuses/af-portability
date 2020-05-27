@@ -89,11 +89,19 @@ public class PersonBaseType {
         return this.citizenship;
     }
 
+    public void setCitizenship(List<CountryCodeList> citizenship) {
+        this.citizenship = citizenship;
+    }
+
     public List<CountryCodeList> getResidenceCountry() {
         if (residenceCountry == null) {
             residenceCountry = new ArrayList<CountryCodeList>();
         }
         return this.residenceCountry;
+    }
+
+    public void setResidenceCountry(List<CountryCodeList> residenceCountry) {
+        this.residenceCountry = residenceCountry;
     }
 
     public String getMilitaryStatus() {

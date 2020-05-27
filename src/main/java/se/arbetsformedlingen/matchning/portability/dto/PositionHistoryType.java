@@ -113,10 +113,18 @@ public class PositionHistoryType {
         return this.jobCategories;
     }
 
+    public void setJobCategories(List<EntityType> jobCategories) {
+        this.jobCategories = jobCategories;
+    }
+
     public List<EntityType> getJobLevels() {
         if (jobLevels == null) {
             jobLevels = new ArrayList<EntityType>();
         }
         return this.jobLevels;
+    }
+
+    public void setJobLevels(List<EntityType> jobLevels) {
+        this.jobLevels = jobLevels;
     }
 }

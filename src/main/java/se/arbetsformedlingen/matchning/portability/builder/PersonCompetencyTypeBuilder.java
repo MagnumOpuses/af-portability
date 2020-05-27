@@ -9,52 +9,52 @@ public class PersonCompetencyTypeBuilder {
     private PersonCompetencyType personCompetencyType = new PersonCompetencyType();
 
     public PersonCompetencyTypeBuilder setCompetencyIds(List<IdentifierType> competencyIds) {
-        personCompetencyType.competencyIds = competencyIds;
+        personCompetencyType.getCompetencyIds().addAll(competencyIds);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyName(String competencyName) {
-        personCompetencyType.competencyName = competencyName;
+        personCompetencyType.setCompetencyName(competencyName);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setDescription(String description) {
-        personCompetencyType.description = description;
+        personCompetencyType.setDescription(description);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setProficiencyLevel(BaseScoreType proficiencyLevel) {
-        personCompetencyType.proficiencyLevel = proficiencyLevel;
+        personCompetencyType.setProficiencyLevel(proficiencyLevel);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setLastUsedDate(String lastUsedDate) {
-        personCompetencyType.lastUsedDate = lastUsedDate;
+        personCompetencyType.setLastUsedDate(lastUsedDate);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setExperienceMeasure(MeasureType experienceMeasure) {
-        personCompetencyType.experienceMeasure = experienceMeasure;
+        personCompetencyType.setExperienceMeasure(experienceMeasure);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setInterestLevel(BaseScoreType interestLevel) {
-        personCompetencyType.interestLevel = interestLevel;
+        personCompetencyType.setInterestLevel(interestLevel);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyDimensions(List<CompetencyDimensionType> competencyDimensions) {
-        personCompetencyType.competencyDimensions = competencyDimensions;
+        personCompetencyType.getCompetencyDimensions().addAll(competencyDimensions);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setCompetencyEvidence(CompetencyEvidenceType competencyEvidence) {
-        personCompetencyType.competencyEvidence = competencyEvidence;
+        personCompetencyType.setCompetencyEvidence(competencyEvidence);
         return this;
     }
 
     public PersonCompetencyTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        personCompetencyType.attachmentReferences = attachmentReferences;
+        personCompetencyType.getAttachmentReferences().addAll(attachmentReferences);
         return this;
     }
 

@@ -61,6 +61,10 @@ public class RemunerationPackageType {
         return this.ranges;
     }
 
+    public void setRanges(List<RemunerationRangeType> ranges) {
+        this.ranges = ranges;
+    }
+
     public StringTypeArray getBenefitsSummary() {
         return benefitsSummary;
     }

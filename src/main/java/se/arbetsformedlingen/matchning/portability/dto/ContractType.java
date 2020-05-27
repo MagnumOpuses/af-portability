@@ -51,6 +51,10 @@ public class ContractType {
         return this.addendum;
     }
 
+    public void setAddendum(List<XMLGregorianCalendar> addendum) {
+        this.addendum = addendum;
+    }
+
     public String getWorkRelationshipType() {
         return workRelationshipType;
     }

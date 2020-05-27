@@ -15,17 +15,17 @@ public class CommunicationTypeBuilder {
     }
 
     public CommunicationTypeBuilder setPhone(List<PhoneType> phone) {
-        communicationType.phone = phone;
+        communicationType.getPhone().addAll(phone);
         return this;
     }
 
     public CommunicationTypeBuilder setEmail(List<EmailType> email) {
-        communicationType.email = email;
+        communicationType.getEmail().addAll(email);
         return this;
     }
 
     public CommunicationTypeBuilder setWeb(List<WebType> web) {
-        communicationType.web = web;
+        communicationType.getWeb().addAll(web);
         return this;
     }
 

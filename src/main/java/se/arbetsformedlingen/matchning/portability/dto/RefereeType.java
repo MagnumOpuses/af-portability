@@ -89,6 +89,14 @@ public class RefereeType {
         return this.attachmentReferences;
     }
 
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
+
+    public void setComments(List<CommentType> comments) {
+        this.comments = comments;
+    }
+
     public List<CommentType> getComments() {
         if (comments == null) {
             comments = new ArrayList<CommentType>();

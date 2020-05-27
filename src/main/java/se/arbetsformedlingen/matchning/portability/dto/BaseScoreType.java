@@ -23,10 +23,18 @@ public class BaseScoreType {
         return this.scoresNumeric;
     }
 
+    public void setScoresNumeric(List<ScoreNumericType> scoresNumeric){
+        this.scoresNumeric = scoresNumeric;
+    }
+
     public List<ScoreTextType> getScoresText() {
         if (scoresText == null) {
             scoresText = new ArrayList<ScoreTextType>();
         }
         return this.scoresText;
+    }
+
+    public void setScoresText(List<ScoreTextType> scoresText){
+        this.scoresText = scoresText;
     }
 }

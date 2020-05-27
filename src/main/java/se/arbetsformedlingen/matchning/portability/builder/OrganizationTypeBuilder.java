@@ -10,67 +10,67 @@ public class OrganizationTypeBuilder {
     private OrganizationType organizationType = new OrganizationType();
 
     public OrganizationTypeBuilder setTaxId(IdentifierType taxId) {
-        organizationType.taxId = taxId;
+        organizationType.setTaxId(taxId);
         return this;
     }
 
     public OrganizationTypeBuilder setLegalId(IdentifierType legalId) {
-        organizationType.legalId = legalId;
+        organizationType.setLegalId(legalId);
         return this;
     }
 
     public OrganizationTypeBuilder setIndustryCodes(List<String> industryCodes) {
-        organizationType.industryCodes = industryCodes;
+        organizationType.getIndustryCodes().addAll(industryCodes);
         return this;
     }
 
     public OrganizationTypeBuilder setIndustryIdentifiers(List<IdentifierType> industryIdentifiers) {
-        organizationType.industryIdentifiers = industryIdentifiers;
+        organizationType.getIndustryIdentifiers().addAll(industryIdentifiers);
         return this;
     }
 
     public OrganizationTypeBuilder setHeadCount(BigDecimal headCount) {
-        organizationType.headCount = headCount;
+        organizationType.setHeadCount(headCount);
         return this;
     }
 
     public OrganizationTypeBuilder setRevenue(AmountType revenue) {
-        organizationType.revenue = revenue;
+        organizationType.setRevenue(revenue);
         return this;
     }
 
     public OrganizationTypeBuilder setDescription(TextType description) {
-        organizationType.description = description;
+        organizationType.setDescription(description);
         return this;
     }
 
     public OrganizationTypeBuilder setGeographicResponsibilityCode(GeographicResponsibilityCodeList geographicResponsibilityCode) {
-        organizationType.geographicResponsibilityCode = geographicResponsibilityCode;
+        organizationType.setGeographicResponsibilityCode(geographicResponsibilityCode);
         return this;
     }
 
     public OrganizationTypeBuilder setOwnershipType(OwnershipTypeCodeList ownershipType) {
-        organizationType.ownershipType = ownershipType;
+        organizationType.setOwnershipType(ownershipType);
         return this;
     }
 
     public OrganizationTypeBuilder setStockSymbol(String stockSymbol) {
-        organizationType.stockSymbol = stockSymbol;
+        organizationType.setStockSymbol(stockSymbol);
         return this;
     }
 
     public OrganizationTypeBuilder setWorkEnvironmentCode(String workEnvironmentCode) {
-        organizationType.workEnvironmentCode = workEnvironmentCode;
+        organizationType.setWorkEnvironmentCode(workEnvironmentCode);
         return this;
     }
 
     public OrganizationTypeBuilder setContacts(List<SpecifiedPersonType> contacts) {
-        organizationType.contacts = contacts;
+        organizationType.setContacts(contacts);
         return this;
     }
 
     public OrganizationTypeBuilder setDomainName(String domainName) {
-        organizationType.domainName = domainName;
+        organizationType.setDomainName(domainName);
         return this;
     }
 

@@ -11,37 +11,37 @@ public class CandidateTypeBuilder {
     private CandidateType candidateType = new CandidateType();
 
     public CandidateTypeBuilder setDocumentId(IdentifierType documentId) {
-        candidateType.documentId = documentId;
+        candidateType.setDocumentId(documentId);
         return this;
     }
 
     public CandidateTypeBuilder setAlternateIds(List<IdentifierType> alternateIds) {
-        candidateType.alternateIds = alternateIds;
+        candidateType.setAlternateIds(alternateIds);
         return this;
     }
 
     public CandidateTypeBuilder setLanguage(LanguageCodeList language) {
-        candidateType.language = language;
+        candidateType.setLanguage(language);
         return this;
     }
 
     public CandidateTypeBuilder setUri(String uri) {
-        candidateType.uri = uri;
+        candidateType.setUri(uri);
         return this;
     }
 
     public CandidateTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
-        candidateType.distributionGuidelines = distributionGuidelines;
+        candidateType.setDistributionGuidelines(distributionGuidelines);
         return this;
     }
 
     public CandidateTypeBuilder setPerson(CandidatePersonType person) {
-        candidateType.person = person;
+        candidateType.setPerson(person);
         return this;
     }
 
     public CandidateTypeBuilder setProfiles(List<CandidateProfileType> profiles) {
-        candidateType.profiles = profiles;
+        candidateType.setProfiles(profiles);
         return this;
     }
 

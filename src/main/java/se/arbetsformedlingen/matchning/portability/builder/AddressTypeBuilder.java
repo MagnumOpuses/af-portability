@@ -13,47 +13,47 @@ public class AddressTypeBuilder {
     private AddressType addressType = new AddressType();
 
     public AddressTypeBuilder setLine(String line) {
-        addressType.line = line;
+        addressType.setLine(line);
         return this;
     }
 
     public AddressTypeBuilder setExtendedLines(List<AddressComponentType> extendedLines) {
-        addressType.extendedLines = extendedLines;
+        addressType.setExtendedLines(extendedLines);
         return this;
     }
 
     public AddressTypeBuilder setCountryCode(CountryCodeList countryCode) {
-        addressType.countryCode = countryCode;
+        addressType.setCountryCode(countryCode);
         return this;
     }
 
     public AddressTypeBuilder setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
-        addressType.countrySubDivisions = countrySubDivisions;
+        addressType.setCountrySubDivisions(countrySubDivisions);
         return this;
     }
 
     public AddressTypeBuilder setCity(String city) {
-        addressType.city = city;
+        addressType.setCity(city);
         return this;
     }
 
     public AddressTypeBuilder setPostalCode(String postalCode) {
-        addressType.postalCode = postalCode;
+        addressType.setPostalCode(postalCode);
         return this;
     }
 
     public AddressTypeBuilder setPostOfficeBox(String postOfficeBox) {
-        addressType.postOfficeBox = postOfficeBox;
+        addressType.setPostOfficeBox(postOfficeBox);
         return this;
     }
 
     public AddressTypeBuilder setGeoLocation(GeoType geoLocation) {
-        addressType.geoLocation = geoLocation;
+        addressType.setGeoLocation(geoLocation);
         return this;
     }
 
     public AddressTypeBuilder setFormattedAddress(String formattedAddress) {
-        addressType.formattedAddress = formattedAddress;
+        addressType.setFormattedAddress(formattedAddress);
         return this;
     }
 

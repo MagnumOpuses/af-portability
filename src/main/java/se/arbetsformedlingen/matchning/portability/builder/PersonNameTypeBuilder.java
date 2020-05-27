@@ -8,82 +8,82 @@ public class PersonNameTypeBuilder {
 
 
     public PersonNameTypeBuilder setLanguage(LanguageCodeList language) {
-        personNameType.language = language;
+        personNameType.setLanguage(language);
         return this;
     }
 
     public PersonNameTypeBuilder setFormattedName(String formattedName) {
-        personNameType.formattedName = formattedName;
+        personNameType.setFormattedName(formattedName);
         return this;
     }
 
     public PersonNameTypeBuilder setLegal(String legal) {
-        personNameType.legal = legal;
+        personNameType.setLegal(legal);
         return this;
     }
 
     public PersonNameTypeBuilder setGiven(String given) {
-        personNameType.given = given;
+        personNameType.setGiven(given);
         return this;
     }
 
     public PersonNameTypeBuilder setPreferred(String preferred) {
-        personNameType.preferred = preferred;
+        personNameType.setPreferred(preferred);
         return this;
     }
 
     public PersonNameTypeBuilder setMiddle(String middle) {
-        personNameType.middle = middle;
+        personNameType.setMiddle(middle);
         return this;
     }
 
     public PersonNameTypeBuilder setFamily(String family) {
-        personNameType.family = family;
+        personNameType.setFamily(family);
         return this;
     }
 
     public PersonNameTypeBuilder setFamilyPrefix(String familyPrefix) {
-        personNameType.familyPrefix = familyPrefix;
+        personNameType.setFamilyPrefix(familyPrefix);
         return this;
     }
 
     public PersonNameTypeBuilder setAlias(String alias) {
-        personNameType.alias = alias;
+        personNameType.setAlias(alias);
         return this;
     }
 
     public PersonNameTypeBuilder setFormerFamily(String formerFamily) {
-        personNameType.formerFamily = formerFamily;
+        personNameType.setFormerFamily(formerFamily);
         return this;
     }
 
     public PersonNameTypeBuilder setFormerFamilyPrefix(String formerFamilyPrefix) {
-        personNameType.formerFamilyPrefix = formerFamilyPrefix;
+        personNameType.setFormerFamilyPrefix(formerFamilyPrefix);
         return this;
     }
 
     public PersonNameTypeBuilder setPreferredSalutationCode(String preferredSalutationCode) {
-        personNameType.preferredSalutationCode = preferredSalutationCode;
+        personNameType.setPreferredSalutationCode(preferredSalutationCode);
         return this;
     }
 
     public PersonNameTypeBuilder setGenerationAffixCode(String generationAffixCode) {
-        personNameType.generationAffixCode = generationAffixCode;
+        personNameType.setGenerationAffixCode(generationAffixCode);
         return this;
     }
 
     public PersonNameTypeBuilder setQualificationAffixCode(String qualificationAffixCode) {
-        personNameType.qualificationAffixCode = qualificationAffixCode;
+        personNameType.setQualificationAffixCode(qualificationAffixCode);
         return this;
     }
 
     public PersonNameTypeBuilder setTitleAffixCode(String titleAffixCode) {
-        personNameType.titleAffixCode = titleAffixCode;
+        personNameType.setTitleAffixCode(titleAffixCode);
         return this;
     }
 
     public PersonNameTypeBuilder setInitials(String initials) {
-        personNameType.initials = initials;
+        personNameType.setInitials(initials);
         return this;
     }
 

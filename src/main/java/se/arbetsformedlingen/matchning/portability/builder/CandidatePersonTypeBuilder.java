@@ -12,147 +12,147 @@ public class CandidatePersonTypeBuilder {
 
 
     public CandidatePersonTypeBuilder setLegalId(IdentifierType legalId) {
-        candidatePersonType.legalId = legalId;
+        candidatePersonType.setLegalId(legalId);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBirthDate(XMLGregorianCalendar birthDate) {
-        candidatePersonType.birthDate = birthDate;
+        candidatePersonType.setBirthDate(birthDate);
         return this;
     }
 
     public CandidatePersonTypeBuilder setGender(GenderCodeList gender) {
-        candidatePersonType.gender = gender;
+        candidatePersonType.setGender(gender);
         return this;
     }
 
     public CandidatePersonTypeBuilder setCitizenship(List<CountryCodeList> citizenship) {
-        candidatePersonType.citizenship = citizenship;
+        candidatePersonType.setCitizenship(citizenship);
         return this;
     }
 
     public CandidatePersonTypeBuilder setResidenceCountry(List<CountryCodeList> residenceCountry) {
-        candidatePersonType.residenceCountry = residenceCountry;
+        candidatePersonType.setResidenceCountry(residenceCountry);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMilitaryStatus(String militaryStatus) {
-        candidatePersonType.militaryStatus = militaryStatus;
+        candidatePersonType.setMilitaryStatus(militaryStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEthnicity(List<String> ethnicity) {
-        candidatePersonType.ethnicity = ethnicity;
+        candidatePersonType.setEthnicity(ethnicity);
         return this;
     }
 
     public CandidatePersonTypeBuilder setId(IdentifierType id) {
-        candidatePersonType.id = id;
+        candidatePersonType.setId(id);
         return this;
     }
 
     public CandidatePersonTypeBuilder setName(PersonNameType name) {
-        candidatePersonType.name = name;
+        candidatePersonType.setName(name);
         return this;
     }
 
     public CandidatePersonTypeBuilder setCommunication(CommunicationType communication) {
-        candidatePersonType.communication = communication;
+        candidatePersonType.setCommunication(communication);
         return this;
     }
 
     public CandidatePersonTypeBuilder setPrimaryLanguage(LanguageCodeList primaryLanguage) {
-        candidatePersonType.primaryLanguage = primaryLanguage;
+        candidatePersonType.setPrimaryLanguage(primaryLanguage);
         return this;
     }
 
     public CandidatePersonTypeBuilder setHeight(MeasureType height) {
-        candidatePersonType.height = height;
+        candidatePersonType.setHeight(height);
         return this;
     }
 
     public CandidatePersonTypeBuilder setWeight(MeasureType weight) {
-        candidatePersonType.weight = weight;
+        candidatePersonType.setWeight(weight);
         return this;
     }
 
     public CandidatePersonTypeBuilder setDisability(DisabilityType disability) {
-        candidatePersonType.disability = disability;
+        candidatePersonType.setDisability(disability);
         return this;
     }
 
     public CandidatePersonTypeBuilder setTobaccoUserIndicator(Boolean tobaccoUserIndicator) {
-        candidatePersonType.tobaccoUserIndicator = tobaccoUserIndicator;
+        candidatePersonType.setTobaccoUserIndicator(tobaccoUserIndicator);
         return this;
     }
 
     public CandidatePersonTypeBuilder setHairColor(String hairColor) {
-        candidatePersonType.hairColor = hairColor;
+        candidatePersonType.setHairColor(hairColor);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEyeColor(String eyeColor) {
-        candidatePersonType.eyeColor = eyeColor;
+        candidatePersonType.setEyeColor(eyeColor);
         return this;
     }
 
     public CandidatePersonTypeBuilder setIdentifyingMarks(List<String> identifyingMarks) {
-        candidatePersonType.identifyingMarks = identifyingMarks;
+        candidatePersonType.setIdentifyingMarks(identifyingMarks);
         return this;
     }
 
     public CandidatePersonTypeBuilder setAge(BigInteger age) {
-        candidatePersonType.age = age;
+        candidatePersonType.setAge(age);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBloodType(String bloodType) {
-        candidatePersonType.bloodType = bloodType;
+        candidatePersonType.setBloodType(bloodType);
         return this;
     }
 
     public CandidatePersonTypeBuilder setPassportId(IdentifierType passportId) {
-        candidatePersonType.passportId = passportId;
+        candidatePersonType.setPassportId(passportId);
         return this;
     }
 
     public CandidatePersonTypeBuilder setFatherName(String fatherName) {
-        candidatePersonType.fatherName = fatherName;
+        candidatePersonType.setFatherName(fatherName);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMotherName(String motherName) {
-        candidatePersonType.motherName = motherName;
+        candidatePersonType.setMotherName(motherName);
         return this;
     }
 
     public CandidatePersonTypeBuilder setRace(List<String> race) {
-        candidatePersonType.race = race;
+        candidatePersonType.setRace(race);
         return this;
     }
 
     public CandidatePersonTypeBuilder setBirthPlace(String birthPlace) {
-        candidatePersonType.birthPlace = birthPlace;
+        candidatePersonType.setBirthPlace(birthPlace);
         return this;
     }
 
     public CandidatePersonTypeBuilder setDeathDate(XMLGregorianCalendar deathDate) {
-        candidatePersonType.deathDate = deathDate;
+        candidatePersonType.setDeathDate(deathDate);
         return this;
     }
 
     public CandidatePersonTypeBuilder setNationality(List<String> nationality) {
-        candidatePersonType.nationality = nationality;
+        candidatePersonType.setNationality(nationality);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMaritalStatus(String maritalStatus) {
-        candidatePersonType.maritalStatus = maritalStatus;
+        candidatePersonType.setMaritalStatus(maritalStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setMaritalStatusDate(XMLGregorianCalendar maritalStatusDate) {
-        candidatePersonType.maritalStatusDate = maritalStatusDate;
+        candidatePersonType.setMaritalStatusDate(maritalStatusDate);
         return this;
     }
 
@@ -162,32 +162,32 @@ public class CandidatePersonTypeBuilder {
     }
 
     public CandidatePersonTypeBuilder setReligion(List<String> religion) {
-        candidatePersonType.religion = religion;
+        candidatePersonType.setReligion(religion);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentType(String studentType) {
-        candidatePersonType.studentType = studentType;
+        candidatePersonType.setStudentType(studentType);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentIndicator(Boolean studentIndicator) {
-        candidatePersonType.studentIndicator = studentIndicator;
+        candidatePersonType.setStudentIndicator(studentIndicator);
         return this;
     }
 
     public CandidatePersonTypeBuilder setStudentStatus(String studentStatus) {
-        candidatePersonType.studentStatus = studentStatus;
+        candidatePersonType.setStudentStatus(studentStatus);
         return this;
     }
 
     public CandidatePersonTypeBuilder setLegalDocuments(List<LegalDocumentType> legalDocuments) {
-        candidatePersonType.legalDocuments = legalDocuments;
+        candidatePersonType.setLegalDocuments(legalDocuments);
         return this;
     }
 
     public CandidatePersonTypeBuilder setEmploymentPermits(List<EmploymentPermitType> employmentPermits) {
-        candidatePersonType.employmentPermits = employmentPermits;
+        candidatePersonType.setEmploymentPermits(employmentPermits);
         return this;
     }
 

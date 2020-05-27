@@ -97,6 +97,10 @@ public class EmploymentPermitType {
         return this.attachmentReferences;
     }
 
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
+
     public StringTypeArray getDescriptions() {
         return descriptions;
     }
@@ -118,5 +122,9 @@ public class EmploymentPermitType {
             countrySubDivisions = new ArrayList<AddressComponentType>();
         }
         return this.countrySubDivisions;
+    }
+
+    public void setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
+        this.countrySubDivisions = countrySubDivisions;
     }
 }

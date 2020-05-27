@@ -8,57 +8,57 @@ public class EducationAttendanceTypeBuilder {
     private EducationAttendanceType educationAttendanceType = new EducationAttendanceType();
 
     public EducationAttendanceTypeBuilder setId(IdentifierType id) {
-        educationAttendanceType.id = id;
+        educationAttendanceType.setId(id);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setStart(String start) {
-        educationAttendanceType.start = start;
+        educationAttendanceType.setStart(start);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setEnd(String end) {
-        educationAttendanceType.end = end;
+        educationAttendanceType.setEnd(end);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setCurrent(Boolean current) {
-        educationAttendanceType.current = current;
+        educationAttendanceType.setCurrent(current);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        educationAttendanceType.attachmentReferences = attachmentReferences;
+        educationAttendanceType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setDescriptions(List<String> descriptions) {
-        educationAttendanceType.descriptions = descriptions;
+        educationAttendanceType.setDescriptions(descriptions);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setInstitution(OrganizationType institution) {
-        educationAttendanceType.institution = institution;
+        educationAttendanceType.setInstitution(institution);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setDepartment(OrganizationType department) {
-        educationAttendanceType.department = department;
+        educationAttendanceType.setDepartment(department);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setPrograms(StringTypeArray programs) {
-        educationAttendanceType.programs = programs;
+        educationAttendanceType.setPrograms(programs);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setEducationLevelCodes(List<EntityType> educationLevelCodes) {
-        educationAttendanceType.educationLevelCodes = educationLevelCodes;
+        educationAttendanceType.setEducationLevelCodes(educationLevelCodes);
         return this;
     }
 
     public EducationAttendanceTypeBuilder setCurrentlyAttendingIndicator(Boolean currentlyAttendingIndicator) {
-        educationAttendanceType.currentlyAttendingIndicator = currentlyAttendingIndicator;
+        educationAttendanceType.setCurrentlyAttendingIndicator(currentlyAttendingIndicator);
         return this;
     }
 

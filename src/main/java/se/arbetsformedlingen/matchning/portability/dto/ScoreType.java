@@ -32,6 +32,14 @@ public class ScoreType {
         return this.scoresText;
     }
 
+    public void setScoresNumeric(List<ScoreNumericType> scoresNumeric) {
+        this.scoresNumeric = scoresNumeric;
+    }
+
+    public void setScoresText(List<ScoreTextType> scoresText) {
+        this.scoresText = scoresText;
+    }
+
     public XMLGregorianCalendar getValidFrom() {
         return validFrom;
     }

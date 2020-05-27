@@ -38,6 +38,10 @@ public class CandidateType {
         return this.alternateIds;
     }
 
+    public void setAlternateIds(List<IdentifierType> alternateIds) {
+        this.alternateIds = alternateIds;
+    }
+
     public LanguageCodeList getLanguage() {
         return language;
     }
@@ -75,5 +79,9 @@ public class CandidateType {
             profiles = new ArrayList<CandidateProfileType>();
         }
         return this.profiles;
+    }
+
+    public void setProfiles(List<CandidateProfileType> profiles) {
+        this.profiles = profiles;
     }
 }

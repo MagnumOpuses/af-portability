@@ -19,13 +19,13 @@ public class PositionPreferenceType {
     public List<PositionScheduleTypeCodeList> positionScheduleTypeCodes;
     public List<ScheduleType> shiftSchedules;
     public List<String> shiftDescriptions;
-    public RemoteWorkType remoteWork; //Not used in current implementation
+    public RemoteWorkType remoteWork;  
     public List<CareerLevelCodeList> careerLevelCodes;
     public EntityType jobGradeCode;
-    public RemunerationPackageType offeredRemunerationPackage; //Not used in current implementation
-    public TravelType travel; //Not used in current implementation
-    public RelocationType relocation; //Not used in current implementation
-    public List<LanguageCodeList> workingLanguageCodes; //Not used in current implementation
+    public RemunerationPackageType offeredRemunerationPackage;  
+    public TravelType travel;  
+    public RelocationType relocation;  
+    public List<LanguageCodeList> workingLanguageCodes;  
 
 
     public List<PreferredLocationType> getLocations() {
@@ -43,11 +43,19 @@ public class PositionPreferenceType {
         return this.jobCategories;
     }
 
+    public void setJobCategories(List<EntityType> jobCategories) {
+        this.jobCategories = jobCategories;
+    }
+
     public List<String> getPositionTitles() {
         if (positionTitles == null) {
             positionTitles = new ArrayList<String>();
         }
         return this.positionTitles;
+    }
+
+    public void setPositionTitles(List<String> positionTitles) {
+        this.positionTitles = positionTitles;
     }
 
     public List<PositionTypeCodeList> getPositionOfferingTypeCodes() {
@@ -57,11 +65,19 @@ public class PositionPreferenceType {
         return this.positionOfferingTypeCodes;
     }
 
+    public void setPositionOfferingTypeCodes(List<PositionTypeCodeList> positionOfferingTypeCodes) {
+        this.positionOfferingTypeCodes = positionOfferingTypeCodes;
+    }
+
     public List<PositionScheduleTypeCodeList> getPositionScheduleTypeCodes() {
         if (positionScheduleTypeCodes == null) {
             positionScheduleTypeCodes = new ArrayList<PositionScheduleTypeCodeList>();
         }
         return this.positionScheduleTypeCodes;
+    }
+
+    public void setPositionScheduleTypeCodes(List<PositionScheduleTypeCodeList> positionScheduleTypeCodes) {
+        this.positionScheduleTypeCodes = positionScheduleTypeCodes;
     }
 
     public List<ScheduleType> getShiftSchedules() {
@@ -71,11 +87,19 @@ public class PositionPreferenceType {
         return this.shiftSchedules;
     }
 
+    public void setShiftSchedules(List<ScheduleType> shiftSchedules) {
+        this.shiftSchedules = shiftSchedules;
+    }
+
     public List<String> getShiftDescriptions() {
         if (shiftDescriptions == null) {
             shiftDescriptions = new ArrayList<String>();
         }
         return this.shiftDescriptions;
+    }
+
+    public void setShiftDescriptions(List<String> shiftDescriptions) {
+        this.shiftDescriptions = shiftDescriptions;
     }
 
     public RemoteWorkType getRemoteWork() {
@@ -131,5 +155,9 @@ public class PositionPreferenceType {
             workingLanguageCodes = new ArrayList<LanguageCodeList>();
         }
         return this.workingLanguageCodes;
+    }
+
+    public void setWorkingLanguageCodes(List<LanguageCodeList> workingLanguageCodes) {
+        this.workingLanguageCodes = workingLanguageCodes;
     }
 }

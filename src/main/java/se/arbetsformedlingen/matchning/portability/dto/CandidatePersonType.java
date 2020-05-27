@@ -28,27 +28,27 @@ public class CandidatePersonType {
     public LanguageCodeList primaryLanguage;
     public MeasureType height;
     public MeasureType weight;
-    public DisabilityType disability; //Not used in current implementation
-    public Boolean tobaccoUserIndicator; //Not used in current implementation
-    public String hairColor; //Not used in current implementation
-    public String eyeColor; //Not used in current implementation
-    public List<String> identifyingMarks; //Not used in current implementation
-    public BigInteger age; //Not used in current implementation
-    public String bloodType; //Not used in current implementation
-    public IdentifierType passportId; //Not used in current implementation
-    public String fatherName; //Not used in current implementation
-    public String motherName; //Not used in current implementation
-    public List<String> race; //Not used in current implementation
-    public String birthPlace; //Not used in current implementation
-    public XMLGregorianCalendar deathDate; //Not used in current implementation
-    public List<String> nationality; //Not used in current implementation
-    public String maritalStatus; //Not used in current implementation
-    public XMLGregorianCalendar maritalStatusDate; //Not used in current implementation
-    public List<String> visa; //Not used in current implementation
-    public List<String> religion; //Not used in current implementation
-    public String studentType; //Not used in current implementation
-    public Boolean studentIndicator; //Not used in current implementation
-    public String studentStatus; //Not used in current implementation
+    public DisabilityType disability;  
+    public Boolean tobaccoUserIndicator;  
+    public String hairColor;  
+    public String eyeColor;  
+    public List<String> identifyingMarks;  
+    public BigInteger age;  
+    public String bloodType;  
+    public IdentifierType passportId;  
+    public String fatherName;  
+    public String motherName;  
+    public List<String> race;  
+    public String birthPlace;  
+    public XMLGregorianCalendar deathDate;  
+    public List<String> nationality;  
+    public String maritalStatus;  
+    public XMLGregorianCalendar maritalStatusDate;  
+    public List<String> visa;  
+    public List<String> religion;  
+    public String studentType;  
+    public Boolean studentIndicator;  
+    public String studentStatus;  
     public List<LegalDocumentType> legalDocuments;
     public List<EmploymentPermitType> employmentPermits;
 
@@ -106,6 +106,10 @@ public class CandidatePersonType {
             ethnicity = new ArrayList<String>();
         }
         return this.ethnicity;
+    }
+
+    public void setEthnicity(List<String> ethnicity){
+        this.ethnicity = ethnicity;
     }
 
     public IdentifierType getId() {
@@ -195,6 +199,10 @@ public class CandidatePersonType {
         return this.identifyingMarks;
     }
 
+    public void setIdentifyingMarks(List<String> identifyingMarks){
+        this.identifyingMarks = identifyingMarks;
+    }
+
     public BigInteger getAge() {
         return age;
     }
@@ -242,6 +250,10 @@ public class CandidatePersonType {
         return this.race;
     }
 
+    public void setRace(List<String> race) {
+        this.race = race;
+    }
+
     public String getBirthPlace() {
         return birthPlace;
     }
@@ -263,6 +275,10 @@ public class CandidatePersonType {
             nationality = new ArrayList<String>();
         }
         return this.race;
+    }
+
+    public void setNationality(List<String> nationality) {
+        this.nationality = nationality;
     }
 
     public String getMaritalStatus() {
@@ -288,11 +304,19 @@ public class CandidatePersonType {
         return this.visa;
     }
 
+    public void setVisa(List<String> visa) {
+        this.visa = visa;
+    }
+
     public List<String> getReligion() {
         if (religion == null) {
             religion = new ArrayList<String>();
         }
         return this.religion;
+    }
+
+    public void setReligion(List<String> religion) {
+        this.religion = religion;
     }
 
     public String getStudentType() {
@@ -326,10 +350,18 @@ public class CandidatePersonType {
         return this.legalDocuments;
     }
 
+    public void setLegalDocuments(List<LegalDocumentType> legalDocuments) {
+        this.legalDocuments = legalDocuments;
+    }
+
     public List<EmploymentPermitType> getEmploymentPermits() {
         if (employmentPermits == null) {
             employmentPermits = new ArrayList<EmploymentPermitType>();
         }
         return this.employmentPermits;
+    }
+
+    public void setEmploymentPermits(List<EmploymentPermitType> employmentPermits) {
+        this.employmentPermits = employmentPermits;
     }
 }

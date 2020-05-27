@@ -24,6 +24,10 @@ public class SpecifiedCompetencyType {
         return this.competencyIds;
     }
 
+    public void setCompetencyIds(List<IdentifierType> competencyIds) {
+        this.competencyIds = competencyIds;
+    }
+
     public String getName() {
         return name;
     }

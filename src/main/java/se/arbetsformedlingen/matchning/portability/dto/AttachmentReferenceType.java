@@ -40,4 +40,8 @@ public class AttachmentReferenceType {
         }
         return this.descriptions;
     }
+
+    public void setDescriptions(List<String> descriptions){
+        this.descriptions = descriptions;
+    }
 }

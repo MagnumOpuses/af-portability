@@ -50,11 +50,19 @@ public class OrganizationType {
         return this.industryCodes;
     }
 
+    public void setIndustryCodes(List<String> industryCodes) {
+        this.industryCodes = industryCodes;
+    }
+
     public List<IdentifierType> getIndustryIdentifiers() {
         if (industryIdentifiers == null) {
             industryIdentifiers = new ArrayList<IdentifierType>();
         }
         return this.industryIdentifiers;
+    }
+
+    public void setIndustryIdentifiers(List<IdentifierType> industryIdentifiers) {
+        this.industryIdentifiers = industryIdentifiers;
     }
 
     public BigDecimal getHeadCount() {
@@ -118,6 +126,10 @@ public class OrganizationType {
             contacts = new ArrayList<SpecifiedPersonType>();
         }
         return this.contacts;
+    }
+
+    public void setContacts(List<SpecifiedPersonType> contacts) {
+        this.contacts = contacts;
     }
 
     public String getDomainName() {

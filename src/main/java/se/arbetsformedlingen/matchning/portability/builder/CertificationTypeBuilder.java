@@ -7,54 +7,53 @@ import java.util.List;
 public class CertificationTypeBuilder {
     private CertificationType certificationType = new CertificationType();
 
-
     public CertificationTypeBuilder setId(IdentifierType id) {
-        certificationType.id = id;
+        certificationType.setId(id);
         return this;
     }
 
     public CertificationTypeBuilder setName(String name) {
-        certificationType.name = name;
+        certificationType.setName(name);
         return this;
     }
 
     public CertificationTypeBuilder setType(EntityType type) {
-        certificationType.type = type;
+        certificationType.setType(type);
         return this;
     }
 
     public CertificationTypeBuilder setStatus(String status) {
-        certificationType.status = status;
+        certificationType.setStatus(status);
         return this;
     }
 
     public CertificationTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
-        certificationType.effectiveTimePeriod = effectiveTimePeriod;
+        certificationType.setEffectiveTimePeriod(effectiveTimePeriod);
         return this;
     }
 
     public CertificationTypeBuilder setIssued(String issued) {
-        certificationType.issued = issued;
+        certificationType.setIssued(issued);
         return this;
     }
 
     public CertificationTypeBuilder setFirstIssued(String firstIssued) {
-        certificationType.firstIssued = firstIssued;
+        certificationType.setFirstIssued(firstIssued);
         return this;
     }
 
     public CertificationTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
-        certificationType.issuingAuthority = issuingAuthority;
+        certificationType.setIssuingAuthority(issuingAuthority);
         return this;
     }
 
     public CertificationTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        certificationType.attachmentReferences = attachmentReferences;
+        certificationType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public CertificationTypeBuilder setDescriptions(List<String> descriptions) {
-        certificationType.descriptions = descriptions;
+        certificationType.setDescriptions(descriptions);
         return this;
     }
 

@@ -90,6 +90,10 @@ public class DisabilitySummaryType {
         return this.accommodationTypeCode;
     }
 
+    public void setAccommodationTypeCode(List<String> accommodationTypeCode) {
+        this.accommodationTypeCode = accommodationTypeCode;
+    }
+
     public CommentType getComment() {
         return comment;
     }

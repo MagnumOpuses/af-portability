@@ -8,72 +8,72 @@ public class PositionPreferenceTypeBuilder {
     private PositionPreferenceType positionPreferenceType = new PositionPreferenceType();
 
     public PositionPreferenceTypeBuilder setLocations(List<PreferredLocationType> locations) {
-        positionPreferenceType.locations = locations;
+        positionPreferenceType.getLocations().addAll(locations);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setJobCategories(List<EntityType> jobCategories) {
-        positionPreferenceType.jobCategories = jobCategories;
+        positionPreferenceType.getJobCategories().addAll(jobCategories);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setPositionTitles(List<String> positionTitles) {
-        positionPreferenceType.positionTitles = positionTitles;
+        positionPreferenceType.getPositionTitles().addAll(positionTitles);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setPositionOfferingTypeCodes(List<PositionTypeCodeList> positionOfferingTypeCodes) {
-        positionPreferenceType.positionOfferingTypeCodes = positionOfferingTypeCodes;
+        positionPreferenceType.getPositionOfferingTypeCodes().addAll(positionOfferingTypeCodes);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setPositionScheduleTypeCodes(List<PositionScheduleTypeCodeList> positionScheduleTypeCodes) {
-        positionPreferenceType.positionScheduleTypeCodes = positionScheduleTypeCodes;
+        positionPreferenceType.getPositionScheduleTypeCodes().addAll(positionScheduleTypeCodes);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setShiftSchedules(List<ScheduleType> shiftSchedules) {
-        positionPreferenceType.shiftSchedules = shiftSchedules;
+        positionPreferenceType.getShiftSchedules().addAll(shiftSchedules);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setShiftDescriptions(List<String> shiftDescriptions) {
-        positionPreferenceType.shiftDescriptions = shiftDescriptions;
+        positionPreferenceType.getShiftDescriptions().addAll(shiftDescriptions);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setRemoteWork(RemoteWorkType remoteWork) {
-        positionPreferenceType.remoteWork = remoteWork;
+        positionPreferenceType.setRemoteWork(remoteWork);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setCareerLevelCodes(List<CareerLevelCodeList> careerLevelCodes) {
-        positionPreferenceType.careerLevelCodes = careerLevelCodes;
+        positionPreferenceType.setCareerLevelCodes(careerLevelCodes);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setJobGradeCode(EntityType jobGradeCode) {
-        positionPreferenceType.jobGradeCode = jobGradeCode;
+        positionPreferenceType.setJobGradeCode(jobGradeCode);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setOfferedRemunerationPackage(RemunerationPackageType offeredRemunerationPackage) {
-        positionPreferenceType.offeredRemunerationPackage = offeredRemunerationPackage;
+        positionPreferenceType.setOfferedRemunerationPackage(offeredRemunerationPackage);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setTravel(TravelType travel) {
-        positionPreferenceType.travel = travel;
+        positionPreferenceType.setTravel(travel);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setRelocation(RelocationType relocation) {
-        positionPreferenceType.relocation = relocation;
+        positionPreferenceType.setRelocation(relocation);
         return this;
     }
 
     public PositionPreferenceTypeBuilder setWorkingLanguageCodes(List<LanguageCodeList> workingLanguageCodes) {
-        positionPreferenceType.workingLanguageCodes = workingLanguageCodes;
+        positionPreferenceType.setWorkingLanguageCodes(workingLanguageCodes);
         return this;
     }
 

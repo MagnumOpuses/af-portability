@@ -53,11 +53,19 @@ public class PersonProfileInclusion {
         return this.education;
     }
 
+    public void setEducation(List<EducationAttendanceType> education) {
+        this.education = education;
+    }
+
     public List<EmployerHistoryType> getEmployment() {
         if (employment == null) {
             employment = new ArrayList<EmployerHistoryType>();
         }
         return this.employment;
+    }
+
+    public void setEmployment(List<EmployerHistoryType> employment) {
+        this.employment = employment;
     }
 
     public List<MilitaryServiceType> getMilitaryService() {
@@ -67,11 +75,19 @@ public class PersonProfileInclusion {
         return this.militaryService;
     }
 
+    public void setMilitaryService(List<MilitaryServiceType> militaryService) {
+        this.militaryService = militaryService;
+    }
+
     public List<LicenseType> getLicenses() {
         if (licenses == null) {
             licenses = new ArrayList<LicenseType>();
         }
         return this.licenses;
+    }
+
+    public void setLicenses(List<LicenseType> licenses) {
+        this.licenses = licenses;
     }
 
     public List<CertificationType> getCertifications() {
@@ -81,11 +97,19 @@ public class PersonProfileInclusion {
         return this.certifications;
     }
 
+    public void setCertifications(List<CertificationType> certifications) {
+        this.certifications = certifications;
+    }
+
     public List<PatentType> getPatents() {
         if (patents == null) {
             patents = new ArrayList<PatentType>();
         }
         return this.patents;
+    }
+
+    public void setPatents(List<PatentType> patents) {
+        this.patents = patents;
     }
 
     public List<PublicationType> getPublications() {
@@ -95,11 +119,19 @@ public class PersonProfileInclusion {
         return this.publications;
     }
 
+    public void setPublications(List<PublicationType> publications) {
+        this.publications = publications;
+    }
+
     public List<PersonCompetencyType> getQualifications() {
         if (qualifications == null) {
             qualifications = new ArrayList<PersonCompetencyType>();
         }
         return this.qualifications;
+    }
+
+    public void setQualifications(List<PersonCompetencyType> qualifications) {
+        this.qualifications = qualifications;
     }
 
     public List<OrganizationAffiliationType> getAffiliations() {
@@ -109,11 +141,19 @@ public class PersonProfileInclusion {
         return this.affiliations;
     }
 
+    public void setAffiliations(List<OrganizationAffiliationType> affiliations) {
+        this.affiliations = affiliations;
+    }
+
     public List<CertificationType> getSecurityCredentials() {
         if (securityCredentials == null) {
             securityCredentials = new ArrayList<CertificationType>();
         }
         return this.securityCredentials;
+    }
+
+    public void setSecurityCredentials(List<CertificationType> securityCredentials) {
+        this.securityCredentials = securityCredentials;
     }
 
     public List<RefereeType> getReferences() {
@@ -123,10 +163,18 @@ public class PersonProfileInclusion {
         return this.references;
     }
 
+    public void setReferences(List<RefereeType> references) {
+        this.references = references;
+    }
+
     public List<AttachmentType> getAttachments() {
         if (attachments == null) {
             attachments = new ArrayList<AttachmentType>();
         }
         return this.attachments;
+    }
+
+    public void setAttachments(List<AttachmentType> attachments) {
+        this.attachments = attachments;
     }
 }

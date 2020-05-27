@@ -8,62 +8,62 @@ public class PositionHistoryTypeBuilder {
     private PositionHistoryType positionHistoryType = new PositionHistoryType();
 
     public PositionHistoryTypeBuilder setId(IdentifierType id) {
-        positionHistoryType.id = id;
+        positionHistoryType.setId(id);
         return this;
     }
 
     public PositionHistoryTypeBuilder setStart(String start) {
-        positionHistoryType.start = start;
+        positionHistoryType.setStart(start);
         return this;
     }
 
     public PositionHistoryTypeBuilder setEnd(String end) {
-        positionHistoryType.end = end;
+        positionHistoryType.setEnd(end);
         return this;
     }
 
     public PositionHistoryTypeBuilder setCurrent(Boolean current) {
-        positionHistoryType.current = current;
+        positionHistoryType.setCurrent(current);
         return this;
     }
 
     public PositionHistoryTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        positionHistoryType.attachmentReferences = attachmentReferences;
+        positionHistoryType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public PositionHistoryTypeBuilder setDescriptions(StringTypeArray descriptions) {
-        positionHistoryType.descriptions = descriptions;
+        positionHistoryType.setDescriptions(descriptions);
         return this;
     }
 
     public PositionHistoryTypeBuilder setTitle(String title) {
-        positionHistoryType.title = title;
+        positionHistoryType.setTitle(title);
         return this;
     }
 
     public PositionHistoryTypeBuilder setResourceRelationshipCode(ResourceRelationshipCodeList resourceRelationshipCode) {
-        positionHistoryType.resourceRelationshipCode = resourceRelationshipCode;
+        positionHistoryType.setResourceRelationshipCode(resourceRelationshipCode);
         return this;
     }
 
     public PositionHistoryTypeBuilder setOrganization(OrganizationType organization) {
-        positionHistoryType.organization = organization;
+        positionHistoryType.setOrganization(organization);
         return this;
     }
 
     public PositionHistoryTypeBuilder setLocation(LocationType location) {
-        positionHistoryType.location = location;
+        positionHistoryType.setLocation(location);
         return this;
     }
 
     public PositionHistoryTypeBuilder setJobCategories(List<EntityType> jobCategories) {
-        positionHistoryType.jobCategories = jobCategories;
+        positionHistoryType.getJobCategories().addAll(jobCategories);
         return this;
     }
 
     public PositionHistoryTypeBuilder setJobLevels(List<EntityType> jobLevels) {
-        positionHistoryType.jobLevels = jobLevels;
+        positionHistoryType.getJobLevels().addAll(jobLevels);
         return this;
     }
 

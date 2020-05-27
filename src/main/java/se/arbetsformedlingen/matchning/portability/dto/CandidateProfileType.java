@@ -16,29 +16,29 @@ public class CandidateProfileType {
     public LanguageCodeList languageCode;
     public List<EducationAttendanceType> education;
     public List<EmployerHistoryType> employment;
-    public List<MilitaryServiceType> militaryService; //Not used in current implementation
+    public List<MilitaryServiceType> militaryService;  
     public List<LicenseType> licenses;
     public List<CertificationType> certifications;
-    public List<PatentType> patents; //Not used in current implementation
-    public List<PublicationType> publications; //Not used in current implementation
+    public List<PatentType> patents;  
+    public List<PublicationType> publications;  
     public List<PersonCompetencyType> qualifications;
     public List<OrganizationAffiliationType> affiliations;
-    public List<CertificationType> securityCredentials; //Not used in current implementation
-    public List<RefereeType> references; //Not used in current implementation
+    public List<CertificationType> securityCredentials;  
+    public List<RefereeType> references;  
     public List<AttachmentType> attachments;
     public IdentifierType profileId;
     public List<IdentifierType> alternateIds;
     public PersonAvailabilityType personAvailability;
     public String processingInformation;
-    public DistributionGuidelinesType distributionGuidelines; //Not used in current implementation
+    public DistributionGuidelinesType distributionGuidelines;  
     public List<AssociatedPositionOpeningType> associatedPositionOpenings;
     public String objective;
     public String executiveSummary;
     public List<EmployerPreferenceType> employerPreferences;
     public List<PositionPreferenceType> positionPreferences;
-    public List<CandidateRelationshipType> candidateRelationships; //Not used in current implementation
-    public List<CandidateSourceType> candidateSources; //Not used in current implementation
-    public ProcessHistoryType applicationProcessHistory; //Not used in current implementation
+    public List<CandidateRelationshipType> candidateRelationships;  
+    public List<CandidateSourceType> candidateSources;  
+    public ProcessHistoryType applicationProcessHistory;  
     public List<WorkLifeCycleType> workLifeCycles;
 
 
@@ -65,11 +65,19 @@ public class CandidateProfileType {
         return this.education;
     }
 
+    public void setEducation(List<EducationAttendanceType> education) {
+        this.education = education;
+    }
+
     public List<EmployerHistoryType> getEmployment() {
         if (employment == null) {
             employment = new ArrayList<EmployerHistoryType>();
         }
         return this.employment;
+    }
+
+    public void setEmployment(List<EmployerHistoryType> employment) {
+        this.employment = employment;
     }
 
     public List<MilitaryServiceType> getMilitaryService() {
@@ -79,11 +87,19 @@ public class CandidateProfileType {
         return this.militaryService;
     }
 
+    public void setMilitaryService(List<MilitaryServiceType> militaryService) {
+        this.militaryService = militaryService;
+    }
+
     public List<LicenseType> getLicenses() {
         if (licenses == null) {
             licenses = new ArrayList<LicenseType>();
         }
         return this.licenses;
+    }
+
+    public void setLicenses(List<LicenseType> licenses) {
+        this.licenses = licenses;
     }
 
     public List<CertificationType> getCertifications() {
@@ -93,11 +109,19 @@ public class CandidateProfileType {
         return this.certifications;
     }
 
+    public void setCertifications(List<CertificationType> certifications) {
+        this.certifications = certifications;
+    }
+
     public List<PatentType> getPatents() {
         if (patents == null) {
             patents = new ArrayList<PatentType>();
         }
         return this.patents;
+    }
+
+    public void setPatents(List<PatentType> patents) {
+        this.patents = patents;
     }
 
     public List<PublicationType> getPublications() {
@@ -107,11 +131,19 @@ public class CandidateProfileType {
         return this.publications;
     }
 
+    public void setPublications(List<PublicationType> publications) {
+        this.publications = publications;
+    }
+
     public List<PersonCompetencyType> getQualifications() {
         if (qualifications == null) {
             qualifications = new ArrayList<PersonCompetencyType>();
         }
         return this.qualifications;
+    }
+
+    public void setQualifications(List<PersonCompetencyType> qualifications) {
+        this.qualifications = qualifications;
     }
 
     public List<OrganizationAffiliationType> getAffiliations() {
@@ -121,11 +153,19 @@ public class CandidateProfileType {
         return this.affiliations;
     }
 
+    public void setAffiliations(List<OrganizationAffiliationType> affiliations) {
+        this.affiliations = affiliations;
+    }
+
     public List<CertificationType> getSecurityCredentials() {
         if (securityCredentials == null) {
             securityCredentials = new ArrayList<CertificationType>();
         }
         return this.securityCredentials;
+    }
+
+    public void setSecurityCredentials(List<CertificationType> securityCredentials) {
+        this.securityCredentials = securityCredentials;
     }
 
     public List<RefereeType> getReferences() {
@@ -135,11 +175,19 @@ public class CandidateProfileType {
         return this.references;
     }
 
+    public void setReferences(List<RefereeType> references) {
+        this.references = references;
+    }
+
     public List<AttachmentType> getAttachments() {
         if (attachments == null) {
             attachments = new ArrayList<AttachmentType>();
         }
         return this.attachments;
+    }
+
+    public void setAttachments(List<AttachmentType> attachments) {
+        this.attachments = attachments;
     }
 
     public IdentifierType getProfileId() {
@@ -155,6 +203,10 @@ public class CandidateProfileType {
             alternateIds = new ArrayList<IdentifierType>();
         }
         return this.alternateIds;
+    }
+
+    public void setAlternateIds(List<IdentifierType> alternateIds) {
+        this.alternateIds = alternateIds;
     }
 
     public PersonAvailabilityType getPersonAvailability() {
@@ -188,6 +240,10 @@ public class CandidateProfileType {
         return this.associatedPositionOpenings;
     }
 
+    public void setAssociatedPositionOpenings(List<AssociatedPositionOpeningType> associatedPositionOpenings) {
+        this.associatedPositionOpenings = associatedPositionOpenings;
+    }
+
     public String getObjective() {
         return objective;
     }
@@ -211,11 +267,19 @@ public class CandidateProfileType {
         return this.employerPreferences;
     }
 
+    public void setEmployerPreferences(List<EmployerPreferenceType> employerPreferences) {
+        this.employerPreferences = employerPreferences;
+    }
+
     public List<PositionPreferenceType> getPositionPreferences() {
         if (positionPreferences == null) {
         positionPreferences = new ArrayList<PositionPreferenceType>();
     }
         return this.positionPreferences;
+    }
+
+    public void setPositionPreferences(List<PositionPreferenceType> positionPreferences) {
+        this.positionPreferences = positionPreferences;
     }
 
     public List<CandidateRelationshipType> getCandidateRelationships() {
@@ -225,11 +289,19 @@ public class CandidateProfileType {
         return this.candidateRelationships;
     }
 
+    public void setCandidateRelationships(List<CandidateRelationshipType> candidateRelationships) {
+        this.candidateRelationships = candidateRelationships;
+    }
+
     public List<CandidateSourceType> getCandidateSources() {
         if (candidateSources == null) {
             candidateSources = new ArrayList<CandidateSourceType>();
         }
         return this.candidateSources;
+    }
+
+    public void setCandidateSources(List<CandidateSourceType> candidateSources) {
+        this.candidateSources = candidateSources;
     }
 
     public ProcessHistoryType getApplicationProcessHistory() {
@@ -245,6 +317,10 @@ public class CandidateProfileType {
             workLifeCycles = new ArrayList<WorkLifeCycleType>(  );
         }
         return this.workLifeCycles;
+    }
+
+    public void setWorkLifeCycles(List<WorkLifeCycleType> workLifeCycles) {
+        this.workLifeCycles = workLifeCycles;
     }
 }
 

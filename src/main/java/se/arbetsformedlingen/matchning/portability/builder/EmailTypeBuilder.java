@@ -1,4 +1,6 @@
-package se.arbetsformedlingen.matchning.portability.dto;
+package se.arbetsformedlingen.matchning.portability.builder;
+
+import se.arbetsformedlingen.matchning.portability.dto.EmailType;
 
 public class EmailTypeBuilder {
     private EmailType emailType = new EmailType();

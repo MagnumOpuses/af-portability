@@ -1,4 +1,6 @@
-package se.arbetsformedlingen.matchning.portability.dto;
+package se.arbetsformedlingen.matchning.portability.builder;
+
+import se.arbetsformedlingen.matchning.portability.dto.WebType;
 
 public class WebTypeBuilder {
     private WebType webType = new WebType();

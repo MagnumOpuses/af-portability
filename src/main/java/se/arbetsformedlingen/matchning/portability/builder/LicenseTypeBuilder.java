@@ -9,67 +9,67 @@ public class LicenseTypeBuilder {
     private LicenseType licenseType = new LicenseType();
 
     public LicenseTypeBuilder setId(IdentifierType id) {
-        licenseType.id = id;
+        licenseType.setId(id);
         return this;
     }
 
     public LicenseTypeBuilder setName(String name) {
-        licenseType.name = name;
+        licenseType.setName(name);
         return this;
     }
 
     public LicenseTypeBuilder setType(EntityType type) {
-        licenseType.type = type;
+        licenseType.setType(type);
         return this;
     }
 
     public LicenseTypeBuilder setStatus(String status) {
-        licenseType.status = status;
+        licenseType.setStatus(status);
         return this;
     }
 
     public LicenseTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
-        licenseType.effectiveTimePeriod = effectiveTimePeriod;
+        licenseType.setEffectiveTimePeriod(effectiveTimePeriod);
         return this;
     }
 
     public LicenseTypeBuilder setIssued(String issued) {
-        licenseType.issued = issued;
+        licenseType.setIssued(issued);
         return this;
     }
 
     public LicenseTypeBuilder setFirstIssued(String firstIssued) {
-        licenseType.firstIssued = firstIssued;
+        licenseType.setFirstIssued(firstIssued);
         return this;
     }
 
     public LicenseTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
-        licenseType.issuingAuthority = issuingAuthority;
+        licenseType.setIssuingAuthority(issuingAuthority);
         return this;
     }
 
     public LicenseTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
-        licenseType.attachmentReferences = attachmentReferences;
+        licenseType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
     public LicenseTypeBuilder setDescriptions(List<String> descriptions) {
-        licenseType.descriptions = descriptions;
+        licenseType.setDescriptions(descriptions);
         return this;
     }
 
     public LicenseTypeBuilder setEndorsements(LicenseType.Endorsements endorsements) {
-        licenseType.endorsements = endorsements;
+        licenseType.setEndorsements(endorsements);
         return this;
     }
 
     public LicenseTypeBuilder setRestrictions(LicenseType.Restrictions restrictions) {
-        licenseType.restrictions = restrictions;
+        licenseType.setRestrictions(restrictions);
         return this;
     }
 
     public LicenseTypeBuilder setViolations(LicenseType.Violations violations) {
-        licenseType.violations = violations;
+        licenseType.setViolations(violations);
         return this;
     }
 

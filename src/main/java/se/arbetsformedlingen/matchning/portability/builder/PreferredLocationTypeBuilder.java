@@ -8,17 +8,17 @@ public class PreferredLocationTypeBuilder {
     private PreferredLocationType preferredLocationType = new PreferredLocationType();
 
     public PreferredLocationTypeBuilder setMaximumCommuteDuration(MeasureType maximumCommuteDuration) {
-        preferredLocationType.maximumCommuteDuration = maximumCommuteDuration;
+        preferredLocationType.setMaximumCommuteDuration(maximumCommuteDuration);
         return this;
     }
 
     public PreferredLocationTypeBuilder setMaximumCommuteDistance(MeasureType maximumCommuteDistance) {
-        preferredLocationType.maximumCommuteDistance = maximumCommuteDistance;
+        preferredLocationType.setMaximumCommuteDistance(maximumCommuteDistance);
         return this;
     }
 
     public PreferredLocationTypeBuilder setReferenceLocation(AddressType referenceLocation) {
-        preferredLocationType.referenceLocation = referenceLocation;
+        preferredLocationType.setReferenceLocation(referenceLocation);
         return this;
     }
 

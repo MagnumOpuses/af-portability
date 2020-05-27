@@ -6,12 +6,12 @@ public class AddressComponentTypeBuilder {
     private AddressComponentType addressComponentType = new AddressComponentType();
 
     public AddressComponentTypeBuilder setType(String type) {
-        addressComponentType.type = type;
+        addressComponentType.setType(type);
         return this;
     }
 
     public AddressComponentTypeBuilder setValue(String value) {
-        addressComponentType.value = value;
+        addressComponentType.setValue(value);
         return this;
     }
 

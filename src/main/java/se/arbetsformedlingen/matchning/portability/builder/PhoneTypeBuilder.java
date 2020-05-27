@@ -7,32 +7,32 @@ public class PhoneTypeBuilder {
 
 
     public PhoneTypeBuilder setCountryDialingCode(String countryDialingCode) {
-        phoneType.countryDialingCode = countryDialingCode;
+        phoneType.setCountryDialingCode(countryDialingCode);
         return this;
     }
 
     public PhoneTypeBuilder setAreaDialingCode(String areaDialingCode) {
-        phoneType.areaDialingCode = areaDialingCode;
+        phoneType.setAreaDialingCode(areaDialingCode);
         return this;
     }
 
     public PhoneTypeBuilder setDialNumber(String dialNumber) {
-        phoneType.dialNumber = dialNumber;
+        phoneType.setDialNumber(dialNumber);
         return this;
     }
 
     public PhoneTypeBuilder setPhoneExtension(String phoneExtension) {
-        phoneType.phoneExtension = phoneExtension;
+        phoneType.setPhoneExtension(phoneExtension);
         return this;
     }
 
     public PhoneTypeBuilder setAccess(String access) {
-        phoneType.access = access;
+        phoneType.setAccess(access);
         return this;
     }
 
     public PhoneTypeBuilder setFormattedNumber(String formattedNumber) {
-        phoneType.formattedNumber = formattedNumber;
+        phoneType.setFormattedNumber(formattedNumber);
         return this;
     }
 

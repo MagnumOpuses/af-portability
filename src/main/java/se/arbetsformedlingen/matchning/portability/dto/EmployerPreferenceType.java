@@ -42,6 +42,10 @@ public class EmployerPreferenceType {
         return this.industryCodes;
     }
 
+    public void setIndustryCodes(List<IdentifierType> industryCodes) {
+        this.industryCodes = industryCodes;
+    }
+
     public HeadcountRange getHeadcountRange() {
         return headcountRange;
     }

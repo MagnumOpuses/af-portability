@@ -65,4 +65,8 @@ public class ScheduleType {
         }
         return this.schedules;
     }
+
+    public void setSchedules(List<DayScheduleType> schedules) {
+        this.schedules = schedules;
+    }
 }

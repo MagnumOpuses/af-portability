@@ -31,6 +31,10 @@ public class PersonCompetencyType {
         return this.competencyIds;
     }
 
+    public void setCompetencyIds(List<IdentifierType> competencyIds) {
+        this.competencyIds = competencyIds;
+    }
+
     public String getCompetencyName() {
         return competencyName;
     }
@@ -86,6 +90,10 @@ public class PersonCompetencyType {
         return this.competencyDimensions;
     }
 
+    public void setCompetencyDimensions(List<CompetencyDimensionType> competencyDimensions) {
+        this.competencyDimensions = competencyDimensions;
+    }
+
     public CompetencyEvidenceType getCompetencyEvidence() {
         return competencyEvidence;
     }
@@ -99,5 +107,9 @@ public class PersonCompetencyType {
             attachmentReferences = new ArrayList<AttachmentReferenceType>();
         }
         return this.attachmentReferences;
+    }
+
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
     }
 }

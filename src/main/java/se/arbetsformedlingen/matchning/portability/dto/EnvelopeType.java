@@ -58,6 +58,11 @@ public class EnvelopeType {
         return this.data;
     }
 
+    public void setData(List<CandidateType> data) {
+        this.data = data;
+    }
+
+
     public class Sink {
         public String sinkId;
         public String sinkName;
@@ -94,6 +99,10 @@ public class EnvelopeType {
             }
             return this.purposeOfUse;
         }
+
+        public void setPurposeOfUse(List<String> purposeOfUse) {
+            this.purposeOfUse = purposeOfUse;
+        }
     }
 
     public class Source {
@@ -126,12 +135,16 @@ public class EnvelopeType {
             this.sinkDescription = sinkDescription;
         }
 
-        public List<String> getPurposeOfUse() {
+        public List<String> getTermsAndConditions() {
 
             if (termsAndConditions == null) {
                 termsAndConditions = new ArrayList<String>();
             }
             return this.termsAndConditions;
+        }
+
+        public void setTermsAndConditions(List<String> termsAndConditions){
+            this.termsAndConditions = termsAndConditions;
         }
     }
 
@@ -182,11 +195,19 @@ public class EnvelopeType {
             return this.acceptedTerms;
         }
 
+        public void setAcceptedTerms(List<String> acceptedTerms) {
+            this.acceptedTerms = acceptedTerms;
+        }
+
         public List<String> getAcceptedPurposes() {
             if (acceptedPurposes == null) {
                 acceptedPurposes = new ArrayList<String>();
             }
             return this.acceptedPurposes;
+        }
+
+        public void setAcceptedPurposes(List<String> acceptedPurposes){
+            this.acceptedPurposes = acceptedPurposes;
         }
     }
 

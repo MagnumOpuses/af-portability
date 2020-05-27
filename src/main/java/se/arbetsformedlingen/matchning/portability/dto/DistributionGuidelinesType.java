@@ -31,10 +31,18 @@ public class DistributionGuidelinesType {
         return this.distributeTo;
     }
 
+    public void setDistributeTo(List<DistributeToType> distributeTo) {
+        this.distributeTo = distributeTo;
+    }
+
     public List<DoNotDistributeToType> getDoNotDistributeTo() {
         if (doNotDistributeTo == null) {
             doNotDistributeTo = new ArrayList<DoNotDistributeToType>();
         }
         return this.doNotDistributeTo;
+    }
+
+    public void setDoNotDistributeTo(List<DoNotDistributeToType> doNotDistributeTo) {
+        this.doNotDistributeTo = doNotDistributeTo;
     }
 }

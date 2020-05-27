@@ -8,52 +8,52 @@ public class LocationTypeBuilder {
     private LocationType locationType = new LocationType();
 
     public LocationTypeBuilder setLine(String line) {
-        locationType.line = line;
+        locationType.setLine(line);
         return this;
     }
 
     public LocationTypeBuilder setExtendedLines(List<AddressComponentType> extendedLines) {
-        locationType.extendedLines = extendedLines;
+        locationType.getExtendedLines().addAll(extendedLines);
         return this;
     }
 
     public LocationTypeBuilder setCountryCode(CountryCodeList countryCode) {
-        locationType.countryCode = countryCode;
+        locationType.setCountryCode(countryCode);
         return this;
     }
 
     public LocationTypeBuilder setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
-        locationType.countrySubDivisions = countrySubDivisions;
+        locationType.getCountrySubDivisions().addAll(countrySubDivisions);
         return this;
     }
 
     public LocationTypeBuilder setCity(String city) {
-        locationType.city = city;
+        locationType.setCity(city);
         return this;
     }
 
     public LocationTypeBuilder setPostalCode(String postalCode) {
-        locationType.postalCode = postalCode;
+        locationType.setPostalCode(postalCode);
         return this;
     }
 
     public LocationTypeBuilder setPostOfficeBox(String postOfficeBox) {
-        locationType.postOfficeBox = postOfficeBox;
+        locationType.setPostOfficeBox(postOfficeBox);
         return this;
     }
 
     public LocationTypeBuilder setGeoLocation(GeoType geoLocation) {
-        locationType.geoLocation = geoLocation;
+        locationType.setGeoLocation(geoLocation);
         return this;
     }
 
     public LocationTypeBuilder setFormattedAddress(String formattedAddress) {
-        locationType.formattedAddress = formattedAddress;
+        locationType.setFormattedAddress(formattedAddress);
         return this;
     }
 
     public LocationTypeBuilder setId(IdentifierType id) {
-        locationType.id = id;
+        locationType.setId(id);
         return this;
     }
 

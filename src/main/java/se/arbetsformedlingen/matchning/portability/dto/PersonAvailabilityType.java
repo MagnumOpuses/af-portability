@@ -24,6 +24,10 @@ public class PersonAvailabilityType {
         return this.availabilityDates;
     }
 
+    public void setAvailabilityDates(List<AvailabilityDatesType> availabilityDates) {
+        this.availabilityDates = availabilityDates;
+    }
+
     public MeasureType getNoticePeriodMeasure() {
         return noticePeriodMeasure;
     }

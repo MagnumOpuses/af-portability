@@ -86,6 +86,10 @@ public class PersonLegalInclusion {
         return this.nationality;
     }
 
+    public void setNationality(List<String> nationality) {
+        this.nationality = nationality;
+    }
+
     public String getMaritalStatus() {
         return maritalStatus;
     }
@@ -109,11 +113,19 @@ public class PersonLegalInclusion {
         return this.visa;
     }
 
+    public void setVisa(List<String> visa) {
+        this.visa = visa;
+    }
+
     public List<String> getReligion() {
         if (religion == null) {
             religion = new ArrayList<String>();
         }
         return this.religion;
+    }
+
+    public void setReligion(List<String> religion) {
+        this.religion = religion;
     }
 
     public String getStudentType() {
@@ -147,10 +159,18 @@ public class PersonLegalInclusion {
         return this.legalDocuments;
     }
 
+    public void setLegalDocuments(List<LegalDocumentType> legalDocuments) {
+        this.legalDocuments = legalDocuments;
+    }
+
     public List<EmploymentPermitType> getEmploymentPermits() {
         if (employmentPermits == null) {
             employmentPermits = new ArrayList<EmploymentPermitType>();
         }
         return this.employmentPermits;
+    }
+
+    public void setEmploymentPermits(List<EmploymentPermitType> employmentPermits) {
+        this.employmentPermits = employmentPermits;
     }
 }

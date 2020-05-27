@@ -29,6 +29,10 @@ public class PatentType {
         return this.ids;
     }
 
+    public void setIds(List<IdentifierType> ids) {
+        this.ids = ids;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -74,6 +78,10 @@ public class PatentType {
             attachmentReferences = new ArrayList<AttachmentReferenceType>();
         }
         return this.attachmentReferences;
+    }
+
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
     }
 
     public StringTypeArray getDescriptions() {

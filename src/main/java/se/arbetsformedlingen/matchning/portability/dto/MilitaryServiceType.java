@@ -73,6 +73,10 @@ public class MilitaryServiceType {
         return this.attachmentReferences;
     }
 
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
+
     public StringTypeArray getDescriptions() {
         return descriptions;
     }
@@ -152,6 +156,10 @@ public class MilitaryServiceType {
         return this.expertises;
     }
 
+    public void setExpertises(List<SpecifiedCompetencyType> expertises) {
+        this.expertises = expertises;
+    }
+
     public StringTypeArray getHonors() {
         return honors;
     }
@@ -189,5 +197,9 @@ public class MilitaryServiceType {
             comments = new ArrayList<CommentType>();
         }
         return this.comments;
+    }
+
+    public void setComments(List<CommentType> comments) {
+        this.comments = comments;
     }
 }

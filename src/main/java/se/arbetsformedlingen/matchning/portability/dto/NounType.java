@@ -51,6 +51,10 @@ public class NounType {
         return this.alternateIds;
     }
 
+    public void setAlternateIds(List<IdentifierType> alternateIds) {
+        this.alternateIds = alternateIds;
+    }
+
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
 

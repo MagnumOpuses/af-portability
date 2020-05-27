@@ -36,6 +36,10 @@ public class RecruitingAndStaffingType {
         return this.interviewDates;
     }
 
+    public void setInterviewDates(List<XMLGregorianCalendar> interviewDates) {
+        this.interviewDates = interviewDates;
+    }
+
     public XMLGregorianCalendar getRejectionDate() {
         return rejectionDate;
     }

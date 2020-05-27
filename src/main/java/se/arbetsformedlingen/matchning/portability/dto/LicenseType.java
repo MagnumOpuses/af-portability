@@ -108,11 +108,19 @@ public class LicenseType {
         return this.attachmentReferences;
     }
 
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
+
     public List<String> getDescriptions() {
         if (descriptions == null) {
             descriptions = new ArrayList<String>();
         }
         return this.descriptions;
+    }
+
+    public void setDescriptions(List<String> descriptions) {
+        this.descriptions = descriptions;
     }
 
     public Endorsements getEndorsements() {

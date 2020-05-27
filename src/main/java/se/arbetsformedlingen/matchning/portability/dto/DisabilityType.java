@@ -31,4 +31,8 @@ public class DisabilityType {
         }
         return this.summary;
     }
+
+    public void setSummary(List<DisabilitySummaryType> summary) {
+        this.summary = summary;
+    }
 }

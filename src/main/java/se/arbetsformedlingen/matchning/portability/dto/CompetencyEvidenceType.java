@@ -54,6 +54,10 @@ public class CompetencyEvidenceType {
         return this.descriptions;
     }
 
+    public void setDescriptions(List<String> descriptions) {
+        this.descriptions = descriptions;
+    }
+
     public IdentifierType getEvidenceRequirementsId() {
         return evidenceRequirementsId;
     }
@@ -67,6 +71,10 @@ public class CompetencyEvidenceType {
             scores = new ArrayList<ScoreType>();
         }
         return this.scores;
+    }
+
+    public void setScores(List<ScoreType> scores) {
+        this.scores = scores;
     }
 
     public OpenEndPeriodType getEffectivePeriod() {

@@ -84,4 +84,8 @@ public class OrganizationAffiliationType {
         }
         return this.attachmentReferences;
     }
+
+    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+        this.attachmentReferences = attachmentReferences;
+    }
 }
