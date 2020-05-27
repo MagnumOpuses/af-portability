@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 public class CandidateTest {
 
     ObjectMapper mapper;

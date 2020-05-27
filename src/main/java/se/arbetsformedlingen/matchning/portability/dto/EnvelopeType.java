@@ -62,7 +62,6 @@ public class EnvelopeType {
         this.data = data;
     }
 
-
     public class Sink {
         public String sinkId;
         public String sinkName;
@@ -143,7 +142,7 @@ public class EnvelopeType {
             return this.termsAndConditions;
         }
 
-        public void setTermsAndConditions(List<String> termsAndConditions){
+        public void setTermsAndConditions(List<String> termsAndConditions) {
             this.termsAndConditions = termsAndConditions;
         }
     }
@@ -206,7 +205,7 @@ public class EnvelopeType {
             return this.acceptedPurposes;
         }
 
-        public void setAcceptedPurposes(List<String> acceptedPurposes){
+        public void setAcceptedPurposes(List<String> acceptedPurposes) {
             this.acceptedPurposes = acceptedPurposes;
         }
     }
