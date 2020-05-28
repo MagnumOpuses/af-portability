@@ -11,6 +11,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.util.Strings;
+import org.json.JSONArray;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,10 @@ import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @RestController
 public class ProfileApi {
@@ -131,8 +133,11 @@ public class ProfileApi {
     private List<String> decodeStringToList(String encodedString) {
         byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
         String decodedString = new String(decodedBytes);
-        String[] splits =  decodedString.replace("[","").replace("]","").split(",");
-        List<String> purposeList = new ArrayList<String>(Arrays.asList(splits));
+        final JSONArray parsed = new JSONArray(decodedString);
+        final List<String> purposeList = IntStream.range(0, parsed.length())
+            .mapToObj(parsed::get)
+            .map(Object::toString)
+            .collect(Collectors.toList());
         return purposeList;
     }
 }
