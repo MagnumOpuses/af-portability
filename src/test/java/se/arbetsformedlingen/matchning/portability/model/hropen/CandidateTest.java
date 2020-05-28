@@ -54,7 +54,7 @@ public class CandidateTest {
 
         for(AddressType item : communication.getAddress()) {
             assertEquals(personUppgifter.getAdress(), item.getLine());
-            assertEquals(personUppgifter.getCo(), item.getExtendedLines());
+            assertEquals(personUppgifter.getCo(), item.getExtendedLines().get(0).getValue());
             assertEquals(personUppgifter.getPostort(), item.getCity());
             assertEquals(personUppgifter.getPostnummer(), item.getPostalCode());
             assertEquals(personUppgifter.getLand(), item.getCountryCode().value());

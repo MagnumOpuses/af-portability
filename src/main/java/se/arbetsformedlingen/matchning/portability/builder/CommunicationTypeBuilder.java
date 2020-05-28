@@ -40,6 +40,8 @@ public class CommunicationTypeBuilder {
 
         List<PhoneType> phone = new ArrayList<>();
         phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
+        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerMobil()).build());
+        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerOvrig()).build());
         setPhone(phone);
 
         List<EmailType> email = new ArrayList<>();

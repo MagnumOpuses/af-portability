@@ -203,28 +203,27 @@ public class CandidateProfileTypeBuilder {
                 List<PositionHistoryType> positions = new ArrayList<>();
                 List<String> descriptions = new ArrayList<>();
                 final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+                final PositionHistoryTypeBuilder positionHistoryTypeBuilder = new PositionHistoryTypeBuilder();
+                final EmployerHistoryTypeBuilder employerHistoryTypeBuilder = new EmployerHistoryTypeBuilder();
 
                 try {
-                    positions.add(new PositionHistoryTypeBuilder().setStart(sdf.format(sdf.parse(
-                            anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())))
-                            .build());
+                    employerHistoryTypeBuilder.setStart(sdf.format(sdf.parse(
+                            anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())));
                 } catch (Exception e) {
                     // No start date
                 }
                 try {
-                    positions.add(new PositionHistoryTypeBuilder().setEnd(sdf.format(sdf.parse(
-                            anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())))
-                            .build());
+                    employerHistoryTypeBuilder.setEnd(sdf.format(sdf.parse(
+                            anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())));
                 } catch (Exception e) {
                     // No end date
                 }
-                positions.add(new PositionHistoryTypeBuilder().setTitle(anstallning.getRubrik()).build());
+                positionHistoryTypeBuilder.setTitle(anstallning.getRubrik()).build();
+                positions.add(positionHistoryTypeBuilder.build());
                 descriptions.add(new String(anstallning.getBeskrivning()));
-                emplyments.add(new EmployerHistoryTypeBuilder()
-                        .setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build())
+                emplyments.add(employerHistoryTypeBuilder.setOrganization(new OrganizationTypeBuilder().withAnstallning(anstallning).build())
                         .setPositionHistories(positions).setCurrent(anstallning.isPagaende())
                         .setDescriptions(descriptions).build());
-
             }
             setEmployment(emplyments);
         }
@@ -233,31 +232,29 @@ public class CandidateProfileTypeBuilder {
             List<EducationAttendanceType> education = new ArrayList<>();
             for (Utbildning utbildning : profil.getUtbildningar()) {
                 List<String> descriptions = new ArrayList<>();
-
-                education.add(new EducationAttendanceTypeBuilder().setInstitution(new OrganizationTypeBuilder()
-                        .setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).build()).build())
-                        .build());
+                final EducationAttendanceTypeBuilder educationAttendanceTypeBuilder = new EducationAttendanceTypeBuilder();
 
                 final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
                 try {
-                    education.add(new EducationAttendanceTypeBuilder().setStart(sdf.format(sdf.parse(
-                            utbildning.getStartdatum().getArtal() + "-" + utbildning.getStartdatum().getManad())))
-                            .build());
+                    educationAttendanceTypeBuilder.setStart(sdf.format(sdf.parse(
+                            utbildning.getStartdatum().getArtal() + "-" + utbildning.getStartdatum().getManad())));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                educationAttendanceTypeBuilder.setInstitution(new OrganizationTypeBuilder()
+                        .setLegalId(new IdentifierTypeBuilder().setValue(utbildning.getSkola()).build()).build());
+
 
                 try {
-                    education.add(new EducationAttendanceTypeBuilder()
-                            .setEnd(sdf.format(sdf.parse(
-                                    utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad())))
-                            .build());
+                    educationAttendanceTypeBuilder.setEnd(sdf.format(sdf.parse(
+                                    utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad())));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 descriptions.add(new String(utbildning.getInriktning()));
-                education.add(new EducationAttendanceTypeBuilder().setCurrent(utbildning.isPagaende())
-                        .setDescriptions(descriptions).build());
+                educationAttendanceTypeBuilder.setCurrent(utbildning.isPagaende())
+                        .setDescriptions(descriptions);
+                education.add(educationAttendanceTypeBuilder.build());
 
             }
             setEducation(education);
