@@ -18,10 +18,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import se.arbetsformedlingen.matchning.portability.builder.ConsentBuilder;
 import se.arbetsformedlingen.matchning.portability.builder.EnvelopeTypeBuilder;
+import se.arbetsformedlingen.matchning.portability.builder.SinkBuilder;
+import se.arbetsformedlingen.matchning.portability.builder.SourceBuilder;
 import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
+import se.arbetsformedlingen.matchning.portability.dto.Consent;
 import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
+import se.arbetsformedlingen.matchning.portability.dto.Sink;
+import se.arbetsformedlingen.matchning.portability.dto.Source;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
+import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreResponse;
 import se.arbetsformedlingen.matchning.portability.repository.AspRespository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
@@ -78,9 +85,10 @@ public class ProfileApi {
             throw new UnauthorizedException(Strings.isEmpty(jwtToken.getToken()) ? "Missing JWT token" : "JWT token is invalid");
         }
 
-        String encodedPurpose = "";
+        StoreResponse encodedPurpose = new StoreResponse();
+        String purposeToken = sessionToken + "-purpose";
         try {
-            encodedPurpose = this.requestValueWithSessionToken(sessionToken);
+            encodedPurpose = this.requestValueWithSessionToken(purposeToken);
         } catch (URISyntaxException ue) {
             ue.printStackTrace();
         }catch (HttpException he) {
@@ -92,11 +100,19 @@ public class ProfileApi {
         List<CandidateType> candidates = new ArrayList<CandidateType>();
         candidates.add(candidate);
 
+        Source source = new SourceBuilder().build();
+        Sink sink = new SinkBuilder()
+                        .setPurposeOfUse(this.decodeStringToList(encodedPurpose.value))
+                        .build();
+        Consent consent = new ConsentBuilder().build();
+
         EnvelopeType envelop = new EnvelopeTypeBuilder()
                                 .setSessionToken(sessionToken)
+                                .setSource(source)
+                                .setSink(sink)
+                                .setConsent(consent)
                                 .setData(candidates)
                                 .build();
-        envelop.getSink().setPurposeOfUse(this.decodeStringToList(encodedPurpose));
 
         return envelop;
     }
@@ -116,7 +132,7 @@ public class ProfileApi {
         return token;
     }
 
-    private String requestValueWithSessionToken(String token) throws IOException, URISyntaxException {
+    private StoreResponse requestValueWithSessionToken(String token) throws IOException, URISyntaxException {
         URIBuilder builder = new URIBuilder(ProfileApi.outboxUrl + "/envelop");
         builder.setParameter("sessionToken", token);
         HttpGet httpGet = new HttpGet(builder.build());
@@ -125,9 +141,8 @@ public class ProfileApi {
         if (response.getStatusLine().getStatusCode() != 200) {
             throw new HttpException(response.getStatusLine().getStatusCode(), ProfileApi.outboxUrl + "/envelop");
         }
-        HttpEntity entity = response.getEntity();
-        String results = EntityUtils.toString(entity);
-        return results;
+        
+        return this.mapper.readValue(response.getEntity().getContent(), StoreResponse.class);
     }
 
     private List<String> decodeStringToList(String encodedString) {

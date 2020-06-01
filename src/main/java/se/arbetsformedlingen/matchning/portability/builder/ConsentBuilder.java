@@ -38,7 +38,7 @@ public class ConsentBuilder {
         return this;
     }
 
-    public Consent createConsent() {
+    public Consent build() {
         return consent;
     }
 }

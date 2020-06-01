@@ -1,7 +1,10 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
 import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
+import se.arbetsformedlingen.matchning.portability.dto.Consent;
 import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
+import se.arbetsformedlingen.matchning.portability.dto.Sink;
+import se.arbetsformedlingen.matchning.portability.dto.Source;
 
 import java.util.List;
 
@@ -13,17 +16,17 @@ public class EnvelopeTypeBuilder {
         return this;
     }
 
-    public EnvelopeTypeBuilder setSource(EnvelopeType.Source source) {
+    public EnvelopeTypeBuilder setSource(Source source) {
         envelopeType.setSource(source);
         return this;
     }
 
-    public EnvelopeTypeBuilder setSink(EnvelopeType.Sink sink) {
+    public EnvelopeTypeBuilder setSink(Sink sink) {
         envelopeType.setSink(sink);
         return this;
     }
 
-    public EnvelopeTypeBuilder setConsent(EnvelopeType.Consent consent) {
+    public EnvelopeTypeBuilder setConsent(Consent consent) {
         envelopeType.setConsent(consent);
         return this;
     }

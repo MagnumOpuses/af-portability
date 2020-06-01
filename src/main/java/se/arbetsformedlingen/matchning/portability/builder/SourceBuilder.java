@@ -6,7 +6,6 @@ import java.util.List;
 
 public class SourceBuilder {
     private Source source = new Source();
-    private List<String> termsAndConditions;
 
     public SourceBuilder setSourceId(String sourceId) {
        source.setSourceId(sourceId);
@@ -28,7 +27,7 @@ public class SourceBuilder {
         return this;
     }
 
-    public Source createSource() {
+    public Source build() {
         return source;
     }
 }
