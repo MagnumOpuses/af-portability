@@ -6,3 +6,6 @@ target/
 .mvn/
 .settings/
 logs/
+.vscode/
+.factorypath
+.github/

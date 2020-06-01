@@ -15,6 +15,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.*;
 import se.arbetsformedlingen.matchning.portability.model.ApiKeys;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
+import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreRequestBody;
 import se.arbetsformedlingen.matchning.portability.repository.ApiGatewayRepository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
@@ -44,17 +45,21 @@ public class SessionTokenApi {
 
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
-    public Token generateSessionToken(@RequestParam("api-key") String apikey) {
+    public Token generateSessionToken(
+        @RequestParam("api-key") String apikey,
+        @RequestParam("purpose") String purpose) {
         ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
         }
 
         UUID uuid = UUID.randomUUID();
-        Token t = new Token(uuid.toString());
+        Token sessionToken = new Token(uuid.toString());
+        Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
 
         try {
-            this.registerTokenToRedis(t);
+            this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
+            this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
             throw he;
@@ -62,10 +67,10 @@ public class SessionTokenApi {
             throw new RuntimeException(e);
         }
 
-        return t;
+        return sessionToken;
     }
 
-    public void registerTokenToRedis(Token t) throws IOException {
+    public void registerTokenToRedis(StoreRequestBody body) throws IOException {
 
         HttpClient client = HttpClients.createDefault();
 
@@ -73,7 +78,7 @@ public class SessionTokenApi {
 
         String json = "";
         try {
-            json = mapper.writeValueAsString(t);
+            json = mapper.writeValueAsString(body);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
