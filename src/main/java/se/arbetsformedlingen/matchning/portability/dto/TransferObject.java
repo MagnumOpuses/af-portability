@@ -5,19 +5,10 @@ import java.util.List;
 
 public class TransferObject {
 
-    private int size;
     private String documentType;
     private String dataStructureLink;
     private List<CandidateType> data;
 
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 
     public String getDocumentType() {
         return documentType;

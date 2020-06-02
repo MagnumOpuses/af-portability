@@ -51,5 +51,11 @@ public class EnvelopeType {
         this.consent = consent;
     }
 
+    public TransferObject getTransferObject() {
+        return transferObject;
+    }
 
+    public void setTransferObject(TransferObject transferObject) {
+        this.transferObject = transferObject;
+    }
 }

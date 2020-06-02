@@ -8,11 +8,6 @@ import java.util.List;
 public class TransferObjectBuilder {
     private TransferObject transferObject = new TransferObject();
 
-    public TransferObjectBuilder setSize(int size) {
-        transferObject.setSize(size);
-        return this;
-    }
-
     public TransferObjectBuilder setDocumentType(String documentType) {
         transferObject.setDocumentType(documentType);
         return this;

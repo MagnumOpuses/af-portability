@@ -18,15 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import se.arbetsformedlingen.matchning.portability.builder.ConsentBuilder;
-import se.arbetsformedlingen.matchning.portability.builder.EnvelopeTypeBuilder;
-import se.arbetsformedlingen.matchning.portability.builder.SinkBuilder;
-import se.arbetsformedlingen.matchning.portability.builder.SourceBuilder;
-import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
-import se.arbetsformedlingen.matchning.portability.dto.Consent;
-import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
-import se.arbetsformedlingen.matchning.portability.dto.Sink;
-import se.arbetsformedlingen.matchning.portability.dto.Source;
+import se.arbetsformedlingen.matchning.portability.builder.*;
+import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
 import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreResponse;
 import se.arbetsformedlingen.matchning.portability.repository.AspRespository;
@@ -100,18 +93,27 @@ public class ProfileApi {
         List<CandidateType> candidates = new ArrayList<CandidateType>();
         candidates.add(candidate);
 
-        Source source = new SourceBuilder().build();
+        Source source = new SourceBuilder()
+                            .setSourceName("Arbetsformedlingen")
+                            .setSourceDescription("Swedish public employment agency")
+                            .build();
         Sink sink = new SinkBuilder()
                         .setPurposeOfUse(this.decodeStringToList(encodedPurpose.value))
                         .build();
         Consent consent = new ConsentBuilder().build();
+
+        TransferObject transferObject = new TransferObjectBuilder()
+                                            .setDataStructureLink("https://github.com/MagnumOpuses/common-cv-model")
+                                            .setDocumentType("CV")
+                                            .setData(candidates)
+                                            .build();
 
         EnvelopeType envelop = new EnvelopeTypeBuilder()
                                 .setSessionToken(sessionToken)
                                 .setSource(source)
                                 .setSink(sink)
                                 .setConsent(consent)
-                                .setData(candidates)
+                                .setTransferObject(transferObject)
                                 .build();
 
         return envelop;

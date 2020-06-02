@@ -1,10 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.dto.CandidateType;
-import se.arbetsformedlingen.matchning.portability.dto.Consent;
-import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
-import se.arbetsformedlingen.matchning.portability.dto.Sink;
-import se.arbetsformedlingen.matchning.portability.dto.Source;
+import se.arbetsformedlingen.matchning.portability.dto.*;
 
 import java.util.List;
 
@@ -31,8 +27,8 @@ public class EnvelopeTypeBuilder {
         return this;
     }
 
-    public EnvelopeTypeBuilder setData(List<CandidateType> data) {
-        envelopeType.getData().addAll(data);
+    public EnvelopeTypeBuilder setTransferObject(TransferObject transferObject){
+        envelopeType.setTransferObject(transferObject);
         return this;
     }
 
