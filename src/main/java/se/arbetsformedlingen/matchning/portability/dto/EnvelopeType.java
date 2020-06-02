@@ -17,7 +17,7 @@ public class EnvelopeType {
     public Source source;
     public Sink sink;
     public Consent consent;
-    public List<CandidateType> data;
+    public TransferObject transferObject;
 
     public String getSessionToken() {
         return sessionToken;
@@ -49,17 +49,6 @@ public class EnvelopeType {
 
     public void setConsent(Consent consent) {
         this.consent = consent;
-    }
-
-    public List<CandidateType> getData() {
-        if (data == null) {
-            data = new ArrayList<CandidateType>();
-        }
-        return this.data;
-    }
-
-    public void setData(List<CandidateType> data) {
-        this.data = data;
     }
 
 
