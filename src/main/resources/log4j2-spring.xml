@@ -2,7 +2,12 @@
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <JSONLayout complete="true" compact="true" eventEol="true" endOfLine="\r" />
+            <JSONLayout complete="false" compact="true" eventEol="true" endOfLine="\n" />
+        </Console>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>%m%n</pattern>
+            </PatternLayout>
         </Console>
 
             <RollingFile name="RollingFile"

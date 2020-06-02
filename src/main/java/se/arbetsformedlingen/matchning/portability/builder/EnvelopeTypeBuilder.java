@@ -27,7 +27,7 @@ public class EnvelopeTypeBuilder {
         return this;
     }
 
-    public EnvelopeTypeBuilder setTransferObject(TransferObject transferObject){
+    public EnvelopeTypeBuilder setTransferObject(TransferObject transferObject) {
         envelopeType.setTransferObject(transferObject);
         return this;
     }

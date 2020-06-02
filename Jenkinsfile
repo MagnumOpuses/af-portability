@@ -1,6 +1,10 @@
 def cicdProjectNamespace = "af-connect-cicd"
-def template = "./infrastructure/openshift/build-template.yml"
 def applicationName = "af-portability"
+def COLOR_MAP = [
+    'SUCCESS': 'good', 
+    'FAILURE': 'danger',
+]
+def slackChannel = '#gravity-monitoring'
 
 pipeline {
     agent any
@@ -17,6 +21,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Create Application Template') {
             when {
                 expression {
@@ -31,12 +36,25 @@ pipeline {
                 script {
                     openshift.withCluster() {
                         openshift.withProject("${cicdProjectNamespace}") {
-                            openshift.newApp(template, "-p APPLICATION_NAME=${applicationName}")
+                            openshift.newApp("--template=${applicationName}")
                         }
                     }
                 }
             }
         }
+
+        stage('Change Source Ref to Stage') {
+            steps {
+                script {
+                    openshift.withCluster() {
+                        def p = openshift.selector("bc/${applicationName}").object()
+                        p.spec.source.git.ref = 'stage'
+                        openshift.apply(p)
+                    }
+                }
+            }
+        }
+
         stage('Build Image') {
             steps {
                 script {
@@ -47,6 +65,33 @@ pipeline {
                     }
                 }
             }
+        }
+
+        stage('Tag Image') {
+            steps {
+                script {
+                    openshift.withCluster() {
+                        openshift.withProject("${cicdProjectNamespace}") {
+                            openshift.tag("${applicationName}:latest", "${applicationName}:build-${BUILD_NUMBER}")
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    // Post-build actions
+    post {
+        success {
+            slackSend channel: "${slackChannel}",
+                color: COLOR_MAP[currentBuild.currentResult],
+                message: "*${currentBuild.currentResult}:* Job ${applicationName} stage build \n Image tagged with build-${BUILD_NUMBER} tag \n More info at: ${env.BUILD_URL}"
+        }
+
+        failure {
+            slackSend channel: "${slackChannel}",
+                color: COLOR_MAP[currentBuild.currentResult],
+                message: "*${currentBuild.currentResult}:* Job ${applicationName} stage build\n More info at: ${env.BUILD_URL}"
         }
     }
 }

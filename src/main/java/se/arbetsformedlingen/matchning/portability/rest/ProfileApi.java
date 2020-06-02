@@ -38,10 +38,9 @@ public class ProfileApi {
 
     private static String idpUrl;
     private static String outboxUrl;
-    ProfileApi(
-        @Value("${spring.idp.url}") String idpUrl,
-        @Value("${spring.outbox.host}") String host,
-        @Value("${spring.outbox.port}") String port) {
+
+    ProfileApi(@Value("${spring.idp.url}") String idpUrl, @Value("${spring.outbox.host}") String host,
+            @Value("${spring.outbox.port}") String port) {
         ProfileApi.idpUrl = idpUrl;
         ProfileApi.outboxUrl = "http://" + host + ":" + port;
     }
@@ -53,11 +52,9 @@ public class ProfileApi {
     private ObjectMapper mapper = new ObjectMapper();
 
     @CrossOrigin
-    @RequestMapping(value="/profile", method = RequestMethod.GET, produces = "application/json")
-    public EnvelopeType fetchCandidate(
-            @RequestHeader("AMV_SSO_COOKIE") String ssoCookie,
-            @RequestParam("sessionToken") String sessionToken
-    ) {
+    @RequestMapping(value = "/profile", method = RequestMethod.GET, produces = "application/json")
+    public EnvelopeType fetchCandidate(@RequestHeader("AMV_SSO_COOKIE") String ssoCookie,
+            @RequestParam("sessionToken") String sessionToken) {
         if (Strings.isEmpty(ssoCookie)) {
             throw new UnauthorizedException("Cookie is missing or invalid");
         }
@@ -67,7 +64,7 @@ public class ProfileApi {
             jwtToken = this.requestJWTToken("AMV_SSO_COOKIE", ssoCookie);
         } catch (URISyntaxException ue) {
             ue.printStackTrace();
-        }catch (HttpException he) {
+        } catch (HttpException he) {
             throw new HttpNotFoundException("Invalid token");
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -75,7 +72,8 @@ public class ProfileApi {
 
         CandidateType candidate = aspRespository.getCandidateForToken(jwtToken.getToken());
         if (candidate == null) {
-            throw new UnauthorizedException(Strings.isEmpty(jwtToken.getToken()) ? "Missing JWT token" : "JWT token is invalid");
+            throw new UnauthorizedException(
+                    Strings.isEmpty(jwtToken.getToken()) ? "Missing JWT token" : "JWT token is invalid");
         }
 
         StoreResponse encodedPurpose = new StoreResponse();
@@ -84,7 +82,7 @@ public class ProfileApi {
             encodedPurpose = this.requestValueWithSessionToken(purposeToken);
         } catch (URISyntaxException ue) {
             ue.printStackTrace();
-        }catch (HttpException he) {
+        } catch (HttpException he) {
             throw new HttpNotFoundException("Invalid or missing purpose");
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -93,28 +91,17 @@ public class ProfileApi {
         List<CandidateType> candidates = new ArrayList<CandidateType>();
         candidates.add(candidate);
 
-        Source source = new SourceBuilder()
-                            .setSourceName("Arbetsformedlingen")
-                            .setSourceDescription("Swedish public employment agency")
-                            .build();
-        Sink sink = new SinkBuilder()
-                        .setPurposeOfUse(this.decodeStringToList(encodedPurpose.value))
-                        .build();
+        Source source = new SourceBuilder().setSourceName("Arbetsformedlingen")
+                .setSourceDescription("Swedish public employment agency").build();
+        Sink sink = new SinkBuilder().setPurposeOfUse(this.decodeStringToList(encodedPurpose.value)).build();
         Consent consent = new ConsentBuilder().build();
 
         TransferObject transferObject = new TransferObjectBuilder()
-                                            .setDataStructureLink("https://github.com/MagnumOpuses/common-cv-model")
-                                            .setDocumentType("CV")
-                                            .setData(candidates)
-                                            .build();
+                .setDataStructureLink("https://github.com/MagnumOpuses/common-cv-model").setDocumentType("CV")
+                .setData(candidates).build();
 
-        EnvelopeType envelop = new EnvelopeTypeBuilder()
-                                .setSessionToken(sessionToken)
-                                .setSource(source)
-                                .setSink(sink)
-                                .setConsent(consent)
-                                .setTransferObject(transferObject)
-                                .build();
+        EnvelopeType envelop = new EnvelopeTypeBuilder().setSessionToken(sessionToken).setSource(source).setSink(sink)
+                .setConsent(consent).setTransferObject(transferObject).build();
 
         return envelop;
     }
@@ -143,7 +130,7 @@ public class ProfileApi {
         if (response.getStatusLine().getStatusCode() != 200) {
             throw new HttpException(response.getStatusLine().getStatusCode(), ProfileApi.outboxUrl + "/envelop");
         }
-        
+
         return this.mapper.readValue(response.getEntity().getContent(), StoreResponse.class);
     }
 
@@ -151,10 +138,8 @@ public class ProfileApi {
         byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
         String decodedString = new String(decodedBytes);
         final JSONArray parsed = new JSONArray(decodedString);
-        final List<String> purposeList = IntStream.range(0, parsed.length())
-            .mapToObj(parsed::get)
-            .map(Object::toString)
-            .collect(Collectors.toList());
+        final List<String> purposeList = IntStream.range(0, parsed.length()).mapToObj(parsed::get).map(Object::toString)
+                .collect(Collectors.toList());
         return purposeList;
     }
 }
