@@ -1,6 +1,5 @@
 package se.arbetsformedlingen.matchning.portability.builder;
 
-import se.arbetsformedlingen.matchning.portability.dto.EnvelopeType;
 import se.arbetsformedlingen.matchning.portability.dto.Sink;
 
 import java.util.List;

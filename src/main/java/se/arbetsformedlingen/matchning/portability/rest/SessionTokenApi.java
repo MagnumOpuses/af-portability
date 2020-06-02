@@ -55,10 +55,12 @@ public class SessionTokenApi {
         System.out.println(info.toString());
 
         UUID uuid = UUID.randomUUID();
-        Token t = new Token(uuid.toString());
+        Token sessionToken = new Token(uuid.toString());
+        Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
 
         try {
-            this.registerTokenToRedis(new StoreRequestBody(t.getToken(), purpose));
+            this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
+            this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
             throw he;
@@ -66,7 +68,7 @@ public class SessionTokenApi {
             throw new RuntimeException(e);
         }
 
-        return t;
+        return sessionToken;
     }
 
     public void registerTokenToRedis(StoreRequestBody body) throws IOException {
