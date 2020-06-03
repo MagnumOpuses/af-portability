@@ -18,7 +18,7 @@ public class PositionHistoryType {
     public String end;
     public Boolean current;
     public List<AttachmentReferenceType> attachmentReferences;
-    public StringTypeArray descriptions;
+    public List<String> descriptions;
     public String title;
     public ResourceRelationshipCodeList resourceRelationshipCode;
     public OrganizationType organization;
@@ -66,11 +66,11 @@ public class PositionHistoryType {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 

@@ -21,7 +21,7 @@ public class ProcessHistoryItemType {
     protected List<ProcessPartyType> primaryParties;
     protected List<ProcessPartyType> associatedParties;
     protected List<AttachmentType> attachments;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
     public IdentifierType getId() {
         return id;
@@ -96,11 +96,11 @@ public class ProcessHistoryItemType {
         return this.attachments;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }
