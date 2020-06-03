@@ -17,10 +17,6 @@ public class SinkBuilder {
         return this;
     }
 
-    public SinkBuilder setSourceDescription(String sourceDescription) {
-        sinkBuilder.setSourceDescription(sourceDescription);
-        return this;
-    }
 
     public SinkBuilder setPurposeOfUse(List<String> purposeOfUse) {
         sinkBuilder.setPurposeOfUse(purposeOfUse);

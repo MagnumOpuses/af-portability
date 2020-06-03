@@ -6,7 +6,6 @@ import java.util.List;
 public class Source {
     public String sourceId;
     public String sourceName;
-    public String sourceDescription;
     public List<String> termsAndConditions;
 
 
@@ -24,14 +23,6 @@ public class Source {
 
     public void setSourceName(String sourceName) {
         this.sourceName = sourceName;
-    }
-
-    public String getSourceDescription() {
-        return sourceDescription;
-    }
-
-    public void setSourceDescription(String sourceDescription) {
-        this.sourceDescription = sourceDescription;
     }
 
     public List<String> getTermsAndConditions() {

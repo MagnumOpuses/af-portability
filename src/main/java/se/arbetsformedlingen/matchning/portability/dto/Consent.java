@@ -1,12 +1,16 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Consent {
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     public XMLGregorianCalendar consentTimestamp;
-    public String consentStatus;
+    public boolean consentStatus;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     public XMLGregorianCalendar consentRevokedTimestamp;
     public String consentedTimePeriod;
     public List<String> acceptedTerms;
@@ -21,11 +25,11 @@ public class Consent {
         this.consentTimestamp = consentTimestamp;
     }
 
-    public String getConsentStatus() {
+    public boolean getConsentStatus() {
         return consentStatus;
     }
 
-    public void setConsentStatus(String consentStatus) {
+    public void setConsentStatus(boolean consentStatus) {
         this.consentStatus = consentStatus;
     }
 

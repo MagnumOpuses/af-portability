@@ -91,8 +91,7 @@ public class ProfileApi {
         List<CandidateType> candidates = new ArrayList<CandidateType>();
         candidates.add(candidate);
 
-        Source source = new SourceBuilder().setSourceName("Arbetsformedlingen")
-                .setSourceDescription("Swedish public employment agency").build();
+        Source source = new SourceBuilder().setSourceName("Arbetsformedlingen").build();
         Sink sink = new SinkBuilder().setPurposeOfUse(this.decodeStringToList(encodedPurpose.value)).build();
         Consent consent = new ConsentBuilder().build();
 

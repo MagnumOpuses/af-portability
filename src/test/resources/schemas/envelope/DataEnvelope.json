@@ -1,6 +1,5 @@
 {
   "$schema": "https://github.com/MagnumOpuses/common-cv-model",
-  "version": "0.1.1",
   "title": "DataEnvelope",
   "description": "Metadata for the data transferred through the AF-Connect service.",
   "definitions": {
@@ -11,11 +10,10 @@
     "SourceType": {
       "title": "SourceType",
       "description": "Contains information about the source of the data.",
-      "allOf": [],
       "type": "object",
       "properties": {
         "sourceId": {
-          "sourceDescription": "The primary identifier of the source of the data.",
+          "description": "The primary identifier of the source of the data.",
           "type": "string"
         },
         "sourceName": {
@@ -33,7 +31,6 @@
         }
       },
       "required": [
-        "sourceId",
         "sourceName",
         "termsAndConditions"
       ]
@@ -41,7 +38,6 @@
     "SinkType": {
       "title": "SinkType",
       "description": "Contains information about the sink of teh data.",
-      "allOf": [],
       "type": "object",
       "properties": {
         "sinkId": {
@@ -66,7 +62,6 @@
         }
       },
       "required": [
-        "sinkId",
         "sinkName",
         "purposeOfUse"
       ]
@@ -78,7 +73,8 @@
       "properties": {
         "consentTimestamp": {
           "description": "The time and date the consent was given. If the consent has been changed multiple times this shows the latest one.",
-          "type": "timestamp"
+          "type": "string",
+          "format": "date-time"
         },
         "consentStatus": {
           "description": "The status of the consent.",
@@ -86,13 +82,15 @@
         },
         "consentRevokedTimestamp": {
           "description": "If the concent was revoked this shows the timestamp of the revocation. If the consent has been revoked multiple times this shows the latest one.",
-          "type": "timestamp"
+          "type": "string",
+          "format": "date-time"
         },
         "consentedTimePeriod": {
           "description": "The time period the user has given consent for their data to be accessible. If this amount of time has traversed from the time the concent was changed to yes then it is automatically changed to no and the action is recorded in the rest of this data structure as well.",
-          "type": "time"
+          "type": "string",
+          "format": "date-time"
         },
-        "AcceptedTerms": {
+        "acceptedTerms": {
           "description": "List of the terms and conditions the user has consented to.",
           "type": "array",
           "items": [
@@ -101,7 +99,7 @@
             }
           ]
         },
-        "AcceptedPurposes": {
+        "acceptedPurposes": {
           "description": "List of the purposes the user has consented to.",
           "type": "array",
           "items": [
@@ -114,8 +112,8 @@
       "required": [
         "consentTimestamp",
         "consentStatus",
-        "AcceptedTerms",
-        "AcceptedPurposes"
+        "acceptedTerms",
+        "acceptedPurposes"
       ]
     },
     "TransferObjectType": {
@@ -145,8 +143,7 @@
         "documentType",
         "data"
       ]
-    },
-    "type": "object"
+    }
   },
   "properties": {
     "sessionToken": {

@@ -17,10 +17,6 @@ public class SourceBuilder {
         return this;
     }
 
-    public SourceBuilder setSourceDescription(String sourceDescription) {
-        source.setSourceDescription(sourceDescription);
-        return this;
-    }
 
     public SourceBuilder setTermsAndConditions(List<String> termsAndConditions) {
         source.setTermsAndConditions(termsAndConditions);
