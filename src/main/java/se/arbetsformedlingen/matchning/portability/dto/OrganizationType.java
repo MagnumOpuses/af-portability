@@ -11,7 +11,7 @@ import java.util.List;
 @XmlType(name = "OrganizationType", propOrder = {
 
 })
-public class OrganizationType extends OrganizationReferenceType {
+public class OrganizationType {
 
     public IdentifierType taxId;
     public IdentifierType legalId;
@@ -26,6 +26,11 @@ public class OrganizationType extends OrganizationReferenceType {
     public String workEnvironmentCode;
     public List<SpecifiedPersonType> contacts;
     public String domainName;
+    public ResponsibilityCodeList responsibilityCode;
+    public CommunicationType communication;
+    public IdentifierType id;
+    public String name;
+    public String code;
 
     public IdentifierType getTaxId() {
         return taxId;
@@ -138,6 +143,46 @@ public class OrganizationType extends OrganizationReferenceType {
 
     public void setDomainName(final String domainName) {
         this.domainName = domainName;
+    }
+
+    public ResponsibilityCodeList getResponsibilityCode() {
+        return responsibilityCode;
+    }
+
+    public void setResponsibilityCode(final ResponsibilityCodeList responsibilityCode) {
+        this.responsibilityCode = responsibilityCode;
+    }
+
+    public CommunicationType getCommunication() {
+        return communication;
+    }
+
+    public void setCommunication(final CommunicationType communication) {
+        this.communication = communication;
+    }
+
+    public IdentifierType getId() {
+        return id;
+    }
+
+    public void setId(final IdentifierType id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(final String code) {
+        this.code = code;
     }
 }
 

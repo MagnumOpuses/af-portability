@@ -12,53 +12,50 @@ import java.util.List;
 })
 public class CommunicationType {
 
-    public List<AddressType> address;
-    public List<PhoneType> phone;
-    public List<EmailType> email;
-    public List<WebType> web;
+    public List<AddressTypeArray> address;
+    public List<PhoneTypeArray> phone;
+    public List<EmailTypeArray> email;
+    public List<WebTypeArray> web;
 
 
-    public List<AddressType> getAddress() {
+    public List<AddressTypeArray> getAddress() {
         if (address == null) {
-            address = new ArrayList<AddressType>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
 
-    public void setAddress(List<AddressType> address) {
+    public void setAddress(final List<AddressTypeArray> address) {
         this.address = address;
     }
 
-    public List<PhoneType> getPhone() {
-        if (phone == null) {
-            phone = new ArrayList<PhoneType>();
-        }
-        return this.phone;
+    public List<PhoneTypeArray> getPhone() {
+        return phone;
     }
 
-    public void setPhone(List<PhoneType> phone) {
+    public void setPhone(final List<PhoneTypeArray> phone) {
         this.phone = phone;
     }
 
-    public List<EmailType> getEmail() {
+    public List<EmailTypeArray> getEmail() {
         if (email == null) {
-            email = new ArrayList<EmailType>();
+            email = new ArrayList<>();
         }
         return this.email;
     }
 
-    public void setEmail(List<EmailType> email) {
+    public void setEmail(final List<EmailTypeArray> email) {
         this.email = email;
     }
 
-    public List<WebType> getWeb() {
+    public List<WebTypeArray> getWeb() {
         if (web == null) {
-            web = new ArrayList<WebType>();
+            web = new ArrayList<>();
         }
         return this.web;
     }
 
-    public void setWeb(List<WebType> web) {
+    public void setWeb(final List<WebTypeArray> web) {
         this.web = web;
     }
 }

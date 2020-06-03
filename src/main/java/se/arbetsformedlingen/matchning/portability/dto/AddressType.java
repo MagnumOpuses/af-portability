@@ -11,7 +11,7 @@ import java.util.List;
 @XmlType(name = "AddressType", propOrder = {
 
 })
-public class AddressType extends CommunicationItemInclusion {
+public class AddressType {
 
     public String line;
     public List<AddressComponentType> extendedLines;

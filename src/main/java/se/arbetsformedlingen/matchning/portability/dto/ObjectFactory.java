@@ -1,13 +1,13 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import se.arbetsformedlingen.matchning.portability.builder.*;
+import se.arbetsformedlingen.matchning.portability.builder.CandidateTypeBuilder;
 
-import java.math.BigDecimal;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
+import java.math.BigDecimal;
 
 
 @XmlRegistry
@@ -126,14 +126,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: se.arbetsformedlingen.matchning.portability.model.hropen421json
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link DistributeToType }
-     * 
      */
     public DistributeToType createDistributeToType() {
         return new DistributeToType();
@@ -141,7 +139,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContractType }
-     * 
      */
     public ContractType createContractType() {
         return new ContractType();
@@ -149,16 +146,14 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link WebTypeArray }
-     * 
      */
     public WebTypeArray createWebTypeArray() {
-        return new WebTypeArray();
+        return new WebTypeArrayBuilder().build();
     }
 
 
     /**
      * Create an instance of {@link MeasureType }
-     * 
      */
     public MeasureType createMeasureType() {
         return new MeasureType();
@@ -166,15 +161,13 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PhoneTypeArray }
-     * 
      */
     public PhoneTypeArray createPhoneTypeArray() {
-        return new PhoneTypeArray();
+        return new PhoneTypeArrayBuilder().build();
     }
 
     /**
      * Create an instance of {@link EmploymentPermitType }
-     * 
      */
     public EmploymentPermitType createEmploymentPermitType() {
         return new EmploymentPermitType();
@@ -182,7 +175,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DayScheduleType }
-     * 
      */
     public DayScheduleType createDayScheduleType() {
         return new DayScheduleType();
@@ -190,7 +182,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link YearMonthPeriodType }
-     * 
      */
     public YearMonthPeriodType createYearMonthPeriodType() {
         return new YearMonthPeriodType();
@@ -199,7 +190,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TravelType }
-     * 
      */
     public TravelType createTravelType() {
         return new TravelType();
@@ -207,7 +197,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AttachmentContent }
-     * 
      */
     public AttachmentContent createAttachmentContent() {
         return new AttachmentContent();
@@ -215,7 +204,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OpenEndPeriodType }
-     * 
      */
     public OpenEndPeriodType createOpenEndPeriodType() {
         return new OpenEndPeriodType();
@@ -223,7 +211,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DisabilityType }
-     * 
      */
     public DisabilityType createDisabilityType() {
         return new DisabilityType();
@@ -231,7 +218,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LeaveType }
-     * 
      */
     public LeaveType createLeaveType() {
         return new LeaveType();
@@ -239,7 +225,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScoreNumericType }
-     * 
      */
     public ScoreNumericType createScoreNumericType() {
         return new ScoreNumericType();
@@ -247,7 +232,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DataProtectionPolicyInclusion }
-     * 
      */
     public DataProtectionPolicyInclusion createDataProtectionPolicyInclusion() {
         return new DataProtectionPolicyInclusion();
@@ -255,7 +239,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DataProtectionPolicyInclusion.DataProtectionPolicy }
-     * 
      */
     public DataProtectionPolicyInclusion.DataProtectionPolicy createDataProtectionPolicyInclusionDataProtectionPolicy() {
         return new DataProtectionPolicyInclusion.DataProtectionPolicy();
@@ -263,7 +246,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PublicationType.Copyrights.Item }
-     * 
      */
     public PublicationType.Copyrights.Item createPublicationTypeCopyrightsItem() {
         return new PublicationType.Copyrights.Item();
@@ -271,7 +253,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CommentType }
-     * 
      */
     public CommentType createCommentType() {
         return new CommentType();
@@ -279,7 +260,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PublicationType.Copyrights }
-     * 
      */
     public PublicationType.Copyrights createPublicationTypeCopyrights() {
         return new PublicationType.Copyrights();
@@ -287,7 +267,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link NounType.DataProtectionPolicy.GeoRestrictions.Item }
-     * 
      */
     public NounType.DataProtectionPolicy.GeoRestrictions.Item createNounTypeDataProtectionPolicyGeoRestrictionsItem() {
         return new NounType.DataProtectionPolicy.GeoRestrictions.Item();
@@ -295,7 +274,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonProfileInclusion }
-     * 
      */
     public PersonProfileInclusion createPersonProfileInclusion() {
         return new PersonProfileInclusion();
@@ -303,7 +281,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonPhysicalInclusion }
-     * 
      */
     public PersonPhysicalInclusion createPersonPhysicalInclusion() {
         return new PersonPhysicalInclusion();
@@ -311,7 +288,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SpecifiedCompetencyType }
-     * 
      */
     public SpecifiedCompetencyType createSpecifiedCompetencyType() {
         return new SpecifiedCompetencyType();
@@ -319,7 +295,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EmployerPreferenceType.HeadcountRange }
-     * 
      */
     public EmployerPreferenceType.HeadcountRange createEmployerPreferenceTypeHeadcountRange() {
         return new EmployerPreferenceType.HeadcountRange();
@@ -327,7 +302,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PublicationType }
-     * 
      */
     public PublicationType createPublicationType() {
         return new PublicationType();
@@ -335,7 +309,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Violations.Item }
-     * 
      */
     public LicenseType.Violations.Item createLicenseTypeViolationsItem() {
         return new LicenseType.Violations.Item();
@@ -343,7 +316,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonReferenceType }
-     * 
      */
     public PersonReferenceType createPersonReferenceType() {
         return new PersonReferenceType();
@@ -351,7 +323,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link YearPeriodType }
-     * 
      */
     public YearPeriodType createYearPeriodType() {
         return new YearPeriodType();
@@ -359,7 +330,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessPartyType }
-     *
      */
     public ProcessPartyType createProcessPartyType() {
         return new ProcessPartyType();
@@ -367,7 +337,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompetencyEvidenceType }
-     *
      */
     public CompetencyEvidenceType createCompetencyEvidenceType() {
         return new CompetencyEvidenceType();
@@ -375,7 +344,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link NounType.DataProtectionPolicy.GeoRestrictions }
-     *
      */
     public NounType.DataProtectionPolicy.GeoRestrictions createNounTypeDataProtectionPolicyGeoRestrictions() {
         return new NounType.DataProtectionPolicy.GeoRestrictions();
@@ -383,7 +351,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessActionType }
-     *
      */
     public ProcessActionType createProcessActionType() {
         return new ProcessActionType();
@@ -391,7 +358,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions.Item }
-     * 
      */
     public DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions.Item createDataProtectionPolicyInclusionDataProtectionPolicyGeoRestrictionsItem() {
         return new DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions.Item();
@@ -399,7 +365,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CandidateType }
-     * 
      */
     public CandidateType createCandidateType() {
         return new CandidateTypeBuilder().build();
@@ -407,7 +372,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link WorkLifeCycleType }
-     * 
      */
     public WorkLifeCycleType createWorkLifeCycleType() {
         return new WorkLifeCycleType();
@@ -415,7 +379,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CandidateRelationshipType }
-     * 
      */
     public CandidateRelationshipType createCandidateRelationshipType() {
         return new CandidateRelationshipType();
@@ -423,7 +386,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DateTimeOpenEndPeriodType }
-     * 
      */
     public DateTimeOpenEndPeriodType createDateTimeOpenEndPeriodType() {
         return new DateTimeOpenEndPeriodType();
@@ -431,7 +393,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BinaryObjectType }
-     * 
      */
     public BinaryObjectType createBinaryObjectType() {
         return new BinaryObjectType();
@@ -439,7 +400,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PublicationType.Contributors }
-     * 
      */
     public PublicationType.Contributors createPublicationTypeContributors() {
         return new PublicationType.Contributors();
@@ -447,7 +407,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AvailabilityDatesType }
-     * 
      */
     public AvailabilityDatesType createAvailabilityDatesType() {
         return new AvailabilityDatesType();
@@ -455,7 +414,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link HireType }
-     * 
      */
     public HireType createHireType() {
         return new HireType();
@@ -463,7 +421,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RemunerationRangeType }
-     * 
      */
     public RemunerationRangeType createRemunerationRangeType() {
         return new RemunerationRangeType();
@@ -471,7 +428,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PatentType }
-     * 
      */
     public PatentType createPatentType() {
         return new PatentType();
@@ -479,15 +435,13 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OrganizationReferenceType }
-     * 
      */
     public OrganizationReferenceType createOrganizationReferenceType() {
-        return new OrganizationReferenceType();
+        return new OrganizationReferenceTypeBuilder().build();
     }
 
     /**
      * Create an instance of {@link ProcessStatusType }
-     * 
      */
     public ProcessStatusType createProcessStatusType() {
         return new ProcessStatusType();
@@ -495,7 +449,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DateOpenEndPeriodType }
-     * 
      */
     public DateOpenEndPeriodType createDateOpenEndPeriodType() {
         return new DateOpenEndPeriodType();
@@ -503,15 +456,13 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AddressTypeArray }
-     * 
      */
     public AddressTypeArray createAddressTypeArray() {
-        return new AddressTypeArray();
+        return new AddressTypeArrayBuilder().build();
     }
 
     /**
      * Create an instance of {@link PersonLegalInclusion }
-     * 
      */
     public PersonLegalInclusion createPersonLegalInclusion() {
         return new PersonLegalInclusion();
@@ -519,7 +470,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link YearMonthOpenEndPeriodType }
-     * 
      */
     public YearMonthOpenEndPeriodType createYearMonthOpenEndPeriodType() {
         return new YearMonthOpenEndPeriodType();
@@ -527,7 +477,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScoreType }
-     * 
      */
     public ScoreType createScoreType() {
         return new ScoreType();
@@ -535,7 +484,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RefereeType }
-     * 
      */
     public RefereeType createRefereeType() {
         return new RefereeType();
@@ -543,7 +491,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AttachmentType }
-     * 
      */
     public AttachmentType createAttachmentType() {
         return new AttachmentType();
@@ -551,7 +498,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Endorsements.Item }
-     * 
      */
     public LicenseType.Endorsements.Item createLicenseTypeEndorsementsItem() {
         return new LicenseType.Endorsements.Item();
@@ -559,7 +505,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link MilitaryServiceType }
-     * 
      */
     public MilitaryServiceType createMilitaryServiceType() {
         return new MilitaryServiceType();
@@ -567,7 +512,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CommunicationItemInclusion }
-     * 
      */
     public CommunicationItemInclusion createCommunicationItemInclusion() {
         return new CommunicationItemInclusion();
@@ -575,7 +519,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DatePeriodType }
-     * 
      */
     public DatePeriodType createDatePeriodType() {
         return new DatePeriodType();
@@ -583,7 +526,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DistributionType }
-     * 
      */
     public DistributionType createDistributionType() {
         return new DistributionType();
@@ -591,15 +533,13 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EmailTypeArray }
-     * 
      */
     public EmailTypeArray createEmailTypeArray() {
-        return new EmailTypeArray();
+        return new EmailTypeArrayBuilder().build();
     }
 
     /**
      * Create an instance of {@link RecruitingAndStaffingType }
-     * 
      */
     public RecruitingAndStaffingType createRecruitingAndStaffingType() {
         return new RecruitingAndStaffingType();
@@ -607,7 +547,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LocalizationInclusion }
-     * 
      */
     public LocalizationInclusion createLocalizationInclusion() {
         return new LocalizationInclusion();
@@ -615,7 +554,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link YearOpenEndPeriodType }
-     * 
      */
     public YearOpenEndPeriodType createYearOpenEndPeriodType() {
         return new YearOpenEndPeriodType();
@@ -623,7 +561,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AmountType }
-     * 
      */
     public AmountType createAmountType() {
         return new AmountType();
@@ -631,7 +568,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AssociatedPositionOpeningType }
-     * 
      */
     public AssociatedPositionOpeningType createAssociatedPositionOpeningType() {
         return new AssociatedPositionOpeningType();
@@ -639,7 +575,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EmployerPreferenceType }
-     * 
      */
     public EmployerPreferenceType createEmployerPreferenceType() {
         return new EmployerPreferenceType();
@@ -647,7 +582,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link NounType.DataProtectionPolicy }
-     * 
      */
     public NounType.DataProtectionPolicy createNounTypeDataProtectionPolicy() {
         return new NounType.DataProtectionPolicy();
@@ -655,7 +589,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AttachmentReferenceType }
-     * 
      */
     public AttachmentReferenceType createAttachmentReferenceType() {
         return new AttachmentReferenceType();
@@ -663,7 +596,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScoreTextType }
-     * 
      */
     public ScoreTextType createScoreTextType() {
         return new ScoreTextType();
@@ -671,7 +603,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RelocationType }
-     * 
      */
     public RelocationType createRelocationType() {
         return new RelocationType();
@@ -679,7 +610,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CandidateSourceType }
-     * 
      */
     public CandidateSourceType createCandidateSourceType() {
         return new CandidateSourceType();
@@ -687,7 +617,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PublicationType.Contributors.Item }
-     * 
      */
     public PublicationType.Contributors.Item createPublicationTypeContributorsItem() {
         return new PublicationType.Contributors.Item();
@@ -695,7 +624,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonAvailabilityType }
-     * 
      */
     public PersonAvailabilityType createPersonAvailabilityType() {
         return new PersonAvailabilityType();
@@ -703,7 +631,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DisabilitySummaryType }
-     * 
      */
     public DisabilitySummaryType createDisabilitySummaryType() {
         return new DisabilitySummaryType();
@@ -711,7 +638,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link NounType }
-     * 
      */
     public NounType createNounType() {
         return new NounType();
@@ -719,7 +645,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessHistoryType }
-     * 
      */
     public ProcessHistoryType createProcessHistoryType() {
         return new ProcessHistoryType();
@@ -727,7 +652,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LegalDocumentType }
-     * 
      */
     public LegalDocumentType createLegalDocumentType() {
         return new LegalDocumentType();
@@ -735,7 +659,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RemunerationPackageType }
-     * 
      */
     public RemunerationPackageType createRemunerationPackageType() {
         return new RemunerationPackageType();
@@ -743,7 +666,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DistributionGuidelinesType }
-     * 
      */
     public DistributionGuidelinesType createDistributionGuidelinesType() {
         return new DistributionGuidelinesType();
@@ -751,7 +673,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScheduleType }
-     * 
      */
     public ScheduleType createScheduleType() {
         return new ScheduleType();
@@ -759,7 +680,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PeriodType }
-     * 
      */
     public PeriodType createPeriodType() {
         return new PeriodType();
@@ -767,7 +687,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompetencyDimensionType }
-     * 
      */
     public CompetencyDimensionType createCompetencyDimensionType() {
         return new CompetencyDimensionType();
@@ -775,7 +694,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TerminationType }
-     * 
      */
     public TerminationType createTerminationType() {
         return new TerminationType();
@@ -783,7 +701,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SpecifiedPersonType }
-     * 
      */
     public SpecifiedPersonType createSpecifiedPersonType() {
         return new SpecifiedPersonType();
@@ -791,7 +708,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ProcessHistoryItemType }
-     * 
      */
     public ProcessHistoryItemType createProcessHistoryItemType() {
         return new ProcessHistoryItemType();
@@ -799,7 +715,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EducationDegreeType }
-     * 
      */
     public EducationDegreeType createEducationDegreeType() {
         return new EducationDegreeType();
@@ -807,7 +722,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link StringTypeArray }
-     * 
      */
     public StringTypeArray createStringTypeArray() {
         return new StringTypeArray();
@@ -815,7 +729,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BaseScoreType }
-     * 
      */
     public BaseScoreType createBaseScoreType() {
         return new BaseScoreType();
@@ -823,7 +736,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DateTimePeriodType }
-     * 
      */
     public DateTimePeriodType createDateTimePeriodType() {
         return new DateTimePeriodType();
@@ -831,7 +743,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OrganizationAffiliationType }
-     * 
      */
     public OrganizationAffiliationType createOrganizationAffiliationType() {
         return new OrganizationAffiliationType();
@@ -839,7 +750,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions }
-     * 
      */
     public DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions createDataProtectionPolicyInclusionDataProtectionPolicyGeoRestrictions() {
         return new DataProtectionPolicyInclusion.DataProtectionPolicy.GeoRestrictions();
@@ -847,7 +757,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EffectiveTimePeriodType }
-     * 
      */
     public EffectiveTimePeriodType createEffectiveTimePeriodType() {
         return new EffectiveTimePeriodType();
@@ -855,7 +764,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Endorsements }
-     * 
      */
     public LicenseType.Endorsements createLicenseTypeEndorsements() {
         return new LicenseType.Endorsements();
@@ -863,7 +771,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EducationSpecializationType }
-     * 
      */
     public EducationSpecializationType createEducationSpecializationType() {
         return new EducationSpecializationType();
@@ -871,7 +778,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DoNotDistributeToType }
-     * 
      */
     public DoNotDistributeToType createDoNotDistributeToType() {
         return new DoNotDistributeToType();
@@ -879,7 +785,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DispositionStatusType }
-     * 
      */
     public DispositionStatusType createDispositionStatusType() {
         return new DispositionStatusType();
@@ -887,7 +792,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GeoType }
-     * 
      */
     public GeoType createGeoType() {
         return new GeoType();
@@ -895,7 +799,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BaseHistoryType }
-     * 
      */
     public BaseHistoryType createBaseHistoryType() {
         return new BaseHistoryType();
@@ -903,7 +806,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Restrictions }
-     * 
      */
     public LicenseType.Restrictions createLicenseTypeRestrictions() {
         return new LicenseType.Restrictions();
@@ -911,7 +813,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Violations }
-     * 
      */
     public LicenseType.Violations createLicenseTypeViolations() {
         return new LicenseType.Violations();
@@ -919,7 +820,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LicenseType.Restrictions.Item }
-     * 
      */
     public LicenseType.Restrictions.Item createLicenseTypeRestrictionsItem() {
         return new LicenseType.Restrictions.Item();
@@ -927,7 +827,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RemoteWorkType }
-     * 
      */
     public RemoteWorkType createRemoteWorkType() {
         return new RemoteWorkType();
@@ -935,991 +834,881 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CurrencyCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CurrencyCode")
-    public JAXBElement<CurrencyCodeList> createCurrencyCode(CurrencyCodeList value) {
+    public JAXBElement<CurrencyCodeList> createCurrencyCode(final CurrencyCodeList value) {
         return new JAXBElement<CurrencyCodeList>(_CurrencyCode_QNAME, CurrencyCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CareerLevelCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CareerLevelCode")
-    public JAXBElement<CareerLevelCodeList> createCareerLevelCode(CareerLevelCodeList value) {
+    public JAXBElement<CareerLevelCodeList> createCareerLevelCode(final CareerLevelCodeList value) {
         return new JAXBElement<CareerLevelCodeList>(_CareerLevelCode_QNAME, CareerLevelCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScoreNumericType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ScoreNumeric")
-    public JAXBElement<ScoreNumericType> createScoreNumeric(ScoreNumericType value) {
+    public JAXBElement<ScoreNumericType> createScoreNumeric(final ScoreNumericType value) {
         return new JAXBElement<ScoreNumericType>(_ScoreNumeric_QNAME, ScoreNumericType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link StringTypeArray }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "StringArray")
-    public JAXBElement<StringTypeArray> createStringArray(StringTypeArray value) {
+    public JAXBElement<StringTypeArray> createStringArray(final StringTypeArray value) {
         return new JAXBElement<StringTypeArray>(_StringArray_QNAME, StringTypeArray.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link WeekdayCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "WeekdayCode")
-    public JAXBElement<WeekdayCodeList> createWeekdayCode(WeekdayCodeList value) {
+    public JAXBElement<WeekdayCodeList> createWeekdayCode(final WeekdayCodeList value) {
         return new JAXBElement<WeekdayCodeList>(_WeekdayCode_QNAME, WeekdayCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MeasureType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Measure")
-    public JAXBElement<MeasureType> createMeasure(MeasureType value) {
+    public JAXBElement<MeasureType> createMeasure(final MeasureType value) {
         return new JAXBElement<MeasureType>(_Measure_QNAME, MeasureType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EducationAttendanceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EducationAttendance")
-    public JAXBElement<EducationAttendanceType> createEducationAttendance(EducationAttendanceType value) {
+    public JAXBElement<EducationAttendanceType> createEducationAttendance(final EducationAttendanceType value) {
         return new JAXBElement<EducationAttendanceType>(_EducationAttendance_QNAME, EducationAttendanceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link NounType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Noun")
-    public JAXBElement<NounType> createNoun(NounType value) {
+    public JAXBElement<NounType> createNoun(final NounType value) {
         return new JAXBElement<NounType>(_Noun_QNAME, NounType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EntityType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Entity")
-    public JAXBElement<EntityType> createEntity(EntityType value) {
+    public JAXBElement<EntityType> createEntity(final EntityType value) {
         return new JAXBElement<EntityType>(_Entity_QNAME, EntityType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddressTypeArray }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "AddressArray")
-    public JAXBElement<AddressTypeArray> createAddressArray(AddressTypeArray value) {
+    public JAXBElement<AddressTypeArray> createAddressArray(final AddressTypeArray value) {
         return new JAXBElement<AddressTypeArray>(_AddressArray_QNAME, AddressTypeArray.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AttachmentReferenceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "AttachmentReference")
-    public JAXBElement<AttachmentReferenceType> createAttachmentReference(AttachmentReferenceType value) {
+    public JAXBElement<AttachmentReferenceType> createAttachmentReference(final AttachmentReferenceType value) {
         return new JAXBElement<AttachmentReferenceType>(_AttachmentReference_QNAME, AttachmentReferenceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RemunerationBasisCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "RemunerationBasisCode")
-    public JAXBElement<RemunerationBasisCodeList> createRemunerationBasisCode(RemunerationBasisCodeList value) {
+    public JAXBElement<RemunerationBasisCodeList> createRemunerationBasisCode(final RemunerationBasisCodeList value) {
         return new JAXBElement<RemunerationBasisCodeList>(_RemunerationBasisCode_QNAME, RemunerationBasisCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddressComponentType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "AddressComponent")
-    public JAXBElement<AddressComponentType> createAddressComponent(AddressComponentType value) {
+    public JAXBElement<AddressComponentType> createAddressComponent(final AddressComponentType value) {
         return new JAXBElement<AddressComponentType>(_AddressComponent_QNAME, AddressComponentType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddressType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Address")
-    public JAXBElement<AddressType> createAddress(AddressType value) {
+    public JAXBElement<AddressType> createAddress(final AddressType value) {
         return new JAXBElement<AddressType>(_Address_QNAME, AddressType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LicenseType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "License")
-    public JAXBElement<LicenseType> createLicense(LicenseType value) {
+    public JAXBElement<LicenseType> createLicense(final LicenseType value) {
         return new JAXBElement<LicenseType>(_License_QNAME, LicenseType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DateTime")
-    public JAXBElement<XMLGregorianCalendar> createDateTime(XMLGregorianCalendar value) {
+    public JAXBElement<XMLGregorianCalendar> createDateTime(final XMLGregorianCalendar value) {
         return new JAXBElement<XMLGregorianCalendar>(_DateTime_QNAME, XMLGregorianCalendar.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ProcessHistoryType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ProcessHistory")
-    public JAXBElement<ProcessHistoryType> createProcessHistory(ProcessHistoryType value) {
+    public JAXBElement<ProcessHistoryType> createProcessHistory(final ProcessHistoryType value) {
         return new JAXBElement<ProcessHistoryType>(_ProcessHistory_QNAME, ProcessHistoryType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GeoType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Geo")
-    public JAXBElement<GeoType> createGeo(GeoType value) {
+    public JAXBElement<GeoType> createGeo(final GeoType value) {
         return new JAXBElement<GeoType>(_Geo_QNAME, GeoType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonProfileInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonProfileInclusion")
-    public JAXBElement<PersonProfileInclusion> createPersonProfileInclusion(PersonProfileInclusion value) {
+    public JAXBElement<PersonProfileInclusion> createPersonProfileInclusion(final PersonProfileInclusion value) {
         return new JAXBElement<PersonProfileInclusion>(_PersonProfileInclusion_QNAME, PersonProfileInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link WebType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Web")
-    public JAXBElement<WebType> createWeb(WebType value) {
+    public JAXBElement<WebType> createWeb(final WebType value) {
         return new JAXBElement<WebType>(_Web_QNAME, WebType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MilitaryServiceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "MilitaryService")
-    public JAXBElement<MilitaryServiceType> createMilitaryService(MilitaryServiceType value) {
+    public JAXBElement<MilitaryServiceType> createMilitaryService(final MilitaryServiceType value) {
         return new JAXBElement<MilitaryServiceType>(_MilitaryService_QNAME, MilitaryServiceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LegalDocumentType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "LegalDocument")
-    public JAXBElement<LegalDocumentType> createLegalDocument(LegalDocumentType value) {
+    public JAXBElement<LegalDocumentType> createLegalDocument(final LegalDocumentType value) {
         return new JAXBElement<LegalDocumentType>(_LegalDocument_QNAME, LegalDocumentType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ProcessHistoryItemType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ProcessHistoryItem")
-    public JAXBElement<ProcessHistoryItemType> createProcessHistoryItem(ProcessHistoryItemType value) {
+    public JAXBElement<ProcessHistoryItemType> createProcessHistoryItem(final ProcessHistoryItemType value) {
         return new JAXBElement<ProcessHistoryItemType>(_ProcessHistoryItem_QNAME, ProcessHistoryItemType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearOpenEndPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "YearOpenEndPeriod")
-    public JAXBElement<YearOpenEndPeriodType> createYearOpenEndPeriod(YearOpenEndPeriodType value) {
+    public JAXBElement<YearOpenEndPeriodType> createYearOpenEndPeriod(final YearOpenEndPeriodType value) {
         return new JAXBElement<YearOpenEndPeriodType>(_YearOpenEndPeriod_QNAME, YearOpenEndPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PublicationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Publication")
-    public JAXBElement<PublicationType> createPublication(PublicationType value) {
+    public JAXBElement<PublicationType> createPublication(final PublicationType value) {
         return new JAXBElement<PublicationType>(_Publication_QNAME, PublicationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AffiliatedOrganizationTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "AffiliatedOrganizationTypeCode")
-    public JAXBElement<AffiliatedOrganizationTypeCodeList> createAffiliatedOrganizationTypeCode(AffiliatedOrganizationTypeCodeList value) {
+    public JAXBElement<AffiliatedOrganizationTypeCodeList> createAffiliatedOrganizationTypeCode(final AffiliatedOrganizationTypeCodeList value) {
         return new JAXBElement<AffiliatedOrganizationTypeCodeList>(_AffiliatedOrganizationTypeCode_QNAME, AffiliatedOrganizationTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Code")
-    public JAXBElement<String> createCode(String value) {
+    public JAXBElement<String> createCode(final String value) {
         return new JAXBElement<String>(_Code_QNAME, String.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DateTimePeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DateTimePeriod")
-    public JAXBElement<DateTimePeriodType> createDateTimePeriod(DateTimePeriodType value) {
+    public JAXBElement<DateTimePeriodType> createDateTimePeriod(final DateTimePeriodType value) {
         return new JAXBElement<DateTimePeriodType>(_DateTimePeriod_QNAME, DateTimePeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "FormattedDateTime")
-    public JAXBElement<String> createFormattedDateTime(String value) {
+    public JAXBElement<String> createFormattedDateTime(final String value) {
         return new JAXBElement<String>(_FormattedDateTime_QNAME, String.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CandidateRelationshipCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CandidateRelationshipCode")
-    public JAXBElement<CandidateRelationshipCodeList> createCandidateRelationshipCode(CandidateRelationshipCodeList value) {
+    public JAXBElement<CandidateRelationshipCodeList> createCandidateRelationshipCode(final CandidateRelationshipCodeList value) {
         return new JAXBElement<CandidateRelationshipCodeList>(_CandidateRelationshipCode_QNAME, CandidateRelationshipCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BinaryObjectType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "BinaryObject")
-    public JAXBElement<BinaryObjectType> createBinaryObject(BinaryObjectType value) {
+    public JAXBElement<BinaryObjectType> createBinaryObject(final BinaryObjectType value) {
         return new JAXBElement<BinaryObjectType>(_BinaryObject_QNAME, BinaryObjectType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CommunicationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Communication")
-    public JAXBElement<CommunicationType> createCommunication(CommunicationType value) {
+    public JAXBElement<CommunicationType> createCommunication(final CommunicationType value) {
         return new JAXBElement<CommunicationType>(_Communication_QNAME, CommunicationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BaseScoreType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "BaseScore")
-    public JAXBElement<BaseScoreType> createBaseScore(BaseScoreType value) {
+    public JAXBElement<BaseScoreType> createBaseScore(final BaseScoreType value) {
         return new JAXBElement<BaseScoreType>(_BaseScore_QNAME, BaseScoreType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OrganizationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Organization")
-    public JAXBElement<OrganizationType> createOrganization(OrganizationType value) {
+    public JAXBElement<OrganizationType> createOrganization(final OrganizationType value) {
         return new JAXBElement<OrganizationType>(_Organization_QNAME, OrganizationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonLegalInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonLegalInclusion")
-    public JAXBElement<PersonLegalInclusion> createPersonLegalInclusion(PersonLegalInclusion value) {
+    public JAXBElement<PersonLegalInclusion> createPersonLegalInclusion(final PersonLegalInclusion value) {
         return new JAXBElement<PersonLegalInclusion>(_PersonLegalInclusion_QNAME, PersonLegalInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonCompetencyType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonCompetency")
-    public JAXBElement<PersonCompetencyType> createPersonCompetency(PersonCompetencyType value) {
+    public JAXBElement<PersonCompetencyType> createPersonCompetency(final PersonCompetencyType value) {
         return new JAXBElement<PersonCompetencyType>(_PersonCompetency_QNAME, PersonCompetencyType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EmployerHistoryType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EmployerHistory")
-    public JAXBElement<EmployerHistoryType> createEmployerHistory(EmployerHistoryType value) {
+    public JAXBElement<EmployerHistoryType> createEmployerHistory(final EmployerHistoryType value) {
         return new JAXBElement<EmployerHistoryType>(_EmployerHistory_QNAME, EmployerHistoryType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RemoteWorkType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "RemoteWork")
-    public JAXBElement<RemoteWorkType> createRemoteWork(RemoteWorkType value) {
+    public JAXBElement<RemoteWorkType> createRemoteWork(final RemoteWorkType value) {
         return new JAXBElement<RemoteWorkType>(_RemoteWork_QNAME, RemoteWorkType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RelationshipTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "RelationshipTypeCode")
-    public JAXBElement<RelationshipTypeCodeList> createRelationshipTypeCode(RelationshipTypeCodeList value) {
+    public JAXBElement<RelationshipTypeCodeList> createRelationshipTypeCode(final RelationshipTypeCodeList value) {
         return new JAXBElement<RelationshipTypeCodeList>(_RelationshipTypeCode_QNAME, RelationshipTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EffectiveTimePeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EffectiveTimePeriod")
-    public JAXBElement<EffectiveTimePeriodType> createEffectiveTimePeriod(EffectiveTimePeriodType value) {
+    public JAXBElement<EffectiveTimePeriodType> createEffectiveTimePeriod(final EffectiveTimePeriodType value) {
         return new JAXBElement<EffectiveTimePeriodType>(_EffectiveTimePeriod_QNAME, EffectiveTimePeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Year")
-    public JAXBElement<XMLGregorianCalendar> createYear(XMLGregorianCalendar value) {
+    public JAXBElement<XMLGregorianCalendar> createYear(final XMLGregorianCalendar value) {
         return new JAXBElement<XMLGregorianCalendar>(_Year_QNAME, XMLGregorianCalendar.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EventType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Event")
-    public JAXBElement<EventType> createEvent(EventType value) {
+    public JAXBElement<EventType> createEvent(final EventType value) {
         return new JAXBElement<EventType>(_Event_QNAME, EventType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ResourceRelationshipCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ResourceRelationshipCode")
-    public JAXBElement<ResourceRelationshipCodeList> createResourceRelationshipCode(ResourceRelationshipCodeList value) {
+    public JAXBElement<ResourceRelationshipCodeList> createResourceRelationshipCode(final ResourceRelationshipCodeList value) {
         return new JAXBElement<ResourceRelationshipCodeList>(_ResourceRelationshipCode_QNAME, ResourceRelationshipCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AmountType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Amount")
-    public JAXBElement<AmountType> createAmount(AmountType value) {
+    public JAXBElement<AmountType> createAmount(final AmountType value) {
         return new JAXBElement<AmountType>(_Amount_QNAME, AmountType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonReferenceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonReference")
-    public JAXBElement<PersonReferenceType> createPersonReference(PersonReferenceType value) {
+    public JAXBElement<PersonReferenceType> createPersonReference(final PersonReferenceType value) {
         return new JAXBElement<PersonReferenceType>(_PersonReference_QNAME, PersonReferenceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "IscedCode")
-    public JAXBElement<String> createIscedCode(String value) {
+    public JAXBElement<String> createIscedCode(final String value) {
         return new JAXBElement<String>(_IscedCode_QNAME, String.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TextType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Text")
-    public JAXBElement<TextType> createText(TextType value) {
+    public JAXBElement<TextType> createText(final TextType value) {
         return new JAXBElement<TextType>(_Text_QNAME, TextType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LocalizationInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "LocalizationInclusion")
-    public JAXBElement<LocalizationInclusion> createLocalizationInclusion(LocalizationInclusion value) {
+    public JAXBElement<LocalizationInclusion> createLocalizationInclusion(final LocalizationInclusion value) {
         return new JAXBElement<LocalizationInclusion>(_LocalizationInclusion_QNAME, LocalizationInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OpenEndPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "OpenEndPeriod")
-    public JAXBElement<OpenEndPeriodType> createOpenEndPeriod(OpenEndPeriodType value) {
+    public JAXBElement<OpenEndPeriodType> createOpenEndPeriod(final OpenEndPeriodType value) {
         return new JAXBElement<OpenEndPeriodType>(_OpenEndPeriod_QNAME, OpenEndPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link IdentifierType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Identifier")
-    public JAXBElement<IdentifierType> createIdentifier(IdentifierType value) {
+    public JAXBElement<IdentifierType> createIdentifier(final IdentifierType value) {
         return new JAXBElement<IdentifierType>(_Identifier_QNAME, IdentifierType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LanguageCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "LanguageCode")
-    public JAXBElement<LanguageCodeList> createLanguageCode(LanguageCodeList value) {
+    public JAXBElement<LanguageCodeList> createLanguageCode(final LanguageCodeList value) {
         return new JAXBElement<LanguageCodeList>(_LanguageCode_QNAME, LanguageCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PositionTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PositionTypeCode")
-    public JAXBElement<PositionTypeCodeList> createPositionTypeCode(PositionTypeCodeList value) {
+    public JAXBElement<PositionTypeCodeList> createPositionTypeCode(final PositionTypeCodeList value) {
         return new JAXBElement<PositionTypeCodeList>(_PositionTypeCode_QNAME, PositionTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EducationDegreeGrantedStatusCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EducationDegreeGrantedStatusCode")
-    public JAXBElement<EducationDegreeGrantedStatusCodeList> createEducationDegreeGrantedStatusCode(EducationDegreeGrantedStatusCodeList value) {
+    public JAXBElement<EducationDegreeGrantedStatusCodeList> createEducationDegreeGrantedStatusCode(final EducationDegreeGrantedStatusCodeList value) {
         return new JAXBElement<EducationDegreeGrantedStatusCodeList>(_EducationDegreeGrantedStatusCode_QNAME, EducationDegreeGrantedStatusCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PatentType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Patent")
-    public JAXBElement<PatentType> createPatent(PatentType value) {
+    public JAXBElement<PatentType> createPatent(final PatentType value) {
         return new JAXBElement<PatentType>(_Patent_QNAME, PatentType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EmailType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Email")
-    public JAXBElement<EmailType> createEmail(EmailType value) {
+    public JAXBElement<EmailType> createEmail(final EmailType value) {
         return new JAXBElement<EmailType>(_Email_QNAME, EmailType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PublicationTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PublicationTypeCode")
-    public JAXBElement<PublicationTypeCodeList> createPublicationTypeCode(PublicationTypeCodeList value) {
+    public JAXBElement<PublicationTypeCodeList> createPublicationTypeCode(final PublicationTypeCodeList value) {
         return new JAXBElement<PublicationTypeCodeList>(_PublicationTypeCode_QNAME, PublicationTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompetencyDimensionType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CompetencyDimension")
-    public JAXBElement<CompetencyDimensionType> createCompetencyDimension(CompetencyDimensionType value) {
+    public JAXBElement<CompetencyDimensionType> createCompetencyDimension(final CompetencyDimensionType value) {
         return new JAXBElement<CompetencyDimensionType>(_CompetencyDimension_QNAME, CompetencyDimensionType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EmploymentPermitType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EmploymentPermit")
-    public JAXBElement<EmploymentPermitType> createEmploymentPermit(EmploymentPermitType value) {
+    public JAXBElement<EmploymentPermitType> createEmploymentPermit(final EmploymentPermitType value) {
         return new JAXBElement<EmploymentPermitType>(_EmploymentPermit_QNAME, EmploymentPermitType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AttachmentType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Attachment")
-    public JAXBElement<AttachmentType> createAttachment(AttachmentType value) {
+    public JAXBElement<AttachmentType> createAttachment(final AttachmentType value) {
         return new JAXBElement<AttachmentType>(_Attachment_QNAME, AttachmentType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DateOpenEndPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DateOpenEndPeriod")
-    public JAXBElement<DateOpenEndPeriodType> createDateOpenEndPeriod(DateOpenEndPeriodType value) {
+    public JAXBElement<DateOpenEndPeriodType> createDateOpenEndPeriod(final DateOpenEndPeriodType value) {
         return new JAXBElement<DateOpenEndPeriodType>(_DateOpenEndPeriod_QNAME, DateOpenEndPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScoreType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Score")
-    public JAXBElement<ScoreType> createScore(ScoreType value) {
+    public JAXBElement<ScoreType> createScore(final ScoreType value) {
         return new JAXBElement<ScoreType>(_Score_QNAME, ScoreType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonPhysicalInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonPhysicalInclusion")
-    public JAXBElement<PersonPhysicalInclusion> createPersonPhysicalInclusion(PersonPhysicalInclusion value) {
+    public JAXBElement<PersonPhysicalInclusion> createPersonPhysicalInclusion(final PersonPhysicalInclusion value) {
         return new JAXBElement<PersonPhysicalInclusion>(_PersonPhysicalInclusion_QNAME, PersonPhysicalInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BaseHistoryType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "BaseHistory")
-    public JAXBElement<BaseHistoryType> createBaseHistory(BaseHistoryType value) {
+    public JAXBElement<BaseHistoryType> createBaseHistory(final BaseHistoryType value) {
         return new JAXBElement<BaseHistoryType>(_BaseHistory_QNAME, BaseHistoryType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DatePeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DatePeriod")
-    public JAXBElement<DatePeriodType> createDatePeriod(DatePeriodType value) {
+    public JAXBElement<DatePeriodType> createDatePeriod(final DatePeriodType value) {
         return new JAXBElement<DatePeriodType>(_DatePeriod_QNAME, DatePeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DataProtectionPolicyInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DataProtectionPolicyInclusion")
-    public JAXBElement<DataProtectionPolicyInclusion> createDataProtectionPolicyInclusion(DataProtectionPolicyInclusion value) {
+    public JAXBElement<DataProtectionPolicyInclusion> createDataProtectionPolicyInclusion(final DataProtectionPolicyInclusion value) {
         return new JAXBElement<DataProtectionPolicyInclusion>(_DataProtectionPolicyInclusion_QNAME, DataProtectionPolicyInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GenderCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "GenderCode")
-    public JAXBElement<GenderCodeList> createGenderCode(GenderCodeList value) {
+    public JAXBElement<GenderCodeList> createGenderCode(final GenderCodeList value) {
         return new JAXBElement<GenderCodeList>(_GenderCode_QNAME, GenderCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CandidateType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Candidate")
-    public JAXBElement<CandidateType> createCandidate(CandidateType value) {
+    public JAXBElement<CandidateType> createCandidate(final CandidateType value) {
         return new JAXBElement<CandidateType>(_Candidate_QNAME, CandidateType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Duration")
-    public JAXBElement<String> createDuration(String value) {
+    public JAXBElement<String> createDuration(final String value) {
         return new JAXBElement<String>(_Duration_QNAME, String.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Period")
-    public JAXBElement<PeriodType> createPeriod(PeriodType value) {
+    public JAXBElement<PeriodType> createPeriod(final PeriodType value) {
         return new JAXBElement<PeriodType>(_Period_QNAME, PeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearMonthPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "YearMonthPeriod")
-    public JAXBElement<YearMonthPeriodType> createYearMonthPeriod(YearMonthPeriodType value) {
+    public JAXBElement<YearMonthPeriodType> createYearMonthPeriod(final YearMonthPeriodType value) {
         return new JAXBElement<YearMonthPeriodType>(_YearMonthPeriod_QNAME, YearMonthPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CertificationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Certification")
-    public JAXBElement<CertificationType> createCertification(CertificationType value) {
+    public JAXBElement<CertificationType> createCertification(final CertificationType value) {
         return new JAXBElement<CertificationType>(_Certification_QNAME, CertificationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RemunerationRangeType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "RemunerationRange")
-    public JAXBElement<RemunerationRangeType> createRemunerationRange(RemunerationRangeType value) {
+    public JAXBElement<RemunerationRangeType> createRemunerationRange(final RemunerationRangeType value) {
         return new JAXBElement<RemunerationRangeType>(_RemunerationRange_QNAME, RemunerationRangeType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UnitCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "UnitCode")
-    public JAXBElement<UnitCodeList> createUnitCode(UnitCodeList value) {
+    public JAXBElement<UnitCodeList> createUnitCode(final UnitCodeList value) {
         return new JAXBElement<UnitCodeList>(_UnitCode_QNAME, UnitCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DisabilityType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Disability")
-    public JAXBElement<DisabilityType> createDisability(DisabilityType value) {
+    public JAXBElement<DisabilityType> createDisability(final DisabilityType value) {
         return new JAXBElement<DisabilityType>(_Disability_QNAME, DisabilityType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PhoneType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Phone")
-    public JAXBElement<PhoneType> createPhone(PhoneType value) {
+    public JAXBElement<PhoneType> createPhone(final PhoneType value) {
         return new JAXBElement<PhoneType>(_Phone_QNAME, PhoneType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "YearPeriod")
-    public JAXBElement<YearPeriodType> createYearPeriod(YearPeriodType value) {
+    public JAXBElement<YearPeriodType> createYearPeriod(final YearPeriodType value) {
         return new JAXBElement<YearPeriodType>(_YearPeriod_QNAME, YearPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PatentStatusCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PatentStatusCode")
-    public JAXBElement<PatentStatusCodeList> createPatentStatusCode(PatentStatusCodeList value) {
+    public JAXBElement<PatentStatusCodeList> createPatentStatusCode(final PatentStatusCodeList value) {
         return new JAXBElement<PatentStatusCodeList>(_PatentStatusCode_QNAME, PatentStatusCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Number")
-    public JAXBElement<BigDecimal> createNumber(BigDecimal value) {
+    public JAXBElement<BigDecimal> createNumber(final BigDecimal value) {
         return new JAXBElement<BigDecimal>(_Number_QNAME, BigDecimal.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonBaseType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonBase")
-    public JAXBElement<PersonBaseType> createPersonBase(PersonBaseType value) {
+    public JAXBElement<PersonBaseType> createPersonBase(final PersonBaseType value) {
         return new JAXBElement<PersonBaseType>(_PersonBase_QNAME, PersonBaseType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DateTimeOpenEndPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "DateTimeOpenEndPeriod")
-    public JAXBElement<DateTimeOpenEndPeriodType> createDateTimeOpenEndPeriod(DateTimeOpenEndPeriodType value) {
+    public JAXBElement<DateTimeOpenEndPeriodType> createDateTimeOpenEndPeriod(final DateTimeOpenEndPeriodType value) {
         return new JAXBElement<DateTimeOpenEndPeriodType>(_DateTimeOpenEndPeriod_QNAME, DateTimeOpenEndPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PhoneTypeArray }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PhoneArray")
-    public JAXBElement<PhoneTypeArray> createPhoneArray(PhoneTypeArray value) {
+    public JAXBElement<PhoneTypeArray> createPhoneArray(final PhoneTypeArray value) {
         return new JAXBElement<PhoneTypeArray>(_PhoneArray_QNAME, PhoneTypeArray.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link WorkLifeCycleType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "WorkLifeCycle")
-    public JAXBElement<WorkLifeCycleType> createWorkLifeCycle(WorkLifeCycleType value) {
+    public JAXBElement<WorkLifeCycleType> createWorkLifeCycle(final WorkLifeCycleType value) {
         return new JAXBElement<WorkLifeCycleType>(_WorkLifeCycle_QNAME, WorkLifeCycleType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RelocationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Relocation")
-    public JAXBElement<RelocationType> createRelocation(RelocationType value) {
+    public JAXBElement<RelocationType> createRelocation(final RelocationType value) {
         return new JAXBElement<RelocationType>(_Relocation_QNAME, RelocationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CountryCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CountryCode")
-    public JAXBElement<CountryCodeList> createCountryCode(CountryCodeList value) {
+    public JAXBElement<CountryCodeList> createCountryCode(final CountryCodeList value) {
         return new JAXBElement<CountryCodeList>(_CountryCode_QNAME, CountryCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SpecifiedPersonType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "SpecifiedPerson")
-    public JAXBElement<SpecifiedPersonType> createSpecifiedPerson(SpecifiedPersonType value) {
+    public JAXBElement<SpecifiedPersonType> createSpecifiedPerson(final SpecifiedPersonType value) {
         return new JAXBElement<SpecifiedPersonType>(_SpecifiedPerson_QNAME, SpecifiedPersonType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RemunerationPackageType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "RemunerationPackage")
-    public JAXBElement<RemunerationPackageType> createRemunerationPackage(RemunerationPackageType value) {
+    public JAXBElement<RemunerationPackageType> createRemunerationPackage(final RemunerationPackageType value) {
         return new JAXBElement<RemunerationPackageType>(_RemunerationPackage_QNAME, RemunerationPackageType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Time")
-    public JAXBElement<XMLGregorianCalendar> createTime(XMLGregorianCalendar value) {
+    public JAXBElement<XMLGregorianCalendar> createTime(final XMLGregorianCalendar value) {
         return new JAXBElement<XMLGregorianCalendar>(_Time_QNAME, XMLGregorianCalendar.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OrganizationAffiliationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "OrganizationAffiliation")
-    public JAXBElement<OrganizationAffiliationType> createOrganizationAffiliation(OrganizationAffiliationType value) {
+    public JAXBElement<OrganizationAffiliationType> createOrganizationAffiliation(final OrganizationAffiliationType value) {
         return new JAXBElement<OrganizationAffiliationType>(_OrganizationAffiliation_QNAME, OrganizationAffiliationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PayTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PayTypeCode")
-    public JAXBElement<PayTypeCodeList> createPayTypeCode(PayTypeCodeList value) {
+    public JAXBElement<PayTypeCodeList> createPayTypeCode(final PayTypeCodeList value) {
         return new JAXBElement<PayTypeCodeList>(_PayTypeCode_QNAME, PayTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TravelType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Travel")
-    public JAXBElement<TravelType> createTravel(TravelType value) {
+    public JAXBElement<TravelType> createTravel(final TravelType value) {
         return new JAXBElement<TravelType>(_Travel_QNAME, TravelType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearMonthOpenEndPeriodType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "YearMonthOpenEndPeriod")
-    public JAXBElement<YearMonthOpenEndPeriodType> createYearMonthOpenEndPeriod(YearMonthOpenEndPeriodType value) {
+    public JAXBElement<YearMonthOpenEndPeriodType> createYearMonthOpenEndPeriod(final YearMonthOpenEndPeriodType value) {
         return new JAXBElement<YearMonthOpenEndPeriodType>(_YearMonthOpenEndPeriod_QNAME, YearMonthOpenEndPeriodType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PayRateIntervalCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PayRateIntervalCode")
-    public JAXBElement<PayRateIntervalCodeList> createPayRateIntervalCode(PayRateIntervalCodeList value) {
+    public JAXBElement<PayRateIntervalCodeList> createPayRateIntervalCode(final PayRateIntervalCodeList value) {
         return new JAXBElement<PayRateIntervalCodeList>(_PayRateIntervalCode_QNAME, PayRateIntervalCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScheduleType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Schedule")
-    public JAXBElement<ScheduleType> createSchedule(ScheduleType value) {
+    public JAXBElement<ScheduleType> createSchedule(final ScheduleType value) {
         return new JAXBElement<ScheduleType>(_Schedule_QNAME, ScheduleType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScoreNumericCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ScoreNumericCode")
-    public JAXBElement<ScoreNumericCodeList> createScoreNumericCode(ScoreNumericCodeList value) {
+    public JAXBElement<ScoreNumericCodeList> createScoreNumericCode(final ScoreNumericCodeList value) {
         return new JAXBElement<ScoreNumericCodeList>(_ScoreNumericCode_QNAME, ScoreNumericCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "YearMonth")
-    public JAXBElement<XMLGregorianCalendar> createYearMonth(XMLGregorianCalendar value) {
+    public JAXBElement<XMLGregorianCalendar> createYearMonth(final XMLGregorianCalendar value) {
         return new JAXBElement<XMLGregorianCalendar>(_YearMonth_QNAME, XMLGregorianCalendar.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PositionScheduleTypeCodeList }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PositionScheduleTypeCode")
-    public JAXBElement<PositionScheduleTypeCodeList> createPositionScheduleTypeCode(PositionScheduleTypeCodeList value) {
+    public JAXBElement<PositionScheduleTypeCodeList> createPositionScheduleTypeCode(final PositionScheduleTypeCodeList value) {
         return new JAXBElement<PositionScheduleTypeCodeList>(_PositionScheduleTypeCode_QNAME, PositionScheduleTypeCodeList.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LocationType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Location")
-    public JAXBElement<LocationType> createLocation(LocationType value) {
+    public JAXBElement<LocationType> createLocation(final LocationType value) {
         return new JAXBElement<LocationType>(_Location_QNAME, LocationType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EmailTypeArray }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "EmailArray")
-    public JAXBElement<EmailTypeArray> createEmailArray(EmailTypeArray value) {
+    public JAXBElement<EmailTypeArray> createEmailArray(final EmailTypeArray value) {
         return new JAXBElement<EmailTypeArray>(_EmailArray_QNAME, EmailTypeArray.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OrganizationReferenceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "OrganizationReference")
-    public JAXBElement<OrganizationReferenceType> createOrganizationReference(OrganizationReferenceType value) {
+    public JAXBElement<OrganizationReferenceType> createOrganizationReference(final OrganizationReferenceType value) {
         return new JAXBElement<OrganizationReferenceType>(_OrganizationReference_QNAME, OrganizationReferenceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompetencyEvidenceType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CompetencyEvidence")
-    public JAXBElement<CompetencyEvidenceType> createCompetencyEvidence(CompetencyEvidenceType value) {
+    public JAXBElement<CompetencyEvidenceType> createCompetencyEvidence(final CompetencyEvidenceType value) {
         return new JAXBElement<CompetencyEvidenceType>(_CompetencyEvidence_QNAME, CompetencyEvidenceType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonNameType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "PersonName")
-    public JAXBElement<PersonNameType> createPersonName(PersonNameType value) {
+    public JAXBElement<PersonNameType> createPersonName(final PersonNameType value) {
         return new JAXBElement<PersonNameType>(_PersonName_QNAME, PersonNameType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SpecifiedCompetencyType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "SpecifiedCompetency")
-    public JAXBElement<SpecifiedCompetencyType> createSpecifiedCompetency(SpecifiedCompetencyType value) {
+    public JAXBElement<SpecifiedCompetencyType> createSpecifiedCompetency(final SpecifiedCompetencyType value) {
         return new JAXBElement<SpecifiedCompetencyType>(_SpecifiedCompetency_QNAME, SpecifiedCompetencyType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CommentType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Comment")
-    public JAXBElement<CommentType> createComment(CommentType value) {
+    public JAXBElement<CommentType> createComment(final CommentType value) {
         return new JAXBElement<CommentType>(_Comment_QNAME, CommentType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CommunicationItemInclusion }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "CommunicationItemInclusion")
-    public JAXBElement<CommunicationItemInclusion> createCommunicationItemInclusion(CommunicationItemInclusion value) {
+    public JAXBElement<CommunicationItemInclusion> createCommunicationItemInclusion(final CommunicationItemInclusion value) {
         return new JAXBElement<CommunicationItemInclusion>(_CommunicationItemInclusion_QNAME, CommunicationItemInclusion.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Percent")
-    public JAXBElement<BigDecimal> createPercent(BigDecimal value) {
+    public JAXBElement<BigDecimal> createPercent(final BigDecimal value) {
         return new JAXBElement<BigDecimal>(_Percent_QNAME, BigDecimal.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link WebTypeArray }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "WebArray")
-    public JAXBElement<WebTypeArray> createWebArray(WebTypeArray value) {
+    public JAXBElement<WebTypeArray> createWebArray(final WebTypeArray value) {
         return new JAXBElement<WebTypeArray>(_WebArray_QNAME, WebTypeArray.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RefereeType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Referee")
-    public JAXBElement<RefereeType> createReferee(RefereeType value) {
+    public JAXBElement<RefereeType> createReferee(final RefereeType value) {
         return new JAXBElement<RefereeType>(_Referee_QNAME, RefereeType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ScoreTextType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "ScoreText")
-    public JAXBElement<ScoreTextType> createScoreText(ScoreTextType value) {
+    public JAXBElement<ScoreTextType> createScoreText(final ScoreTextType value) {
         return new JAXBElement<ScoreTextType>(_ScoreText_QNAME, ScoreTextType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Indicator")
-    public JAXBElement<Boolean> createIndicator(Boolean value) {
+    public JAXBElement<Boolean> createIndicator(final Boolean value) {
         return new JAXBElement<Boolean>(_Indicator_QNAME, Boolean.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "https://hropenstandards.org/schema/xml/", name = "Date")
-    public JAXBElement<XMLGregorianCalendar> createDate(XMLGregorianCalendar value) {
+    public JAXBElement<XMLGregorianCalendar> createDate(final XMLGregorianCalendar value) {
         return new JAXBElement<XMLGregorianCalendar>(_Date_QNAME, XMLGregorianCalendar.class, null, value);
     }
 

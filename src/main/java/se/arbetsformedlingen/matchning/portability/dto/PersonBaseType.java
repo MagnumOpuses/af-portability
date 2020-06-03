@@ -1,11 +1,13 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -19,7 +21,9 @@ public class PersonBaseType {
     public CommunicationType communication;
     public LanguageCodeList primaryLanguage;
     public IdentifierType legalId;
-    public XMLGregorianCalendar birthDate;
+    @JsonSerialize(using = DateType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateType.DateTypeDeserializer.class)
+    public DateType birthDate;
     public GenderCodeList gender;
     public List<CountryCodeList> citizenship;
     public List<CountryCodeList> residenceCountry;
@@ -30,7 +34,7 @@ public class PersonBaseType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -38,7 +42,7 @@ public class PersonBaseType {
         return name;
     }
 
-    public void setName(PersonNameType name) {
+    public void setName(final PersonNameType name) {
         this.name = name;
     }
 
@@ -46,7 +50,7 @@ public class PersonBaseType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
@@ -54,7 +58,7 @@ public class PersonBaseType {
         return primaryLanguage;
     }
 
-    public void setPrimaryLanguage(LanguageCodeList primaryLanguage) {
+    public void setPrimaryLanguage(final LanguageCodeList primaryLanguage) {
         this.primaryLanguage = primaryLanguage;
     }
 
@@ -62,15 +66,15 @@ public class PersonBaseType {
         return legalId;
     }
 
-    public void setLegalId(IdentifierType legalId) {
+    public void setLegalId(final IdentifierType legalId) {
         this.legalId = legalId;
     }
 
-    public XMLGregorianCalendar getBirthDate() {
+    public DateType getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(XMLGregorianCalendar birthDate) {
+    public void setBirthDate(final DateType birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -78,7 +82,7 @@ public class PersonBaseType {
         return gender;
     }
 
-    public void setGender(GenderCodeList gender) {
+    public void setGender(final GenderCodeList gender) {
         this.gender = gender;
     }
 
@@ -89,7 +93,7 @@ public class PersonBaseType {
         return this.citizenship;
     }
 
-    public void setCitizenship(List<CountryCodeList> citizenship) {
+    public void setCitizenship(final List<CountryCodeList> citizenship) {
         this.citizenship = citizenship;
     }
 
@@ -100,7 +104,7 @@ public class PersonBaseType {
         return this.residenceCountry;
     }
 
-    public void setResidenceCountry(List<CountryCodeList> residenceCountry) {
+    public void setResidenceCountry(final List<CountryCodeList> residenceCountry) {
         this.residenceCountry = residenceCountry;
     }
 
@@ -108,7 +112,7 @@ public class PersonBaseType {
         return militaryStatus;
     }
 
-    public void setMilitaryStatus(String militaryStatus) {
+    public void setMilitaryStatus(final String militaryStatus) {
         this.militaryStatus = militaryStatus;
     }
 
@@ -116,7 +120,7 @@ public class PersonBaseType {
         return ethnicity;
     }
 
-    public void setEthnicity(List<String> ethnicity) {
+    public void setEthnicity(final List<String> ethnicity) {
         this.ethnicity = ethnicity;
     }
 }

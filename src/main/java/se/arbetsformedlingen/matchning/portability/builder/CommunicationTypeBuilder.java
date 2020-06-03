@@ -7,25 +7,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommunicationTypeBuilder {
-    private CommunicationType communicationType = new CommunicationType();
+    private final CommunicationType communicationType = new CommunicationType();
 
-    public CommunicationTypeBuilder setAddress(List<AddressType> address) {
-        communicationType.getAddress().addAll(address);
+    public CommunicationTypeBuilder setAddress(final List<AddressTypeArray> addressTypeArray) {
+        communicationType.getAddress().addAll(addressTypeArray);
         return this;
     }
 
-    public CommunicationTypeBuilder setPhone(List<PhoneType> phone) {
-        communicationType.getPhone().addAll(phone);
+    public CommunicationTypeBuilder setPhone(final List<PhoneTypeArray> phoneTypeArray) {
+        communicationType.getPhone().addAll(phoneTypeArray);
         return this;
     }
 
-    public CommunicationTypeBuilder setEmail(List<EmailType> email) {
-        communicationType.getEmail().addAll(email);
+    public CommunicationTypeBuilder setEmail(final List<EmailTypeArray> emailTypeArray) {
+        communicationType.getEmail().addAll(emailTypeArray);
         return this;
     }
 
-    public CommunicationTypeBuilder setWeb(List<WebType> web) {
-        communicationType.getWeb().addAll(web);
+    public CommunicationTypeBuilder setWeb(final List<WebTypeArray> webTypeArray) {
+        communicationType.getWeb().addAll(webTypeArray);
         return this;
     }
 
@@ -33,23 +33,24 @@ public class CommunicationTypeBuilder {
         return communicationType;
     }
 
-    public CommunicationTypeBuilder withPersonUppgifter(PersonUppgifter personUppgifter) {
-        List<AddressType> address = new ArrayList<>();
-        address.add(new AddressTypeBuilder().withPersonUppgifter(personUppgifter).build());
+    public CommunicationTypeBuilder withPersonUppgifter(final PersonUppgifter personUppgifter) {
+        final List<AddressTypeArray> address = new ArrayList<>();
+        address.add(new AddressTypeArrayBuilder().withPersonUppgifter(personUppgifter).build());
         setAddress(address);
 
-        List<PhoneType> phone = new ArrayList<>();
-        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
-        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerMobil()).build());
-        phone.add(new PhoneTypeBuilder().setFormattedNumber(personUppgifter.getTelefonnummerOvrig()).build());
-        setPhone(phone);
+        final List<PhoneTypeArray> phoneTypeArray = new ArrayList<>();
+        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
+        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerMobil()).build());
+        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerOvrig()).build());
+        setPhone(phoneTypeArray);
 
-        List<EmailType> email = new ArrayList<>();
-        email.add(new EmailTypeBuilder().setAddress(personUppgifter.getEpostadress()).build());
+        final List<EmailTypeArray> email = new ArrayList<>();
+        email.add(new EmailTypeArrayBuilder().setAddress(personUppgifter.getEpostadress()).build());
         setEmail(email);
 
-        List<WebType> web = new ArrayList<>();
-        web.add(new WebTypeBuilder().setUrl(personUppgifter.getHemsida()).build());
+        final List<WebTypeArray> web = new ArrayList<>();
+        web.add(new WebTypeArrayBuilder().setUrl(personUppgifter.getHemsida()).build());
         setWeb(web);
         return this;
-    }}
+    }
+}

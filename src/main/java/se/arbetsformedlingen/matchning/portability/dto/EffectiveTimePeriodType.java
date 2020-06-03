@@ -1,9 +1,11 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EffectiveTimePeriodType", propOrder = {
@@ -11,22 +13,26 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class EffectiveTimePeriodType {
 
-    protected XMLGregorianCalendar validFrom;
-    protected XMLGregorianCalendar validTo;
+    @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+    protected DateTimeType validFrom;
+    @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+    protected DateTimeType validTo;
 
-    public XMLGregorianCalendar getValidFrom() {
+    public DateTimeType getValidFrom() {
         return validFrom;
     }
 
-    public void setValidFrom(XMLGregorianCalendar validFrom) {
+    public void setValidFrom(final DateTimeType validFrom) {
         this.validFrom = validFrom;
     }
 
-    public XMLGregorianCalendar getValidTo() {
+    public DateTimeType getValidTo() {
         return validTo;
     }
 
-    public void setValidTo(XMLGregorianCalendar validTo) {
+    public void setValidTo(final DateTimeType validTo) {
         this.validTo = validTo;
     }
 }

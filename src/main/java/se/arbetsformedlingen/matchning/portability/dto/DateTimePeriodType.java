@@ -1,10 +1,12 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -14,23 +16,25 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class DateTimePeriodType {
 
     @XmlElement(required = true)
-    protected XMLGregorianCalendar start;
+    protected DateTimeType start;
     @XmlElement(required = true)
-    protected XMLGregorianCalendar end;
+    @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+    protected DateTimeType end;
 
-    public XMLGregorianCalendar getStart() {
+    public DateTimeType getStart() {
         return start;
     }
 
-    public void setStart(XMLGregorianCalendar start) {
+    public void setStart(final DateTimeType start) {
         this.start = start;
     }
 
-    public XMLGregorianCalendar getEnd() {
+    public DateTimeType getEnd() {
         return end;
     }
 
-    public void setEnd(XMLGregorianCalendar end) {
+    public void setEnd(final DateTimeType end) {
         this.end = end;
     }
 }

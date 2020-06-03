@@ -74,8 +74,7 @@
       "properties": {
         "consentTimestamp": {
           "description": "The time and date the consent was given. If the consent has been changed multiple times this shows the latest one.",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "consentStatus": {
           "description": "The status of the consent.",
@@ -83,13 +82,11 @@
         },
         "consentRevokedTimestamp": {
           "description": "If the concent was revoked this shows the timestamp of the revocation. If the consent has been revoked multiple times this shows the latest one.",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "consentedTimePeriod": {
           "description": "The time period the user has given consent for their data to be accessible. If this amount of time has traversed from the time the concent was changed to yes then it is automatically changed to no and the action is recorded in the rest of this data structure as well.",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "acceptedTerms": {
           "description": "List of the terms and conditions the user has consented to.",

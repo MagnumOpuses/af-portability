@@ -5,64 +5,64 @@ import se.arbetsformedlingen.matchning.portability.dto.*;
 import java.util.List;
 
 public class PositionHistoryTypeBuilder {
-    private PositionHistoryType positionHistoryType = new PositionHistoryType();
+    private final PositionHistoryType positionHistoryType = new PositionHistoryType();
 
-    public PositionHistoryTypeBuilder setId(IdentifierType id) {
+    public PositionHistoryTypeBuilder setId(final IdentifierType id) {
         positionHistoryType.setId(id);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setStart(String start) {
+    public PositionHistoryTypeBuilder setStart(final String start) {
         positionHistoryType.setStart(start);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setEnd(String end) {
+    public PositionHistoryTypeBuilder setEnd(final String end) {
         positionHistoryType.setEnd(end);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setCurrent(Boolean current) {
+    public PositionHistoryTypeBuilder setCurrent(final Boolean current) {
         positionHistoryType.setCurrent(current);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public PositionHistoryTypeBuilder setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         positionHistoryType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setDescriptions(StringTypeArray descriptions) {
+    public PositionHistoryTypeBuilder setDescriptions(final List<String> descriptions) {
         positionHistoryType.setDescriptions(descriptions);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setTitle(String title) {
+    public PositionHistoryTypeBuilder setTitle(final String title) {
         positionHistoryType.setTitle(title);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setResourceRelationshipCode(ResourceRelationshipCodeList resourceRelationshipCode) {
+    public PositionHistoryTypeBuilder setResourceRelationshipCode(final ResourceRelationshipCodeList resourceRelationshipCode) {
         positionHistoryType.setResourceRelationshipCode(resourceRelationshipCode);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setOrganization(OrganizationType organization) {
+    public PositionHistoryTypeBuilder setOrganization(final OrganizationType organization) {
         positionHistoryType.setOrganization(organization);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setLocation(LocationType location) {
+    public PositionHistoryTypeBuilder setLocation(final LocationType location) {
         positionHistoryType.setLocation(location);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setJobCategories(List<EntityType> jobCategories) {
+    public PositionHistoryTypeBuilder setJobCategories(final List<EntityType> jobCategories) {
         positionHistoryType.getJobCategories().addAll(jobCategories);
         return this;
     }
 
-    public PositionHistoryTypeBuilder setJobLevels(List<EntityType> jobLevels) {
+    public PositionHistoryTypeBuilder setJobLevels(final List<EntityType> jobLevels) {
         positionHistoryType.getJobLevels().addAll(jobLevels);
         return this;
     }

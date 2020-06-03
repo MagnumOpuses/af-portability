@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EmailType", propOrder = {
 
 })
-public class EmailType extends CommunicationItemInclusion {
+public class EmailType {
 
     @XmlElement(required = true)
     public String address;

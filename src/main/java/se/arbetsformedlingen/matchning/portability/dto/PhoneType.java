@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PhoneType", propOrder = {
 
 })
-public class PhoneType extends CommunicationItemInclusion {
+public class PhoneType {
 
     public String countryDialingCode;
     public String areaDialingCode;
