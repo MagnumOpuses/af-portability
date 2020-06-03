@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
@@ -9,28 +11,31 @@ import javax.xml.bind.annotation.XmlType;
 public enum PatentStatusCodeList {
 
     @XmlEnumValue("Filed")
+    @JsonProperty("Filed")
     FILED("Filed"),
     @XmlEnumValue("Issued")
+    @JsonProperty("Issued")
     ISSUED("Issued"),
     @XmlEnumValue("Pending")
+    @JsonProperty("Pending")
     PENDING("Pending");
     private final String value;
 
-    PatentStatusCodeList(String v) {
+    PatentStatusCodeList(final String v) {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static PatentStatusCodeList fromValue(String v) {
-        for (PatentStatusCodeList c: PatentStatusCodeList.values()) {
+    public static PatentStatusCodeList fromValue(final String v) {
+        for (final PatentStatusCodeList c : PatentStatusCodeList.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

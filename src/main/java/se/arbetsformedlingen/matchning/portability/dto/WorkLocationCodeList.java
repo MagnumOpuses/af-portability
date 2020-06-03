@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
@@ -10,28 +12,31 @@ import javax.xml.bind.annotation.XmlType;
 public enum WorkLocationCodeList {
 
     @XmlEnumValue("Home")
+    @JsonProperty("Home")
     HOME("Home"),
     @XmlEnumValue("Virtual")
+    @JsonProperty("Virtual")
     VIRTUAL("Virtual"),
     @XmlEnumValue("Colocation")
+    @JsonProperty("Colocation")
     COLOCATION("Colocation");
     private final String value;
 
-    WorkLocationCodeList(String v) {
+    WorkLocationCodeList(final String v) {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
-    public static WorkLocationCodeList fromValue(String v) {
-        for (WorkLocationCodeList c: WorkLocationCodeList.values()) {
+    public static WorkLocationCodeList fromValue(final String v) {
+        for (final WorkLocationCodeList c : WorkLocationCodeList.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

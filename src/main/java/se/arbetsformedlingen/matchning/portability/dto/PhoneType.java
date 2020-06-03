@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PhoneType", propOrder = {
 
 })
-public class PhoneType {
+public class PhoneType extends CommunicationItemInclusion {
 
     public String countryDialingCode;
     public String areaDialingCode;
@@ -24,7 +24,7 @@ public class PhoneType {
         return countryDialingCode;
     }
 
-    public void setCountryDialingCode(String countryDialingCode) {
+    public void setCountryDialingCode(final String countryDialingCode) {
         this.countryDialingCode = countryDialingCode;
     }
 
@@ -32,7 +32,7 @@ public class PhoneType {
         return areaDialingCode;
     }
 
-    public void setAreaDialingCode(String areaDialingCode) {
+    public void setAreaDialingCode(final String areaDialingCode) {
         this.areaDialingCode = areaDialingCode;
     }
 
@@ -40,7 +40,7 @@ public class PhoneType {
         return dialNumber;
     }
 
-    public void setDialNumber(String dialNumber) {
+    public void setDialNumber(final String dialNumber) {
         this.dialNumber = dialNumber;
     }
 
@@ -48,7 +48,7 @@ public class PhoneType {
         return phoneExtension;
     }
 
-    public void setPhoneExtension(String phoneExtension) {
+    public void setPhoneExtension(final String phoneExtension) {
         this.phoneExtension = phoneExtension;
     }
 
@@ -56,7 +56,7 @@ public class PhoneType {
         return access;
     }
 
-    public void setAccess(String access) {
+    public void setAccess(final String access) {
         this.access = access;
     }
 
@@ -64,7 +64,7 @@ public class PhoneType {
         return formattedNumber;
     }
 
-    public void setFormattedNumber(String formattedNumber) {
+    public void setFormattedNumber(final String formattedNumber) {
         this.formattedNumber = formattedNumber;
     }
 }

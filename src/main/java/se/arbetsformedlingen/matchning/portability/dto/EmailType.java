@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EmailType", propOrder = {
 
 })
-public class EmailType {
+public class EmailType extends CommunicationItemInclusion {
 
     @XmlElement(required = true)
     public String address;
@@ -20,7 +20,7 @@ public class EmailType {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(final String address) {
         this.address = address;
     }
 }

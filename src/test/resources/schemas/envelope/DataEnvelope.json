@@ -1,5 +1,6 @@
 {
   "$schema": "https://github.com/MagnumOpuses/common-cv-model",
+  "id": "resource:/schemas/envelope/DataEnvelope.json#",
   "title": "DataEnvelope",
   "description": "Metadata for the data transferred through the AF-Connect service.",
   "definitions": {
@@ -132,11 +133,9 @@
         "data": {
           "description": "The data transferred.",
           "type": "array",
-          "allOf": [
-            {
-              "$ref": "../HROpen-v4.2-1/recruiting/json/CandidateType.json#"
-            }
-          ]
+          "items": {
+            "$ref": "../HROpen-v4.2-1/recruiting/json/CandidateType.json#"
+          }
         }
       },
       "required": [

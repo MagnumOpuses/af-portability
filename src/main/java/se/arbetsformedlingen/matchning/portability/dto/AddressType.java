@@ -1,17 +1,17 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressType", propOrder = {
 
 })
-public class AddressType {
+public class AddressType extends CommunicationItemInclusion {
 
     public String line;
     public List<AddressComponentType> extendedLines;
@@ -28,7 +28,7 @@ public class AddressType {
         return line;
     }
 
-    public void setLine(String line) {
+    public void setLine(final String line) {
         this.line = line;
     }
 
@@ -39,7 +39,7 @@ public class AddressType {
         return this.extendedLines;
     }
 
-    public void setExtendedLines(List<AddressComponentType> extendedLines){
+    public void setExtendedLines(final List<AddressComponentType> extendedLines) {
         this.extendedLines = extendedLines;
     }
 
@@ -47,7 +47,7 @@ public class AddressType {
         return countryCode;
     }
 
-    public void setCountryCode(CountryCodeList countryCode) {
+    public void setCountryCode(final CountryCodeList countryCode) {
         this.countryCode = countryCode;
     }
 
@@ -58,7 +58,7 @@ public class AddressType {
         return this.countrySubDivisions;
     }
 
-    public void setCountrySubDivisions(List<AddressComponentType> countrySubDivisions){
+    public void setCountrySubDivisions(final List<AddressComponentType> countrySubDivisions) {
         this.countrySubDivisions = countrySubDivisions;
     }
 
@@ -66,7 +66,7 @@ public class AddressType {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(final String city) {
         this.city = city;
     }
 
@@ -74,7 +74,7 @@ public class AddressType {
         return postalCode;
     }
 
-    public void setPostalCode(String postalCode) {
+    public void setPostalCode(final String postalCode) {
         this.postalCode = postalCode;
     }
 
@@ -82,7 +82,7 @@ public class AddressType {
         return postOfficeBox;
     }
 
-    public void setPostOfficeBox(String postOfficeBox) {
+    public void setPostOfficeBox(final String postOfficeBox) {
         this.postOfficeBox = postOfficeBox;
     }
 
@@ -90,7 +90,7 @@ public class AddressType {
         return geoLocation;
     }
 
-    public void setGeoLocation(GeoType geoLocation) {
+    public void setGeoLocation(final GeoType geoLocation) {
         this.geoLocation = geoLocation;
     }
 
@@ -98,7 +98,7 @@ public class AddressType {
         return formattedAddress;
     }
 
-    public void setFormattedAddress(String formattedAddress) {
+    public void setFormattedAddress(final String formattedAddress) {
         this.formattedAddress = formattedAddress;
     }
 }

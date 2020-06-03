@@ -9,43 +9,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "OrganizationReferenceType", propOrder = {
 
 })
-public class OrganizationReferenceType {
+public class OrganizationReferenceType extends EntityType {
 
-    protected IdentifierType id;
-    protected String name;
-    protected String code;
     protected ResponsibilityCodeList responsibilityCode;
     protected CommunicationType communication;
-
-    public IdentifierType getId() {
-        return id;
-    }
-
-    public void setId(IdentifierType id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public ResponsibilityCodeList getResponsibilityCode() {
         return responsibilityCode;
     }
 
-    public void setResponsibilityCode(ResponsibilityCodeList responsibilityCode) {
+    public void setResponsibilityCode(final ResponsibilityCodeList responsibilityCode) {
         this.responsibilityCode = responsibilityCode;
     }
 
@@ -53,7 +26,7 @@ public class OrganizationReferenceType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 }

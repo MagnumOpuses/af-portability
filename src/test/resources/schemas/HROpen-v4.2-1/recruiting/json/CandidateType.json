@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "resource:/schemas/HROpen-v4.2-1/recruiting/json/CandidateType.json#",
   "version": "4.2.0",
   "title": "CandidateType",
   "description": "A person who is requesting consideration or is being considered for a current or future position at a company.",

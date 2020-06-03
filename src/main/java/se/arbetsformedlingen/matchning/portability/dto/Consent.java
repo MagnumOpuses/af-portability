@@ -21,7 +21,7 @@ public class Consent {
         return consentTimestamp;
     }
 
-    public void setConsentTimestamp(XMLGregorianCalendar consentTimestamp) {
+    public void setConsentTimestamp(final XMLGregorianCalendar consentTimestamp) {
         this.consentTimestamp = consentTimestamp;
     }
 
@@ -29,7 +29,7 @@ public class Consent {
         return consentStatus;
     }
 
-    public void setConsentStatus(boolean consentStatus) {
+    public void setConsentStatus(final boolean consentStatus) {
         this.consentStatus = consentStatus;
     }
 
@@ -37,7 +37,7 @@ public class Consent {
         return consentRevokedTimestamp;
     }
 
-    public void setConsentRevokedTimestamp(XMLGregorianCalendar consentRevokedTimestamp) {
+    public void setConsentRevokedTimestamp(final XMLGregorianCalendar consentRevokedTimestamp) {
         this.consentRevokedTimestamp = consentRevokedTimestamp;
     }
 
@@ -45,7 +45,7 @@ public class Consent {
         return consentedTimePeriod;
     }
 
-    public void setConsentedTimePeriod(String consentedTimePeriod) {
+    public void setConsentedTimePeriod(final String consentedTimePeriod) {
         this.consentedTimePeriod = consentedTimePeriod;
     }
 
@@ -56,7 +56,7 @@ public class Consent {
         return this.acceptedTerms;
     }
 
-    public void setAcceptedTerms(List<String> acceptedTerms) {
+    public void setAcceptedTerms(final List<String> acceptedTerms) {
         this.acceptedTerms = acceptedTerms;
     }
 
@@ -67,7 +67,7 @@ public class Consent {
         return this.acceptedPurposes;
     }
 
-    public void setAcceptedPurposes(List<String> acceptedPurposes) {
+    public void setAcceptedPurposes(final List<String> acceptedPurposes) {
         this.acceptedPurposes = acceptedPurposes;
     }
 }

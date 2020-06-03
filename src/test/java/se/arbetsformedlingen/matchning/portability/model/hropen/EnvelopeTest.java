@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.model.hropen;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jackson.JsonLoader;
@@ -27,6 +28,7 @@ public class EnvelopeTest {
         final ValidationConfiguration cfg = ValidationConfiguration.newBuilder()
                 .setDefaultVersion(SchemaVersion.DRAFTV4).freeze();
         validator = JsonSchemaFactory.newBuilder().setValidationConfiguration(cfg).freeze().getValidator();
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); // <-- TODO: still not global, it's only in the unit test.
     }
 
     @Test

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "WebType", propOrder = {
 
 })
-public class WebType {
+public class WebType extends CommunicationItemInclusion {
 
     @XmlElement(required = true)
     protected String url;
@@ -19,7 +19,7 @@ public class WebType {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(final String url) {
         this.url = url;
     }
 }
