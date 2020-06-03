@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StringTypeArray", propOrder = {
-    "item"
+        "item"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class StringTypeArray {
 
     protected List<String> item;

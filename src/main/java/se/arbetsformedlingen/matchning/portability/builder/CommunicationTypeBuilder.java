@@ -39,17 +39,27 @@ public class CommunicationTypeBuilder {
         setAddress(address);
 
         final List<PhoneTypeArray> phoneTypeArray = new ArrayList<>();
-        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
-        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerMobil()).build());
-        phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerOvrig()).build());
+        if (personUppgifter.getTelefonnummerHem() != null) {
+            phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerHem()).build());
+        }
+        if (personUppgifter.getTelefonnummerMobil() != null) {
+            phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerMobil()).build());
+        }
+        if (personUppgifter.getTelefonnummerOvrig() != null) {
+            phoneTypeArray.add(new PhoneTypeArrayBuilder().setFormattedNumber(personUppgifter.getTelefonnummerOvrig()).build());
+        }
         setPhone(phoneTypeArray);
 
         final List<EmailTypeArray> email = new ArrayList<>();
-        email.add(new EmailTypeArrayBuilder().setAddress(personUppgifter.getEpostadress()).build());
+        if (personUppgifter.getEpostadress() != null) {
+            email.add(new EmailTypeArrayBuilder().setAddress(personUppgifter.getEpostadress()).build());
+        }
         setEmail(email);
 
         final List<WebTypeArray> web = new ArrayList<>();
-        web.add(new WebTypeArrayBuilder().setUrl(personUppgifter.getHemsida()).build());
+        if (personUppgifter.getHemsida() != null) {
+            web.add(new WebTypeArrayBuilder().setUrl(personUppgifter.getHemsida()).build());
+        }
         setWeb(web);
         return this;
     }

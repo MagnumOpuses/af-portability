@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PublicationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PublicationType {
 
     protected IdentifierType id;
@@ -43,7 +46,7 @@ public class PublicationType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -51,7 +54,7 @@ public class PublicationType {
         return type;
     }
 
-    public void setType(PublicationTypeCodeList type) {
+    public void setType(final PublicationTypeCodeList type) {
         this.type = type;
     }
 
@@ -59,7 +62,7 @@ public class PublicationType {
         return date;
     }
 
-    public void setDate(XMLGregorianCalendar date) {
+    public void setDate(final XMLGregorianCalendar date) {
         this.date = date;
     }
 
@@ -67,7 +70,7 @@ public class PublicationType {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(final String title) {
         this.title = title;
     }
 
@@ -75,7 +78,7 @@ public class PublicationType {
         return _abstract;
     }
 
-    public void set_abstract(String _abstract) {
+    public void set_abstract(final String _abstract) {
         this._abstract = _abstract;
     }
 
@@ -83,7 +86,7 @@ public class PublicationType {
         return contributors;
     }
 
-    public void setContributors(Contributors contributors) {
+    public void setContributors(final Contributors contributors) {
         this.contributors = contributors;
     }
 
@@ -91,7 +94,7 @@ public class PublicationType {
         return copyrights;
     }
 
-    public void setCopyrights(Copyrights copyrights) {
+    public void setCopyrights(final Copyrights copyrights) {
         this.copyrights = copyrights;
     }
 
@@ -102,19 +105,15 @@ public class PublicationType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
-    }
-
-    public void setComments(List<CommentType> comments) {
-        this.comments = comments;
     }
 
     public LanguageCodeList getLanguageCode() {
         return languageCode;
     }
 
-    public void setLanguageCode(LanguageCodeList languageCode) {
+    public void setLanguageCode(final LanguageCodeList languageCode) {
         this.languageCode = languageCode;
     }
 
@@ -125,11 +124,15 @@ public class PublicationType {
         return this.comments;
     }
 
+    public void setComments(final List<CommentType> comments) {
+        this.comments = comments;
+    }
+
     public String getJournal() {
         return journal;
     }
 
-    public void setJournal(String journal) {
+    public void setJournal(final String journal) {
         this.journal = journal;
     }
 
@@ -137,7 +140,7 @@ public class PublicationType {
         return issn;
     }
 
-    public void setIssn(String issn) {
+    public void setIssn(final String issn) {
         this.issn = issn;
     }
 
@@ -145,7 +148,7 @@ public class PublicationType {
         return volume;
     }
 
-    public void setVolume(String volume) {
+    public void setVolume(final String volume) {
         this.volume = volume;
     }
 
@@ -153,7 +156,7 @@ public class PublicationType {
         return issue;
     }
 
-    public void setIssue(String issue) {
+    public void setIssue(final String issue) {
         this.issue = issue;
     }
 
@@ -161,7 +164,7 @@ public class PublicationType {
         return pages;
     }
 
-    public void setPages(String pages) {
+    public void setPages(final String pages) {
         this.pages = pages;
     }
 
@@ -169,7 +172,7 @@ public class PublicationType {
         return edition;
     }
 
-    public void setEdition(String edition) {
+    public void setEdition(final String edition) {
         this.edition = edition;
     }
 
@@ -177,7 +180,7 @@ public class PublicationType {
         return chapters;
     }
 
-    public void setChapters(String chapters) {
+    public void setChapters(final String chapters) {
         this.chapters = chapters;
     }
 
@@ -185,7 +188,7 @@ public class PublicationType {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(final String isbn) {
         this.isbn = isbn;
     }
 
@@ -193,7 +196,7 @@ public class PublicationType {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(final String publisher) {
         this.publisher = publisher;
     }
 
@@ -201,7 +204,7 @@ public class PublicationType {
         return publisherLocation;
     }
 
-    public void setPublisherLocation(LocationType publisherLocation) {
+    public void setPublisherLocation(final LocationType publisherLocation) {
         this.publisherLocation = publisherLocation;
     }
 
@@ -209,13 +212,13 @@ public class PublicationType {
         return event;
     }
 
-    public void setEvent(EventType event) {
+    public void setEvent(final EventType event) {
         this.event = event;
     }
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "item"
+            "item"
     })
     public static class Contributors {
 
@@ -243,7 +246,7 @@ public class PublicationType {
                 return name;
             }
 
-            public void setName(String name) {
+            public void setName(final String name) {
                 this.name = name;
             }
 
@@ -251,7 +254,7 @@ public class PublicationType {
                 return role;
             }
 
-            public void setRole(String role) {
+            public void setRole(final String role) {
                 this.role = role;
             }
         }
@@ -261,7 +264,7 @@ public class PublicationType {
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "item"
+            "item"
     })
     public static class Copyrights {
 
@@ -287,7 +290,7 @@ public class PublicationType {
                 return owner;
             }
 
-            public void setOwner(String owner) {
+            public void setOwner(final String owner) {
                 this.owner = owner;
             }
 
@@ -295,7 +298,7 @@ public class PublicationType {
                 return year;
             }
 
-            public void setYear(XMLGregorianCalendar year) {
+            public void setYear(final XMLGregorianCalendar year) {
                 this.year = year;
             }
         }

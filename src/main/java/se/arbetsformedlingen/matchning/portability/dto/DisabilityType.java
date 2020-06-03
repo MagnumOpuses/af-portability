@@ -1,17 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DisabilityType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DisabilityType {
 
     protected Boolean indicator;
@@ -21,7 +23,7 @@ public class DisabilityType {
         return indicator;
     }
 
-    public void setIndicator(Boolean indicator) {
+    public void setIndicator(final Boolean indicator) {
         this.indicator = indicator;
     }
 
@@ -32,7 +34,7 @@ public class DisabilityType {
         return this.summary;
     }
 
-    public void setSummary(List<DisabilitySummaryType> summary) {
+    public void setSummary(final List<DisabilitySummaryType> summary) {
         this.summary = summary;
     }
 }

@@ -1,17 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CandidateType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidateType {
 
     public IdentifierType documentId;
@@ -27,7 +28,7 @@ public class CandidateType {
         return documentId;
     }
 
-    public void setDocumentId(IdentifierType documentId) {
+    public void setDocumentId(final IdentifierType documentId) {
         this.documentId = documentId;
     }
 
@@ -38,7 +39,7 @@ public class CandidateType {
         return this.alternateIds;
     }
 
-    public void setAlternateIds(List<IdentifierType> alternateIds) {
+    public void setAlternateIds(final List<IdentifierType> alternateIds) {
         this.alternateIds = alternateIds;
     }
 
@@ -46,7 +47,7 @@ public class CandidateType {
         return language;
     }
 
-    public void setLanguage(LanguageCodeList language) {
+    public void setLanguage(final LanguageCodeList language) {
         this.language = language;
     }
 
@@ -54,7 +55,7 @@ public class CandidateType {
         return uri;
     }
 
-    public void setUri(String uri) {
+    public void setUri(final String uri) {
         this.uri = uri;
     }
 
@@ -62,7 +63,7 @@ public class CandidateType {
         return distributionGuidelines;
     }
 
-    public void setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
+    public void setDistributionGuidelines(final DistributionGuidelinesType distributionGuidelines) {
         this.distributionGuidelines = distributionGuidelines;
     }
 
@@ -70,7 +71,7 @@ public class CandidateType {
         return person;
     }
 
-    public void setPerson(CandidatePersonType person) {
+    public void setPerson(final CandidatePersonType person) {
         this.person = person;
     }
 
@@ -81,7 +82,7 @@ public class CandidateType {
         return this.profiles;
     }
 
-    public void setProfiles(List<CandidateProfileType> profiles) {
+    public void setProfiles(final List<CandidateProfileType> profiles) {
         this.profiles = profiles;
     }
 }

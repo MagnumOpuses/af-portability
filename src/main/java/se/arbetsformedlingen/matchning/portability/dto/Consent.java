@@ -1,11 +1,13 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Consent {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     public XMLGregorianCalendar consentTimestamp;

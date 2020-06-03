@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -8,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CompetencyDimensionType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CompetencyDimensionType {
 
     protected String dimensionType;
@@ -17,7 +20,7 @@ public class CompetencyDimensionType {
         return dimensionType;
     }
 
-    public void setDimensionType(String dimensionType) {
+    public void setDimensionType(final String dimensionType) {
         this.dimensionType = dimensionType;
     }
 
@@ -25,7 +28,7 @@ public class CompetencyDimensionType {
         return score;
     }
 
-    public void setScore(ScoreType score) {
+    public void setScore(final ScoreType score) {
         this.score = score;
     }
 }

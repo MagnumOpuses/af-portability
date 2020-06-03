@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ProcessActionType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProcessActionType {
 
     protected String name;
@@ -19,7 +22,7 @@ public class ProcessActionType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -27,7 +30,7 @@ public class ProcessActionType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -35,7 +38,7 @@ public class ProcessActionType {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 }

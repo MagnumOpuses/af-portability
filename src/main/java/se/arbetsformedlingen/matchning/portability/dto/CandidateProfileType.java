@@ -1,44 +1,47 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CandidateProfileType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidateProfileType {
 
     public String profileName;
     public LanguageCodeList languageCode;
     public List<EducationAttendanceType> education;
     public List<EmployerHistoryType> employment;
-    public List<MilitaryServiceType> militaryService;  
+    public List<MilitaryServiceType> militaryService;
     public List<LicenseType> licenses;
     public List<CertificationType> certifications;
-    public List<PatentType> patents;  
-    public List<PublicationType> publications;  
+    public List<PatentType> patents;
+    public List<PublicationType> publications;
     public List<PersonCompetencyType> qualifications;
     public List<OrganizationAffiliationType> affiliations;
-    public List<CertificationType> securityCredentials;  
-    public List<RefereeType> references;  
+    public List<CertificationType> securityCredentials;
+    public List<RefereeType> references;
     public List<AttachmentType> attachments;
     public IdentifierType profileId;
     public List<IdentifierType> alternateIds;
     public PersonAvailabilityType personAvailability;
     public String processingInformation;
-    public DistributionGuidelinesType distributionGuidelines;  
+    public DistributionGuidelinesType distributionGuidelines;
     public List<AssociatedPositionOpeningType> associatedPositionOpenings;
     public String objective;
     public String executiveSummary;
     public List<EmployerPreferenceType> employerPreferences;
     public List<PositionPreferenceType> positionPreferences;
-    public List<CandidateRelationshipType> candidateRelationships;  
-    public List<CandidateSourceType> candidateSources;  
-    public ProcessHistoryType applicationProcessHistory;  
+    public List<CandidateRelationshipType> candidateRelationships;
+    public List<CandidateSourceType> candidateSources;
+    public ProcessHistoryType applicationProcessHistory;
     public List<WorkLifeCycleType> workLifeCycles;
 
 
@@ -46,7 +49,7 @@ public class CandidateProfileType {
         return profileName;
     }
 
-    public void setProfileName(String profileName) {
+    public void setProfileName(final String profileName) {
         this.profileName = profileName;
     }
 
@@ -54,7 +57,7 @@ public class CandidateProfileType {
         return languageCode;
     }
 
-    public void setLanguageCode(LanguageCodeList languageCode) {
+    public void setLanguageCode(final LanguageCodeList languageCode) {
         this.languageCode = languageCode;
     }
 
@@ -65,7 +68,7 @@ public class CandidateProfileType {
         return this.education;
     }
 
-    public void setEducation(List<EducationAttendanceType> education) {
+    public void setEducation(final List<EducationAttendanceType> education) {
         this.education = education;
     }
 
@@ -76,7 +79,7 @@ public class CandidateProfileType {
         return this.employment;
     }
 
-    public void setEmployment(List<EmployerHistoryType> employment) {
+    public void setEmployment(final List<EmployerHistoryType> employment) {
         this.employment = employment;
     }
 
@@ -87,7 +90,7 @@ public class CandidateProfileType {
         return this.militaryService;
     }
 
-    public void setMilitaryService(List<MilitaryServiceType> militaryService) {
+    public void setMilitaryService(final List<MilitaryServiceType> militaryService) {
         this.militaryService = militaryService;
     }
 
@@ -98,7 +101,7 @@ public class CandidateProfileType {
         return this.licenses;
     }
 
-    public void setLicenses(List<LicenseType> licenses) {
+    public void setLicenses(final List<LicenseType> licenses) {
         this.licenses = licenses;
     }
 
@@ -109,7 +112,7 @@ public class CandidateProfileType {
         return this.certifications;
     }
 
-    public void setCertifications(List<CertificationType> certifications) {
+    public void setCertifications(final List<CertificationType> certifications) {
         this.certifications = certifications;
     }
 
@@ -120,7 +123,7 @@ public class CandidateProfileType {
         return this.patents;
     }
 
-    public void setPatents(List<PatentType> patents) {
+    public void setPatents(final List<PatentType> patents) {
         this.patents = patents;
     }
 
@@ -131,7 +134,7 @@ public class CandidateProfileType {
         return this.publications;
     }
 
-    public void setPublications(List<PublicationType> publications) {
+    public void setPublications(final List<PublicationType> publications) {
         this.publications = publications;
     }
 
@@ -142,7 +145,7 @@ public class CandidateProfileType {
         return this.qualifications;
     }
 
-    public void setQualifications(List<PersonCompetencyType> qualifications) {
+    public void setQualifications(final List<PersonCompetencyType> qualifications) {
         this.qualifications = qualifications;
     }
 
@@ -153,7 +156,7 @@ public class CandidateProfileType {
         return this.affiliations;
     }
 
-    public void setAffiliations(List<OrganizationAffiliationType> affiliations) {
+    public void setAffiliations(final List<OrganizationAffiliationType> affiliations) {
         this.affiliations = affiliations;
     }
 
@@ -164,7 +167,7 @@ public class CandidateProfileType {
         return this.securityCredentials;
     }
 
-    public void setSecurityCredentials(List<CertificationType> securityCredentials) {
+    public void setSecurityCredentials(final List<CertificationType> securityCredentials) {
         this.securityCredentials = securityCredentials;
     }
 
@@ -175,7 +178,7 @@ public class CandidateProfileType {
         return this.references;
     }
 
-    public void setReferences(List<RefereeType> references) {
+    public void setReferences(final List<RefereeType> references) {
         this.references = references;
     }
 
@@ -186,7 +189,7 @@ public class CandidateProfileType {
         return this.attachments;
     }
 
-    public void setAttachments(List<AttachmentType> attachments) {
+    public void setAttachments(final List<AttachmentType> attachments) {
         this.attachments = attachments;
     }
 
@@ -194,7 +197,7 @@ public class CandidateProfileType {
         return profileId;
     }
 
-    public void setProfileId(IdentifierType profileId) {
+    public void setProfileId(final IdentifierType profileId) {
         this.profileId = profileId;
     }
 
@@ -205,7 +208,7 @@ public class CandidateProfileType {
         return this.alternateIds;
     }
 
-    public void setAlternateIds(List<IdentifierType> alternateIds) {
+    public void setAlternateIds(final List<IdentifierType> alternateIds) {
         this.alternateIds = alternateIds;
     }
 
@@ -213,7 +216,7 @@ public class CandidateProfileType {
         return personAvailability;
     }
 
-    public void setPersonAvailability(PersonAvailabilityType personAvailability) {
+    public void setPersonAvailability(final PersonAvailabilityType personAvailability) {
         this.personAvailability = personAvailability;
     }
 
@@ -221,7 +224,7 @@ public class CandidateProfileType {
         return processingInformation;
     }
 
-    public void setProcessingInformation(String processingInformation) {
+    public void setProcessingInformation(final String processingInformation) {
         this.processingInformation = processingInformation;
     }
 
@@ -229,7 +232,7 @@ public class CandidateProfileType {
         return distributionGuidelines;
     }
 
-    public void setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
+    public void setDistributionGuidelines(final DistributionGuidelinesType distributionGuidelines) {
         this.distributionGuidelines = distributionGuidelines;
     }
 
@@ -240,7 +243,7 @@ public class CandidateProfileType {
         return this.associatedPositionOpenings;
     }
 
-    public void setAssociatedPositionOpenings(List<AssociatedPositionOpeningType> associatedPositionOpenings) {
+    public void setAssociatedPositionOpenings(final List<AssociatedPositionOpeningType> associatedPositionOpenings) {
         this.associatedPositionOpenings = associatedPositionOpenings;
     }
 
@@ -248,7 +251,7 @@ public class CandidateProfileType {
         return objective;
     }
 
-    public void setObjective(String objective) {
+    public void setObjective(final String objective) {
         this.objective = objective;
     }
 
@@ -256,7 +259,7 @@ public class CandidateProfileType {
         return executiveSummary;
     }
 
-    public void setExecutiveSummary(String executiveSummary) {
+    public void setExecutiveSummary(final String executiveSummary) {
         this.executiveSummary = executiveSummary;
     }
 
@@ -267,18 +270,18 @@ public class CandidateProfileType {
         return this.employerPreferences;
     }
 
-    public void setEmployerPreferences(List<EmployerPreferenceType> employerPreferences) {
+    public void setEmployerPreferences(final List<EmployerPreferenceType> employerPreferences) {
         this.employerPreferences = employerPreferences;
     }
 
     public List<PositionPreferenceType> getPositionPreferences() {
         if (positionPreferences == null) {
-        positionPreferences = new ArrayList<PositionPreferenceType>();
-    }
+            positionPreferences = new ArrayList<PositionPreferenceType>();
+        }
         return this.positionPreferences;
     }
 
-    public void setPositionPreferences(List<PositionPreferenceType> positionPreferences) {
+    public void setPositionPreferences(final List<PositionPreferenceType> positionPreferences) {
         this.positionPreferences = positionPreferences;
     }
 
@@ -289,7 +292,7 @@ public class CandidateProfileType {
         return this.candidateRelationships;
     }
 
-    public void setCandidateRelationships(List<CandidateRelationshipType> candidateRelationships) {
+    public void setCandidateRelationships(final List<CandidateRelationshipType> candidateRelationships) {
         this.candidateRelationships = candidateRelationships;
     }
 
@@ -300,7 +303,7 @@ public class CandidateProfileType {
         return this.candidateSources;
     }
 
-    public void setCandidateSources(List<CandidateSourceType> candidateSources) {
+    public void setCandidateSources(final List<CandidateSourceType> candidateSources) {
         this.candidateSources = candidateSources;
     }
 
@@ -308,18 +311,18 @@ public class CandidateProfileType {
         return applicationProcessHistory;
     }
 
-    public void setApplicationProcessHistory(ProcessHistoryType applicationProcessHistory) {
+    public void setApplicationProcessHistory(final ProcessHistoryType applicationProcessHistory) {
         this.applicationProcessHistory = applicationProcessHistory;
     }
 
     public List<WorkLifeCycleType> getWorkLifeCycles() {
         if (workLifeCycles == null) {
-            workLifeCycles = new ArrayList<WorkLifeCycleType>(  );
+            workLifeCycles = new ArrayList<WorkLifeCycleType>();
         }
         return this.workLifeCycles;
     }
 
-    public void setWorkLifeCycles(List<WorkLifeCycleType> workLifeCycles) {
+    public void setWorkLifeCycles(final List<WorkLifeCycleType> workLifeCycles) {
         this.workLifeCycles = workLifeCycles;
     }
 }

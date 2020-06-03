@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -8,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PersonNameType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonNameType {
 
     public LanguageCodeList language;
@@ -31,7 +34,7 @@ public class PersonNameType {
         return language;
     }
 
-    public void setLanguage(LanguageCodeList language) {
+    public void setLanguage(final LanguageCodeList language) {
         this.language = language;
     }
 
@@ -39,7 +42,7 @@ public class PersonNameType {
         return formattedName;
     }
 
-    public void setFormattedName(String formattedName) {
+    public void setFormattedName(final String formattedName) {
         this.formattedName = formattedName;
     }
 
@@ -47,7 +50,7 @@ public class PersonNameType {
         return legal;
     }
 
-    public void setLegal(String legal) {
+    public void setLegal(final String legal) {
         this.legal = legal;
     }
 
@@ -55,7 +58,7 @@ public class PersonNameType {
         return given;
     }
 
-    public void setGiven(String given) {
+    public void setGiven(final String given) {
         this.given = given;
     }
 
@@ -63,7 +66,7 @@ public class PersonNameType {
         return preferred;
     }
 
-    public void setPreferred(String preferred) {
+    public void setPreferred(final String preferred) {
         this.preferred = preferred;
     }
 
@@ -71,7 +74,7 @@ public class PersonNameType {
         return middle;
     }
 
-    public void setMiddle(String middle) {
+    public void setMiddle(final String middle) {
         this.middle = middle;
     }
 
@@ -79,7 +82,7 @@ public class PersonNameType {
         return family;
     }
 
-    public void setFamily(String family) {
+    public void setFamily(final String family) {
         this.family = family;
     }
 
@@ -87,7 +90,7 @@ public class PersonNameType {
         return familyPrefix;
     }
 
-    public void setFamilyPrefix(String familyPrefix) {
+    public void setFamilyPrefix(final String familyPrefix) {
         this.familyPrefix = familyPrefix;
     }
 
@@ -95,7 +98,7 @@ public class PersonNameType {
         return alias;
     }
 
-    public void setAlias(String alias) {
+    public void setAlias(final String alias) {
         this.alias = alias;
     }
 
@@ -103,7 +106,7 @@ public class PersonNameType {
         return formerFamily;
     }
 
-    public void setFormerFamily(String formerFamily) {
+    public void setFormerFamily(final String formerFamily) {
         this.formerFamily = formerFamily;
     }
 
@@ -111,7 +114,7 @@ public class PersonNameType {
         return formerFamilyPrefix;
     }
 
-    public void setFormerFamilyPrefix(String formerFamilyPrefix) {
+    public void setFormerFamilyPrefix(final String formerFamilyPrefix) {
         this.formerFamilyPrefix = formerFamilyPrefix;
     }
 
@@ -119,7 +122,7 @@ public class PersonNameType {
         return preferredSalutationCode;
     }
 
-    public void setPreferredSalutationCode(String preferredSalutationCode) {
+    public void setPreferredSalutationCode(final String preferredSalutationCode) {
         this.preferredSalutationCode = preferredSalutationCode;
     }
 
@@ -127,7 +130,7 @@ public class PersonNameType {
         return generationAffixCode;
     }
 
-    public void setGenerationAffixCode(String generationAffixCode) {
+    public void setGenerationAffixCode(final String generationAffixCode) {
         this.generationAffixCode = generationAffixCode;
     }
 
@@ -135,7 +138,7 @@ public class PersonNameType {
         return qualificationAffixCode;
     }
 
-    public void setQualificationAffixCode(String qualificationAffixCode) {
+    public void setQualificationAffixCode(final String qualificationAffixCode) {
         this.qualificationAffixCode = qualificationAffixCode;
     }
 
@@ -143,7 +146,7 @@ public class PersonNameType {
         return titleAffixCode;
     }
 
-    public void setTitleAffixCode(String titleAffixCode) {
+    public void setTitleAffixCode(final String titleAffixCode) {
         this.titleAffixCode = titleAffixCode;
     }
 
@@ -151,7 +154,7 @@ public class PersonNameType {
         return initials;
     }
 
-    public void setInitials(String initials) {
+    public void setInitials(final String initials) {
         this.initials = initials;
     }
 }

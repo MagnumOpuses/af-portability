@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ScoreType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ScoreType {
 
     protected List<ScoreNumericType> scoresNumeric;
@@ -25,6 +28,10 @@ public class ScoreType {
         return this.scoresNumeric;
     }
 
+    public void setScoresNumeric(final List<ScoreNumericType> scoresNumeric) {
+        this.scoresNumeric = scoresNumeric;
+    }
+
     public List<ScoreTextType> getScoresText() {
         if (scoresText == null) {
             scoresText = new ArrayList<ScoreTextType>();
@@ -32,11 +39,7 @@ public class ScoreType {
         return this.scoresText;
     }
 
-    public void setScoresNumeric(List<ScoreNumericType> scoresNumeric) {
-        this.scoresNumeric = scoresNumeric;
-    }
-
-    public void setScoresText(List<ScoreTextType> scoresText) {
+    public void setScoresText(final List<ScoreTextType> scoresText) {
         this.scoresText = scoresText;
     }
 
@@ -44,7 +47,7 @@ public class ScoreType {
         return validFrom;
     }
 
-    public void setValidFrom(XMLGregorianCalendar validFrom) {
+    public void setValidFrom(final XMLGregorianCalendar validFrom) {
         this.validFrom = validFrom;
     }
 
@@ -52,7 +55,7 @@ public class ScoreType {
         return validTo;
     }
 
-    public void setValidTo(XMLGregorianCalendar validTo) {
+    public void setValidTo(final XMLGregorianCalendar validTo) {
         this.validTo = validTo;
     }
 }

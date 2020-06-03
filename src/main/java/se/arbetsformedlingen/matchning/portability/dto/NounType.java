@@ -1,18 +1,21 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NounType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class NounType {
 
     protected LanguageCodeList language;
@@ -24,7 +27,7 @@ public class NounType {
         return language;
     }
 
-    public void setLanguage(LanguageCodeList language) {
+    public void setLanguage(final LanguageCodeList language) {
         this.language = language;
     }
 
@@ -32,7 +35,7 @@ public class NounType {
         return dataProtectionPolicy;
     }
 
-    public void setDataProtectionPolicy(DataProtectionPolicy dataProtectionPolicy) {
+    public void setDataProtectionPolicy(final DataProtectionPolicy dataProtectionPolicy) {
         this.dataProtectionPolicy = dataProtectionPolicy;
     }
 
@@ -40,7 +43,7 @@ public class NounType {
         return documentId;
     }
 
-    public void setDocumentId(IdentifierType documentId) {
+    public void setDocumentId(final IdentifierType documentId) {
         this.documentId = documentId;
     }
 
@@ -51,7 +54,7 @@ public class NounType {
         return this.alternateIds;
     }
 
-    public void setAlternateIds(List<IdentifierType> alternateIds) {
+    public void setAlternateIds(final List<IdentifierType> alternateIds) {
         this.alternateIds = alternateIds;
     }
 
@@ -69,7 +72,7 @@ public class NounType {
             return retentionDate;
         }
 
-        public void setRetentionDate(XMLGregorianCalendar retentionDate) {
+        public void setRetentionDate(final XMLGregorianCalendar retentionDate) {
             this.retentionDate = retentionDate;
         }
 
@@ -77,7 +80,7 @@ public class NounType {
             return retentionDays;
         }
 
-        public void setRetentionDays(BigInteger retentionDays) {
+        public void setRetentionDays(final BigInteger retentionDays) {
             this.retentionDays = retentionDays;
         }
 
@@ -85,13 +88,13 @@ public class NounType {
             return geoRestrictions;
         }
 
-        public void setGeoRestrictions(GeoRestrictions geoRestrictions) {
+        public void setGeoRestrictions(final GeoRestrictions geoRestrictions) {
             this.geoRestrictions = geoRestrictions;
         }
 
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "item"
+                "item"
         })
         public static class GeoRestrictions {
 
@@ -117,7 +120,7 @@ public class NounType {
                     return country;
                 }
 
-                public void setCountry(CountryCodeList country) {
+                public void setCountry(final CountryCodeList country) {
                     this.country = country;
                 }
 
@@ -125,7 +128,7 @@ public class NounType {
                     return policy;
                 }
 
-                public void setPolicy(SecurityPermissionType policy) {
+                public void setPolicy(final SecurityPermissionType policy) {
                     this.policy = policy;
                 }
             }

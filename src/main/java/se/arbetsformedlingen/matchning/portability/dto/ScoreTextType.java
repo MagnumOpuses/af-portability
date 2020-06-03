@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,6 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ScoreTextType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ScoreTextType {
 
     @XmlElement(required = true)
@@ -22,7 +25,7 @@ public class ScoreTextType {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(final String value) {
         this.value = value;
     }
 
@@ -30,7 +33,7 @@ public class ScoreTextType {
         return scoreTextCode;
     }
 
-    public void setScoreTextCode(String scoreTextCode) {
+    public void setScoreTextCode(final String scoreTextCode) {
         this.scoreTextCode = scoreTextCode;
     }
 
@@ -38,7 +41,7 @@ public class ScoreTextType {
         return minimum;
     }
 
-    public void setMinimum(String minimum) {
+    public void setMinimum(final String minimum) {
         this.minimum = minimum;
     }
 
@@ -46,7 +49,7 @@ public class ScoreTextType {
         return maximum;
     }
 
-    public void setMaximum(String maximum) {
+    public void setMaximum(final String maximum) {
         this.maximum = maximum;
     }
 }

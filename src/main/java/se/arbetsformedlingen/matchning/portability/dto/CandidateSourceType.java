@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CandidateSourceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidateSourceType {
 
     protected IdentifierType id;
@@ -22,7 +25,7 @@ public class CandidateSourceType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -30,7 +33,7 @@ public class CandidateSourceType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -38,7 +41,7 @@ public class CandidateSourceType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -46,7 +49,7 @@ public class CandidateSourceType {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(final String type) {
         this.type = type;
     }
 
@@ -54,7 +57,7 @@ public class CandidateSourceType {
         return order;
     }
 
-    public void setOrder(BigDecimal order) {
+    public void setOrder(final BigDecimal order) {
         this.order = order;
     }
 }

@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EducationDegreeType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EducationDegreeType {
 
     protected IdentifierType id;
@@ -26,7 +29,7 @@ public class EducationDegreeType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -34,7 +37,7 @@ public class EducationDegreeType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -45,7 +48,7 @@ public class EducationDegreeType {
         return this.codes;
     }
 
-    public void setCodes(List<String> codes) {
+    public void setCodes(final List<String> codes) {
         this.codes = codes;
     }
 
@@ -53,7 +56,7 @@ public class EducationDegreeType {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(final String date) {
         this.date = date;
     }
 
@@ -64,7 +67,7 @@ public class EducationDegreeType {
         return this.specializations;
     }
 
-    public void setSpecializations(List<EducationSpecializationType> specializations) {
+    public void setSpecializations(final List<EducationSpecializationType> specializations) {
         this.specializations = specializations;
     }
 
@@ -72,7 +75,7 @@ public class EducationDegreeType {
         return score;
     }
 
-    public void setScore(ScoreType score) {
+    public void setScore(final ScoreType score) {
         this.score = score;
     }
 
@@ -83,7 +86,7 @@ public class EducationDegreeType {
         return this.academicHonors;
     }
 
-    public void setAcademicHonors(List<String> academicHonors) {
+    public void setAcademicHonors(final List<String> academicHonors) {
         this.academicHonors = academicHonors;
     }
 
@@ -91,7 +94,7 @@ public class EducationDegreeType {
         return degreeGrantedStatus;
     }
 
-    public void setDegreeGrantedStatus(EducationDegreeGrantedStatusCodeList degreeGrantedStatus) {
+    public void setDegreeGrantedStatus(final EducationDegreeGrantedStatusCodeList degreeGrantedStatus) {
         this.degreeGrantedStatus = degreeGrantedStatus;
     }
 
@@ -99,7 +102,7 @@ public class EducationDegreeType {
         return iscedEducationLevelCode;
     }
 
-    public void setIscedEducationLevelCode(String iscedEducationLevelCode) {
+    public void setIscedEducationLevelCode(final String iscedEducationLevelCode) {
         this.iscedEducationLevelCode = iscedEducationLevelCode;
     }
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -8,12 +10,13 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PeriodType", propOrder = {
-    "formattedDateTime",
-    "dateTimePeriod",
-    "datePeriod",
-    "yearMonthPeriod",
-    "yearPeriod"
+        "formattedDateTime",
+        "dateTimePeriod",
+        "datePeriod",
+        "yearMonthPeriod",
+        "yearPeriod"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PeriodType {
 
     @XmlElement(name = "FormattedDateTime")
@@ -31,7 +34,7 @@ public class PeriodType {
         return formattedDateTime;
     }
 
-    public void setFormattedDateTime(String formattedDateTime) {
+    public void setFormattedDateTime(final String formattedDateTime) {
         this.formattedDateTime = formattedDateTime;
     }
 
@@ -39,7 +42,7 @@ public class PeriodType {
         return dateTimePeriod;
     }
 
-    public void setDateTimePeriod(DateTimePeriodType dateTimePeriod) {
+    public void setDateTimePeriod(final DateTimePeriodType dateTimePeriod) {
         this.dateTimePeriod = dateTimePeriod;
     }
 
@@ -47,7 +50,7 @@ public class PeriodType {
         return datePeriod;
     }
 
-    public void setDatePeriod(DatePeriodType datePeriod) {
+    public void setDatePeriod(final DatePeriodType datePeriod) {
         this.datePeriod = datePeriod;
     }
 
@@ -55,7 +58,7 @@ public class PeriodType {
         return yearMonthPeriod;
     }
 
-    public void setYearMonthPeriod(YearMonthPeriodType yearMonthPeriod) {
+    public void setYearMonthPeriod(final YearMonthPeriodType yearMonthPeriod) {
         this.yearMonthPeriod = yearMonthPeriod;
     }
 
@@ -63,7 +66,7 @@ public class PeriodType {
         return yearPeriod;
     }
 
-    public void setYearPeriod(YearPeriodType yearPeriod) {
+    public void setYearPeriod(final YearPeriodType yearPeriod) {
         this.yearPeriod = yearPeriod;
     }
 }

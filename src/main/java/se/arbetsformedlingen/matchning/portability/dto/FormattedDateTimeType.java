@@ -1,5 +1,8 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class FormattedDateTimeType {
     protected String start;
     protected String end;
@@ -8,7 +11,7 @@ public class FormattedDateTimeType {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(final String start) {
         this.start = start;
     }
 
@@ -16,7 +19,7 @@ public class FormattedDateTimeType {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(final String end) {
         this.end = end;
     }
 }

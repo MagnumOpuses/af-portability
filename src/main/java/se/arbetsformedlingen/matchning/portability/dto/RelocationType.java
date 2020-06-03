@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -10,6 +12,7 @@ import java.util.List;
 @XmlType(name = "RelocationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RelocationType {
 
     protected Boolean willingToRelocateIndicator;
@@ -19,7 +22,7 @@ public class RelocationType {
         return willingToRelocateIndicator;
     }
 
-    public void setWillingToRelocateIndicator(Boolean willingToRelocateIndicator) {
+    public void setWillingToRelocateIndicator(final Boolean willingToRelocateIndicator) {
         this.willingToRelocateIndicator = willingToRelocateIndicator;
     }
 
@@ -27,7 +30,7 @@ public class RelocationType {
         return descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

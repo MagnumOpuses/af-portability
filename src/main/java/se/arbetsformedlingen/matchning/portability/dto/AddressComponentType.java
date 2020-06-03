@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AddressComponentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AddressComponentType {
 
     @XmlElement(required = true)
@@ -21,7 +24,7 @@ public class AddressComponentType {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(final String type) {
         this.type = type;
     }
 
@@ -29,7 +32,7 @@ public class AddressComponentType {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(final String value) {
         this.value = value;
     }
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -10,6 +12,7 @@ import java.util.List;
 @XmlType(name = "AttachmentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AttachmentType {
 
     protected BinaryObjectType content;
@@ -21,7 +24,7 @@ public class AttachmentType {
         return content;
     }
 
-    public void setContent(BinaryObjectType content) {
+    public void setContent(final BinaryObjectType content) {
         this.content = content;
     }
 
@@ -29,7 +32,7 @@ public class AttachmentType {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(final String url) {
         this.url = url;
     }
 
@@ -37,7 +40,7 @@ public class AttachmentType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -48,7 +51,7 @@ public class AttachmentType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions){
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

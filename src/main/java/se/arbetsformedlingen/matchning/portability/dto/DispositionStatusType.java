@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -8,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DispositionStatusType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DispositionStatusType {
 
     protected String name;
@@ -21,7 +24,7 @@ public class DispositionStatusType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -29,7 +32,7 @@ public class DispositionStatusType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -37,7 +40,7 @@ public class DispositionStatusType {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 
@@ -45,7 +48,7 @@ public class DispositionStatusType {
         return reasonCode;
     }
 
-    public void setReasonCode(String reasonCode) {
+    public void setReasonCode(final String reasonCode) {
         this.reasonCode = reasonCode;
     }
 
@@ -53,7 +56,7 @@ public class DispositionStatusType {
         return reasonDescription;
     }
 
-    public void setReasonDescription(String reasonDescription) {
+    public void setReasonDescription(final String reasonDescription) {
         this.reasonDescription = reasonDescription;
     }
 
@@ -61,7 +64,7 @@ public class DispositionStatusType {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(final String date) {
         this.date = date;
     }
 }

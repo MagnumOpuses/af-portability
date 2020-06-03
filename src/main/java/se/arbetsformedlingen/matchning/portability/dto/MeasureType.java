@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MeasureType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MeasureType {
 
     @XmlElement(required = true)
@@ -20,7 +23,7 @@ public class MeasureType {
         return value;
     }
 
-    public void setValue(BigDecimal value) {
+    public void setValue(final BigDecimal value) {
         this.value = value;
     }
 
@@ -28,7 +31,7 @@ public class MeasureType {
         return unitCode;
     }
 
-    public void setUnitCode(UnitCodeList unitCode) {
+    public void setUnitCode(final UnitCodeList unitCode) {
         this.unitCode = unitCode;
     }
 }

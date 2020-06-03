@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CompetencyEvidenceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CompetencyEvidenceType {
 
     protected List<IdentifierType> ids;
@@ -27,7 +30,7 @@ public class CompetencyEvidenceType {
         return ids;
     }
 
-    public void setIds(List<IdentifierType> ids) {
+    public void setIds(final List<IdentifierType> ids) {
         this.ids = ids;
     }
 
@@ -35,7 +38,7 @@ public class CompetencyEvidenceType {
         return evidenceTypeCode;
     }
 
-    public void setEvidenceTypeCode(String evidenceTypeCode) {
+    public void setEvidenceTypeCode(final String evidenceTypeCode) {
         this.evidenceTypeCode = evidenceTypeCode;
     }
 
@@ -43,7 +46,7 @@ public class CompetencyEvidenceType {
         return evidenceName;
     }
 
-    public void setEvidenceName(String evidenceName) {
+    public void setEvidenceName(final String evidenceName) {
         this.evidenceName = evidenceName;
     }
 
@@ -54,7 +57,7 @@ public class CompetencyEvidenceType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -62,7 +65,7 @@ public class CompetencyEvidenceType {
         return evidenceRequirementsId;
     }
 
-    public void setEvidenceRequirementsId(IdentifierType evidenceRequirementsId) {
+    public void setEvidenceRequirementsId(final IdentifierType evidenceRequirementsId) {
         this.evidenceRequirementsId = evidenceRequirementsId;
     }
 
@@ -73,7 +76,7 @@ public class CompetencyEvidenceType {
         return this.scores;
     }
 
-    public void setScores(List<ScoreType> scores) {
+    public void setScores(final List<ScoreType> scores) {
         this.scores = scores;
     }
 
@@ -81,7 +84,7 @@ public class CompetencyEvidenceType {
         return effectivePeriod;
     }
 
-    public void setEffectivePeriod(OpenEndPeriodType effectivePeriod) {
+    public void setEffectivePeriod(final OpenEndPeriodType effectivePeriod) {
         this.effectivePeriod = effectivePeriod;
     }
 
@@ -89,7 +92,7 @@ public class CompetencyEvidenceType {
         return verificationDate;
     }
 
-    public void setVerificationDate(String verificationDate) {
+    public void setVerificationDate(final String verificationDate) {
         this.verificationDate = verificationDate;
     }
 
@@ -97,7 +100,7 @@ public class CompetencyEvidenceType {
         return verificationSourceName;
     }
 
-    public void setVerificationSourceName(String verificationSourceName) {
+    public void setVerificationSourceName(final String verificationSourceName) {
         this.verificationSourceName = verificationSourceName;
     }
 
@@ -105,7 +108,7 @@ public class CompetencyEvidenceType {
         return attachmentReference;
     }
 
-    public void setAttachmentReference(AttachmentReferenceType attachmentReference) {
+    public void setAttachmentReference(final AttachmentReferenceType attachmentReference) {
         this.attachmentReference = attachmentReference;
     }
 }

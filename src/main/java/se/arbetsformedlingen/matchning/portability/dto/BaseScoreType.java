@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BaseScoreType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BaseScoreType {
 
     protected List<ScoreNumericType> scoresNumeric;
@@ -23,7 +26,7 @@ public class BaseScoreType {
         return this.scoresNumeric;
     }
 
-    public void setScoresNumeric(List<ScoreNumericType> scoresNumeric){
+    public void setScoresNumeric(final List<ScoreNumericType> scoresNumeric) {
         this.scoresNumeric = scoresNumeric;
     }
 
@@ -34,7 +37,7 @@ public class BaseScoreType {
         return this.scoresText;
     }
 
-    public void setScoresText(List<ScoreTextType> scoresText){
+    public void setScoresText(final List<ScoreTextType> scoresText) {
         this.scoresText = scoresText;
     }
 }

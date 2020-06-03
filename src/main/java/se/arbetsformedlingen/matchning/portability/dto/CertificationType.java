@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CertificationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CertificationType {
 
     public IdentifierType id;
@@ -29,7 +32,7 @@ public class CertificationType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -37,7 +40,7 @@ public class CertificationType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -45,7 +48,7 @@ public class CertificationType {
         return type;
     }
 
-    public void setType(EntityType type) {
+    public void setType(final EntityType type) {
         this.type = type;
     }
 
@@ -53,7 +56,7 @@ public class CertificationType {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(final String status) {
         this.status = status;
     }
 
@@ -61,7 +64,7 @@ public class CertificationType {
         return effectiveTimePeriod;
     }
 
-    public void setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
+    public void setEffectiveTimePeriod(final EffectiveTimePeriodType effectiveTimePeriod) {
         this.effectiveTimePeriod = effectiveTimePeriod;
     }
 
@@ -69,7 +72,7 @@ public class CertificationType {
         return issued;
     }
 
-    public void setIssued(String issued) {
+    public void setIssued(final String issued) {
         this.issued = issued;
     }
 
@@ -77,7 +80,7 @@ public class CertificationType {
         return firstIssued;
     }
 
-    public void setFirstIssued(String firstIssued) {
+    public void setFirstIssued(final String firstIssued) {
         this.firstIssued = firstIssued;
     }
 
@@ -85,7 +88,7 @@ public class CertificationType {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+    public void setIssuingAuthority(final OrganizationType issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -93,7 +96,7 @@ public class CertificationType {
         return attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -104,7 +107,7 @@ public class CertificationType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

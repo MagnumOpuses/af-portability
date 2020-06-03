@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @XmlType(name = "CandidatePersonType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidatePersonType {
 
     public IdentifierType legalId;

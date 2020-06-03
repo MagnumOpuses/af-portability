@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -11,6 +13,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "LegalDocumentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LegalDocumentType {
 
     @XmlElement(required = true)
@@ -30,7 +33,7 @@ public class LegalDocumentType {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(final String value) {
         this.value = value;
     }
 
@@ -38,7 +41,7 @@ public class LegalDocumentType {
         return schemeId;
     }
 
-    public void setSchemeId(String schemeId) {
+    public void setSchemeId(final String schemeId) {
         this.schemeId = schemeId;
     }
 
@@ -46,7 +49,7 @@ public class LegalDocumentType {
         return schemeVersionId;
     }
 
-    public void setSchemeVersionId(String schemeVersionId) {
+    public void setSchemeVersionId(final String schemeVersionId) {
         this.schemeVersionId = schemeVersionId;
     }
 
@@ -54,7 +57,7 @@ public class LegalDocumentType {
         return schemeAgencyId;
     }
 
-    public void setSchemeAgencyId(String schemeAgencyId) {
+    public void setSchemeAgencyId(final String schemeAgencyId) {
         this.schemeAgencyId = schemeAgencyId;
     }
 
@@ -62,7 +65,7 @@ public class LegalDocumentType {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 
@@ -70,7 +73,7 @@ public class LegalDocumentType {
         return schemeLink;
     }
 
-    public void setSchemeLink(String schemeLink) {
+    public void setSchemeLink(final String schemeLink) {
         this.schemeLink = schemeLink;
     }
 
@@ -78,7 +81,7 @@ public class LegalDocumentType {
         return agencyUri;
     }
 
-    public void setAgencyUri(String agencyUri) {
+    public void setAgencyUri(final String agencyUri) {
         this.agencyUri = agencyUri;
     }
 
@@ -86,7 +89,7 @@ public class LegalDocumentType {
         return documentType;
     }
 
-    public void setDocumentType(String documentType) {
+    public void setDocumentType(final String documentType) {
         this.documentType = documentType;
     }
 
@@ -94,7 +97,7 @@ public class LegalDocumentType {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(String issuingAuthority) {
+    public void setIssuingAuthority(final String issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -102,7 +105,7 @@ public class LegalDocumentType {
         return issueDate;
     }
 
-    public void setIssueDate(XMLGregorianCalendar issueDate) {
+    public void setIssueDate(final XMLGregorianCalendar issueDate) {
         this.issueDate = issueDate;
     }
 
@@ -110,7 +113,7 @@ public class LegalDocumentType {
         return expirationDate;
     }
 
-    public void setExpirationDate(XMLGregorianCalendar expirationDate) {
+    public void setExpirationDate(final XMLGregorianCalendar expirationDate) {
         this.expirationDate = expirationDate;
     }
 }

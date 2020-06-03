@@ -8,6 +8,7 @@
 
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -23,6 +24,7 @@ import java.util.List;
 @XmlType(name = "LicenseType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LicenseType {
 
     public IdentifierType id;
@@ -30,7 +32,9 @@ public class LicenseType {
     public EntityType type;
     public String status;
     public EffectiveTimePeriodType effectiveTimePeriod;
-    public String issued;
+    @JsonSerialize(using = DateType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateType.DateTypeDeserializer.class)
+    public DateType issued;
     public String firstIssued;
     public OrganizationType issuingAuthority;
     public List<AttachmentReferenceType> attachmentReferences;
@@ -79,11 +83,11 @@ public class LicenseType {
         this.effectiveTimePeriod = effectiveTimePeriod;
     }
 
-    public String getIssued() {
+    public DateType getIssued() {
         return issued;
     }
 
-    public void setIssued(final String issued) {
+    public void setIssued(final DateType issued) {
         this.issued = issued;
     }
 

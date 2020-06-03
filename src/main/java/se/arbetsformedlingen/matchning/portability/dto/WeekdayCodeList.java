@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.xml.bind.annotation.XmlEnum;
@@ -9,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "WeekdayCodeList")
 @XmlEnum
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public enum WeekdayCodeList {
 
     @XmlEnumValue("Monday")

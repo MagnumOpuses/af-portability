@@ -1,8 +1,11 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TransferObject {
 
     private String documentType;
@@ -14,7 +17,7 @@ public class TransferObject {
         return documentType;
     }
 
-    public void setDocumentType(String documentType) {
+    public void setDocumentType(final String documentType) {
         this.documentType = documentType;
     }
 
@@ -22,7 +25,7 @@ public class TransferObject {
         return dataStructureLink;
     }
 
-    public void setDataStructureLink(String dataStructureLink) {
+    public void setDataStructureLink(final String dataStructureLink) {
         this.dataStructureLink = dataStructureLink;
     }
 
@@ -33,7 +36,7 @@ public class TransferObject {
         return this.data;
     }
 
-    public void setData(List<CandidateType> data) {
+    public void setData(final List<CandidateType> data) {
         this.data = data;
     }
 }

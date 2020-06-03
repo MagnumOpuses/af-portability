@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SpecifiedCompetencyType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SpecifiedCompetencyType {
 
     protected List<IdentifierType> competencyIds;
@@ -24,7 +27,7 @@ public class SpecifiedCompetencyType {
         return this.competencyIds;
     }
 
-    public void setCompetencyIds(List<IdentifierType> competencyIds) {
+    public void setCompetencyIds(final List<IdentifierType> competencyIds) {
         this.competencyIds = competencyIds;
     }
 
@@ -32,7 +35,7 @@ public class SpecifiedCompetencyType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -40,7 +43,7 @@ public class SpecifiedCompetencyType {
         return proficiencyLevel;
     }
 
-    public void setProficiencyLevel(BaseScoreType proficiencyLevel) {
+    public void setProficiencyLevel(final BaseScoreType proficiencyLevel) {
         this.proficiencyLevel = proficiencyLevel;
     }
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "WorkLifeCycleType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class WorkLifeCycleType {
 
     protected ContractType contract;
@@ -21,7 +24,7 @@ public class WorkLifeCycleType {
         return contract;
     }
 
-    public void setContract(ContractType contract) {
+    public void setContract(final ContractType contract) {
         this.contract = contract;
     }
 
@@ -29,7 +32,7 @@ public class WorkLifeCycleType {
         return hire;
     }
 
-    public void setHire(HireType hire) {
+    public void setHire(final HireType hire) {
         this.hire = hire;
     }
 
@@ -37,7 +40,7 @@ public class WorkLifeCycleType {
         return termination;
     }
 
-    public void setTermination(TerminationType termination) {
+    public void setTermination(final TerminationType termination) {
         this.termination = termination;
     }
 
@@ -45,7 +48,7 @@ public class WorkLifeCycleType {
         return leaveOfAbsence;
     }
 
-    public void setLeaveOfAbsence(LeaveType leaveOfAbsence) {
+    public void setLeaveOfAbsence(final LeaveType leaveOfAbsence) {
         this.leaveOfAbsence = leaveOfAbsence;
     }
 
@@ -53,7 +56,7 @@ public class WorkLifeCycleType {
         return recruitingAndStaffing;
     }
 
-    public void setRecruitingAndStaffing(RecruitingAndStaffingType recruitingAndStaffing) {
+    public void setRecruitingAndStaffing(final RecruitingAndStaffingType recruitingAndStaffing) {
         this.recruitingAndStaffing = recruitingAndStaffing;
     }
 }

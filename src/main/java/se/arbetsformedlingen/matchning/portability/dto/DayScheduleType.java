@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "DayScheduleType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DayScheduleType {
 
     protected IdentifierType id;
@@ -25,7 +28,7 @@ public class DayScheduleType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -33,7 +36,7 @@ public class DayScheduleType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -41,7 +44,7 @@ public class DayScheduleType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -49,7 +52,7 @@ public class DayScheduleType {
         return weekday;
     }
 
-    public void setWeekday(WeekdayCodeList weekday) {
+    public void setWeekday(final WeekdayCodeList weekday) {
         this.weekday = weekday;
     }
 
@@ -57,7 +60,7 @@ public class DayScheduleType {
         return date;
     }
 
-    public void setDate(XMLGregorianCalendar date) {
+    public void setDate(final XMLGregorianCalendar date) {
         this.date = date;
     }
 
@@ -65,7 +68,7 @@ public class DayScheduleType {
         return startTime;
     }
 
-    public void setStartTime(XMLGregorianCalendar startTime) {
+    public void setStartTime(final XMLGregorianCalendar startTime) {
         this.startTime = startTime;
     }
 
@@ -73,7 +76,7 @@ public class DayScheduleType {
         return endTime;
     }
 
-    public void setEndTime(XMLGregorianCalendar endTime) {
+    public void setEndTime(final XMLGregorianCalendar endTime) {
         this.endTime = endTime;
     }
 
@@ -81,7 +84,7 @@ public class DayScheduleType {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(final String hours) {
         this.hours = hours;
     }
 
@@ -89,7 +92,7 @@ public class DayScheduleType {
         return shift;
     }
 
-    public void setShift(EntityType shift) {
+    public void setShift(final EntityType shift) {
         this.shift = shift;
     }
 }

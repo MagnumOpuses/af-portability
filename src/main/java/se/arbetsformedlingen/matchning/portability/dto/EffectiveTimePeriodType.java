@@ -1,5 +1,6 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -11,6 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EffectiveTimePeriodType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EffectiveTimePeriodType {
 
     @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)

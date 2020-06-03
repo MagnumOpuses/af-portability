@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "BinaryObjectType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BinaryObjectType {
 
     @XmlElement(required = true)
@@ -21,7 +24,7 @@ public class BinaryObjectType {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(final String value) {
         this.value = value;
     }
 
@@ -29,7 +32,7 @@ public class BinaryObjectType {
         return encoding;
     }
 
-    public void setEncoding(String encoding) {
+    public void setEncoding(final String encoding) {
         this.encoding = encoding;
     }
 
@@ -37,7 +40,7 @@ public class BinaryObjectType {
         return mimeType;
     }
 
-    public void setMimeType(String mimeType) {
+    public void setMimeType(final String mimeType) {
         this.mimeType = mimeType;
     }
 
@@ -45,7 +48,7 @@ public class BinaryObjectType {
         return filename;
     }
 
-    public void setFilename(String filename) {
+    public void setFilename(final String filename) {
         this.filename = filename;
     }
 }

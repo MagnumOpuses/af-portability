@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HireType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class HireType {
 
     protected String typeCode;
@@ -26,7 +29,7 @@ public class HireType {
         return typeCode;
     }
 
-    public void setTypeCode(String typeCode) {
+    public void setTypeCode(final String typeCode) {
         this.typeCode = typeCode;
     }
 
@@ -34,7 +37,7 @@ public class HireType {
         return date;
     }
 
-    public void setDate(XMLGregorianCalendar date) {
+    public void setDate(final XMLGregorianCalendar date) {
         this.date = date;
     }
 
@@ -42,7 +45,7 @@ public class HireType {
         return firstWorkDate;
     }
 
-    public void setFirstWorkDate(XMLGregorianCalendar firstWorkDate) {
+    public void setFirstWorkDate(final XMLGregorianCalendar firstWorkDate) {
         this.firstWorkDate = firstWorkDate;
     }
 
@@ -50,7 +53,7 @@ public class HireType {
         return expectedFirstWorkDate;
     }
 
-    public void setExpectedFirstWorkDate(XMLGregorianCalendar expectedFirstWorkDate) {
+    public void setExpectedFirstWorkDate(final XMLGregorianCalendar expectedFirstWorkDate) {
         this.expectedFirstWorkDate = expectedFirstWorkDate;
     }
 
@@ -58,7 +61,7 @@ public class HireType {
         return originalDate;
     }
 
-    public void setOriginalDate(XMLGregorianCalendar originalDate) {
+    public void setOriginalDate(final XMLGregorianCalendar originalDate) {
         this.originalDate = originalDate;
     }
 
@@ -66,7 +69,7 @@ public class HireType {
         return adjustedDate;
     }
 
-    public void setAdjustedDate(XMLGregorianCalendar adjustedDate) {
+    public void setAdjustedDate(final XMLGregorianCalendar adjustedDate) {
         this.adjustedDate = adjustedDate;
     }
 

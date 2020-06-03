@@ -3,6 +3,9 @@ package se.arbetsformedlingen.matchning.portability.builder;
 import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.List;
 
 public class LicenseTypeBuilder {
@@ -33,7 +36,7 @@ public class LicenseTypeBuilder {
         return this;
     }
 
-    public LicenseTypeBuilder setIssued(final String issued) {
+    public LicenseTypeBuilder setIssued(final DateType issued) {
         licenseType.setIssued(issued);
         return this;
     }
@@ -79,7 +82,16 @@ public class LicenseTypeBuilder {
 
     public LicenseTypeBuilder withKorkort(final ArbetsSokandeProfil.Korkort korkort) {
         setType(new EntityTypeBuilder().setId(new IdentifierTypeBuilder().setValue(String.join(" ", korkort.getKorkortsklasser())).build()).build());
-        setIssued(String.valueOf(korkort.getSenastUppdaterad()));
+
+        try {
+            final XMLGregorianCalendar xcal = DatatypeFactory.newInstance().newXMLGregorianCalendar(korkort.getSenastUppdaterad().toInstant().toString());
+            final DateType dateType = new DateType();
+            dateType.setDate(xcal);
+            setIssued(dateType);
+        } catch (final DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
+
         return this;
     }
 }

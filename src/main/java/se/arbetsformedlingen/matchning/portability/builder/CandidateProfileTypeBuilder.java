@@ -9,146 +9,146 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CandidateProfileTypeBuilder {
-    private CandidateProfileType candidateProfileType = new CandidateProfileType();
+    private final CandidateProfileType candidateProfileType = new CandidateProfileType();
 
-    public CandidateProfileTypeBuilder setProfileName(String profileName) {
+    public CandidateProfileTypeBuilder setProfileName(final String profileName) {
         candidateProfileType.setProfileName(profileName);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setLanguageCode(LanguageCodeList languageCode) {
+    public CandidateProfileTypeBuilder setLanguageCode(final LanguageCodeList languageCode) {
         candidateProfileType.setLanguageCode(languageCode);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEducation(List<EducationAttendanceType> education) {
+    public CandidateProfileTypeBuilder setEducation(final List<EducationAttendanceType> education) {
         candidateProfileType.setEducation(education);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployment(List<EmployerHistoryType> employment) {
+    public CandidateProfileTypeBuilder setEmployment(final List<EmployerHistoryType> employment) {
         candidateProfileType.setEmployment(employment);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setMilitaryService(List<MilitaryServiceType> militaryService) {
+    public CandidateProfileTypeBuilder setMilitaryService(final List<MilitaryServiceType> militaryService) {
         candidateProfileType.setMilitaryService(militaryService);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setLicenses(List<LicenseType> licenses) {
+    public CandidateProfileTypeBuilder setLicenses(final List<LicenseType> licenses) {
         candidateProfileType.setLicenses(licenses);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCertifications(List<CertificationType> certifications) {
+    public CandidateProfileTypeBuilder setCertifications(final List<CertificationType> certifications) {
         candidateProfileType.setCertifications(certifications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPatents(List<PatentType> patents) {
+    public CandidateProfileTypeBuilder setPatents(final List<PatentType> patents) {
         candidateProfileType.setPatents(patents);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPublications(List<PublicationType> publications) {
+    public CandidateProfileTypeBuilder setPublications(final List<PublicationType> publications) {
         candidateProfileType.setPublications(publications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setQualifications(List<PersonCompetencyType> qualifications) {
+    public CandidateProfileTypeBuilder setQualifications(final List<PersonCompetencyType> qualifications) {
         candidateProfileType.setQualifications(qualifications);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAffiliations(List<OrganizationAffiliationType> affiliations) {
+    public CandidateProfileTypeBuilder setAffiliations(final List<OrganizationAffiliationType> affiliations) {
         candidateProfileType.setAffiliations(affiliations);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setSecurityCredentials(List<CertificationType> securityCredentials) {
+    public CandidateProfileTypeBuilder setSecurityCredentials(final List<CertificationType> securityCredentials) {
         candidateProfileType.setSecurityCredentials(securityCredentials);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setReferences(List<RefereeType> references) {
+    public CandidateProfileTypeBuilder setReferences(final List<RefereeType> references) {
         candidateProfileType.setReferences(references);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAttachments(List<AttachmentType> attachments) {
+    public CandidateProfileTypeBuilder setAttachments(final List<AttachmentType> attachments) {
         candidateProfileType.setAttachments(attachments);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setProfileId(IdentifierType profileId) {
+    public CandidateProfileTypeBuilder setProfileId(final IdentifierType profileId) {
         candidateProfileType.setProfileId(profileId);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setAlternateIds(List<IdentifierType> alternateIds) {
+    public CandidateProfileTypeBuilder setAlternateIds(final List<IdentifierType> alternateIds) {
         candidateProfileType.setAlternateIds(alternateIds);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPersonAvailability(PersonAvailabilityType personAvailability) {
+    public CandidateProfileTypeBuilder setPersonAvailability(final PersonAvailabilityType personAvailability) {
         candidateProfileType.setPersonAvailability(personAvailability);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setProcessingInformation(String processingInformation) {
+    public CandidateProfileTypeBuilder setProcessingInformation(final String processingInformation) {
         candidateProfileType.setProcessingInformation(processingInformation);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setDistributionGuidelines(DistributionGuidelinesType distributionGuidelines) {
+    public CandidateProfileTypeBuilder setDistributionGuidelines(final DistributionGuidelinesType distributionGuidelines) {
         candidateProfileType.setDistributionGuidelines(distributionGuidelines);
         return this;
     }
 
     public CandidateProfileTypeBuilder setAssociatedPositionOpenings(
-            List<AssociatedPositionOpeningType> associatedPositionOpenings) {
+            final List<AssociatedPositionOpeningType> associatedPositionOpenings) {
         candidateProfileType.setAssociatedPositionOpenings(associatedPositionOpenings);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setObjective(String objective) {
+    public CandidateProfileTypeBuilder setObjective(final String objective) {
         candidateProfileType.setObjective(objective);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setExecutiveSummary(String executiveSummary) {
+    public CandidateProfileTypeBuilder setExecutiveSummary(final String executiveSummary) {
         candidateProfileType.setExecutiveSummary(executiveSummary);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setEmployerPreferences(List<EmployerPreferenceType> employerPreferences) {
+    public CandidateProfileTypeBuilder setEmployerPreferences(final List<EmployerPreferenceType> employerPreferences) {
         candidateProfileType.setEmployerPreferences(employerPreferences);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setPositionPreferences(List<PositionPreferenceType> positionPreferences) {
+    public CandidateProfileTypeBuilder setPositionPreferences(final List<PositionPreferenceType> positionPreferences) {
         candidateProfileType.setPositionPreferences(positionPreferences);
         return this;
     }
 
     public CandidateProfileTypeBuilder setCandidateRelationships(
-            List<CandidateRelationshipType> candidateRelationships) {
+            final List<CandidateRelationshipType> candidateRelationships) {
         candidateProfileType.setCandidateRelationships(candidateRelationships);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setCandidateSources(List<CandidateSourceType> candidateSources) {
+    public CandidateProfileTypeBuilder setCandidateSources(final List<CandidateSourceType> candidateSources) {
         candidateProfileType.setCandidateSources(candidateSources);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setApplicationProcessHistory(ProcessHistoryType applicationProcessHistory) {
+    public CandidateProfileTypeBuilder setApplicationProcessHistory(final ProcessHistoryType applicationProcessHistory) {
         candidateProfileType.setApplicationProcessHistory(applicationProcessHistory);
         return this;
     }
 
-    public CandidateProfileTypeBuilder setWorkLifeCycles(List<WorkLifeCycleType> workLifeCycles) {
+    public CandidateProfileTypeBuilder setWorkLifeCycles(final List<WorkLifeCycleType> workLifeCycles) {
         candidateProfileType.setWorkLifeCycles(workLifeCycles);
         return this;
     }
@@ -157,20 +157,20 @@ public class CandidateProfileTypeBuilder {
         return candidateProfileType;
     }
 
-    public CandidateProfileTypeBuilder withProfiles(ArbetsSokandeProfil profil) {
+    public CandidateProfileTypeBuilder withProfiles(final ArbetsSokandeProfil profil) {
         setProfileName(profil.getNamn());
         setObjective(profil.getBeskrivning());
         setExecutiveSummary(profil.getPresentation());
 
         if (profil.getKorkort() != null) {
-            List<LicenseType> licenses = new ArrayList<>();
+            final List<LicenseType> licenses = new ArrayList<>();
             licenses.add(new LicenseTypeBuilder().withKorkort(profil.getKorkort()).build());
             setLicenses(licenses);
         }
 
         if (profil.getKompetenser() != null) {
-            List<PersonCompetencyType> qualifications = new ArrayList<>();
-            for (Kompetens kompetens : profil.getKompetenser()) {
+            final List<PersonCompetencyType> qualifications = new ArrayList<>();
+            for (final Kompetens kompetens : profil.getKompetenser()) {
                 // TODO Adjust this to use the new taxonomy.
                 qualifications
                         .add(new PersonCompetencyTypeBuilder().withKompetens(String.valueOf(kompetens.getTaxonomiId()))
@@ -180,8 +180,8 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getYrkeserfarenheter() != null) {
-            List<EmployerHistoryType> employment = new ArrayList<>();
-            for (Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
+            final List<EmployerHistoryType> employment = new ArrayList<>();
+            for (final Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
                 // TODO Adjust this to use the new taxonomy.
                 employment.add(new EmployerHistoryTypeBuilder()
                         .withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).build());
@@ -190,18 +190,18 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getYrkesroller() != null) {
-            List<EmployerHistoryType> employment = new ArrayList<>();
-            for (Yrkesroll yrkesroll : profil.getYrkesroller()) {
+            final List<EmployerHistoryType> employment = new ArrayList<>();
+            for (final Yrkesroll yrkesroll : profil.getYrkesroller()) {
                 employment.add(new EmployerHistoryTypeBuilder().withCodes(yrkesroll.getKod()).build());
             }
             setEmployment(employment);
         }
 
         if (profil.getAnstallningar() != null) {
-            List<EmployerHistoryType> emplyments = new ArrayList<>();
-            for (Anstallning anstallning : profil.getAnstallningar()) {
-                List<PositionHistoryType> positions = new ArrayList<>();
-                List<String> descriptions = new ArrayList<>();
+            final List<EmployerHistoryType> emplyments = new ArrayList<>();
+            for (final Anstallning anstallning : profil.getAnstallningar()) {
+                final List<PositionHistoryType> positions = new ArrayList<>();
+                final List<String> descriptions = new ArrayList<>();
                 final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
                 final PositionHistoryTypeBuilder positionHistoryTypeBuilder = new PositionHistoryTypeBuilder();
                 final EmployerHistoryTypeBuilder employerHistoryTypeBuilder = new EmployerHistoryTypeBuilder();
@@ -209,13 +209,13 @@ public class CandidateProfileTypeBuilder {
                 try {
                     employerHistoryTypeBuilder.setStart(sdf.format(sdf.parse(
                             anstallning.getStartdatum().getArtal() + "-" + anstallning.getStartdatum().getManad())));
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     // No start date
                 }
                 try {
                     employerHistoryTypeBuilder.setEnd(sdf.format(sdf.parse(
                             anstallning.getSlutdatum().getArtal() + "-" + anstallning.getSlutdatum().getManad())));
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     // No end date
                 }
                 positionHistoryTypeBuilder.setTitle(anstallning.getRubrik()).build();
@@ -229,16 +229,16 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getUtbildningar() != null) {
-            List<EducationAttendanceType> education = new ArrayList<>();
-            for (Utbildning utbildning : profil.getUtbildningar()) {
-                List<String> descriptions = new ArrayList<>();
+            final List<EducationAttendanceType> education = new ArrayList<>();
+            for (final Utbildning utbildning : profil.getUtbildningar()) {
+                final List<String> descriptions = new ArrayList<>();
                 final EducationAttendanceTypeBuilder educationAttendanceTypeBuilder = new EducationAttendanceTypeBuilder();
 
                 final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
                 try {
                     educationAttendanceTypeBuilder.setStart(sdf.format(sdf.parse(
                             utbildning.getStartdatum().getArtal() + "-" + utbildning.getStartdatum().getManad())));
-                } catch (Exception e) {
+                } catch (final Exception e) {
                     e.printStackTrace();
                 }
                 educationAttendanceTypeBuilder.setInstitution(new OrganizationTypeBuilder()
@@ -247,8 +247,8 @@ public class CandidateProfileTypeBuilder {
 
                 try {
                     educationAttendanceTypeBuilder.setEnd(sdf.format(sdf.parse(
-                                    utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad())));
-                } catch (Exception e) {
+                            utbildning.getSlutdatum().getArtal() + "-" + utbildning.getSlutdatum().getManad())));
+                } catch (final Exception e) {
                     e.printStackTrace();
                 }
                 descriptions.add(new String(utbildning.getInriktning()));
@@ -261,9 +261,9 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getOvrigaMeriter() != null) {
-            List<CertificationType> certifications = new ArrayList<>();
-            for (Merit merit : profil.getOvrigaMeriter()) {
-                List<String> descriptions = new ArrayList<>();
+            final List<CertificationType> certifications = new ArrayList<>();
+            for (final Merit merit : profil.getOvrigaMeriter()) {
+                final List<String> descriptions = new ArrayList<>();
                 descriptions.add(new String(merit.getBeskrivning()));
                 certifications.add(new CertificationTypeBuilder().setName(merit.getRubrik())
                         .setDescriptions(descriptions).build());
@@ -272,12 +272,12 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getArbetsorter() != null) {
-            List<PositionPreferenceType> positionPreferences = new ArrayList<>();
-            List<PreferredLocationType> preferredLocations = new ArrayList<>();
-            List<AddressComponentType> countrySubDivisions = new ArrayList<>();
+            final List<PositionPreferenceType> positionPreferences = new ArrayList<>();
+            final List<PreferredLocationType> preferredLocations = new ArrayList<>();
+            final List<AddressComponentType> countrySubDivisions = new ArrayList<>();
 
-            for (Arbetsort arbetsort : profil.getArbetsorter()) {
-                countrySubDivisions.add(new AddressComponentTypeBuilder().setValue("Kommun").build());
+            for (final Arbetsort arbetsort : profil.getArbetsorter()) {
+                countrySubDivisions.add(new AddressComponentTypeBuilder().setType("PLACEHOLDER TYPE").setValue("Kommun").build());
                 preferredLocations.add(new PreferredLocationTypeBuilder().setReferenceLocation(new AddressTypeBuilder()
                         .setCity(arbetsort.getVarde1()).setCountrySubDivisions(countrySubDivisions).build()).build());
                 positionPreferences.add(new PositionPreferenceTypeBuilder().setLocations(preferredLocations).build());

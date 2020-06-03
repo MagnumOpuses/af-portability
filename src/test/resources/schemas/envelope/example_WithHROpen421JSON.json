@@ -1,28 +1,320 @@
 {
-  "sessionToken": "e5b09312-546d-4cee-a9ea-ae595f7a7017",
+  "sessionToken": "ea867997-b2a0-4a59-9dd7-f7ac8da1768d",
   "source": {
     "sourceName": "Arbetsformedlingen",
     "termsAndConditions": []
   },
   "sink": {
-    "sinkName": "AF-Demo",
+    "sinkName": "PLACEHOLDER NAME",
     "purposeOfUse": [
       "Ansökan till roll 'System utvecklare' på 'JobTechDev'"
     ]
   },
   "consent": {
-    "consentTimestamp": "2020-06-02T09:36:28.231Z",
     "consentStatus": true,
-    "consentedTimePeriod": "2020-07-02T09:36:28.231Z",
     "acceptedTerms": [],
     "acceptedPurposes": [
       "Ansökan till roll 'System utvecklare' på 'JobTechDev'"
-    ]
+    ],
+    "consentTimestamp": "2020-06-03T17:17:55.857Z",
+    "consentedTimePeriod": "2020-07-03T17:17:55.857Z"
   },
   "transferObject": {
     "documentType": "CV",
     "dataStructureLink": "https://github.com/MagnumOpuses/common-cv-model",
     "data": [
+      {
+        "documentId": {
+          "value": "81994764"
+        },
+        "alternateIds": [],
+        "person": {
+          "ethnicity": [],
+          "name": {
+            "given": "Nina",
+            "family": "Greger"
+          },
+          "communication": {
+            "address": [
+              {
+                "line": "Karlavägen 98",
+                "extendedLines": [
+                  {
+                    "type": "PLACEHOLDER TYPE",
+                    "value": "test"
+                  }
+                ],
+                "countryCode": "SE",
+                "countrySubDivisions": [],
+                "city": "Forserum",
+                "postalCode": "57197"
+              }
+            ],
+            "phone": [
+              {
+                "formattedNumber": "08558945622"
+              },
+              {
+                "formattedNumber": "07055555"
+              },
+              {
+                "formattedNumber": "07081542644"
+              }
+            ],
+            "email": [
+              {
+                "address": "test@test.se"
+              }
+            ],
+            "web": []
+          },
+          "identifyingMarks": [],
+          "race": [],
+          "nationality": [],
+          "visa": [],
+          "religion": [],
+          "legalDocuments": [],
+          "employmentPermits": []
+        },
+        "profiles": [
+          {
+            "profileName": "System Utvecklare",
+            "education": [],
+            "employment": [
+              {
+                "start": "2017-02",
+                "end": "2018-07",
+                "current": false,
+                "attachmentReferences": [],
+                "descriptions": [
+                  "Min roll involverar administration av IT system på företaget JobJobJob IT."
+                ],
+                "organization": {
+                  "legalId": {
+                    "value": "JobJobJob IT"
+                  },
+                  "industryCodes": [],
+                  "industryIdentifiers": [],
+                  "contacts": []
+                },
+                "positionHistories": [
+                  {
+                    "title": "Systemadmin på JobJobJob IT",
+                    "jobCategories": [],
+                    "jobLevels": []
+                  }
+                ]
+              },
+              {
+                "start": "2018-07",
+                "end": "2019-05",
+                "current": false,
+                "attachmentReferences": [],
+                "descriptions": [
+                  "Jag har utvecklat ett HR system och Demo verktyg."
+                ],
+                "organization": {
+                  "legalId": {
+                    "value": "Mittmittjobbjobb"
+                  },
+                  "industryCodes": [],
+                  "industryIdentifiers": [],
+                  "contacts": []
+                },
+                "positionHistories": [
+                  {
+                    "title": "Systemutvecklare på mittmittjobbjobb.se",
+                    "jobCategories": [],
+                    "jobLevels": []
+                  }
+                ]
+              }
+            ],
+            "militaryService": [],
+            "licenses": [
+              {
+                "type": {
+                  "id": {
+                    "value": ""
+                  }
+                },
+                "issued": "2019-W40-5",
+                "attachmentReferences": [],
+                "descriptions": []
+              }
+            ],
+            "certifications": [],
+            "patents": [],
+            "publications": [],
+            "qualifications": [
+              {
+                "competencyIds": [
+                  {
+                    "value": "609205"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "5956"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "200029"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "605952"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "161"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "3252"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "607902"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              },
+              {
+                "competencyIds": [
+                  {
+                    "value": "200028"
+                  }
+                ],
+                "description": "skill",
+                "competencyDimensions": [],
+                "attachmentReferences": []
+              }
+            ],
+            "affiliations": [],
+            "securityCredentials": [],
+            "references": [],
+            "attachments": [],
+            "alternateIds": [],
+            "associatedPositionOpenings": [],
+            "objective": "Systemutvecklare som vill jobba i Stockholm",
+            "executiveSummary": "Jag är en duktig system utvecklare!",
+            "employerPreferences": [],
+            "positionPreferences": [
+              {
+                "locations": [
+                  {
+                    "referenceLocation": {
+                      "extendedLines": [],
+                      "countrySubDivisions": [
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        },
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        }
+                      ],
+                      "city": "0180"
+                    }
+                  }
+                ],
+                "jobCategories": [],
+                "positionTitles": [],
+                "positionOfferingTypeCodes": [],
+                "positionScheduleTypeCodes": [],
+                "shiftSchedules": [],
+                "shiftDescriptions": [],
+                "workingLanguageCodes": []
+              },
+              {
+                "locations": [
+                  {
+                    "referenceLocation": {
+                      "extendedLines": [],
+                      "countrySubDivisions": [
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        },
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        }
+                      ],
+                      "city": "0180"
+                    }
+                  },
+                  {
+                    "referenceLocation": {
+                      "extendedLines": [],
+                      "countrySubDivisions": [
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        },
+                        {
+                          "type": "PLACEHOLDER TYPE",
+                          "value": "Kommun"
+                        }
+                      ],
+                      "city": "01"
+                    }
+                  }
+                ],
+                "jobCategories": [],
+                "positionTitles": [],
+                "positionOfferingTypeCodes": [],
+                "positionScheduleTypeCodes": [],
+                "shiftSchedules": [],
+                "shiftDescriptions": [],
+                "workingLanguageCodes": []
+              }
+            ],
+            "candidateRelationships": [],
+            "candidateSources": [],
+            "workLifeCycles": []
+          }
+        ]
+      }
     ]
   }
 }

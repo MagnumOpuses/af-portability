@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PatentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PatentType {
 
     protected List<IdentifierType> ids;
@@ -29,7 +32,7 @@ public class PatentType {
         return this.ids;
     }
 
-    public void setIds(List<IdentifierType> ids) {
+    public void setIds(final List<IdentifierType> ids) {
         this.ids = ids;
     }
 
@@ -37,7 +40,7 @@ public class PatentType {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(final String title) {
         this.title = title;
     }
 
@@ -46,7 +49,7 @@ public class PatentType {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+    public void setIssuingAuthority(final OrganizationType issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -54,7 +57,7 @@ public class PatentType {
         return status;
     }
 
-    public void setStatus(PatentStatusCodeList status) {
+    public void setStatus(final PatentStatusCodeList status) {
         this.status = status;
     }
 
@@ -65,7 +68,7 @@ public class PatentType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -73,7 +76,7 @@ public class PatentType {
         return inventorNames;
     }
 
-    public void setInventorNames(List<String> inventorNames) {
+    public void setInventorNames(final List<String> inventorNames) {
         this.inventorNames = inventorNames;
     }
 
@@ -81,7 +84,7 @@ public class PatentType {
         return assigneeNames;
     }
 
-    public void setAssigneeNames(List<String> assigneeNames) {
+    public void setAssigneeNames(final List<String> assigneeNames) {
         this.assigneeNames = assigneeNames;
     }
 
@@ -89,7 +92,7 @@ public class PatentType {
         return descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

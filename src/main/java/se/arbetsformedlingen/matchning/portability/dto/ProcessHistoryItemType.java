@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProcessHistoryItemType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProcessHistoryItemType {
 
     protected IdentifierType id;
@@ -27,7 +30,7 @@ public class ProcessHistoryItemType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -35,7 +38,7 @@ public class ProcessHistoryItemType {
         return actionDate;
     }
 
-    public void setActionDate(String actionDate) {
+    public void setActionDate(final String actionDate) {
         this.actionDate = actionDate;
     }
 
@@ -43,7 +46,7 @@ public class ProcessHistoryItemType {
         return action;
     }
 
-    public void setAction(ProcessActionType action) {
+    public void setAction(final ProcessActionType action) {
         this.action = action;
     }
 
@@ -51,7 +54,7 @@ public class ProcessHistoryItemType {
         return status;
     }
 
-    public void setStatus(ProcessStatusType status) {
+    public void setStatus(final ProcessStatusType status) {
         this.status = status;
     }
 
@@ -59,7 +62,7 @@ public class ProcessHistoryItemType {
         return previousStatus;
     }
 
-    public void setPreviousStatus(ProcessStatusType previousStatus) {
+    public void setPreviousStatus(final ProcessStatusType previousStatus) {
         this.previousStatus = previousStatus;
     }
 
@@ -70,16 +73,8 @@ public class ProcessHistoryItemType {
         return this.primaryParties;
     }
 
-    public void setPrimaryParties(List<ProcessPartyType> primaryParties) {
+    public void setPrimaryParties(final List<ProcessPartyType> primaryParties) {
         this.primaryParties = primaryParties;
-    }
-
-    public void setAssociatedParties(List<ProcessPartyType> associatedParties) {
-        this.associatedParties = associatedParties;
-    }
-
-    public void setAttachments(List<AttachmentType> attachments) {
-        this.attachments = attachments;
     }
 
     public List<ProcessPartyType> getAssociatedParties() {
@@ -89,6 +84,10 @@ public class ProcessHistoryItemType {
         return this.associatedParties;
     }
 
+    public void setAssociatedParties(final List<ProcessPartyType> associatedParties) {
+        this.associatedParties = associatedParties;
+    }
+
     public List<AttachmentType> getAttachments() {
         if (attachments == null) {
             attachments = new ArrayList<AttachmentType>();
@@ -96,11 +95,15 @@ public class ProcessHistoryItemType {
         return this.attachments;
     }
 
+    public void setAttachments(final List<AttachmentType> attachments) {
+        this.attachments = attachments;
+    }
+
     public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

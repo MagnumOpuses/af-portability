@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonLegalInclusion", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonLegalInclusion {
 
     protected IdentifierType passportId;
@@ -35,7 +38,7 @@ public class PersonLegalInclusion {
         return passportId;
     }
 
-    public void setPassportId(IdentifierType passportId) {
+    public void setPassportId(final IdentifierType passportId) {
         this.passportId = passportId;
     }
 
@@ -43,7 +46,7 @@ public class PersonLegalInclusion {
         return fatherName;
     }
 
-    public void setFatherName(String fatherName) {
+    public void setFatherName(final String fatherName) {
         this.fatherName = fatherName;
     }
 
@@ -51,7 +54,7 @@ public class PersonLegalInclusion {
         return motherName;
     }
 
-    public void setMotherName(String motherName) {
+    public void setMotherName(final String motherName) {
         this.motherName = motherName;
     }
 
@@ -59,7 +62,7 @@ public class PersonLegalInclusion {
         return race;
     }
 
-    public void setRace(List<String> race) {
+    public void setRace(final List<String> race) {
         this.race = race;
     }
 
@@ -67,7 +70,7 @@ public class PersonLegalInclusion {
         return birthPlace;
     }
 
-    public void setBirthPlace(String birthPlace) {
+    public void setBirthPlace(final String birthPlace) {
         this.birthPlace = birthPlace;
     }
 
@@ -75,7 +78,7 @@ public class PersonLegalInclusion {
         return deathDate;
     }
 
-    public void setDeathDate(XMLGregorianCalendar deathDate) {
+    public void setDeathDate(final XMLGregorianCalendar deathDate) {
         this.deathDate = deathDate;
     }
 
@@ -86,7 +89,7 @@ public class PersonLegalInclusion {
         return this.nationality;
     }
 
-    public void setNationality(List<String> nationality) {
+    public void setNationality(final List<String> nationality) {
         this.nationality = nationality;
     }
 
@@ -94,7 +97,7 @@ public class PersonLegalInclusion {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(String maritalStatus) {
+    public void setMaritalStatus(final String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -102,7 +105,7 @@ public class PersonLegalInclusion {
         return maritalStatusDate;
     }
 
-    public void setMaritalStatusDate(XMLGregorianCalendar maritalStatusDate) {
+    public void setMaritalStatusDate(final XMLGregorianCalendar maritalStatusDate) {
         this.maritalStatusDate = maritalStatusDate;
     }
 
@@ -113,7 +116,7 @@ public class PersonLegalInclusion {
         return this.visa;
     }
 
-    public void setVisa(List<String> visa) {
+    public void setVisa(final List<String> visa) {
         this.visa = visa;
     }
 
@@ -124,7 +127,7 @@ public class PersonLegalInclusion {
         return this.religion;
     }
 
-    public void setReligion(List<String> religion) {
+    public void setReligion(final List<String> religion) {
         this.religion = religion;
     }
 
@@ -132,7 +135,7 @@ public class PersonLegalInclusion {
         return studentType;
     }
 
-    public void setStudentType(String studentType) {
+    public void setStudentType(final String studentType) {
         this.studentType = studentType;
     }
 
@@ -140,7 +143,7 @@ public class PersonLegalInclusion {
         return studentIndicator;
     }
 
-    public void setStudentIndicator(Boolean studentIndicator) {
+    public void setStudentIndicator(final Boolean studentIndicator) {
         this.studentIndicator = studentIndicator;
     }
 
@@ -148,7 +151,7 @@ public class PersonLegalInclusion {
         return studentStatus;
     }
 
-    public void setStudentStatus(String studentStatus) {
+    public void setStudentStatus(final String studentStatus) {
         this.studentStatus = studentStatus;
     }
 
@@ -159,7 +162,7 @@ public class PersonLegalInclusion {
         return this.legalDocuments;
     }
 
-    public void setLegalDocuments(List<LegalDocumentType> legalDocuments) {
+    public void setLegalDocuments(final List<LegalDocumentType> legalDocuments) {
         this.legalDocuments = legalDocuments;
     }
 
@@ -170,7 +173,7 @@ public class PersonLegalInclusion {
         return this.employmentPermits;
     }
 
-    public void setEmploymentPermits(List<EmploymentPermitType> employmentPermits) {
+    public void setEmploymentPermits(final List<EmploymentPermitType> employmentPermits) {
         this.employmentPermits = employmentPermits;
     }
 }

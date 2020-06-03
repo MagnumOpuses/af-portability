@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonCompetencyType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonCompetencyType {
 
     public List<IdentifierType> competencyIds;
@@ -31,7 +34,7 @@ public class PersonCompetencyType {
         return this.competencyIds;
     }
 
-    public void setCompetencyIds(List<IdentifierType> competencyIds) {
+    public void setCompetencyIds(final List<IdentifierType> competencyIds) {
         this.competencyIds = competencyIds;
     }
 
@@ -39,7 +42,7 @@ public class PersonCompetencyType {
         return competencyName;
     }
 
-    public void setCompetencyName(String competencyName) {
+    public void setCompetencyName(final String competencyName) {
         this.competencyName = competencyName;
     }
 
@@ -47,7 +50,7 @@ public class PersonCompetencyType {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 
@@ -55,7 +58,7 @@ public class PersonCompetencyType {
         return proficiencyLevel;
     }
 
-    public void setProficiencyLevel(BaseScoreType proficiencyLevel) {
+    public void setProficiencyLevel(final BaseScoreType proficiencyLevel) {
         this.proficiencyLevel = proficiencyLevel;
     }
 
@@ -63,7 +66,7 @@ public class PersonCompetencyType {
         return lastUsedDate;
     }
 
-    public void setLastUsedDate(String lastUsedDate) {
+    public void setLastUsedDate(final String lastUsedDate) {
         this.lastUsedDate = lastUsedDate;
     }
 
@@ -71,7 +74,7 @@ public class PersonCompetencyType {
         return experienceMeasure;
     }
 
-    public void setExperienceMeasure(MeasureType experienceMeasure) {
+    public void setExperienceMeasure(final MeasureType experienceMeasure) {
         this.experienceMeasure = experienceMeasure;
     }
 
@@ -79,7 +82,7 @@ public class PersonCompetencyType {
         return interestLevel;
     }
 
-    public void setInterestLevel(BaseScoreType interestLevel) {
+    public void setInterestLevel(final BaseScoreType interestLevel) {
         this.interestLevel = interestLevel;
     }
 
@@ -90,7 +93,7 @@ public class PersonCompetencyType {
         return this.competencyDimensions;
     }
 
-    public void setCompetencyDimensions(List<CompetencyDimensionType> competencyDimensions) {
+    public void setCompetencyDimensions(final List<CompetencyDimensionType> competencyDimensions) {
         this.competencyDimensions = competencyDimensions;
     }
 
@@ -98,7 +101,7 @@ public class PersonCompetencyType {
         return competencyEvidence;
     }
 
-    public void setCompetencyEvidence(CompetencyEvidenceType competencyEvidence) {
+    public void setCompetencyEvidence(final CompetencyEvidenceType competencyEvidence) {
         this.competencyEvidence = competencyEvidence;
     }
 
@@ -109,7 +112,7 @@ public class PersonCompetencyType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 }
