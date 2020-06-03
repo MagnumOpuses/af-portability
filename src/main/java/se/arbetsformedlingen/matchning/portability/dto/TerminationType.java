@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -10,6 +12,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "TerminationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TerminationType {
 
     protected IdentifierType reasonCode;
@@ -22,7 +25,7 @@ public class TerminationType {
         return reasonCode;
     }
 
-    public void setReasonCode(IdentifierType reasonCode) {
+    public void setReasonCode(final IdentifierType reasonCode) {
         this.reasonCode = reasonCode;
     }
 
@@ -30,7 +33,7 @@ public class TerminationType {
         return date;
     }
 
-    public void setDate(XMLGregorianCalendar date) {
+    public void setDate(final XMLGregorianCalendar date) {
         this.date = date;
     }
 
@@ -38,7 +41,7 @@ public class TerminationType {
         return lastWorkedDate;
     }
 
-    public void setLastWorkedDate(XMLGregorianCalendar lastWorkedDate) {
+    public void setLastWorkedDate(final XMLGregorianCalendar lastWorkedDate) {
         this.lastWorkedDate = lastWorkedDate;
     }
 
@@ -46,7 +49,7 @@ public class TerminationType {
         return lastPaidDate;
     }
 
-    public void setLastPaidDate(XMLGregorianCalendar lastPaidDate) {
+    public void setLastPaidDate(final XMLGregorianCalendar lastPaidDate) {
         this.lastPaidDate = lastPaidDate;
     }
 
@@ -54,7 +57,7 @@ public class TerminationType {
         return intendedDate;
     }
 
-    public void setIntendedDate(XMLGregorianCalendar intendedDate) {
+    public void setIntendedDate(final XMLGregorianCalendar intendedDate) {
         this.intendedDate = intendedDate;
     }
 }

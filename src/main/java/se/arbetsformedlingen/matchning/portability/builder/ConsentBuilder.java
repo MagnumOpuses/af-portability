@@ -13,7 +13,7 @@ public class ConsentBuilder {
         return this;
     }
 
-    public ConsentBuilder setConsentStatus(String consentStatus) {
+    public ConsentBuilder setConsentStatus(boolean consentStatus) {
         consent.setConsentStatus(consentStatus);
         return this;
     }

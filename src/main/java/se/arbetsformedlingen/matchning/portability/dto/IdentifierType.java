@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IdentifierType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class IdentifierType {
 
     @XmlElement(required = true)
@@ -25,7 +28,7 @@ public class IdentifierType {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(final String value) {
         this.value = value;
     }
 
@@ -33,7 +36,7 @@ public class IdentifierType {
         return schemeId;
     }
 
-    public void setSchemeId(String schemeId) {
+    public void setSchemeId(final String schemeId) {
         this.schemeId = schemeId;
     }
 
@@ -41,7 +44,7 @@ public class IdentifierType {
         return schemeVersionId;
     }
 
-    public void setSchemeVersionId(String schemeVersionId) {
+    public void setSchemeVersionId(final String schemeVersionId) {
         this.schemeVersionId = schemeVersionId;
     }
 
@@ -49,7 +52,7 @@ public class IdentifierType {
         return schemeAgencyId;
     }
 
-    public void setSchemeAgencyId(String schemeAgencyId) {
+    public void setSchemeAgencyId(final String schemeAgencyId) {
         this.schemeAgencyId = schemeAgencyId;
     }
 
@@ -57,7 +60,7 @@ public class IdentifierType {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
 
@@ -65,7 +68,7 @@ public class IdentifierType {
         return schemeLink;
     }
 
-    public void setSchemeLink(String schemeLink) {
+    public void setSchemeLink(final String schemeLink) {
         this.schemeLink = schemeLink;
     }
 
@@ -73,7 +76,7 @@ public class IdentifierType {
         return agencyUri;
     }
 
-    public void setAgencyUri(String agencyUri) {
+    public void setAgencyUri(final String agencyUri) {
         this.agencyUri = agencyUri;
     }
 }

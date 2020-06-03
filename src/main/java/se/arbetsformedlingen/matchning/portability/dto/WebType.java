@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,7 +12,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "WebType", propOrder = {
 
 })
-public class WebType {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class WebType extends CommunicationItemInclusion {
 
     @XmlElement(required = true)
     protected String url;
@@ -19,7 +22,7 @@ public class WebType {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(final String url) {
         this.url = url;
     }
 }

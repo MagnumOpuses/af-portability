@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DisabilitySummaryType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DisabilitySummaryType {
 
     protected IdentifierType disabilityId;
@@ -31,7 +34,7 @@ public class DisabilitySummaryType {
         return disabilityId;
     }
 
-    public void setDisabilityId(IdentifierType disabilityId) {
+    public void setDisabilityId(final IdentifierType disabilityId) {
         this.disabilityId = disabilityId;
     }
 
@@ -39,7 +42,7 @@ public class DisabilitySummaryType {
         return disabilityLevelCode;
     }
 
-    public void setDisabilityLevelCode(String disabilityLevelCode) {
+    public void setDisabilityLevelCode(final String disabilityLevelCode) {
         this.disabilityLevelCode = disabilityLevelCode;
     }
 
@@ -47,7 +50,7 @@ public class DisabilitySummaryType {
         return percentage;
     }
 
-    public void setPercentage(BigDecimal percentage) {
+    public void setPercentage(final BigDecimal percentage) {
         this.percentage = percentage;
     }
 
@@ -55,7 +58,7 @@ public class DisabilitySummaryType {
         return disabilityType;
     }
 
-    public void setDisabilityType(EntityType disabilityType) {
+    public void setDisabilityType(final EntityType disabilityType) {
         this.disabilityType = disabilityType;
     }
 
@@ -63,7 +66,7 @@ public class DisabilitySummaryType {
         return disabilityDate;
     }
 
-    public void setDisabilityDate(String disabilityDate) {
+    public void setDisabilityDate(final String disabilityDate) {
         this.disabilityDate = disabilityDate;
     }
 
@@ -71,7 +74,7 @@ public class DisabilitySummaryType {
         return disabilityCertifiedDate;
     }
 
-    public void setDisabilityCertifiedDate(String disabilityCertifiedDate) {
+    public void setDisabilityCertifiedDate(final String disabilityCertifiedDate) {
         this.disabilityCertifiedDate = disabilityCertifiedDate;
     }
 
@@ -79,7 +82,7 @@ public class DisabilitySummaryType {
         return recoveryDate;
     }
 
-    public void setRecoveryDate(String recoveryDate) {
+    public void setRecoveryDate(final String recoveryDate) {
         this.recoveryDate = recoveryDate;
     }
 
@@ -90,7 +93,7 @@ public class DisabilitySummaryType {
         return this.accommodationTypeCode;
     }
 
-    public void setAccommodationTypeCode(List<String> accommodationTypeCode) {
+    public void setAccommodationTypeCode(final List<String> accommodationTypeCode) {
         this.accommodationTypeCode = accommodationTypeCode;
     }
 
@@ -98,7 +101,7 @@ public class DisabilitySummaryType {
         return comment;
     }
 
-    public void setComment(CommentType comment) {
+    public void setComment(final CommentType comment) {
         this.comment = comment;
     }
 
@@ -106,7 +109,7 @@ public class DisabilitySummaryType {
         return effectiveDate;
     }
 
-    public void setEffectiveDate(EffectiveTimePeriodType effectiveDate) {
+    public void setEffectiveDate(final EffectiveTimePeriodType effectiveDate) {
         this.effectiveDate = effectiveDate;
     }
 
@@ -114,7 +117,7 @@ public class DisabilitySummaryType {
         return attachments;
     }
 
-    public void setAttachments(List<AttachmentType> attachments) {
+    public void setAttachments(final List<AttachmentType> attachments) {
         this.attachments = attachments;
     }
 
@@ -122,7 +125,7 @@ public class DisabilitySummaryType {
         return attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 }

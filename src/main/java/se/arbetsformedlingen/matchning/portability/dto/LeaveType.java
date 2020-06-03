@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "LeaveType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LeaveType {
 
     protected String statusCode;
@@ -24,7 +27,7 @@ public class LeaveType {
         return statusCode;
     }
 
-    public void setStatusCode(String statusCode) {
+    public void setStatusCode(final String statusCode) {
         this.statusCode = statusCode;
     }
 
@@ -32,7 +35,7 @@ public class LeaveType {
         return remunerationCode;
     }
 
-    public void setRemunerationCode(String remunerationCode) {
+    public void setRemunerationCode(final String remunerationCode) {
         this.remunerationCode = remunerationCode;
     }
 
@@ -40,7 +43,7 @@ public class LeaveType {
         return reasonCode;
     }
 
-    public void setReasonCode(String reasonCode) {
+    public void setReasonCode(final String reasonCode) {
         this.reasonCode = reasonCode;
     }
 
@@ -48,7 +51,7 @@ public class LeaveType {
         return startDate;
     }
 
-    public void setStartDate(XMLGregorianCalendar startDate) {
+    public void setStartDate(final XMLGregorianCalendar startDate) {
         this.startDate = startDate;
     }
 
@@ -56,7 +59,7 @@ public class LeaveType {
         return lastWorkedDate;
     }
 
-    public void setLastWorkedDate(XMLGregorianCalendar lastWorkedDate) {
+    public void setLastWorkedDate(final XMLGregorianCalendar lastWorkedDate) {
         this.lastWorkedDate = lastWorkedDate;
     }
 
@@ -64,7 +67,7 @@ public class LeaveType {
         return lastPaidDate;
     }
 
-    public void setLastPaidDate(XMLGregorianCalendar lastPaidDate) {
+    public void setLastPaidDate(final XMLGregorianCalendar lastPaidDate) {
         this.lastPaidDate = lastPaidDate;
     }
 
@@ -72,7 +75,7 @@ public class LeaveType {
         return scheduledWorkReturnDate;
     }
 
-    public void setScheduledWorkReturnDate(XMLGregorianCalendar scheduledWorkReturnDate) {
+    public void setScheduledWorkReturnDate(final XMLGregorianCalendar scheduledWorkReturnDate) {
         this.scheduledWorkReturnDate = scheduledWorkReturnDate;
     }
 
@@ -80,7 +83,7 @@ public class LeaveType {
         return workReturnDate;
     }
 
-    public void setWorkReturnDate(XMLGregorianCalendar workReturnDate) {
+    public void setWorkReturnDate(final XMLGregorianCalendar workReturnDate) {
         this.workReturnDate = workReturnDate;
     }
 }

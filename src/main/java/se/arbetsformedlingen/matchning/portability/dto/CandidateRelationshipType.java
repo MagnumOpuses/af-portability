@@ -1,5 +1,6 @@
-
 package se.arbetsformedlingen.matchning.portability.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CandidateRelationshipType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidateRelationshipType {
 
     protected IdentifierType candidateRelationshipId;
@@ -20,7 +22,7 @@ public class CandidateRelationshipType {
         return candidateRelationshipId;
     }
 
-    public void setCandidateRelationshipId(IdentifierType candidateRelationshipId) {
+    public void setCandidateRelationshipId(final IdentifierType candidateRelationshipId) {
         this.candidateRelationshipId = candidateRelationshipId;
     }
 
@@ -28,7 +30,7 @@ public class CandidateRelationshipType {
         return internalCandidateIndicator;
     }
 
-    public void setInternalCandidateIndicator(Boolean internalCandidateIndicator) {
+    public void setInternalCandidateIndicator(final Boolean internalCandidateIndicator) {
         this.internalCandidateIndicator = internalCandidateIndicator;
     }
 
@@ -36,7 +38,7 @@ public class CandidateRelationshipType {
         return candidateRelationshipCode;
     }
 
-    public void setCandidateRelationshipCode(CandidateRelationshipCodeList candidateRelationshipCode) {
+    public void setCandidateRelationshipCode(final CandidateRelationshipCodeList candidateRelationshipCode) {
         this.candidateRelationshipCode = candidateRelationshipCode;
     }
 
@@ -44,7 +46,7 @@ public class CandidateRelationshipType {
         return otherCandidateRelationshipCode;
     }
 
-    public void setOtherCandidateRelationshipCode(String otherCandidateRelationshipCode) {
+    public void setOtherCandidateRelationshipCode(final String otherCandidateRelationshipCode) {
         this.otherCandidateRelationshipCode = otherCandidateRelationshipCode;
     }
 }

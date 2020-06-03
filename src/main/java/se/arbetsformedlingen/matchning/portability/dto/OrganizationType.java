@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrganizationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrganizationType {
 
     public IdentifierType taxId;
@@ -26,12 +29,17 @@ public class OrganizationType {
     public String workEnvironmentCode;
     public List<SpecifiedPersonType> contacts;
     public String domainName;
+    public ResponsibilityCodeList responsibilityCode;
+    public CommunicationType communication;
+    public IdentifierType id;
+    public String name;
+    public String code;
 
     public IdentifierType getTaxId() {
         return taxId;
     }
 
-    public void setTaxId(IdentifierType taxId) {
+    public void setTaxId(final IdentifierType taxId) {
         this.taxId = taxId;
     }
 
@@ -39,7 +47,7 @@ public class OrganizationType {
         return legalId;
     }
 
-    public void setLegalId(IdentifierType legalId) {
+    public void setLegalId(final IdentifierType legalId) {
         this.legalId = legalId;
     }
 
@@ -50,7 +58,7 @@ public class OrganizationType {
         return this.industryCodes;
     }
 
-    public void setIndustryCodes(List<String> industryCodes) {
+    public void setIndustryCodes(final List<String> industryCodes) {
         this.industryCodes = industryCodes;
     }
 
@@ -61,7 +69,7 @@ public class OrganizationType {
         return this.industryIdentifiers;
     }
 
-    public void setIndustryIdentifiers(List<IdentifierType> industryIdentifiers) {
+    public void setIndustryIdentifiers(final List<IdentifierType> industryIdentifiers) {
         this.industryIdentifiers = industryIdentifiers;
     }
 
@@ -69,7 +77,7 @@ public class OrganizationType {
         return headCount;
     }
 
-    public void setHeadCount(BigDecimal headCount) {
+    public void setHeadCount(final BigDecimal headCount) {
         this.headCount = headCount;
     }
 
@@ -77,7 +85,7 @@ public class OrganizationType {
         return revenue;
     }
 
-    public void setRevenue(AmountType revenue) {
+    public void setRevenue(final AmountType revenue) {
         this.revenue = revenue;
     }
 
@@ -85,7 +93,7 @@ public class OrganizationType {
         return description;
     }
 
-    public void setDescription(TextType description) {
+    public void setDescription(final TextType description) {
         this.description = description;
     }
 
@@ -93,7 +101,7 @@ public class OrganizationType {
         return geographicResponsibilityCode;
     }
 
-    public void setGeographicResponsibilityCode(GeographicResponsibilityCodeList geographicResponsibilityCode) {
+    public void setGeographicResponsibilityCode(final GeographicResponsibilityCodeList geographicResponsibilityCode) {
         this.geographicResponsibilityCode = geographicResponsibilityCode;
     }
 
@@ -101,7 +109,7 @@ public class OrganizationType {
         return ownershipType;
     }
 
-    public void setOwnershipType(OwnershipTypeCodeList ownershipType) {
+    public void setOwnershipType(final OwnershipTypeCodeList ownershipType) {
         this.ownershipType = ownershipType;
     }
 
@@ -109,7 +117,7 @@ public class OrganizationType {
         return stockSymbol;
     }
 
-    public void setStockSymbol(String stockSymbol) {
+    public void setStockSymbol(final String stockSymbol) {
         this.stockSymbol = stockSymbol;
     }
 
@@ -117,7 +125,7 @@ public class OrganizationType {
         return workEnvironmentCode;
     }
 
-    public void setWorkEnvironmentCode(String workEnvironmentCode) {
+    public void setWorkEnvironmentCode(final String workEnvironmentCode) {
         this.workEnvironmentCode = workEnvironmentCode;
     }
 
@@ -128,7 +136,7 @@ public class OrganizationType {
         return this.contacts;
     }
 
-    public void setContacts(List<SpecifiedPersonType> contacts) {
+    public void setContacts(final List<SpecifiedPersonType> contacts) {
         this.contacts = contacts;
     }
 
@@ -136,8 +144,48 @@ public class OrganizationType {
         return domainName;
     }
 
-    public void setDomainName(String domainName) {
+    public void setDomainName(final String domainName) {
         this.domainName = domainName;
+    }
+
+    public ResponsibilityCodeList getResponsibilityCode() {
+        return responsibilityCode;
+    }
+
+    public void setResponsibilityCode(final ResponsibilityCodeList responsibilityCode) {
+        this.responsibilityCode = responsibilityCode;
+    }
+
+    public CommunicationType getCommunication() {
+        return communication;
+    }
+
+    public void setCommunication(final CommunicationType communication) {
+        this.communication = communication;
+    }
+
+    public IdentifierType getId() {
+        return id;
+    }
+
+    public void setId(final IdentifierType id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(final String code) {
+        this.code = code;
     }
 }
 

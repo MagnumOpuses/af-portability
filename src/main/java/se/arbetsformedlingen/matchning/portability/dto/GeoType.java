@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GeoType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GeoType {
 
     @XmlElement(required = true)
@@ -22,7 +25,7 @@ public class GeoType {
         return latitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
+    public void setLatitude(final BigDecimal latitude) {
         this.latitude = latitude;
     }
 
@@ -30,7 +33,7 @@ public class GeoType {
         return longitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
+    public void setLongitude(final BigDecimal longitude) {
         this.longitude = longitude;
     }
 
@@ -38,7 +41,7 @@ public class GeoType {
         return altitude;
     }
 
-    public void setAltitude(MeasureType altitude) {
+    public void setAltitude(final MeasureType altitude) {
         this.altitude = altitude;
     }
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -11,6 +13,7 @@ import java.util.List;
 @XmlType(name = "AttachmentReferenceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AttachmentReferenceType {
 
     protected IdentifierType reference;
@@ -22,7 +25,7 @@ public class AttachmentReferenceType {
         return reference;
     }
 
-    public void setReference(IdentifierType reference) {
+    public void setReference(final IdentifierType reference) {
         this.reference = reference;
     }
 
@@ -30,7 +33,7 @@ public class AttachmentReferenceType {
         return uri;
     }
 
-    public void setUri(String uri) {
+    public void setUri(final String uri) {
         this.uri = uri;
     }
 
@@ -41,7 +44,7 @@ public class AttachmentReferenceType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions){
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

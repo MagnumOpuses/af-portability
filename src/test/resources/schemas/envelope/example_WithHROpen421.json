@@ -1,0 +1,4051 @@
+{
+  "sessionToken": "test-23039409-session-r2094rufn-token",
+  "source": {
+    "sourceId": "01",
+    "sourceName": "Arbetsformedlingen",
+    "termsAndConditions": ["term1", "term2"]
+  },
+  "sink": {
+    "sinkId": "01",
+    "sinkName": "TestSink",
+    "purposeOfUse": ["purposeOfUse1", "purposeOfUse2", "purposeOfUse3"]
+  },
+  "consent": {
+    "consentTimestamp": "2019-09-20T11:53:21+00:00",
+    "consentStatus": true,
+    "consentedTimePeriod": "0000-00-30T00:00:00+00:00",
+    "AcceptedTerms": ["term1"],
+    "AcceptedPurposes": ["purposeOfUse2", "purposeOfUse3"]
+  },
+  "data": {
+    "size": "500",
+    "documentType": "CV",
+    "dataStructureLink": "https://github.com/MagnumOpuses/common-cv-model/tree/master/common%20data%20structure",
+    "data": {
+      "documentId": {
+        "value": "81994764",
+        "schemeId": null,
+        "schemeVersionId": null,
+        "schemeAgencyId": null,
+        "description": null,
+        "schemeLink": null,
+        "agencyUri": null
+      },
+      "alternateIds": null,
+      "language": null,
+      "dataProtectionPolicy": null,
+      "uri": null,
+      "distributionGuidelines": null,
+      "person": {
+        "legalId": null,
+        "birthDate": null,
+        "gender": null,
+        "citizenship": null,
+        "residenceCountry": null,
+        "militaryStatus": null,
+        "ethnicity": null,
+        "id": null,
+        "name": {
+          "language": null,
+          "formattedName": null,
+          "legal": null,
+          "given": "Nina",
+          "preferred": null,
+          "middle": null,
+          "family": "Greger",
+          "familyPrefix": null,
+          "alias": null,
+          "formerFamily": null,
+          "formerFamilyPrefix": null,
+          "preferredSalutationCode": null,
+          "generationAffixCode": null,
+          "qualificationAffixCode": null,
+          "titleAffixCode": null,
+          "initials": null
+        },
+        "communication": {
+          "address": {
+            "item": [
+              {
+                "line": "Karlavägen 98",
+                "extendedLines": {
+                  "item": [
+                    {
+                      "type": null,
+                      "value": "test"
+                    }
+                  ]
+                },
+                "countryCode": "SE",
+                "countrySubDivisions": null,
+                "city": "Forserum",
+                "postalCode": "57197",
+                "postOfficeBox": null,
+                "geoLocation": null,
+                "formattedAddress": null,
+                "name": null,
+                "useCode": null,
+                "preference": null,
+                "availablePeriod": null
+              }
+            ]
+          },
+          "phone": {
+            "item": [
+              {
+                "countryDialingCode": null,
+                "areaDialingCode": null,
+                "dialNumber": null,
+                "phoneExtension": null,
+                "access": null,
+                "formattedNumber": "08558945622",
+                "name": "Home",
+                "useCode": null,
+                "preference": 1,
+                "availablePeriod": null
+              },
+              {
+                "countryDialingCode": null,
+                "areaDialingCode": null,
+                "dialNumber": null,
+                "phoneExtension": null,
+                "access": null,
+                "formattedNumber": "07055555",
+                "name": "Mobile",
+                "useCode": null,
+                "preference": 2,
+                "availablePeriod": null
+              },
+              {
+                "countryDialingCode": null,
+                "areaDialingCode": null,
+                "dialNumber": null,
+                "phoneExtension": null,
+                "access": null,
+                "formattedNumber": "07081542644",
+                "name": "Other",
+                "useCode": null,
+                "preference": 3,
+                "availablePeriod": null
+              }
+            ]
+          },
+          "email": {
+            "item": [
+              {
+                "address": "test@test.se",
+                "name": null,
+                "useCode": null,
+                "preference": null,
+                "availablePeriod": null
+              }
+            ]
+          },
+          "web": {
+            "item": [
+              {
+                "url": null,
+                "name": null,
+                "useCode": null,
+                "preference": null,
+                "availablePeriod": null
+              }
+            ]
+          }
+        },
+        "primaryLanguage": null,
+        "height": null,
+        "weight": null,
+        "disability": null,
+        "tobaccoUserIndicator": null,
+        "hairColor": null,
+        "eyeColor": null,
+        "identifyingMarks": null,
+        "age": null,
+        "bloodType": null,
+        "passportId": null,
+        "fatherName": null,
+        "motherName": null,
+        "race": null,
+        "birthPlace": null,
+        "deathDate": null,
+        "nationality": null,
+        "maritalStatus": null,
+        "maritalStatusDate": null,
+        "visa": null,
+        "religion": null,
+        "studentType": null,
+        "studentIndicator": null,
+        "studentStatus": null,
+        "legalDocuments": null,
+        "employmentPermits": null
+      },
+      "profiles": {
+        "item": [
+          {
+            "profileName": "UX Designer",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": []
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Oct 04 11:36:37 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": null,
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "rrrr",
+            "executiveSummary": null,
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": []
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Arkitekt",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": []
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Oct 04 11:35:41 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": null,
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": null,
+            "executiveSummary": null,
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "01",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Ellinor B.",
+            "languageCode": null,
+            "education": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@665c601",
+                  "end": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@70dca006",
+                  "current": false,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["340"]
+                  },
+                  "institution": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "Vasaskolan",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "department": null,
+                  "programs": null,
+                  "educationLevelCodes": null,
+                  "currentlyAttendingIndicator": null,
+                  "goodStandingIndicator": null,
+                  "educationDegrees": null,
+                  "otherAttendancePeriods": null
+                }
+              ]
+            },
+            "employment": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@767db17d",
+                  "end": "null",
+                  "current": true,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["sdfsdf"]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "refd",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "test",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "AM A1 A2 A B BU BE DE D1 D D1E CE C1 C C1E",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Thu Oct 10 08:55:10 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "400059",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605911",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605913",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607655",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "773",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605207",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "603062",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "606185",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605240",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605200",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605194",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "34",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "1657",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "602713",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "200170",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "604888",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "394",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605917",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "894",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "602667",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "6049",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "1987",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "604154",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "Passionerad praktikant",
+            "executiveSummary": "Ellinor\nLorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.\n\n",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0140",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0117",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0181",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0191",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0120",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0187",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0162",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0183",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0126",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0128",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0115",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0138",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0136",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0163",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0188",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0160",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0123",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0127",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0184",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0180",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0114",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0186",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0192",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0125",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0139",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "System Utvecklare",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@1b830604",
+                  "end": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@6eba50",
+                  "current": false,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": [
+                      "Min roll involverar administration av IT system på företaget JobJobJob IT."
+                    ]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "JobJobJob IT",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "Systemadmin på JobJobJob IT",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@28933192",
+                  "end": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@3dda7816",
+                  "current": false,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": [
+                      "Jag har utvecklat ett HR system och Demo verktyg."
+                    ]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "Mittmittjobbjobb",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "Systemutvecklare på mittmittjobbjobb.se",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Oct 04 11:43:01 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "609205",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "5956",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "200029",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605952",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "161",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "3252",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607902",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "200028",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "Systemutvecklare som vill jobba i Stockholm",
+            "executiveSummary": "Jag är en duktig system utvecklare!",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0180",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "01",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Personlig tränare",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": []
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "AM B BU",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Thu Aug 30 08:27:33 GMT 2018",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "517",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": null,
+            "executiveSummary": null,
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": []
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Testare",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": []
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Oct 04 11:33:52 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": [
+                {
+                  "id": null,
+                  "name": "test",
+                  "type": null,
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": null,
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["test"]
+                  }
+                }
+              ]
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "200028",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "Test för bevakningsmail",
+            "executiveSummary": "hej hej",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0180",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0184",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "01",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "PL",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "System ingenjör",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@3eeafa8f",
+                  "end": "null",
+                  "current": true,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["personlig tränare"]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "sats",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "pt",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "AM A1 B BU BE",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Mon Dec 18 14:25:26 GMT 2017",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": []
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "608302",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "608174",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607546",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "86",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607293",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "609204",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "1288",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607330",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "602883",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "3589",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": null,
+            "executiveSummary": null,
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "DZ",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "MA",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Läkare",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@4ba37b38",
+                  "end": "null",
+                  "current": true,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["kjhj"]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "kjh",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "kjhkj",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@7a0ddc7f",
+                  "end": "null",
+                  "current": true,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["asdfija"]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "sdffd",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "uytuy",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "AM B DE BU BE D1 D D1E CE C1 C C1E",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Thu Oct 24 08:39:58 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": [
+                {
+                  "id": null,
+                  "name": "Personlig tränare Sats",
+                  "type": null,
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": null,
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["Personlig tränare"]
+                  }
+                }
+              ]
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605167",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605165",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "605181",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": null,
+            "executiveSummary": "Hej \nVill jobaa gärnet!",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "0184",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Scrum Master",
+            "languageCode": null,
+            "education": {
+              "item": []
+            },
+            "employment": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@147901e0",
+                  "end": "null",
+                  "current": true,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["bhghg"]
+                  },
+                  "organization": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "gg",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "positionHistories": {
+                    "item": [
+                      {
+                        "id": null,
+                        "start": null,
+                        "end": null,
+                        "current": null,
+                        "attachmentReferences": null,
+                        "descriptions": null,
+                        "title": "gg",
+                        "resourceRelationshipCode": null,
+                        "organization": null,
+                        "location": null,
+                        "jobCategories": null,
+                        "jobLevels": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "DE AM B BU BE D1 D D1E",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Mar 16 09:40:11 GMT 2018",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": [
+                {
+                  "id": null,
+                  "name": "dsfsd",
+                  "type": null,
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": null,
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["fsdfds"]
+                  }
+                },
+                {
+                  "id": null,
+                  "name": "dasdas",
+                  "type": null,
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": null,
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["gfdgfd"]
+                  }
+                }
+              ]
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "603586",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "600871",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "607654",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                },
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "2904",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "Psykopat till Stationschef",
+            "executiveSummary": "Hej Christopher !!!!!",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "03",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "01",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                },
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "2584",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          },
+          {
+            "profileName": "Receptionist",
+            "languageCode": null,
+            "education": {
+              "item": [
+                {
+                  "id": null,
+                  "start": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@7d2ebf62",
+                  "end": "se.arbetsformedlingen.matchning.portability.model.asp.common.ArManad@2d847144",
+                  "current": false,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["010"]
+                  },
+                  "institution": {
+                    "taxId": null,
+                    "legalId": {
+                      "value": "test school",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "industryCodes": null,
+                    "industryIdentifiers": null,
+                    "headCount": null,
+                    "revenue": null,
+                    "description": null,
+                    "geographicResponsibilityCode": null,
+                    "ownershipType": null,
+                    "stockSymbol": null,
+                    "workEnvironmentCode": null,
+                    "contacts": null,
+                    "domainName": null
+                  },
+                  "department": null,
+                  "programs": null,
+                  "educationLevelCodes": null,
+                  "currentlyAttendingIndicator": null,
+                  "goodStandingIndicator": null,
+                  "educationDegrees": null,
+                  "otherAttendancePeriods": null
+                }
+              ]
+            },
+            "employment": {
+              "item": []
+            },
+            "militaryService": null,
+            "licenses": {
+              "item": [
+                {
+                  "id": null,
+                  "name": null,
+                  "type": {
+                    "id": {
+                      "value": "A1 AM",
+                      "schemeId": null,
+                      "schemeVersionId": null,
+                      "schemeAgencyId": null,
+                      "description": null,
+                      "schemeLink": null,
+                      "agencyUri": null
+                    },
+                    "name": null,
+                    "code": null
+                  },
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": "Fri Sep 13 08:55:43 GMT 2019",
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "endorsements": null,
+                  "restrictions": null,
+                  "violations": null
+                }
+              ]
+            },
+            "certifications": {
+              "item": [
+                {
+                  "id": null,
+                  "name": "wefwefwrf",
+                  "type": null,
+                  "status": null,
+                  "effectiveTimePeriod": null,
+                  "issued": null,
+                  "firstIssued": null,
+                  "issuingAuthority": null,
+                  "attachmentReferences": null,
+                  "descriptions": {
+                    "item": ["WEFAWEF"]
+                  }
+                }
+              ]
+            },
+            "patents": null,
+            "publications": null,
+            "qualifications": {
+              "item": [
+                {
+                  "competencyIds": {
+                    "item": [
+                      {
+                        "value": "609065",
+                        "schemeId": null,
+                        "schemeVersionId": null,
+                        "schemeAgencyId": null,
+                        "description": null,
+                        "schemeLink": null,
+                        "agencyUri": null
+                      }
+                    ]
+                  },
+                  "competencyName": null,
+                  "description": "skill",
+                  "proficiencyLevel": null,
+                  "lastUsedDate": null,
+                  "experienceMeasure": null,
+                  "interestLevel": null,
+                  "competencyDimensions": null,
+                  "competencyEvidence": null,
+                  "attachmentReferences": null
+                }
+              ]
+            },
+            "affiliations": null,
+            "securityCredentials": null,
+            "references": null,
+            "attachments": null,
+            "profileId": null,
+            "alternateIds": null,
+            "personAvailability": null,
+            "processingInformation": null,
+            "distributionGuidelines": null,
+            "associatedPositionOpenings": null,
+            "objective": "to have an education to show",
+            "executiveSummary": "JLFNÄAIRJEFGPEIHRNFGVOLJSM RGOL  EIRFVNOEKLRNO V-KE RMVF",
+            "employerPreferences": null,
+            "positionPreferences": {
+              "item": [
+                {
+                  "locations": {
+                    "item": [
+                      {
+                        "maximumCommuteDuration": null,
+                        "maximumCommuteDistance": null,
+                        "referenceLocation": {
+                          "line": null,
+                          "extendedLines": null,
+                          "countryCode": null,
+                          "countrySubDivisions": {
+                            "item": []
+                          },
+                          "city": "1862",
+                          "postalCode": null,
+                          "postOfficeBox": null,
+                          "geoLocation": null,
+                          "formattedAddress": null
+                        }
+                      }
+                    ]
+                  },
+                  "jobCategories": null,
+                  "positionTitles": null,
+                  "positionOfferingTypeCodes": null,
+                  "positionScheduleTypeCodes": null,
+                  "shiftSchedules": null,
+                  "shiftDescriptions": null,
+                  "remoteWork": null,
+                  "careerLevelCodes": null,
+                  "jobGradeCode": null,
+                  "offeredRemunerationPackage": null,
+                  "travel": null,
+                  "relocation": null,
+                  "workingLanguageCodes": null
+                }
+              ]
+            },
+            "candidateRelationships": null,
+            "candidateSources": null,
+            "applicationProcessHistory": null,
+            "workLifeCycles": null
+          }
+        ]
+      }
+    }
+  }
+}

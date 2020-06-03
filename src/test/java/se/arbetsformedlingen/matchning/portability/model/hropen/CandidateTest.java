@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
 import org.junit.Before;
 import org.junit.Test;
+import se.arbetsformedlingen.matchning.portability.builder.CandidateTypeBuilder;
 import se.arbetsformedlingen.matchning.portability.dto.*;
-import se.arbetsformedlingen.matchning.portability.builder.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.*;
 
 import java.io.IOException;
@@ -52,7 +52,7 @@ public class CandidateTest {
         assertEquals(personUppgifter.getTelefonnummerMobil(), communication.getPhone().get(1).getFormattedNumber());
         assertEquals(personUppgifter.getTelefonnummerOvrig(), communication.getPhone().get(2).getFormattedNumber());
 
-        for(AddressType item : communication.getAddress()) {
+        for (final AddressTypeArray item : communication.getAddress()) {
             assertEquals(personUppgifter.getAdress(), item.getLine());
             assertEquals(personUppgifter.getCo(), item.getExtendedLines().get(0).getValue());
             assertEquals(personUppgifter.getPostort(), item.getCity());
@@ -95,14 +95,15 @@ public class CandidateTest {
         assertEquals(ort.getVarde1(), city.getLocations().get(0).getReferenceLocation().getCity());
     }
 
-    private PersonUppgifter loadPersonUppgifter(String resourceName) throws IOException {
-        String json = Resources.toString(Resources.getResource(resourceName), Charset.forName("UTF-8"));
+    private PersonUppgifter loadPersonUppgifter(final String resourceName) throws IOException {
+        final String json = Resources.toString(Resources.getResource(resourceName), Charset.forName("UTF-8"));
         return mapper.readValue(json, PersonUppgifter.class);
     }
 
-    private List<ArbetsSokandeProfil> loadArbetsSokandeProfil(String resourceName) throws IOException {
-        String json = Resources.toString(Resources.getResource(resourceName), Charset.forName("UTF-8"));
-        return mapper.readValue(json, new TypeReference<List<ArbetsSokandeProfil>>() {});
+    private List<ArbetsSokandeProfil> loadArbetsSokandeProfil(final String resourceName) throws IOException {
+        final String json = Resources.toString(Resources.getResource(resourceName), Charset.forName("UTF-8"));
+        return mapper.readValue(json, new TypeReference<List<ArbetsSokandeProfil>>() {
+        });
     }
 }
 

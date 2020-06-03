@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RemoteWorkType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RemoteWorkType {
 
     protected Boolean remoteWorkIndicator;
@@ -23,7 +26,7 @@ public class RemoteWorkType {
         return remoteWorkIndicator;
     }
 
-    public void setRemoteWorkIndicator(Boolean remoteWorkIndicator) {
+    public void setRemoteWorkIndicator(final Boolean remoteWorkIndicator) {
         this.remoteWorkIndicator = remoteWorkIndicator;
     }
 
@@ -34,12 +37,8 @@ public class RemoteWorkType {
         return this.workLocationCodes;
     }
 
-    public void setWorkLocationCodes(List<WorkLocationCodeList> workLocationCodes) {
+    public void setWorkLocationCodes(final List<WorkLocationCodeList> workLocationCodes) {
         this.workLocationCodes = workLocationCodes;
-    }
-
-    public void setRestrictionCodes(List<RestrictionCodeList> restrictionCodes) {
-        this.restrictionCodes = restrictionCodes;
     }
 
     public List<RestrictionCodeList> getRestrictionCodes() {
@@ -49,11 +48,15 @@ public class RemoteWorkType {
         return this.restrictionCodes;
     }
 
+    public void setRestrictionCodes(final List<RestrictionCodeList> restrictionCodes) {
+        this.restrictionCodes = restrictionCodes;
+    }
+
     public String getRemoteEligibilityRequirement() {
         return remoteEligibilityRequirement;
     }
 
-    public void setRemoteEligibilityRequirement(String remoteEligibilityRequirement) {
+    public void setRemoteEligibilityRequirement(final String remoteEligibilityRequirement) {
         this.remoteEligibilityRequirement = remoteEligibilityRequirement;
     }
 
@@ -61,7 +64,7 @@ public class RemoteWorkType {
         return restrictionDetails;
     }
 
-    public void setRestrictionDetails(String restrictionDetails) {
+    public void setRestrictionDetails(final String restrictionDetails) {
         this.restrictionDetails = restrictionDetails;
     }
 }

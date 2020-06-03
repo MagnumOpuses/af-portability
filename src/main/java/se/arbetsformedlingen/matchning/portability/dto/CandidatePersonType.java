@@ -1,22 +1,28 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.prefs.PreferenceChangeEvent;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CandidatePersonType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidatePersonType {
 
     public IdentifierType legalId;
-    public XMLGregorianCalendar birthDate;
+    @JsonSerialize(using = DateType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateType.DateTypeDeserializer.class)
+    public DateType birthDate;
     public GenderCodeList gender;
     public List<CountryCodeList> citizenship;
     public List<CountryCodeList> residenceCountry;
@@ -28,27 +34,27 @@ public class CandidatePersonType {
     public LanguageCodeList primaryLanguage;
     public MeasureType height;
     public MeasureType weight;
-    public DisabilityType disability;  
-    public Boolean tobaccoUserIndicator;  
-    public String hairColor;  
-    public String eyeColor;  
-    public List<String> identifyingMarks;  
-    public BigInteger age;  
-    public String bloodType;  
-    public IdentifierType passportId;  
-    public String fatherName;  
-    public String motherName;  
-    public List<String> race;  
-    public String birthPlace;  
-    public XMLGregorianCalendar deathDate;  
-    public List<String> nationality;  
-    public String maritalStatus;  
-    public XMLGregorianCalendar maritalStatusDate;  
-    public List<String> visa;  
-    public List<String> religion;  
-    public String studentType;  
-    public Boolean studentIndicator;  
-    public String studentStatus;  
+    public DisabilityType disability;
+    public Boolean tobaccoUserIndicator;
+    public String hairColor;
+    public String eyeColor;
+    public List<String> identifyingMarks;
+    public BigInteger age;
+    public String bloodType;
+    public IdentifierType passportId;
+    public String fatherName;
+    public String motherName;
+    public List<String> race;
+    public String birthPlace;
+    public XMLGregorianCalendar deathDate;
+    public List<String> nationality;
+    public String maritalStatus;
+    public XMLGregorianCalendar maritalStatusDate;
+    public List<String> visa;
+    public List<String> religion;
+    public String studentType;
+    public Boolean studentIndicator;
+    public String studentStatus;
     public List<LegalDocumentType> legalDocuments;
     public List<EmploymentPermitType> employmentPermits;
 
@@ -57,15 +63,15 @@ public class CandidatePersonType {
         return legalId;
     }
 
-    public void setLegalId(IdentifierType legalId) {
+    public void setLegalId(final IdentifierType legalId) {
         this.legalId = legalId;
     }
 
-    public XMLGregorianCalendar getBirthDate() {
+    public DateType getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(XMLGregorianCalendar birthDate) {
+    public void setBirthDate(final DateType birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -73,7 +79,7 @@ public class CandidatePersonType {
         return gender;
     }
 
-    public void setGender(GenderCodeList gender) {
+    public void setGender(final GenderCodeList gender) {
         this.gender = gender;
     }
 
@@ -81,7 +87,7 @@ public class CandidatePersonType {
         return citizenship;
     }
 
-    public void setCitizenship(List<CountryCodeList> citizenship) {
+    public void setCitizenship(final List<CountryCodeList> citizenship) {
         this.citizenship = citizenship;
     }
 
@@ -89,7 +95,7 @@ public class CandidatePersonType {
         return residenceCountry;
     }
 
-    public void setResidenceCountry(List<CountryCodeList> residenceCountry) {
+    public void setResidenceCountry(final List<CountryCodeList> residenceCountry) {
         this.residenceCountry = residenceCountry;
     }
 
@@ -97,7 +103,7 @@ public class CandidatePersonType {
         return militaryStatus;
     }
 
-    public void setMilitaryStatus(String militaryStatus) {
+    public void setMilitaryStatus(final String militaryStatus) {
         this.militaryStatus = militaryStatus;
     }
 
@@ -108,7 +114,7 @@ public class CandidatePersonType {
         return this.ethnicity;
     }
 
-    public void setEthnicity(List<String> ethnicity){
+    public void setEthnicity(final List<String> ethnicity) {
         this.ethnicity = ethnicity;
     }
 
@@ -116,7 +122,7 @@ public class CandidatePersonType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -124,7 +130,7 @@ public class CandidatePersonType {
         return name;
     }
 
-    public void setName(PersonNameType name) {
+    public void setName(final PersonNameType name) {
         this.name = name;
     }
 
@@ -132,7 +138,7 @@ public class CandidatePersonType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
@@ -140,7 +146,7 @@ public class CandidatePersonType {
         return primaryLanguage;
     }
 
-    public void setPrimaryLanguage(LanguageCodeList primaryLanguage) {
+    public void setPrimaryLanguage(final LanguageCodeList primaryLanguage) {
         this.primaryLanguage = primaryLanguage;
     }
 
@@ -148,7 +154,7 @@ public class CandidatePersonType {
         return height;
     }
 
-    public void setHeight(MeasureType height) {
+    public void setHeight(final MeasureType height) {
         this.height = height;
     }
 
@@ -156,7 +162,7 @@ public class CandidatePersonType {
         return weight;
     }
 
-    public void setWeight(MeasureType weight) {
+    public void setWeight(final MeasureType weight) {
         this.weight = weight;
     }
 
@@ -164,7 +170,7 @@ public class CandidatePersonType {
         return disability;
     }
 
-    public void setDisability(DisabilityType disability) {
+    public void setDisability(final DisabilityType disability) {
         this.disability = disability;
     }
 
@@ -172,7 +178,7 @@ public class CandidatePersonType {
         return tobaccoUserIndicator;
     }
 
-    public void setTobaccoUserIndicator(Boolean tobaccoUserIndicator) {
+    public void setTobaccoUserIndicator(final Boolean tobaccoUserIndicator) {
         this.tobaccoUserIndicator = tobaccoUserIndicator;
     }
 
@@ -180,7 +186,7 @@ public class CandidatePersonType {
         return hairColor;
     }
 
-    public void setHairColor(String hairColor) {
+    public void setHairColor(final String hairColor) {
         this.hairColor = hairColor;
     }
 
@@ -188,7 +194,7 @@ public class CandidatePersonType {
         return eyeColor;
     }
 
-    public void setEyeColor(String eyeColor) {
+    public void setEyeColor(final String eyeColor) {
         this.eyeColor = eyeColor;
     }
 
@@ -199,7 +205,7 @@ public class CandidatePersonType {
         return this.identifyingMarks;
     }
 
-    public void setIdentifyingMarks(List<String> identifyingMarks){
+    public void setIdentifyingMarks(final List<String> identifyingMarks) {
         this.identifyingMarks = identifyingMarks;
     }
 
@@ -207,7 +213,7 @@ public class CandidatePersonType {
         return age;
     }
 
-    public void setAge(BigInteger age) {
+    public void setAge(final BigInteger age) {
         this.age = age;
     }
 
@@ -215,7 +221,7 @@ public class CandidatePersonType {
         return bloodType;
     }
 
-    public void setBloodType(String bloodType) {
+    public void setBloodType(final String bloodType) {
         this.bloodType = bloodType;
     }
 
@@ -223,7 +229,7 @@ public class CandidatePersonType {
         return passportId;
     }
 
-    public void setPassportId(IdentifierType passportId) {
+    public void setPassportId(final IdentifierType passportId) {
         this.passportId = passportId;
     }
 
@@ -231,7 +237,7 @@ public class CandidatePersonType {
         return fatherName;
     }
 
-    public void setFatherName(String fatherName) {
+    public void setFatherName(final String fatherName) {
         this.fatherName = fatherName;
     }
 
@@ -239,7 +245,7 @@ public class CandidatePersonType {
         return motherName;
     }
 
-    public void setMotherName(String motherName) {
+    public void setMotherName(final String motherName) {
         this.motherName = motherName;
     }
 
@@ -250,7 +256,7 @@ public class CandidatePersonType {
         return this.race;
     }
 
-    public void setRace(List<String> race) {
+    public void setRace(final List<String> race) {
         this.race = race;
     }
 
@@ -258,7 +264,7 @@ public class CandidatePersonType {
         return birthPlace;
     }
 
-    public void setBirthPlace(String birthPlace) {
+    public void setBirthPlace(final String birthPlace) {
         this.birthPlace = birthPlace;
     }
 
@@ -266,7 +272,7 @@ public class CandidatePersonType {
         return deathDate;
     }
 
-    public void setDeathDate(XMLGregorianCalendar deathDate) {
+    public void setDeathDate(final XMLGregorianCalendar deathDate) {
         this.deathDate = deathDate;
     }
 
@@ -277,7 +283,7 @@ public class CandidatePersonType {
         return this.race;
     }
 
-    public void setNationality(List<String> nationality) {
+    public void setNationality(final List<String> nationality) {
         this.nationality = nationality;
     }
 
@@ -285,7 +291,7 @@ public class CandidatePersonType {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(String maritalStatus) {
+    public void setMaritalStatus(final String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -293,7 +299,7 @@ public class CandidatePersonType {
         return maritalStatusDate;
     }
 
-    public void setMaritalStatusDate(XMLGregorianCalendar maritalStatusDate) {
+    public void setMaritalStatusDate(final XMLGregorianCalendar maritalStatusDate) {
         this.maritalStatusDate = maritalStatusDate;
     }
 
@@ -304,7 +310,7 @@ public class CandidatePersonType {
         return this.visa;
     }
 
-    public void setVisa(List<String> visa) {
+    public void setVisa(final List<String> visa) {
         this.visa = visa;
     }
 
@@ -315,7 +321,7 @@ public class CandidatePersonType {
         return this.religion;
     }
 
-    public void setReligion(List<String> religion) {
+    public void setReligion(final List<String> religion) {
         this.religion = religion;
     }
 
@@ -323,7 +329,7 @@ public class CandidatePersonType {
         return studentType;
     }
 
-    public void setStudentType(String studentType) {
+    public void setStudentType(final String studentType) {
         this.studentType = studentType;
     }
 
@@ -331,7 +337,7 @@ public class CandidatePersonType {
         return studentIndicator;
     }
 
-    public void setStudentIndicator(Boolean studentIndicator) {
+    public void setStudentIndicator(final Boolean studentIndicator) {
         this.studentIndicator = studentIndicator;
     }
 
@@ -339,7 +345,7 @@ public class CandidatePersonType {
         return studentStatus;
     }
 
-    public void setStudentStatus(String studentStatus) {
+    public void setStudentStatus(final String studentStatus) {
         this.studentStatus = studentStatus;
     }
 
@@ -350,7 +356,7 @@ public class CandidatePersonType {
         return this.legalDocuments;
     }
 
-    public void setLegalDocuments(List<LegalDocumentType> legalDocuments) {
+    public void setLegalDocuments(final List<LegalDocumentType> legalDocuments) {
         this.legalDocuments = legalDocuments;
     }
 
@@ -361,7 +367,7 @@ public class CandidatePersonType {
         return this.employmentPermits;
     }
 
-    public void setEmploymentPermits(List<EmploymentPermitType> employmentPermits) {
+    public void setEmploymentPermits(final List<EmploymentPermitType> employmentPermits) {
         this.employmentPermits = employmentPermits;
     }
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -7,12 +9,13 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OpenEndPeriodType", propOrder = {
-    "formattedDateTime",
-    "dateTimeOpenEndPeriod",
-    "dateOpenEndPeriod",
-    "yearMonthOpenEndPeriod",
-    "yearOpenEndPeriod"
+        "formattedDateTime",
+        "dateTimeOpenEndPeriod",
+        "dateOpenEndPeriod",
+        "yearMonthOpenEndPeriod",
+        "yearOpenEndPeriod"
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OpenEndPeriodType {
 
     @XmlElement(name = "FormattedDateTime")
@@ -30,7 +33,7 @@ public class OpenEndPeriodType {
         return formattedDateTime;
     }
 
-    public void setFormattedDateTime(String formattedDateTime) {
+    public void setFormattedDateTime(final String formattedDateTime) {
         this.formattedDateTime = formattedDateTime;
     }
 
@@ -38,7 +41,7 @@ public class OpenEndPeriodType {
         return dateTimeOpenEndPeriod;
     }
 
-    public void setDateTimeOpenEndPeriod(DateTimeOpenEndPeriodType dateTimeOpenEndPeriod) {
+    public void setDateTimeOpenEndPeriod(final DateTimeOpenEndPeriodType dateTimeOpenEndPeriod) {
         this.dateTimeOpenEndPeriod = dateTimeOpenEndPeriod;
     }
 
@@ -46,7 +49,7 @@ public class OpenEndPeriodType {
         return dateOpenEndPeriod;
     }
 
-    public void setDateOpenEndPeriod(DateOpenEndPeriodType dateOpenEndPeriod) {
+    public void setDateOpenEndPeriod(final DateOpenEndPeriodType dateOpenEndPeriod) {
         this.dateOpenEndPeriod = dateOpenEndPeriod;
     }
 
@@ -54,7 +57,7 @@ public class OpenEndPeriodType {
         return yearMonthOpenEndPeriod;
     }
 
-    public void setYearMonthOpenEndPeriod(YearMonthOpenEndPeriodType yearMonthOpenEndPeriod) {
+    public void setYearMonthOpenEndPeriod(final YearMonthOpenEndPeriodType yearMonthOpenEndPeriod) {
         this.yearMonthOpenEndPeriod = yearMonthOpenEndPeriod;
     }
 
@@ -62,7 +65,7 @@ public class OpenEndPeriodType {
         return yearOpenEndPeriod;
     }
 
-    public void setYearOpenEndPeriod(YearOpenEndPeriodType yearOpenEndPeriod) {
+    public void setYearOpenEndPeriod(final YearOpenEndPeriodType yearOpenEndPeriod) {
         this.yearOpenEndPeriod = yearOpenEndPeriod;
     }
 }

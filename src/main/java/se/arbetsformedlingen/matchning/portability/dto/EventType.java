@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EventType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EventType {
 
     public IdentifierType id;
@@ -23,7 +26,7 @@ public class EventType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -31,7 +34,7 @@ public class EventType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -39,7 +42,7 @@ public class EventType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -47,7 +50,7 @@ public class EventType {
         return venue;
     }
 
-    public void setVenue(String venue) {
+    public void setVenue(final String venue) {
         this.venue = venue;
     }
 
@@ -55,7 +58,7 @@ public class EventType {
         return location;
     }
 
-    public void setLocation(LocationType location) {
+    public void setLocation(final LocationType location) {
         this.location = location;
     }
 
@@ -63,7 +66,7 @@ public class EventType {
         return when;
     }
 
-    public void setWhen(DateOpenEndPeriodType when) {
+    public void setWhen(final DateOpenEndPeriodType when) {
         this.when = when;
     }
 }

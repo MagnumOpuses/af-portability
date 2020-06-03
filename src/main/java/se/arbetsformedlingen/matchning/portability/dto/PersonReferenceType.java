@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PersonReferenceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonReferenceType {
 
     protected IdentifierType id;
@@ -20,7 +23,7 @@ public class PersonReferenceType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -28,7 +31,7 @@ public class PersonReferenceType {
         return name;
     }
 
-    public void setName(PersonNameType name) {
+    public void setName(final PersonNameType name) {
         this.name = name;
     }
 
@@ -36,7 +39,7 @@ public class PersonReferenceType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
@@ -44,7 +47,7 @@ public class PersonReferenceType {
         return primaryLanguage;
     }
 
-    public void setPrimaryLanguage(LanguageCodeList primaryLanguage) {
+    public void setPrimaryLanguage(final LanguageCodeList primaryLanguage) {
         this.primaryLanguage = primaryLanguage;
     }
 }

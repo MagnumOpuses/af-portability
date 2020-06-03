@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EducationAttendanceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EducationAttendanceType {
 
     public IdentifierType id;
@@ -20,7 +23,7 @@ public class EducationAttendanceType {
     public List<String> descriptions;
     public OrganizationType institution;
     public OrganizationType department;
-    public StringTypeArray programs;
+    public List<String> programs;
     public List<EntityType> educationLevelCodes;
     public Boolean currentlyAttendingIndicator;
     public Boolean goodStandingIndicator;
@@ -32,7 +35,7 @@ public class EducationAttendanceType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -40,7 +43,7 @@ public class EducationAttendanceType {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(final String start) {
         this.start = start;
     }
 
@@ -48,7 +51,7 @@ public class EducationAttendanceType {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(final String end) {
         this.end = end;
     }
 
@@ -56,7 +59,7 @@ public class EducationAttendanceType {
         return current;
     }
 
-    public void setCurrent(Boolean current) {
+    public void setCurrent(final Boolean current) {
         this.current = current;
     }
 
@@ -67,7 +70,7 @@ public class EducationAttendanceType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -78,7 +81,7 @@ public class EducationAttendanceType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -86,7 +89,7 @@ public class EducationAttendanceType {
         return institution;
     }
 
-    public void setInstitution(OrganizationType institution) {
+    public void setInstitution(final OrganizationType institution) {
         this.institution = institution;
     }
 
@@ -94,15 +97,15 @@ public class EducationAttendanceType {
         return department;
     }
 
-    public void setDepartment(OrganizationType department) {
+    public void setDepartment(final OrganizationType department) {
         this.department = department;
     }
 
-    public StringTypeArray getPrograms() {
+    public List<String> getPrograms() {
         return programs;
     }
 
-    public void setPrograms(StringTypeArray programs) {
+    public void setPrograms(final List<String> programs) {
         this.programs = programs;
     }
 
@@ -113,7 +116,7 @@ public class EducationAttendanceType {
         return this.educationLevelCodes;
     }
 
-    public void setEducationLevelCodes(List<EntityType> educationLevelCodes) {
+    public void setEducationLevelCodes(final List<EntityType> educationLevelCodes) {
         this.educationLevelCodes = educationLevelCodes;
     }
 
@@ -121,7 +124,7 @@ public class EducationAttendanceType {
         return currentlyAttendingIndicator;
     }
 
-    public void setCurrentlyAttendingIndicator(Boolean currentlyAttendingIndicator) {
+    public void setCurrentlyAttendingIndicator(final Boolean currentlyAttendingIndicator) {
         this.currentlyAttendingIndicator = currentlyAttendingIndicator;
     }
 
@@ -129,7 +132,7 @@ public class EducationAttendanceType {
         return goodStandingIndicator;
     }
 
-    public void setGoodStandingIndicator(Boolean goodStandingIndicator) {
+    public void setGoodStandingIndicator(final Boolean goodStandingIndicator) {
         this.goodStandingIndicator = goodStandingIndicator;
     }
 
@@ -140,7 +143,7 @@ public class EducationAttendanceType {
         return this.educationDegrees;
     }
 
-    public void setEducationDegrees(List<EducationDegreeType> educationDegrees) {
+    public void setEducationDegrees(final List<EducationDegreeType> educationDegrees) {
         this.educationDegrees = educationDegrees;
     }
 
@@ -148,7 +151,7 @@ public class EducationAttendanceType {
         return otherAttendancePeriods;
     }
 
-    public void setOtherAttendancePeriods(FormattedDateTimeType otherAttendancePeriods) {
+    public void setOtherAttendancePeriods(final FormattedDateTimeType otherAttendancePeriods) {
         this.otherAttendancePeriods = otherAttendancePeriods;
     }
 

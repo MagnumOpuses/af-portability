@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ScheduleType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ScheduleType {
 
     protected IdentifierType id;
@@ -23,7 +26,7 @@ public class ScheduleType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -31,7 +34,7 @@ public class ScheduleType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -39,7 +42,7 @@ public class ScheduleType {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(final String code) {
         this.code = code;
     }
 
@@ -47,7 +50,7 @@ public class ScheduleType {
         return period;
     }
 
-    public void setPeriod(PeriodType period) {
+    public void setPeriod(final PeriodType period) {
         this.period = period;
     }
 
@@ -55,7 +58,7 @@ public class ScheduleType {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(final String hours) {
         this.hours = hours;
     }
 
@@ -66,7 +69,7 @@ public class ScheduleType {
         return this.schedules;
     }
 
-    public void setSchedules(List<DayScheduleType> schedules) {
+    public void setSchedules(final List<DayScheduleType> schedules) {
         this.schedules = schedules;
     }
 }

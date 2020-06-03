@@ -1,18 +1,21 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RefereeType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RefereeType {
 
     protected IdentifierType refereeId;
@@ -30,7 +33,7 @@ public class RefereeType {
         return refereeId;
     }
 
-    public void setRefereeId(IdentifierType refereeId) {
+    public void setRefereeId(final IdentifierType refereeId) {
         this.refereeId = refereeId;
     }
 
@@ -38,7 +41,7 @@ public class RefereeType {
         return personName;
     }
 
-    public void setPersonName(PersonNameType personName) {
+    public void setPersonName(final PersonNameType personName) {
         this.personName = personName;
     }
 
@@ -46,7 +49,7 @@ public class RefereeType {
         return positionTitle;
     }
 
-    public void setPositionTitle(String positionTitle) {
+    public void setPositionTitle(final String positionTitle) {
         this.positionTitle = positionTitle;
     }
 
@@ -54,7 +57,7 @@ public class RefereeType {
         return organizationName;
     }
 
-    public void setOrganizationName(String organizationName) {
+    public void setOrganizationName(final String organizationName) {
         this.organizationName = organizationName;
     }
 
@@ -62,7 +65,7 @@ public class RefereeType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
@@ -70,7 +73,7 @@ public class RefereeType {
         return yearsKnown;
     }
 
-    public void setYearsKnown(BigDecimal yearsKnown) {
+    public void setYearsKnown(final BigDecimal yearsKnown) {
         this.yearsKnown = yearsKnown;
     }
 
@@ -78,7 +81,7 @@ public class RefereeType {
         return relationship;
     }
 
-    public void setRelationship(RelationshipTypeCodeList relationship) {
+    public void setRelationship(final RelationshipTypeCodeList relationship) {
         this.relationship = relationship;
     }
 
@@ -89,12 +92,8 @@ public class RefereeType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
-    }
-
-    public void setComments(List<CommentType> comments) {
-        this.comments = comments;
     }
 
     public List<CommentType> getComments() {
@@ -102,5 +101,9 @@ public class RefereeType {
             comments = new ArrayList<CommentType>();
         }
         return this.comments;
+    }
+
+    public void setComments(final List<CommentType> comments) {
+        this.comments = comments;
     }
 }

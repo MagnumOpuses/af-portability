@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "version": "4.2.0",
+    "title": "DataProtectionPolicyInclusion",
+    "description": "Data protection policy according General Data Protection Regulation (GDPR) (Regulation (EU) 2016/679).",
+    "definitions": {
+        "SecurityPermissionType": {
+            "enum": [
+                "Read",
+                "Modify",
+                "Store",
+                "Full Control"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "dataProtectionPolicy": {
+            "type": "object",
+            "properties": {
+                "retentionDate": {
+                    "description": "Date until allowed to keep privacy data. In case 'retentionDays' is also present, earlier one is taken as retention limit. In case of no retention property present, data can be kept indefinitely.",
+                    "$ref": "DateType.json#"
+                },
+                "retentionDays": {
+                    "description": "Number of days allowed to keep privacy data. In case 'retentionDate' is also present, earlier one is taken as retention limit. In case of no retention property present, data can be kept indefinitely.",
+                    "type": "integer"
+                },
+                "geoRestrictions": {
+                    "description": "Data can be processed only in countries from this list. In case not present, there is no country restriction associated with data.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "country": { "$ref": "../codelist/CountryCodeList.json#" },
+                            "policy": { "$ref": "#/definitions/SecurityPermissionType" }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

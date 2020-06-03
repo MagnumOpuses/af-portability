@@ -1,29 +1,28 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CandidatePersonType", propOrder = {
 
 })
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EnvelopeType {
     public String sessionToken;
     public Source source;
     public Sink sink;
     public Consent consent;
-    public List<CandidateType> data;
+    public TransferObject transferObject;
 
     public String getSessionToken() {
         return sessionToken;
     }
 
-    public void setSessionToken(String sessionToken) {
+    public void setSessionToken(final String sessionToken) {
         this.sessionToken = sessionToken;
     }
 
@@ -31,7 +30,7 @@ public class EnvelopeType {
         return source;
     }
 
-    public void setSource(Source source) {
+    public void setSource(final Source source) {
         this.source = source;
     }
 
@@ -39,7 +38,7 @@ public class EnvelopeType {
         return sink;
     }
 
-    public void setSink(Sink sink) {
+    public void setSink(final Sink sink) {
         this.sink = sink;
     }
 
@@ -47,20 +46,15 @@ public class EnvelopeType {
         return consent;
     }
 
-    public void setConsent(Consent consent) {
+    public void setConsent(final Consent consent) {
         this.consent = consent;
     }
 
-    public List<CandidateType> getData() {
-        if (data == null) {
-            data = new ArrayList<CandidateType>();
-        }
-        return this.data;
+    public TransferObject getTransferObject() {
+        return transferObject;
     }
 
-    public void setData(List<CandidateType> data) {
-        this.data = data;
+    public void setTransferObject(final TransferObject transferObject) {
+        this.transferObject = transferObject;
     }
-
-
 }

@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -11,6 +13,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "YearPeriodType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class YearPeriodType {
 
     @XmlElement(namespace = "", required = true)
@@ -22,7 +25,7 @@ public class YearPeriodType {
         return start;
     }
 
-    public void setStart(XMLGregorianCalendar start) {
+    public void setStart(final XMLGregorianCalendar start) {
         this.start = start;
     }
 
@@ -30,7 +33,7 @@ public class YearPeriodType {
         return end;
     }
 
-    public void setEnd(XMLGregorianCalendar end) {
+    public void setEnd(final XMLGregorianCalendar end) {
         this.end = end;
     }
 }

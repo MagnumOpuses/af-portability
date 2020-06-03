@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -11,6 +13,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "CommentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CommentType {
 
     protected LanguageCodeList language;
@@ -25,7 +28,7 @@ public class CommentType {
         return language;
     }
 
-    public void setLanguage(LanguageCodeList language) {
+    public void setLanguage(final LanguageCodeList language) {
         this.language = language;
     }
 
@@ -33,7 +36,7 @@ public class CommentType {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(final String type) {
         this.type = type;
     }
 
@@ -41,7 +44,7 @@ public class CommentType {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(final String author) {
         this.author = author;
     }
 
@@ -49,7 +52,7 @@ public class CommentType {
         return datetime;
     }
 
-    public void setDatetime(XMLGregorianCalendar datetime) {
+    public void setDatetime(final XMLGregorianCalendar datetime) {
         this.datetime = datetime;
     }
 
@@ -57,7 +60,7 @@ public class CommentType {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(final String status) {
         this.status = status;
     }
 
@@ -65,7 +68,7 @@ public class CommentType {
         return note;
     }
 
-    public void setNote(String note) {
+    public void setNote(final String note) {
         this.note = note;
     }
 }

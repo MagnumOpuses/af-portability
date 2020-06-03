@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BaseHistoryType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BaseHistoryType {
 
     protected IdentifierType id;
@@ -23,7 +26,7 @@ public class BaseHistoryType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -31,7 +34,7 @@ public class BaseHistoryType {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(final String start) {
         this.start = start;
     }
 
@@ -39,7 +42,7 @@ public class BaseHistoryType {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(final String end) {
         this.end = end;
     }
 
@@ -47,7 +50,7 @@ public class BaseHistoryType {
         return current;
     }
 
-    public void setCurrent(Boolean current) {
+    public void setCurrent(final Boolean current) {
         this.current = current;
     }
 
@@ -58,7 +61,7 @@ public class BaseHistoryType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences){
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -69,7 +72,7 @@ public class BaseHistoryType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions){
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

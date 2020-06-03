@@ -1,12 +1,14 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Sink {
     public String sinkId;
     public String sinkName;
-    public String sourceDescription;
     public List<String> purposeOfUse;
 
 
@@ -14,7 +16,7 @@ public class Sink {
         return sinkId;
     }
 
-    public void setSinkId(String sinkId) {
+    public void setSinkId(final String sinkId) {
         this.sinkId = sinkId;
     }
 
@@ -22,16 +24,8 @@ public class Sink {
         return sinkName;
     }
 
-    public void setSinkName(String sinkName) {
+    public void setSinkName(final String sinkName) {
         this.sinkName = sinkName;
-    }
-
-    public String getSourceDescription() {
-        return sourceDescription;
-    }
-
-    public void setSourceDescription(String sourceDescription) {
-        this.sourceDescription = sourceDescription;
     }
 
     public List<String> getPurposeOfUse() {
@@ -41,7 +35,7 @@ public class Sink {
         return this.purposeOfUse;
     }
 
-    public void setPurposeOfUse(List<String> purposeOfUse) {
+    public void setPurposeOfUse(final List<String> purposeOfUse) {
         this.purposeOfUse = purposeOfUse;
     }
 }

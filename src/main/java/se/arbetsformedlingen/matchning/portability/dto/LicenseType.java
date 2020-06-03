@@ -8,19 +8,23 @@
 
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LicenseType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LicenseType {
 
     public IdentifierType id;
@@ -28,20 +32,22 @@ public class LicenseType {
     public EntityType type;
     public String status;
     public EffectiveTimePeriodType effectiveTimePeriod;
-    public String issued;
+    @JsonSerialize(using = DateType.DateTypeSerializer.class)
+    @JsonDeserialize(using = DateType.DateTypeDeserializer.class)
+    public DateType issued;
     public String firstIssued;
     public OrganizationType issuingAuthority;
     public List<AttachmentReferenceType> attachmentReferences;
     public List<String> descriptions;
-    public Endorsements endorsements;
-    public Restrictions restrictions;
-    public Violations violations;
+    public List<Endorsements.Item> endorsements;
+    public List<Restrictions.Item> restrictions;
+    public List<Violations.Item> violations;
 
     public IdentifierType getId() {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -49,7 +55,7 @@ public class LicenseType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -57,7 +63,7 @@ public class LicenseType {
         return type;
     }
 
-    public void setType(EntityType type) {
+    public void setType(final EntityType type) {
         this.type = type;
     }
 
@@ -65,7 +71,7 @@ public class LicenseType {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(final String status) {
         this.status = status;
     }
 
@@ -73,15 +79,15 @@ public class LicenseType {
         return effectiveTimePeriod;
     }
 
-    public void setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
+    public void setEffectiveTimePeriod(final EffectiveTimePeriodType effectiveTimePeriod) {
         this.effectiveTimePeriod = effectiveTimePeriod;
     }
 
-    public String getIssued() {
+    public DateType getIssued() {
         return issued;
     }
 
-    public void setIssued(String issued) {
+    public void setIssued(final DateType issued) {
         this.issued = issued;
     }
 
@@ -89,7 +95,7 @@ public class LicenseType {
         return firstIssued;
     }
 
-    public void setFirstIssued(String firstIssued) {
+    public void setFirstIssued(final String firstIssued) {
         this.firstIssued = firstIssued;
     }
 
@@ -97,7 +103,7 @@ public class LicenseType {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+    public void setIssuingAuthority(final OrganizationType issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -108,7 +114,7 @@ public class LicenseType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -119,37 +125,37 @@ public class LicenseType {
         return this.descriptions;
     }
 
-    public void setDescriptions(List<String> descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
-    public Endorsements getEndorsements() {
+    public List<Endorsements.Item> getEndorsements() {
         return endorsements;
     }
 
-    public void setEndorsements(Endorsements endorsements) {
+    public void setEndorsements(final List<Endorsements.Item> endorsements) {
         this.endorsements = endorsements;
     }
 
-    public Restrictions getRestrictions() {
+    public List<Restrictions.Item> getRestrictions() {
         return restrictions;
     }
 
-    public void setRestrictions(Restrictions restrictions) {
+    public void setRestrictions(final List<Restrictions.Item> restrictions) {
         this.restrictions = restrictions;
     }
 
-    public Violations getViolations() {
+    public List<Violations.Item> getViolations() {
         return violations;
     }
 
-    public void setViolations(Violations violations) {
+    public void setViolations(final List<Violations.Item> violations) {
         this.violations = violations;
     }
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "item"
+            "item"
     })
     public static class Endorsements {
 
@@ -170,25 +176,29 @@ public class LicenseType {
         })
         public static class Item {
 
-            protected XMLGregorianCalendar validFrom;
-            protected XMLGregorianCalendar validTo;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validFrom;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validTo;
             @XmlElement(required = true)
             protected String value;
             protected String description;
 
-            public XMLGregorianCalendar getValidFrom() {
+            public DateTimeType getValidFrom() {
                 return validFrom;
             }
 
-            public void setValidFrom(XMLGregorianCalendar validFrom) {
+            public void setValidFrom(final DateTimeType validFrom) {
                 this.validFrom = validFrom;
             }
 
-            public XMLGregorianCalendar getValidTo() {
+            public DateTimeType getValidTo() {
                 return validTo;
             }
 
-            public void setValidTo(XMLGregorianCalendar validTo) {
+            public void setValidTo(final DateTimeType validTo) {
                 this.validTo = validTo;
             }
 
@@ -196,7 +206,7 @@ public class LicenseType {
                 return value;
             }
 
-            public void setValue(String value) {
+            public void setValue(final String value) {
                 this.value = value;
             }
 
@@ -204,7 +214,7 @@ public class LicenseType {
                 return description;
             }
 
-            public void setDescription(String description) {
+            public void setDescription(final String description) {
                 this.description = description;
             }
         }
@@ -212,10 +222,9 @@ public class LicenseType {
     }
 
 
-
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "item"
+            "item"
     })
     public static class Restrictions {
 
@@ -236,25 +245,29 @@ public class LicenseType {
         })
         public static class Item {
 
-            protected XMLGregorianCalendar validFrom;
-            protected XMLGregorianCalendar validTo;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validFrom;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validTo;
             @XmlElement(required = true)
             protected String value;
             protected String description;
 
-            public XMLGregorianCalendar getValidFrom() {
+            public DateTimeType getValidFrom() {
                 return validFrom;
             }
 
-            public void setValidFrom(XMLGregorianCalendar validFrom) {
+            public void setValidFrom(final DateTimeType validFrom) {
                 this.validFrom = validFrom;
             }
 
-            public XMLGregorianCalendar getValidTo() {
+            public DateTimeType getValidTo() {
                 return validTo;
             }
 
-            public void setValidTo(XMLGregorianCalendar validTo) {
+            public void setValidTo(final DateTimeType validTo) {
                 this.validTo = validTo;
             }
 
@@ -262,7 +275,7 @@ public class LicenseType {
                 return value;
             }
 
-            public void setValue(String value) {
+            public void setValue(final String value) {
                 this.value = value;
             }
 
@@ -270,7 +283,7 @@ public class LicenseType {
                 return description;
             }
 
-            public void setDescription(String description) {
+            public void setDescription(final String description) {
                 this.description = description;
             }
         }
@@ -280,7 +293,7 @@ public class LicenseType {
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "item"
+            "item"
     })
     public static class Violations {
 
@@ -301,25 +314,29 @@ public class LicenseType {
         })
         public static class Item {
 
-            protected XMLGregorianCalendar validFrom;
-            protected XMLGregorianCalendar validTo;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validFrom;
+            @JsonSerialize(using = DateTimeType.DateTypeSerializer.class)
+            @JsonDeserialize(using = DateTimeType.DateTypeDeserializer.class)
+            protected DateTimeType validTo;
             @XmlElement(required = true)
             protected String value;
             protected String description;
 
-            public XMLGregorianCalendar getValidFrom() {
+            public DateTimeType getValidFrom() {
                 return validFrom;
             }
 
-            public void setValidFrom(XMLGregorianCalendar validFrom) {
+            public void setValidFrom(final DateTimeType validFrom) {
                 this.validFrom = validFrom;
             }
 
-            public XMLGregorianCalendar getValidTo() {
+            public DateTimeType getValidTo() {
                 return validTo;
             }
 
-            public void setValidTo(XMLGregorianCalendar validTo) {
+            public void setValidTo(final DateTimeType validTo) {
                 this.validTo = validTo;
             }
 
@@ -327,7 +344,7 @@ public class LicenseType {
                 return value;
             }
 
-            public void setValue(String value) {
+            public void setValue(final String value) {
                 this.value = value;
             }
 
@@ -335,7 +352,7 @@ public class LicenseType {
                 return description;
             }
 
-            public void setDescription(String description) {
+            public void setDescription(final String description) {
                 this.description = description;
             }
         }

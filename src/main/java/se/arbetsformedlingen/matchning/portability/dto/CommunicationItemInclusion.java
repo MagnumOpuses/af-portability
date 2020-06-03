@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigInteger;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CommunicationItemInclusion", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CommunicationItemInclusion {
 
     protected String name;
@@ -21,7 +24,7 @@ public class CommunicationItemInclusion {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -29,7 +32,7 @@ public class CommunicationItemInclusion {
         return useCode;
     }
 
-    public void setUseCode(String useCode) {
+    public void setUseCode(final String useCode) {
         this.useCode = useCode;
     }
 
@@ -37,7 +40,7 @@ public class CommunicationItemInclusion {
         return preference;
     }
 
-    public void setPreference(BigInteger preference) {
+    public void setPreference(final BigInteger preference) {
         this.preference = preference;
     }
 
@@ -45,7 +48,7 @@ public class CommunicationItemInclusion {
         return availablePeriod;
     }
 
-    public void setAvailablePeriod(DateTimePeriodType availablePeriod) {
+    public void setAvailablePeriod(final DateTimePeriodType availablePeriod) {
         this.availablePeriod = availablePeriod;
     }
 }

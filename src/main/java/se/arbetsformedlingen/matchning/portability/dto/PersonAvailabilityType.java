@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonAvailabilityType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonAvailabilityType {
 
     protected List<AvailabilityDatesType> availabilityDates;
@@ -24,7 +27,7 @@ public class PersonAvailabilityType {
         return this.availabilityDates;
     }
 
-    public void setAvailabilityDates(List<AvailabilityDatesType> availabilityDates) {
+    public void setAvailabilityDates(final List<AvailabilityDatesType> availabilityDates) {
         this.availabilityDates = availabilityDates;
     }
 
@@ -32,7 +35,7 @@ public class PersonAvailabilityType {
         return noticePeriodMeasure;
     }
 
-    public void setNoticePeriodMeasure(MeasureType noticePeriodMeasure) {
+    public void setNoticePeriodMeasure(final MeasureType noticePeriodMeasure) {
         this.noticePeriodMeasure = noticePeriodMeasure;
     }
 
@@ -40,7 +43,7 @@ public class PersonAvailabilityType {
         return immediateStartIndicator;
     }
 
-    public void setImmediateStartIndicator(Boolean immediateStartIndicator) {
+    public void setImmediateStartIndicator(final Boolean immediateStartIndicator) {
         this.immediateStartIndicator = immediateStartIndicator;
     }
 }

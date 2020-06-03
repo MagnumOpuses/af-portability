@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -10,55 +12,56 @@ import java.util.List;
 @XmlType(name = "CommunicationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CommunicationType {
 
-    public List<AddressType> address;
-    public List<PhoneType> phone;
-    public List<EmailType> email;
-    public List<WebType> web;
+    public List<AddressTypeArray> address;
+    public List<PhoneTypeArray> phone;
+    public List<EmailTypeArray> email;
+    public List<WebTypeArray> web;
 
 
-    public List<AddressType> getAddress() {
+    public List<AddressTypeArray> getAddress() {
         if (address == null) {
-            address = new ArrayList<AddressType>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
 
-    public void setAddress(List<AddressType> address) {
+    public void setAddress(final List<AddressTypeArray> address) {
         this.address = address;
     }
 
-    public List<PhoneType> getPhone() {
+    public List<PhoneTypeArray> getPhone() {
         if (phone == null) {
-            phone = new ArrayList<PhoneType>();
+            phone = new ArrayList<>();
         }
-        return this.phone;
+        return phone;
     }
 
-    public void setPhone(List<PhoneType> phone) {
+    public void setPhone(final List<PhoneTypeArray> phone) {
         this.phone = phone;
     }
 
-    public List<EmailType> getEmail() {
+    public List<EmailTypeArray> getEmail() {
         if (email == null) {
-            email = new ArrayList<EmailType>();
+            email = new ArrayList<>();
         }
         return this.email;
     }
 
-    public void setEmail(List<EmailType> email) {
+    public void setEmail(final List<EmailTypeArray> email) {
         this.email = email;
     }
 
-    public List<WebType> getWeb() {
+    public List<WebTypeArray> getWeb() {
         if (web == null) {
-            web = new ArrayList<WebType>();
+            web = new ArrayList<>();
         }
         return this.web;
     }
 
-    public void setWeb(List<WebType> web) {
+    public void setWeb(final List<WebTypeArray> web) {
         this.web = web;
     }
 }

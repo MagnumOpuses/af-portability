@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RemunerationRangeType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RemunerationRangeType {
 
     protected PayTypeCodeList typeCode;
@@ -21,7 +24,7 @@ public class RemunerationRangeType {
         return typeCode;
     }
 
-    public void setTypeCode(PayTypeCodeList typeCode) {
+    public void setTypeCode(final PayTypeCodeList typeCode) {
         this.typeCode = typeCode;
     }
 
@@ -29,7 +32,7 @@ public class RemunerationRangeType {
         return referenceAmount;
     }
 
-    public void setReferenceAmount(AmountType referenceAmount) {
+    public void setReferenceAmount(final AmountType referenceAmount) {
         this.referenceAmount = referenceAmount;
     }
 
@@ -37,7 +40,7 @@ public class RemunerationRangeType {
         return minimumAmount;
     }
 
-    public void setMinimumAmount(AmountType minimumAmount) {
+    public void setMinimumAmount(final AmountType minimumAmount) {
         this.minimumAmount = minimumAmount;
     }
 
@@ -45,7 +48,7 @@ public class RemunerationRangeType {
         return maximumAmount;
     }
 
-    public void setMaximumAmount(AmountType maximumAmount) {
+    public void setMaximumAmount(final AmountType maximumAmount) {
         this.maximumAmount = maximumAmount;
     }
 
@@ -53,7 +56,7 @@ public class RemunerationRangeType {
         return intervalCode;
     }
 
-    public void setIntervalCode(PayRateIntervalCodeList intervalCode) {
+    public void setIntervalCode(final PayRateIntervalCodeList intervalCode) {
         this.intervalCode = intervalCode;
     }
 }

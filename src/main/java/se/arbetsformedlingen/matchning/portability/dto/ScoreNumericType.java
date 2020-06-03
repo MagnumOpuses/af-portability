@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ScoreNumericType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ScoreNumericType {
 
     @XmlElement(required = true)
@@ -23,7 +26,7 @@ public class ScoreNumericType {
         return value;
     }
 
-    public void setValue(BigDecimal value) {
+    public void setValue(final BigDecimal value) {
         this.value = value;
     }
 
@@ -31,7 +34,7 @@ public class ScoreNumericType {
         return scoreCode;
     }
 
-    public void setScoreCode(ScoreNumericCodeList scoreCode) {
+    public void setScoreCode(final ScoreNumericCodeList scoreCode) {
         this.scoreCode = scoreCode;
     }
 
@@ -39,7 +42,7 @@ public class ScoreNumericType {
         return interval;
     }
 
-    public void setInterval(BigDecimal interval) {
+    public void setInterval(final BigDecimal interval) {
         this.interval = interval;
     }
 
@@ -47,7 +50,7 @@ public class ScoreNumericType {
         return minimum;
     }
 
-    public void setMinimum(BigDecimal minimum) {
+    public void setMinimum(final BigDecimal minimum) {
         this.minimum = minimum;
     }
 
@@ -55,7 +58,7 @@ public class ScoreNumericType {
         return maximum;
     }
 
-    public void setMaximum(BigDecimal maximum) {
+    public void setMaximum(final BigDecimal maximum) {
         this.maximum = maximum;
     }
 }

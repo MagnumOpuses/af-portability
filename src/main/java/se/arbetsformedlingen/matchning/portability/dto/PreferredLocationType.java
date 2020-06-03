@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PreferredLocationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PreferredLocationType {
 
     public MeasureType maximumCommuteDuration;
@@ -20,7 +23,7 @@ public class PreferredLocationType {
         return maximumCommuteDuration;
     }
 
-    public void setMaximumCommuteDuration(MeasureType maximumCommuteDuration) {
+    public void setMaximumCommuteDuration(final MeasureType maximumCommuteDuration) {
         this.maximumCommuteDuration = maximumCommuteDuration;
     }
 
@@ -28,7 +31,7 @@ public class PreferredLocationType {
         return maximumCommuteDistance;
     }
 
-    public void setMaximumCommuteDistance(MeasureType maximumCommuteDistance) {
+    public void setMaximumCommuteDistance(final MeasureType maximumCommuteDistance) {
         this.maximumCommuteDistance = maximumCommuteDistance;
     }
 
@@ -36,7 +39,7 @@ public class PreferredLocationType {
         return referenceLocation;
     }
 
-    public void setReferenceLocation(AddressType referenceLocation) {
+    public void setReferenceLocation(final AddressType referenceLocation) {
         this.referenceLocation = referenceLocation;
     }
 }

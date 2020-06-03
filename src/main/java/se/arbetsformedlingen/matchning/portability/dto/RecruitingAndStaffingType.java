@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RecruitingAndStaffingType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RecruitingAndStaffingType {
 
     protected XMLGregorianCalendar applicationDate;
@@ -25,7 +28,7 @@ public class RecruitingAndStaffingType {
         return applicationDate;
     }
 
-    public void setApplicationDate(XMLGregorianCalendar applicationDate) {
+    public void setApplicationDate(final XMLGregorianCalendar applicationDate) {
         this.applicationDate = applicationDate;
     }
 
@@ -36,7 +39,7 @@ public class RecruitingAndStaffingType {
         return this.interviewDates;
     }
 
-    public void setInterviewDates(List<XMLGregorianCalendar> interviewDates) {
+    public void setInterviewDates(final List<XMLGregorianCalendar> interviewDates) {
         this.interviewDates = interviewDates;
     }
 
@@ -44,7 +47,7 @@ public class RecruitingAndStaffingType {
         return rejectionDate;
     }
 
-    public void setRejectionDate(XMLGregorianCalendar rejectionDate) {
+    public void setRejectionDate(final XMLGregorianCalendar rejectionDate) {
         this.rejectionDate = rejectionDate;
     }
 
@@ -52,7 +55,7 @@ public class RecruitingAndStaffingType {
         return rejectionReasonCode;
     }
 
-    public void setRejectionReasonCode(String rejectionReasonCode) {
+    public void setRejectionReasonCode(final String rejectionReasonCode) {
         this.rejectionReasonCode = rejectionReasonCode;
     }
 
@@ -60,7 +63,7 @@ public class RecruitingAndStaffingType {
         return offeredOnDate;
     }
 
-    public void setOfferedOnDate(XMLGregorianCalendar offeredOnDate) {
+    public void setOfferedOnDate(final XMLGregorianCalendar offeredOnDate) {
         this.offeredOnDate = offeredOnDate;
     }
 
@@ -68,7 +71,7 @@ public class RecruitingAndStaffingType {
         return offerAcceptedDate;
     }
 
-    public void setOfferAcceptedDate(XMLGregorianCalendar offerAcceptedDate) {
+    public void setOfferAcceptedDate(final XMLGregorianCalendar offerAcceptedDate) {
         this.offerAcceptedDate = offerAcceptedDate;
     }
 }

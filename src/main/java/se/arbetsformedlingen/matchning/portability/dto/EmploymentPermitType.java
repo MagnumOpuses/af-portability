@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmploymentPermitType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EmploymentPermitType {
 
     protected IdentifierType id;
@@ -30,7 +33,7 @@ public class EmploymentPermitType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -38,7 +41,7 @@ public class EmploymentPermitType {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -46,7 +49,7 @@ public class EmploymentPermitType {
         return type;
     }
 
-    public void setType(EntityType type) {
+    public void setType(final EntityType type) {
         this.type = type;
     }
 
@@ -54,7 +57,7 @@ public class EmploymentPermitType {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(final String status) {
         this.status = status;
     }
 
@@ -62,7 +65,7 @@ public class EmploymentPermitType {
         return effectiveTimePeriod;
     }
 
-    public void setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
+    public void setEffectiveTimePeriod(final EffectiveTimePeriodType effectiveTimePeriod) {
         this.effectiveTimePeriod = effectiveTimePeriod;
     }
 
@@ -70,7 +73,7 @@ public class EmploymentPermitType {
         return issued;
     }
 
-    public void setIssued(String issued) {
+    public void setIssued(final String issued) {
         this.issued = issued;
     }
 
@@ -78,7 +81,7 @@ public class EmploymentPermitType {
         return firstIssued;
     }
 
-    public void setFirstIssued(String firstIssued) {
+    public void setFirstIssued(final String firstIssued) {
         this.firstIssued = firstIssued;
     }
 
@@ -86,7 +89,7 @@ public class EmploymentPermitType {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+    public void setIssuingAuthority(final OrganizationType issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -97,7 +100,7 @@ public class EmploymentPermitType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
@@ -105,7 +108,7 @@ public class EmploymentPermitType {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final StringTypeArray descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -113,7 +116,7 @@ public class EmploymentPermitType {
         return countryCode;
     }
 
-    public void setCountryCode(CountryCodeList countryCode) {
+    public void setCountryCode(final CountryCodeList countryCode) {
         this.countryCode = countryCode;
     }
 
@@ -124,7 +127,7 @@ public class EmploymentPermitType {
         return this.countrySubDivisions;
     }
 
-    public void setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
+    public void setCountrySubDivisions(final List<AddressComponentType> countrySubDivisions) {
         this.countrySubDivisions = countrySubDivisions;
     }
 }

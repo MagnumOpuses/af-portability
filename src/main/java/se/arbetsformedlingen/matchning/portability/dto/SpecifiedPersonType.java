@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SpecifiedPersonType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SpecifiedPersonType {
 
     protected IdentifierType id;
@@ -21,7 +24,7 @@ public class SpecifiedPersonType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -29,7 +32,7 @@ public class SpecifiedPersonType {
         return name;
     }
 
-    public void setName(PersonNameType name) {
+    public void setName(final PersonNameType name) {
         this.name = name;
     }
 
@@ -37,7 +40,7 @@ public class SpecifiedPersonType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
@@ -45,7 +48,7 @@ public class SpecifiedPersonType {
         return primaryLanguage;
     }
 
-    public void setPrimaryLanguage(LanguageCodeList primaryLanguage) {
+    public void setPrimaryLanguage(final LanguageCodeList primaryLanguage) {
         this.primaryLanguage = primaryLanguage;
     }
 
@@ -53,7 +56,7 @@ public class SpecifiedPersonType {
         return roleCode;
     }
 
-    public void setRoleCode(String roleCode) {
+    public void setRoleCode(final String roleCode) {
         this.roleCode = roleCode;
     }
 }

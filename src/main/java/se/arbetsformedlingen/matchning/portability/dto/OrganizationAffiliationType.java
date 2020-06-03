@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrganizationAffiliationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrganizationAffiliationType {
 
     protected OrganizationType organization;
@@ -19,14 +22,14 @@ public class OrganizationAffiliationType {
     protected String role;
     protected XMLGregorianCalendar startDate;
     protected XMLGregorianCalendar endDate;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
     protected List<AttachmentReferenceType> attachmentReferences;
 
     public OrganizationType getOrganization() {
         return organization;
     }
 
-    public void setOrganization(OrganizationType organization) {
+    public void setOrganization(final OrganizationType organization) {
         this.organization = organization;
     }
 
@@ -34,7 +37,7 @@ public class OrganizationAffiliationType {
         return affiliationTypeCode;
     }
 
-    public void setAffiliationTypeCode(AffiliatedOrganizationTypeCodeList affiliationTypeCode) {
+    public void setAffiliationTypeCode(final AffiliatedOrganizationTypeCodeList affiliationTypeCode) {
         this.affiliationTypeCode = affiliationTypeCode;
     }
 
@@ -42,7 +45,7 @@ public class OrganizationAffiliationType {
         return memberId;
     }
 
-    public void setMemberId(IdentifierType memberId) {
+    public void setMemberId(final IdentifierType memberId) {
         this.memberId = memberId;
     }
 
@@ -50,7 +53,7 @@ public class OrganizationAffiliationType {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(final String role) {
         this.role = role;
     }
 
@@ -58,7 +61,7 @@ public class OrganizationAffiliationType {
         return startDate;
     }
 
-    public void setStartDate(XMLGregorianCalendar startDate) {
+    public void setStartDate(final XMLGregorianCalendar startDate) {
         this.startDate = startDate;
     }
 
@@ -66,15 +69,15 @@ public class OrganizationAffiliationType {
         return endDate;
     }
 
-    public void setEndDate(XMLGregorianCalendar endDate) {
+    public void setEndDate(final XMLGregorianCalendar endDate) {
         this.endDate = endDate;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -85,7 +88,7 @@ public class OrganizationAffiliationType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 }

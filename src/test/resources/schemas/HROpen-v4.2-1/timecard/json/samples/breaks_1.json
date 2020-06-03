@@ -1,0 +1,72 @@
+{
+    "documentId": {
+        "value": "Breaks(Clocked)"
+    },
+    "person": {
+        "id": {
+            "value": "E1222"
+        },
+        "name": {
+            "given": "John",
+            "family": "Doe"
+        }
+    },
+    "location": { "code": "ST100" },
+    "period": "2014-07-27",
+    "items": [
+        {
+            "period": {
+                "start": "2014-07-27T09:00:00",
+                "end": "2014-07-27T11:15:00"
+            },
+            "department": {
+                "code": "Res1",
+                "name": "Home Regular"
+            }
+        },
+        {
+            "period": {
+                "start": "2014-07-27T11:25:00",
+                "end": "2014-07-27T14:25:00"
+            },
+            "department": {
+                "code": "Res1",
+                "name": "Home Regular"
+            }
+        },
+        {
+            "period": {
+                "start": "2014-07-27T14:50:00",
+                "end": "2014-07-27T16:00:00"
+            },
+            "department": {
+                "code": "Res1",
+                "name": "Home Regular"
+            }
+        },
+        {
+            "period": {
+                "start": "2014-07-27T16:10:00",
+                "end": "2014-07-27T17:30:00"
+            },
+            "department": {
+                "code": "Res2",
+                "name": "Vintage"
+            }
+        },
+        {
+            "period": {
+                "start": "2014-07-27T17:30:00",
+                "end": "2014-07-27T18:00:00"
+            },
+            "department": {
+                "code": "Res1",
+                "name": "Home Regular"
+            },
+            "costCenter": {
+                "code": "MENT",
+                "name": "Mentoring"
+            }
+        }
+    ]
+}

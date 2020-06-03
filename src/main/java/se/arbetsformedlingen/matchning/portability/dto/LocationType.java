@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LocationType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LocationType {
 
     public String line;
@@ -28,7 +31,7 @@ public class LocationType {
         return line;
     }
 
-    public void setLine(String line) {
+    public void setLine(final String line) {
         this.line = line;
     }
 
@@ -39,7 +42,7 @@ public class LocationType {
         return this.extendedLines;
     }
 
-    public void setExtendedLines(List<AddressComponentType> extendedLines) {
+    public void setExtendedLines(final List<AddressComponentType> extendedLines) {
         this.extendedLines = extendedLines;
     }
 
@@ -47,7 +50,7 @@ public class LocationType {
         return countryCode;
     }
 
-    public void setCountryCode(CountryCodeList countryCode) {
+    public void setCountryCode(final CountryCodeList countryCode) {
         this.countryCode = countryCode;
     }
 
@@ -58,7 +61,7 @@ public class LocationType {
         return this.countrySubDivisions;
     }
 
-    public void setCountrySubDivisions(List<AddressComponentType> countrySubDivisions) {
+    public void setCountrySubDivisions(final List<AddressComponentType> countrySubDivisions) {
         this.countrySubDivisions = countrySubDivisions;
     }
 
@@ -66,7 +69,7 @@ public class LocationType {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(final String city) {
         this.city = city;
     }
 
@@ -74,7 +77,7 @@ public class LocationType {
         return postalCode;
     }
 
-    public void setPostalCode(String postalCode) {
+    public void setPostalCode(final String postalCode) {
         this.postalCode = postalCode;
     }
 
@@ -82,7 +85,7 @@ public class LocationType {
         return postOfficeBox;
     }
 
-    public void setPostOfficeBox(String postOfficeBox) {
+    public void setPostOfficeBox(final String postOfficeBox) {
         this.postOfficeBox = postOfficeBox;
     }
 
@@ -90,7 +93,7 @@ public class LocationType {
         return geoLocation;
     }
 
-    public void setGeoLocation(GeoType geoLocation) {
+    public void setGeoLocation(final GeoType geoLocation) {
         this.geoLocation = geoLocation;
     }
 
@@ -98,7 +101,7 @@ public class LocationType {
         return formattedAddress;
     }
 
-    public void setFormattedAddress(String formattedAddress) {
+    public void setFormattedAddress(final String formattedAddress) {
         this.formattedAddress = formattedAddress;
     }
 
@@ -106,7 +109,7 @@ public class LocationType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 }

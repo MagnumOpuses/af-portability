@@ -3,72 +3,75 @@ package se.arbetsformedlingen.matchning.portability.builder;
 import se.arbetsformedlingen.matchning.portability.dto.*;
 import se.arbetsformedlingen.matchning.portability.model.asp.ArbetsSokandeProfil;
 
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.List;
 
 public class LicenseTypeBuilder {
-    private LicenseType licenseType = new LicenseType();
+    private final LicenseType licenseType = new LicenseType();
 
-    public LicenseTypeBuilder setId(IdentifierType id) {
+    public LicenseTypeBuilder setId(final IdentifierType id) {
         licenseType.setId(id);
         return this;
     }
 
-    public LicenseTypeBuilder setName(String name) {
+    public LicenseTypeBuilder setName(final String name) {
         licenseType.setName(name);
         return this;
     }
 
-    public LicenseTypeBuilder setType(EntityType type) {
+    public LicenseTypeBuilder setType(final EntityType type) {
         licenseType.setType(type);
         return this;
     }
 
-    public LicenseTypeBuilder setStatus(String status) {
+    public LicenseTypeBuilder setStatus(final String status) {
         licenseType.setStatus(status);
         return this;
     }
 
-    public LicenseTypeBuilder setEffectiveTimePeriod(EffectiveTimePeriodType effectiveTimePeriod) {
+    public LicenseTypeBuilder setEffectiveTimePeriod(final EffectiveTimePeriodType effectiveTimePeriod) {
         licenseType.setEffectiveTimePeriod(effectiveTimePeriod);
         return this;
     }
 
-    public LicenseTypeBuilder setIssued(String issued) {
+    public LicenseTypeBuilder setIssued(final DateType issued) {
         licenseType.setIssued(issued);
         return this;
     }
 
-    public LicenseTypeBuilder setFirstIssued(String firstIssued) {
+    public LicenseTypeBuilder setFirstIssued(final String firstIssued) {
         licenseType.setFirstIssued(firstIssued);
         return this;
     }
 
-    public LicenseTypeBuilder setIssuingAuthority(OrganizationType issuingAuthority) {
+    public LicenseTypeBuilder setIssuingAuthority(final OrganizationType issuingAuthority) {
         licenseType.setIssuingAuthority(issuingAuthority);
         return this;
     }
 
-    public LicenseTypeBuilder setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public LicenseTypeBuilder setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         licenseType.setAttachmentReferences(attachmentReferences);
         return this;
     }
 
-    public LicenseTypeBuilder setDescriptions(List<String> descriptions) {
+    public LicenseTypeBuilder setDescriptions(final List<String> descriptions) {
         licenseType.setDescriptions(descriptions);
         return this;
     }
 
-    public LicenseTypeBuilder setEndorsements(LicenseType.Endorsements endorsements) {
+    public LicenseTypeBuilder setEndorsements(final List<LicenseType.Endorsements.Item> endorsements) {
         licenseType.setEndorsements(endorsements);
         return this;
     }
 
-    public LicenseTypeBuilder setRestrictions(LicenseType.Restrictions restrictions) {
+    public LicenseTypeBuilder setRestrictions(final List<LicenseType.Restrictions.Item> restrictions) {
         licenseType.setRestrictions(restrictions);
         return this;
     }
 
-    public LicenseTypeBuilder setViolations(LicenseType.Violations violations) {
+    public LicenseTypeBuilder setViolations(final List<LicenseType.Violations.Item> violations) {
         licenseType.setViolations(violations);
         return this;
     }
@@ -77,9 +80,18 @@ public class LicenseTypeBuilder {
         return licenseType;
     }
 
-    public LicenseTypeBuilder withKorkort(ArbetsSokandeProfil.Korkort korkort) {
+    public LicenseTypeBuilder withKorkort(final ArbetsSokandeProfil.Korkort korkort) {
         setType(new EntityTypeBuilder().setId(new IdentifierTypeBuilder().setValue(String.join(" ", korkort.getKorkortsklasser())).build()).build());
-        setIssued(String.valueOf(korkort.getSenastUppdaterad()));
+
+        try {
+            final XMLGregorianCalendar xcal = DatatypeFactory.newInstance().newXMLGregorianCalendar(korkort.getSenastUppdaterad().toInstant().toString());
+            final DateType dateType = new DateType();
+            dateType.setDate(xcal);
+            setIssued(dateType);
+        } catch (final DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
+
         return this;
     }
 }

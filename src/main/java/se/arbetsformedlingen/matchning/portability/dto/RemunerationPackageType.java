@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RemunerationPackageType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class RemunerationPackageType {
 
     protected XMLGregorianCalendar validFrom;
@@ -19,14 +22,14 @@ public class RemunerationPackageType {
     protected EntityType id;
     protected RemunerationBasisCodeList basisCode;
     protected List<RemunerationRangeType> ranges;
-    protected StringTypeArray benefitsSummary;
-    protected StringTypeArray descriptions;
+    protected List<String> benefitsSummary;
+    protected List<String> descriptions;
 
     public XMLGregorianCalendar getValidFrom() {
         return validFrom;
     }
 
-    public void setValidFrom(XMLGregorianCalendar validFrom) {
+    public void setValidFrom(final XMLGregorianCalendar validFrom) {
         this.validFrom = validFrom;
     }
 
@@ -34,7 +37,7 @@ public class RemunerationPackageType {
         return validTo;
     }
 
-    public void setValidTo(XMLGregorianCalendar validTo) {
+    public void setValidTo(final XMLGregorianCalendar validTo) {
         this.validTo = validTo;
     }
 
@@ -42,7 +45,7 @@ public class RemunerationPackageType {
         return id;
     }
 
-    public void setId(EntityType id) {
+    public void setId(final EntityType id) {
         this.id = id;
     }
 
@@ -50,7 +53,7 @@ public class RemunerationPackageType {
         return basisCode;
     }
 
-    public void setBasisCode(RemunerationBasisCodeList basisCode) {
+    public void setBasisCode(final RemunerationBasisCodeList basisCode) {
         this.basisCode = basisCode;
     }
 
@@ -61,23 +64,23 @@ public class RemunerationPackageType {
         return this.ranges;
     }
 
-    public void setRanges(List<RemunerationRangeType> ranges) {
+    public void setRanges(final List<RemunerationRangeType> ranges) {
         this.ranges = ranges;
     }
 
-    public StringTypeArray getBenefitsSummary() {
+    public List<String> getBenefitsSummary() {
         return benefitsSummary;
     }
 
-    public void setBenefitsSummary(StringTypeArray benefitsSummary) {
+    public void setBenefitsSummary(final List<String> benefitsSummary) {
         this.benefitsSummary = benefitsSummary;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

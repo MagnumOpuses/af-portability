@@ -1,25 +1,28 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PatentType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PatentType {
 
     protected List<IdentifierType> ids;
     protected String title;
-    protected StringTypeArray inventorNames;
-    protected StringTypeArray assigneeNames;
+    protected List<String> inventorNames;
+    protected List<String> assigneeNames;
     protected OrganizationType issuingAuthority;
     protected PatentStatusCodeList status;
     protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
 
     public List<IdentifierType> getIds() {
@@ -29,7 +32,7 @@ public class PatentType {
         return this.ids;
     }
 
-    public void setIds(List<IdentifierType> ids) {
+    public void setIds(final List<IdentifierType> ids) {
         this.ids = ids;
     }
 
@@ -37,31 +40,16 @@ public class PatentType {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(final String title) {
         this.title = title;
     }
 
-    public StringTypeArray getInventorNames() {
-        return inventorNames;
-    }
-
-    public void setInventorNames(StringTypeArray inventorNames) {
-        this.inventorNames = inventorNames;
-    }
-
-    public StringTypeArray getAssigneeNames() {
-        return assigneeNames;
-    }
-
-    public void setAssigneeNames(StringTypeArray assigneeNames) {
-        this.assigneeNames = assigneeNames;
-    }
 
     public OrganizationType getIssuingAuthority() {
         return issuingAuthority;
     }
 
-    public void setIssuingAuthority(OrganizationType issuingAuthority) {
+    public void setIssuingAuthority(final OrganizationType issuingAuthority) {
         this.issuingAuthority = issuingAuthority;
     }
 
@@ -69,7 +57,7 @@ public class PatentType {
         return status;
     }
 
-    public void setStatus(PatentStatusCodeList status) {
+    public void setStatus(final PatentStatusCodeList status) {
         this.status = status;
     }
 
@@ -80,15 +68,31 @@ public class PatentType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getInventorNames() {
+        return inventorNames;
+    }
+
+    public void setInventorNames(final List<String> inventorNames) {
+        this.inventorNames = inventorNames;
+    }
+
+    public List<String> getAssigneeNames() {
+        return assigneeNames;
+    }
+
+    public void setAssigneeNames(final List<String> assigneeNames) {
+        this.assigneeNames = assigneeNames;
+    }
+
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

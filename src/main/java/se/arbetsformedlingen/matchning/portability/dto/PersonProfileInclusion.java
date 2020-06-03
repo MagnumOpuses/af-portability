@@ -1,18 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import se.arbetsformedlingen.matchning.portability.dto.CandidateProfileType;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonProfileInclusion", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonProfileInclusion {
 
     protected String profileName;
@@ -34,7 +35,7 @@ public class PersonProfileInclusion {
         return profileName;
     }
 
-    public void setProfileName(String profileName) {
+    public void setProfileName(final String profileName) {
         this.profileName = profileName;
     }
 
@@ -42,7 +43,7 @@ public class PersonProfileInclusion {
         return languageCode;
     }
 
-    public void setLanguageCode(LanguageCodeList languageCode) {
+    public void setLanguageCode(final LanguageCodeList languageCode) {
         this.languageCode = languageCode;
     }
 
@@ -53,7 +54,7 @@ public class PersonProfileInclusion {
         return this.education;
     }
 
-    public void setEducation(List<EducationAttendanceType> education) {
+    public void setEducation(final List<EducationAttendanceType> education) {
         this.education = education;
     }
 
@@ -64,7 +65,7 @@ public class PersonProfileInclusion {
         return this.employment;
     }
 
-    public void setEmployment(List<EmployerHistoryType> employment) {
+    public void setEmployment(final List<EmployerHistoryType> employment) {
         this.employment = employment;
     }
 
@@ -75,7 +76,7 @@ public class PersonProfileInclusion {
         return this.militaryService;
     }
 
-    public void setMilitaryService(List<MilitaryServiceType> militaryService) {
+    public void setMilitaryService(final List<MilitaryServiceType> militaryService) {
         this.militaryService = militaryService;
     }
 
@@ -86,7 +87,7 @@ public class PersonProfileInclusion {
         return this.licenses;
     }
 
-    public void setLicenses(List<LicenseType> licenses) {
+    public void setLicenses(final List<LicenseType> licenses) {
         this.licenses = licenses;
     }
 
@@ -97,7 +98,7 @@ public class PersonProfileInclusion {
         return this.certifications;
     }
 
-    public void setCertifications(List<CertificationType> certifications) {
+    public void setCertifications(final List<CertificationType> certifications) {
         this.certifications = certifications;
     }
 
@@ -108,7 +109,7 @@ public class PersonProfileInclusion {
         return this.patents;
     }
 
-    public void setPatents(List<PatentType> patents) {
+    public void setPatents(final List<PatentType> patents) {
         this.patents = patents;
     }
 
@@ -119,7 +120,7 @@ public class PersonProfileInclusion {
         return this.publications;
     }
 
-    public void setPublications(List<PublicationType> publications) {
+    public void setPublications(final List<PublicationType> publications) {
         this.publications = publications;
     }
 
@@ -130,7 +131,7 @@ public class PersonProfileInclusion {
         return this.qualifications;
     }
 
-    public void setQualifications(List<PersonCompetencyType> qualifications) {
+    public void setQualifications(final List<PersonCompetencyType> qualifications) {
         this.qualifications = qualifications;
     }
 
@@ -141,7 +142,7 @@ public class PersonProfileInclusion {
         return this.affiliations;
     }
 
-    public void setAffiliations(List<OrganizationAffiliationType> affiliations) {
+    public void setAffiliations(final List<OrganizationAffiliationType> affiliations) {
         this.affiliations = affiliations;
     }
 
@@ -152,7 +153,7 @@ public class PersonProfileInclusion {
         return this.securityCredentials;
     }
 
-    public void setSecurityCredentials(List<CertificationType> securityCredentials) {
+    public void setSecurityCredentials(final List<CertificationType> securityCredentials) {
         this.securityCredentials = securityCredentials;
     }
 
@@ -163,7 +164,7 @@ public class PersonProfileInclusion {
         return this.references;
     }
 
-    public void setReferences(List<RefereeType> references) {
+    public void setReferences(final List<RefereeType> references) {
         this.references = references;
     }
 
@@ -174,7 +175,7 @@ public class PersonProfileInclusion {
         return this.attachments;
     }
 
-    public void setAttachments(List<AttachmentType> attachments) {
+    public void setAttachments(final List<AttachmentType> attachments) {
         this.attachments = attachments;
     }
 }

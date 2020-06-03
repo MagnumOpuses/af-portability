@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -9,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AvailabilityDatesType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AvailabilityDatesType {
 
     protected String startDateTime;
@@ -18,7 +21,7 @@ public class AvailabilityDatesType {
         return startDateTime;
     }
 
-    public void setStartDateTime(String startDateTime) {
+    public void setStartDateTime(final String startDateTime) {
         this.startDateTime = startDateTime;
     }
 
@@ -26,7 +29,7 @@ public class AvailabilityDatesType {
         return endDateTime;
     }
 
-    public void setEndDateTime(String endDateTime) {
+    public void setEndDateTime(final String endDateTime) {
         this.endDateTime = endDateTime;
     }
 }

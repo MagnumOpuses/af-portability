@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PositionHistoryType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PositionHistoryType {
 
     public IdentifierType id;
@@ -18,7 +21,7 @@ public class PositionHistoryType {
     public String end;
     public Boolean current;
     public List<AttachmentReferenceType> attachmentReferences;
-    public StringTypeArray descriptions;
+    public List<String> descriptions;
     public String title;
     public ResourceRelationshipCodeList resourceRelationshipCode;
     public OrganizationType organization;
@@ -30,7 +33,7 @@ public class PositionHistoryType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -38,7 +41,7 @@ public class PositionHistoryType {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(final String start) {
         this.start = start;
     }
 
@@ -46,7 +49,7 @@ public class PositionHistoryType {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(final String end) {
         this.end = end;
     }
 
@@ -54,7 +57,7 @@ public class PositionHistoryType {
         return current;
     }
 
-    public void setCurrent(Boolean current) {
+    public void setCurrent(final Boolean current) {
         this.current = current;
     }
 
@@ -62,15 +65,15 @@ public class PositionHistoryType {
         return attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -78,7 +81,7 @@ public class PositionHistoryType {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(final String title) {
         this.title = title;
     }
 
@@ -86,7 +89,7 @@ public class PositionHistoryType {
         return resourceRelationshipCode;
     }
 
-    public void setResourceRelationshipCode(ResourceRelationshipCodeList resourceRelationshipCode) {
+    public void setResourceRelationshipCode(final ResourceRelationshipCodeList resourceRelationshipCode) {
         this.resourceRelationshipCode = resourceRelationshipCode;
     }
 
@@ -94,7 +97,7 @@ public class PositionHistoryType {
         return organization;
     }
 
-    public void setOrganization(OrganizationType organization) {
+    public void setOrganization(final OrganizationType organization) {
         this.organization = organization;
     }
 
@@ -102,7 +105,7 @@ public class PositionHistoryType {
         return location;
     }
 
-    public void setLocation(LocationType location) {
+    public void setLocation(final LocationType location) {
         this.location = location;
     }
 
@@ -113,7 +116,7 @@ public class PositionHistoryType {
         return this.jobCategories;
     }
 
-    public void setJobCategories(List<EntityType> jobCategories) {
+    public void setJobCategories(final List<EntityType> jobCategories) {
         this.jobCategories = jobCategories;
     }
 
@@ -124,7 +127,7 @@ public class PositionHistoryType {
         return this.jobLevels;
     }
 
-    public void setJobLevels(List<EntityType> jobLevels) {
+    public void setJobLevels(final List<EntityType> jobLevels) {
         this.jobLevels = jobLevels;
     }
 }

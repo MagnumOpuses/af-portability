@@ -1,15 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigInteger;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonPhysicalInclusion", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonPhysicalInclusion {
 
     protected MeasureType height;
@@ -18,7 +22,7 @@ public class PersonPhysicalInclusion {
     protected Boolean tobaccoUserIndicator;
     protected String hairColor;
     protected String eyeColor;
-    protected StringTypeArray identifyingMarks;
+    protected List<String> identifyingMarks;
     protected BigInteger age;
     protected String bloodType;
 
@@ -26,7 +30,7 @@ public class PersonPhysicalInclusion {
         return height;
     }
 
-    public void setHeight(MeasureType height) {
+    public void setHeight(final MeasureType height) {
         this.height = height;
     }
 
@@ -34,7 +38,7 @@ public class PersonPhysicalInclusion {
         return weight;
     }
 
-    public void setWeight(MeasureType weight) {
+    public void setWeight(final MeasureType weight) {
         this.weight = weight;
     }
 
@@ -42,7 +46,7 @@ public class PersonPhysicalInclusion {
         return disability;
     }
 
-    public void setDisability(DisabilityType disability) {
+    public void setDisability(final DisabilityType disability) {
         this.disability = disability;
     }
 
@@ -50,7 +54,7 @@ public class PersonPhysicalInclusion {
         return tobaccoUserIndicator;
     }
 
-    public void setTobaccoUserIndicator(Boolean tobaccoUserIndicator) {
+    public void setTobaccoUserIndicator(final Boolean tobaccoUserIndicator) {
         this.tobaccoUserIndicator = tobaccoUserIndicator;
     }
 
@@ -58,7 +62,7 @@ public class PersonPhysicalInclusion {
         return hairColor;
     }
 
-    public void setHairColor(String hairColor) {
+    public void setHairColor(final String hairColor) {
         this.hairColor = hairColor;
     }
 
@@ -66,15 +70,15 @@ public class PersonPhysicalInclusion {
         return eyeColor;
     }
 
-    public void setEyeColor(String eyeColor) {
+    public void setEyeColor(final String eyeColor) {
         this.eyeColor = eyeColor;
     }
 
-    public StringTypeArray getIdentifyingMarks() {
+    public List<String> getIdentifyingMarks() {
         return identifyingMarks;
     }
 
-    public void setIdentifyingMarks(StringTypeArray identifyingMarks) {
+    public void setIdentifyingMarks(final List<String> identifyingMarks) {
         this.identifyingMarks = identifyingMarks;
     }
 
@@ -82,7 +86,7 @@ public class PersonPhysicalInclusion {
         return age;
     }
 
-    public void setAge(BigInteger age) {
+    public void setAge(final BigInteger age) {
         this.age = age;
     }
 
@@ -90,7 +94,7 @@ public class PersonPhysicalInclusion {
         return bloodType;
     }
 
-    public void setBloodType(String bloodType) {
+    public void setBloodType(final String bloodType) {
         this.bloodType = bloodType;
     }
 }

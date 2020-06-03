@@ -1,15 +1,18 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PositionPreferenceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PositionPreferenceType {
 
     public List<PreferredLocationType> locations;
@@ -19,13 +22,13 @@ public class PositionPreferenceType {
     public List<PositionScheduleTypeCodeList> positionScheduleTypeCodes;
     public List<ScheduleType> shiftSchedules;
     public List<String> shiftDescriptions;
-    public RemoteWorkType remoteWork;  
+    public RemoteWorkType remoteWork;
     public List<CareerLevelCodeList> careerLevelCodes;
     public EntityType jobGradeCode;
-    public RemunerationPackageType offeredRemunerationPackage;  
-    public TravelType travel;  
-    public RelocationType relocation;  
-    public List<LanguageCodeList> workingLanguageCodes;  
+    public RemunerationPackageType offeredRemunerationPackage;
+    public TravelType travel;
+    public RelocationType relocation;
+    public List<LanguageCodeList> workingLanguageCodes;
 
 
     public List<PreferredLocationType> getLocations() {
@@ -35,7 +38,7 @@ public class PositionPreferenceType {
         return this.locations;
     }
 
-    public void setLocations(List<PreferredLocationType> locations) {
+    public void setLocations(final List<PreferredLocationType> locations) {
         this.locations = locations;
     }
 
@@ -46,7 +49,7 @@ public class PositionPreferenceType {
         return this.jobCategories;
     }
 
-    public void setJobCategories(List<EntityType> jobCategories) {
+    public void setJobCategories(final List<EntityType> jobCategories) {
         this.jobCategories = jobCategories;
     }
 
@@ -57,7 +60,7 @@ public class PositionPreferenceType {
         return this.positionTitles;
     }
 
-    public void setPositionTitles(List<String> positionTitles) {
+    public void setPositionTitles(final List<String> positionTitles) {
         this.positionTitles = positionTitles;
     }
 
@@ -68,7 +71,7 @@ public class PositionPreferenceType {
         return this.positionOfferingTypeCodes;
     }
 
-    public void setPositionOfferingTypeCodes(List<PositionTypeCodeList> positionOfferingTypeCodes) {
+    public void setPositionOfferingTypeCodes(final List<PositionTypeCodeList> positionOfferingTypeCodes) {
         this.positionOfferingTypeCodes = positionOfferingTypeCodes;
     }
 
@@ -79,7 +82,7 @@ public class PositionPreferenceType {
         return this.positionScheduleTypeCodes;
     }
 
-    public void setPositionScheduleTypeCodes(List<PositionScheduleTypeCodeList> positionScheduleTypeCodes) {
+    public void setPositionScheduleTypeCodes(final List<PositionScheduleTypeCodeList> positionScheduleTypeCodes) {
         this.positionScheduleTypeCodes = positionScheduleTypeCodes;
     }
 
@@ -90,7 +93,7 @@ public class PositionPreferenceType {
         return this.shiftSchedules;
     }
 
-    public void setShiftSchedules(List<ScheduleType> shiftSchedules) {
+    public void setShiftSchedules(final List<ScheduleType> shiftSchedules) {
         this.shiftSchedules = shiftSchedules;
     }
 
@@ -101,7 +104,7 @@ public class PositionPreferenceType {
         return this.shiftDescriptions;
     }
 
-    public void setShiftDescriptions(List<String> shiftDescriptions) {
+    public void setShiftDescriptions(final List<String> shiftDescriptions) {
         this.shiftDescriptions = shiftDescriptions;
     }
 
@@ -109,7 +112,7 @@ public class PositionPreferenceType {
         return remoteWork;
     }
 
-    public void setRemoteWork(RemoteWorkType remoteWork) {
+    public void setRemoteWork(final RemoteWorkType remoteWork) {
         this.remoteWork = remoteWork;
     }
 
@@ -117,7 +120,7 @@ public class PositionPreferenceType {
         return careerLevelCodes;
     }
 
-    public void setCareerLevelCodes(List<CareerLevelCodeList> careerLevelCodes) {
+    public void setCareerLevelCodes(final List<CareerLevelCodeList> careerLevelCodes) {
         this.careerLevelCodes = careerLevelCodes;
     }
 
@@ -125,7 +128,7 @@ public class PositionPreferenceType {
         return jobGradeCode;
     }
 
-    public void setJobGradeCode(EntityType jobGradeCode) {
+    public void setJobGradeCode(final EntityType jobGradeCode) {
         this.jobGradeCode = jobGradeCode;
     }
 
@@ -133,7 +136,7 @@ public class PositionPreferenceType {
         return offeredRemunerationPackage;
     }
 
-    public void setOfferedRemunerationPackage(RemunerationPackageType offeredRemunerationPackage) {
+    public void setOfferedRemunerationPackage(final RemunerationPackageType offeredRemunerationPackage) {
         this.offeredRemunerationPackage = offeredRemunerationPackage;
     }
 
@@ -141,7 +144,7 @@ public class PositionPreferenceType {
         return travel;
     }
 
-    public void setTravel(TravelType travel) {
+    public void setTravel(final TravelType travel) {
         this.travel = travel;
     }
 
@@ -149,7 +152,7 @@ public class PositionPreferenceType {
         return relocation;
     }
 
-    public void setRelocation(RelocationType relocation) {
+    public void setRelocation(final RelocationType relocation) {
         this.relocation = relocation;
     }
 
@@ -160,7 +163,7 @@ public class PositionPreferenceType {
         return this.workingLanguageCodes;
     }
 
-    public void setWorkingLanguageCodes(List<LanguageCodeList> workingLanguageCodes) {
+    public void setWorkingLanguageCodes(final List<LanguageCodeList> workingLanguageCodes) {
         this.workingLanguageCodes = workingLanguageCodes;
     }
 }

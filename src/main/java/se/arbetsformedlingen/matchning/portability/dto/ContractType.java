@@ -1,17 +1,20 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ContractType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ContractType {
 
     protected IdentifierType contractNumber;
@@ -24,7 +27,7 @@ public class ContractType {
         return contractNumber;
     }
 
-    public void setContractNumber(IdentifierType contractNumber) {
+    public void setContractNumber(final IdentifierType contractNumber) {
         this.contractNumber = contractNumber;
     }
 
@@ -32,7 +35,7 @@ public class ContractType {
         return contractStartDate;
     }
 
-    public void setContractStartDate(XMLGregorianCalendar contractStartDate) {
+    public void setContractStartDate(final XMLGregorianCalendar contractStartDate) {
         this.contractStartDate = contractStartDate;
     }
 
@@ -40,7 +43,7 @@ public class ContractType {
         return contractEndDate;
     }
 
-    public void setContractEndDate(XMLGregorianCalendar contractEndDate) {
+    public void setContractEndDate(final XMLGregorianCalendar contractEndDate) {
         this.contractEndDate = contractEndDate;
     }
 
@@ -51,7 +54,7 @@ public class ContractType {
         return this.addendum;
     }
 
-    public void setAddendum(List<XMLGregorianCalendar> addendum) {
+    public void setAddendum(final List<XMLGregorianCalendar> addendum) {
         this.addendum = addendum;
     }
 
@@ -59,7 +62,7 @@ public class ContractType {
         return workRelationshipType;
     }
 
-    public void setWorkRelationshipType(String workRelationshipType) {
+    public void setWorkRelationshipType(final String workRelationshipType) {
         this.workRelationshipType = workRelationshipType;
     }
 }

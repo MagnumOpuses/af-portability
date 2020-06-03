@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "version": "4.2.0",
+    "title": "JobType",
+    "description": "A type representing the specific job (position) at an organization and related identifiers and classifications.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The id of the job.",
+            "$ref": "../base/IdentifierType.json#"
+        },
+        "title": {
+            "description": "The title of a job.",
+            "type": "string"
+        },
+        "categoryCode": {
+            "description": "A code classifying the job category code. Examples include Officials And Managers, Professionals, Technicians, Sales, Official And Clerical, Craft Worker Skilled, Operative Semi-Skilled, Laborers Unskilled, Service Workers, etc.",
+            "$ref": "../base/CodeType.json#"
+        },
+        "jobFunction": {
+            "description": "A code classifying the job function e.g., HR, Finance, Marketing, Sales, Product Development, etc.",
+            "$ref": "../base/CodeType.json#"
+        },
+        "planCode": {
+            "description": "Identifies a specific salary structure or program used either throughout, or in specific segments of, an enterprise.",
+            "$ref": "../base/CodeType.json#"
+        },
+        "gradeCode": {
+            "description": "Defines the salary range or band that a job falls within, based on the formal structure. Formal pay structures are less common today than in the past, but remain common in certain sectors, such as in public-sector employment and in employment covered by collective bargaining agreements.",
+            "$ref": "../base/CodeType.json#"
+        },
+        "stepCode": {
+            "description": "Pinpoints a job's specific level or point within a salary range or band.",
+            "$ref": "../base/CodeType.json#"
+        },
+        "description": {
+            "description": "The description of a job.",
+            "type": "string"
+        }
+    }
+}

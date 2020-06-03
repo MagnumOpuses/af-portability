@@ -1,5 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -8,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AssociatedPositionOpeningType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AssociatedPositionOpeningType {
 
     protected IdentifierType positionOpeningId;
@@ -21,7 +24,7 @@ public class AssociatedPositionOpeningType {
         return positionOpeningId;
     }
 
-    public void setPositionOpeningId(IdentifierType positionOpeningId) {
+    public void setPositionOpeningId(final IdentifierType positionOpeningId) {
         this.positionOpeningId = positionOpeningId;
     }
 
@@ -29,7 +32,7 @@ public class AssociatedPositionOpeningType {
         return staffingOrderId;
     }
 
-    public void setStaffingOrderId(IdentifierType staffingOrderId) {
+    public void setStaffingOrderId(final IdentifierType staffingOrderId) {
         this.staffingOrderId = staffingOrderId;
     }
 
@@ -37,7 +40,7 @@ public class AssociatedPositionOpeningType {
         return positionTitle;
     }
 
-    public void setPositionTitle(String positionTitle) {
+    public void setPositionTitle(final String positionTitle) {
         this.positionTitle = positionTitle;
     }
 
@@ -45,7 +48,7 @@ public class AssociatedPositionOpeningType {
         return positionUri;
     }
 
-    public void setPositionUri(String positionUri) {
+    public void setPositionUri(final String positionUri) {
         this.positionUri = positionUri;
     }
 
@@ -53,7 +56,7 @@ public class AssociatedPositionOpeningType {
         return candidateAppliedIndicator;
     }
 
-    public void setCandidateAppliedIndicator(Boolean candidateAppliedIndicator) {
+    public void setCandidateAppliedIndicator(final Boolean candidateAppliedIndicator) {
         this.candidateAppliedIndicator = candidateAppliedIndicator;
     }
 
@@ -61,7 +64,7 @@ public class AssociatedPositionOpeningType {
         return dispositionStatus;
     }
 
-    public void setDispositionStatus(DispositionStatusType dispositionStatus) {
+    public void setDispositionStatus(final DispositionStatusType dispositionStatus) {
         this.dispositionStatus = dispositionStatus;
     }
 }

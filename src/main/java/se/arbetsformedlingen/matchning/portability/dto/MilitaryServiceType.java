@@ -1,16 +1,19 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MilitaryServiceType", propOrder = {
 
 })
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MilitaryServiceType {
 
     protected IdentifierType id;
@@ -18,7 +21,7 @@ public class MilitaryServiceType {
     protected String end;
     protected Boolean current;
     protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
     protected CountryCodeList countryCode;
     protected String serviceNumber;
     protected String branch;
@@ -26,10 +29,10 @@ public class MilitaryServiceType {
     protected String startingRank;
     protected String endingRank;
     protected Boolean currentRankIndicator;
-    protected StringTypeArray campaigns;
+    protected List<String> campaigns;
     protected List<SpecifiedCompetencyType> expertises;
-    protected StringTypeArray honors;
-    protected StringTypeArray disciplinaryActions;
+    protected List<String> honors;
+    protected List<String> disciplinaryActions;
     protected String dischargeStatus;
     protected XMLGregorianCalendar dischargeDate;
     protected List<CommentType> comments;
@@ -38,7 +41,7 @@ public class MilitaryServiceType {
         return id;
     }
 
-    public void setId(IdentifierType id) {
+    public void setId(final IdentifierType id) {
         this.id = id;
     }
 
@@ -46,7 +49,7 @@ public class MilitaryServiceType {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(final String start) {
         this.start = start;
     }
 
@@ -54,7 +57,7 @@ public class MilitaryServiceType {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(final String end) {
         this.end = end;
     }
 
@@ -62,7 +65,7 @@ public class MilitaryServiceType {
         return current;
     }
 
-    public void setCurrent(Boolean current) {
+    public void setCurrent(final Boolean current) {
         this.current = current;
     }
 
@@ -73,15 +76,15 @@ public class MilitaryServiceType {
         return this.attachmentReferences;
     }
 
-    public void setAttachmentReferences(List<AttachmentReferenceType> attachmentReferences) {
+    public void setAttachmentReferences(final List<AttachmentReferenceType> attachmentReferences) {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -89,7 +92,7 @@ public class MilitaryServiceType {
         return countryCode;
     }
 
-    public void setCountryCode(CountryCodeList countryCode) {
+    public void setCountryCode(final CountryCodeList countryCode) {
         this.countryCode = countryCode;
     }
 
@@ -97,7 +100,7 @@ public class MilitaryServiceType {
         return serviceNumber;
     }
 
-    public void setServiceNumber(String serviceNumber) {
+    public void setServiceNumber(final String serviceNumber) {
         this.serviceNumber = serviceNumber;
     }
 
@@ -105,7 +108,7 @@ public class MilitaryServiceType {
         return branch;
     }
 
-    public void setBranch(String branch) {
+    public void setBranch(final String branch) {
         this.branch = branch;
     }
 
@@ -113,7 +116,7 @@ public class MilitaryServiceType {
         return division;
     }
 
-    public void setDivision(String division) {
+    public void setDivision(final String division) {
         this.division = division;
     }
 
@@ -121,7 +124,7 @@ public class MilitaryServiceType {
         return startingRank;
     }
 
-    public void setStartingRank(String startingRank) {
+    public void setStartingRank(final String startingRank) {
         this.startingRank = startingRank;
     }
 
@@ -129,7 +132,7 @@ public class MilitaryServiceType {
         return endingRank;
     }
 
-    public void setEndingRank(String endingRank) {
+    public void setEndingRank(final String endingRank) {
         this.endingRank = endingRank;
     }
 
@@ -137,15 +140,15 @@ public class MilitaryServiceType {
         return currentRankIndicator;
     }
 
-    public void setCurrentRankIndicator(Boolean currentRankIndicator) {
+    public void setCurrentRankIndicator(final Boolean currentRankIndicator) {
         this.currentRankIndicator = currentRankIndicator;
     }
 
-    public StringTypeArray getCampaigns() {
+    public List<String> getCampaigns() {
         return campaigns;
     }
 
-    public void setCampaigns(StringTypeArray campaigns) {
+    public void setCampaigns(final List<String> campaigns) {
         this.campaigns = campaigns;
     }
 
@@ -156,23 +159,23 @@ public class MilitaryServiceType {
         return this.expertises;
     }
 
-    public void setExpertises(List<SpecifiedCompetencyType> expertises) {
+    public void setExpertises(final List<SpecifiedCompetencyType> expertises) {
         this.expertises = expertises;
     }
 
-    public StringTypeArray getHonors() {
+    public List<String> getHonors() {
         return honors;
     }
 
-    public void setHonors(StringTypeArray honors) {
+    public void setHonors(final List<String> honors) {
         this.honors = honors;
     }
 
-    public StringTypeArray getDisciplinaryActions() {
+    public List<String> getDisciplinaryActions() {
         return disciplinaryActions;
     }
 
-    public void setDisciplinaryActions(StringTypeArray disciplinaryActions) {
+    public void setDisciplinaryActions(final List<String> disciplinaryActions) {
         this.disciplinaryActions = disciplinaryActions;
     }
 
@@ -180,7 +183,7 @@ public class MilitaryServiceType {
         return dischargeStatus;
     }
 
-    public void setDischargeStatus(String dischargeStatus) {
+    public void setDischargeStatus(final String dischargeStatus) {
         this.dischargeStatus = dischargeStatus;
     }
 
@@ -188,7 +191,7 @@ public class MilitaryServiceType {
         return dischargeDate;
     }
 
-    public void setDischargeDate(XMLGregorianCalendar dischargeDate) {
+    public void setDischargeDate(final XMLGregorianCalendar dischargeDate) {
         this.dischargeDate = dischargeDate;
     }
 
@@ -199,7 +202,7 @@ public class MilitaryServiceType {
         return this.comments;
     }
 
-    public void setComments(List<CommentType> comments) {
+    public void setComments(final List<CommentType> comments) {
         this.comments = comments;
     }
 }
