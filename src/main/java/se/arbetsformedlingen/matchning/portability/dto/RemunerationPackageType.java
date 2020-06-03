@@ -19,8 +19,8 @@ public class RemunerationPackageType {
     protected EntityType id;
     protected RemunerationBasisCodeList basisCode;
     protected List<RemunerationRangeType> ranges;
-    protected StringTypeArray benefitsSummary;
-    protected StringTypeArray descriptions;
+    protected List<String> benefitsSummary;
+    protected List<String> descriptions;
 
     public XMLGregorianCalendar getValidFrom() {
         return validFrom;
@@ -65,19 +65,19 @@ public class RemunerationPackageType {
         this.ranges = ranges;
     }
 
-    public StringTypeArray getBenefitsSummary() {
+    public List<String> getBenefitsSummary() {
         return benefitsSummary;
     }
 
-    public void setBenefitsSummary(StringTypeArray benefitsSummary) {
+    public void setBenefitsSummary(List<String> benefitsSummary) {
         this.benefitsSummary = benefitsSummary;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

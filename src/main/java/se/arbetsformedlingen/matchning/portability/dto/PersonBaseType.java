@@ -24,7 +24,7 @@ public class PersonBaseType {
     public List<CountryCodeList> citizenship;
     public List<CountryCodeList> residenceCountry;
     public String militaryStatus;
-    public StringTypeArray ethnicity;
+    public List<String> ethnicity;
 
     public IdentifierType getId() {
         return id;
@@ -112,11 +112,11 @@ public class PersonBaseType {
         this.militaryStatus = militaryStatus;
     }
 
-    public StringTypeArray getEthnicity() {
+    public List<String> getEthnicity() {
         return ethnicity;
     }
 
-    public void setEthnicity(StringTypeArray ethnicity) {
+    public void setEthnicity(List<String> ethnicity) {
         this.ethnicity = ethnicity;
     }
 }

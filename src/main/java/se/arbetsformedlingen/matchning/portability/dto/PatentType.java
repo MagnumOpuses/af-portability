@@ -14,12 +14,12 @@ public class PatentType {
 
     protected List<IdentifierType> ids;
     protected String title;
-    protected StringTypeArray inventorNames;
-    protected StringTypeArray assigneeNames;
+    protected List<String> inventorNames;
+    protected List<String> assigneeNames;
     protected OrganizationType issuingAuthority;
     protected PatentStatusCodeList status;
     protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
 
     public List<IdentifierType> getIds() {
@@ -41,21 +41,6 @@ public class PatentType {
         this.title = title;
     }
 
-    public StringTypeArray getInventorNames() {
-        return inventorNames;
-    }
-
-    public void setInventorNames(StringTypeArray inventorNames) {
-        this.inventorNames = inventorNames;
-    }
-
-    public StringTypeArray getAssigneeNames() {
-        return assigneeNames;
-    }
-
-    public void setAssigneeNames(StringTypeArray assigneeNames) {
-        this.assigneeNames = assigneeNames;
-    }
 
     public OrganizationType getIssuingAuthority() {
         return issuingAuthority;
@@ -84,11 +69,27 @@ public class PatentType {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getInventorNames() {
+        return inventorNames;
+    }
+
+    public void setInventorNames(List<String> inventorNames) {
+        this.inventorNames = inventorNames;
+    }
+
+    public List<String> getAssigneeNames() {
+        return assigneeNames;
+    }
+
+    public void setAssigneeNames(List<String> assigneeNames) {
+        this.assigneeNames = assigneeNames;
+    }
+
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }

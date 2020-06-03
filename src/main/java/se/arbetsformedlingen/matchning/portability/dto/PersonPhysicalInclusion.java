@@ -1,6 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
 import java.math.BigInteger;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -18,7 +19,7 @@ public class PersonPhysicalInclusion {
     protected Boolean tobaccoUserIndicator;
     protected String hairColor;
     protected String eyeColor;
-    protected StringTypeArray identifyingMarks;
+    protected List<String> identifyingMarks;
     protected BigInteger age;
     protected String bloodType;
 
@@ -70,11 +71,11 @@ public class PersonPhysicalInclusion {
         this.eyeColor = eyeColor;
     }
 
-    public StringTypeArray getIdentifyingMarks() {
+    public List<String> getIdentifyingMarks() {
         return identifyingMarks;
     }
 
-    public void setIdentifyingMarks(StringTypeArray identifyingMarks) {
+    public void setIdentifyingMarks(List<String> identifyingMarks) {
         this.identifyingMarks = identifyingMarks;
     }
 

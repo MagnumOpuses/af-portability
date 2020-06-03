@@ -18,7 +18,7 @@ public class MilitaryServiceType {
     protected String end;
     protected Boolean current;
     protected List<AttachmentReferenceType> attachmentReferences;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
     protected CountryCodeList countryCode;
     protected String serviceNumber;
     protected String branch;
@@ -26,10 +26,10 @@ public class MilitaryServiceType {
     protected String startingRank;
     protected String endingRank;
     protected Boolean currentRankIndicator;
-    protected StringTypeArray campaigns;
+    protected List<String> campaigns;
     protected List<SpecifiedCompetencyType> expertises;
-    protected StringTypeArray honors;
-    protected StringTypeArray disciplinaryActions;
+    protected List<String> honors;
+    protected List<String> disciplinaryActions;
     protected String dischargeStatus;
     protected XMLGregorianCalendar dischargeDate;
     protected List<CommentType> comments;
@@ -77,12 +77,24 @@ public class MilitaryServiceType {
         this.attachmentReferences = attachmentReferences;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
+    }
+
+    public void setCampaigns(List<String> campaigns) {
+        this.campaigns = campaigns;
+    }
+
+    public void setHonors(List<String> honors) {
+        this.honors = honors;
+    }
+
+    public void setDisciplinaryActions(List<String> disciplinaryActions) {
+        this.disciplinaryActions = disciplinaryActions;
     }
 
     public CountryCodeList getCountryCode() {
@@ -141,12 +153,8 @@ public class MilitaryServiceType {
         this.currentRankIndicator = currentRankIndicator;
     }
 
-    public StringTypeArray getCampaigns() {
+    public List<String> getCampaigns() {
         return campaigns;
-    }
-
-    public void setCampaigns(StringTypeArray campaigns) {
-        this.campaigns = campaigns;
     }
 
     public List<SpecifiedCompetencyType> getExpertises() {
@@ -160,20 +168,12 @@ public class MilitaryServiceType {
         this.expertises = expertises;
     }
 
-    public StringTypeArray getHonors() {
+    public List<String> getHonors() {
         return honors;
     }
 
-    public void setHonors(StringTypeArray honors) {
-        this.honors = honors;
-    }
-
-    public StringTypeArray getDisciplinaryActions() {
+    public List<String> getDisciplinaryActions() {
         return disciplinaryActions;
-    }
-
-    public void setDisciplinaryActions(StringTypeArray disciplinaryActions) {
-        this.disciplinaryActions = disciplinaryActions;
     }
 
     public String getDischargeStatus() {

@@ -19,7 +19,7 @@ public class OrganizationAffiliationType {
     protected String role;
     protected XMLGregorianCalendar startDate;
     protected XMLGregorianCalendar endDate;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
     protected List<AttachmentReferenceType> attachmentReferences;
 
     public OrganizationType getOrganization() {
@@ -70,11 +70,11 @@ public class OrganizationAffiliationType {
         this.endDate = endDate;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 

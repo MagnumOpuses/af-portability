@@ -1,6 +1,7 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
 import java.math.BigDecimal;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -14,7 +15,7 @@ public class TravelType {
 
     protected Boolean willingToTravelIndicator;
     protected BigDecimal percentage;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
 
     public Boolean getWillingToTravelIndicator() {
@@ -33,11 +34,11 @@ public class TravelType {
         this.percentage = percentage;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }
