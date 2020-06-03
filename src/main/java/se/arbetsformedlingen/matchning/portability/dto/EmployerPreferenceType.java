@@ -1,11 +1,11 @@
 package se.arbetsformedlingen.matchning.portability.dto;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmployerPreferenceType", propOrder = {
@@ -13,25 +13,25 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class EmployerPreferenceType {
 
-    protected StringTypeArray organizationNames;
-    protected StringTypeArray organizationTypes;
+    protected List<String> organizationNames;
+    protected List<String> organizationTypes;
     protected List<IdentifierType> industryCodes;
     protected EmployerPreferenceType.HeadcountRange headcountRange;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
-    public StringTypeArray getOrganizationNames() {
+    public List<String> getOrganizationNames() {
         return organizationNames;
     }
 
-    public void setOrganizationNames(StringTypeArray organizationNames) {
+    public void setOrganizationNames(final List<String> organizationNames) {
         this.organizationNames = organizationNames;
     }
 
-    public StringTypeArray getOrganizationTypes() {
+    public List<String> getOrganizationTypes() {
         return organizationTypes;
     }
 
-    public void setOrganizationTypes(StringTypeArray organizationTypes) {
+    public void setOrganizationTypes(final List<String> organizationTypes) {
         this.organizationTypes = organizationTypes;
     }
 
@@ -42,7 +42,7 @@ public class EmployerPreferenceType {
         return this.industryCodes;
     }
 
-    public void setIndustryCodes(List<IdentifierType> industryCodes) {
+    public void setIndustryCodes(final List<IdentifierType> industryCodes) {
         this.industryCodes = industryCodes;
     }
 
@@ -50,15 +50,15 @@ public class EmployerPreferenceType {
         return headcountRange;
     }
 
-    public void setHeadcountRange(HeadcountRange headcountRange) {
+    public void setHeadcountRange(final HeadcountRange headcountRange) {
         this.headcountRange = headcountRange;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 
@@ -75,7 +75,7 @@ public class EmployerPreferenceType {
             return minimum;
         }
 
-        public void setMinimum(BigDecimal minimum) {
+        public void setMinimum(final BigDecimal minimum) {
             this.minimum = minimum;
         }
 
@@ -83,7 +83,7 @@ public class EmployerPreferenceType {
             return maximum;
         }
 
-        public void setMaximum(BigDecimal maximum) {
+        public void setMaximum(final BigDecimal maximum) {
             this.maximum = maximum;
         }
     }

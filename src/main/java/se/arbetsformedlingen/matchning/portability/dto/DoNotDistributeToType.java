@@ -3,6 +3,7 @@ package se.arbetsformedlingen.matchning.portability.dto;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DoNotDistributeToType", propOrder = {
@@ -16,13 +17,13 @@ public class DoNotDistributeToType {
     protected EntityType person;
     protected OrganizationType organization;
     protected CommunicationType communication;
-    protected StringTypeArray descriptions;
+    protected List<String> descriptions;
 
     public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(final String startDate) {
         this.startDate = startDate;
     }
 
@@ -30,7 +31,7 @@ public class DoNotDistributeToType {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(final String endDate) {
         this.endDate = endDate;
     }
 
@@ -38,7 +39,7 @@ public class DoNotDistributeToType {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(final String duration) {
         this.duration = duration;
     }
 
@@ -46,7 +47,7 @@ public class DoNotDistributeToType {
         return person;
     }
 
-    public void setPerson(EntityType person) {
+    public void setPerson(final EntityType person) {
         this.person = person;
     }
 
@@ -54,7 +55,7 @@ public class DoNotDistributeToType {
         return organization;
     }
 
-    public void setOrganization(OrganizationType organization) {
+    public void setOrganization(final OrganizationType organization) {
         this.organization = organization;
     }
 
@@ -62,15 +63,15 @@ public class DoNotDistributeToType {
         return communication;
     }
 
-    public void setCommunication(CommunicationType communication) {
+    public void setCommunication(final CommunicationType communication) {
         this.communication = communication;
     }
 
-    public StringTypeArray getDescriptions() {
+    public List<String> getDescriptions() {
         return descriptions;
     }
 
-    public void setDescriptions(StringTypeArray descriptions) {
+    public void setDescriptions(final List<String> descriptions) {
         this.descriptions = descriptions;
     }
 }
