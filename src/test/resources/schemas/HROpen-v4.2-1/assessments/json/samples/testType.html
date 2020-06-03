@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HROS Assessments Workgroup</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Demo project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js" type="text/javascript"></script>
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>HR OPEN</h1>
+
+				<p>Links are presented to validate the schema structure.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Assessments</h3>
+				<p><a href="https://github.com/HROpen/Assessments">Github Repo</a></p>
+				<p><a href="../bower.json">bower.json</a></p>
+
+				<h4>JSON Schema</h4>
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+									<a data-toggle="" href="#assessments-nouns">Assessments Nouns</a>
+								</h4>
+						</div>
+						<div id="assessments-nouns" class="panel-collapse ">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/AssessmentSubjectType.json">AssessmentSubjectType.json</a>
+										<a href="AssessmentSubjectType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/AssessmentType.json">AssessmentType.json</a>
+										<a href="AssessmentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/CatalogType.json">CatalogType.json</a>
+										<a href="CatalogType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/OrderType.json">OrderType.json</a>
+										<a href="OrderType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/RedirectURLType.json">RedirectURLType.json</a>
+										<a href="RedirectURLType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/ReportType.json">ReportType.json</a>
+										<a href="ReportType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+									<a data-toggle="collapse" href="#assessments-codelist">codelist</a>
+								</h4>
+						</div>
+						<div id="assessments-codelist" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/codelist/AssessmentStatusCodeList.json">AssessmentStatusCodeList.json</a>
+										<a href="/HROPEN/Assessments/json/codelist/AssessmentStatusCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/codelist/AssessmentTypeCodeList.json">AssessmentTypeCodeList.json</a>
+										<a href="/HROPEN/Assessments/json/codelist/AssessmentTypeCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/codelist/InvitationPartyCodeList.json">InvitationPartyCodeList.json</a>
+										<a href="/HROPEN/Assessments/json/codelist/InvitationPartyCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Assessments/json/codelist/ServiceAvailabilityCode.json">ServiceAvailabilityCode.json</a>
+										<a href="/HROPEN/Assessments/json/codelist/ServiceAvailabilityCode.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+			</div>
+
+
+
+			<div class="col-md-6">
+				<h3>Common</h3>
+				<p><a href="https://github.com/HROpen/Common">Github Repo</a></p>
+				<p><a href="/HROPEN/Common/bower.json">bower.json</a></p>
+				<h4>JSON Schema</h4>
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a href="#common-base" data-toggle="collapse">Base Types</a>
+							</h4>
+						</div>
+						<div id="common-base" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/AmountType.json">AmountType.json</a>
+										<a href="/HROPEN/Common/json/base/AmountType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/AttachmentReferenceType.json">AttachmentReferenceType.json</a>
+										<a href="/HROPEN/Common/json/base/AttachmentReferenceType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/AttachmentType.json">AttachmentType.json</a>
+										<a href="/HROPEN/Common/json/base/AttachmentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/BinaryObjectType.json">BinaryObjectType.json</a>
+										<a href="/HROPEN/Common/json/base/BinaryObjectType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/CodeType.json">CodeType.json</a>
+										<a href="/HROPEN/Common/json/base/CodeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/CommentType.json">CommentType.json</a>
+										<a href="/HROPEN/Common/json/base/CommentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DateOpenEndPeriodType.json">DateOpenEndPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/DateOpenEndPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DatePeriodType.json">DatePeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/DatePeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DateTimeOpenEndPeriodType.json">DateTimeOpenEndPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/DateTimeOpenEndPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DateTimePeriodType.json">DateTimePeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/DateTimePeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DateTimeType.json">DateTimeType.json</a>
+										<a href="/HROPEN/Common/json/base/DateTimeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DateType.json">DateType.json</a>
+										<a href="/HROPEN/Common/json/base/DateType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/DurationType.json">DurationType.json</a>
+										<a href="/HROPEN/Common/json/base/DurationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/EffectiveTimePeriodType.json">EffectiveTimePeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/EffectiveTimePeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/EntityType.json">EntityType.json</a>
+										<a href="/HROPEN/Common/json/base/EntityType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/FormattedDateTimeType.json">FormattedDateTimeType.json</a>
+										<a href="/HROPEN/Common/json/base/FormattedDateTimeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/GeoType.json">GeoType.json</a>
+										<a href="/HROPEN/Common/json/base/GeoType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/IdGroupType.json">IdGroupType.json</a>
+										<a href="/HROPEN/Common/json/base/IdGroupType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/IdentifierType.json">IdentifierType.json</a>
+										<a href="/HROPEN/Common/json/base/IdentifierType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/IndicatorType.json">IndicatorType.json</a>
+										<a href="/HROPEN/Common/json/base/IndicatorType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/LocalizationInclusion.json">LocalizationInclusion.json</a>
+										<a href="/HROPEN/Common/json/base/LocalizationInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/MeasureType.json">MeasureType.json</a>
+										<a href="/HROPEN/Common/json/base/MeasureType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/NounType.json">NounType.json</a>
+										<a href="/HROPEN/Common/json/base/NounType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/NumberType.json">NumberType.json</a>
+										<a href="/HROPEN/Common/json/base/NumberType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/OpenEndPeriodType.json">OpenEndPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/OpenEndPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/OrdinalType.json">OrdinalType.json</a>
+										<a href="/HROPEN/Common/json/base/OrdinalType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/PercentType.json">PercentType.json</a>
+										<a href="/HROPEN/Common/json/base/PercentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/QuantityType.json">QuantityType.json</a>
+										<a href="/HROPEN/Common/json/base/QuantityType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/RateType.json">RateType.json</a>
+										<a href="/HROPEN/Common/json/base/RateType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/RatioType.json">RatioType.json</a>
+										<a href="/HROPEN/Common/json/base/RatioType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/StringTypeArray.json">StringTypeArray.json</a>
+										<a href="/HROPEN/Common/json/base/StringTypeArray.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/TextType.json">TextType.json</a>
+										<a href="/HROPEN/Common/json/base/TextType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/TimeType.json">TimeType.json</a>
+										<a href="/HROPEN/Common/json/base/TimeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearMonthOpenEndPeriodType.json">YearMonthOpenEndPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/YearMonthOpenEndPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearMonthPeriodType.json">YearMonthPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/YearMonthPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearMonthType.json">YearMonthType.json</a>
+										<a href="/HROPEN/Common/json/base/YearMonthType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearOpenEndPeriodType.json">YearOpenEndPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/YearOpenEndPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearPeriodType.json">YearPeriodType.json</a>
+										<a href="/HROPEN/Common/json/base/YearPeriodType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/base/YearType.json">YearType.json</a>
+										<a href="/HROPEN/Common/json/base/YearType.json"> {json}</a>
+									</li>
+
+								</ul>
+							</div>
+							<!-- end panel-body -->
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" href="#common-codelist">CodeList Types</a>
+							</h4>
+						</div>
+						<div id="common-codelist" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/ActionCodeList.json">ActionCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/ActionCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/AgencyRoleCodeList.json">AgencyRoleCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/AgencyRoleCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/BasisOfTargetPayCodeList.json">BasisOfTargetPayCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/BasisOfTargetPayCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/CompensationCareerLevelCodeList.json">CompensationCareerLevelCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/CompensationCareerLevelCodeList.json"> {json}</a>
+									</li>
+
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/CountryCodeList.json">CountryCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/CountryCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/CurrencyCodeList.json">CurrencyCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/CurrencyCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/GenderCodeList.json">GenderCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/GenderCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/IscedCodeList.json">IscedCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/IscedCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/LanguageCodeList.json">LanguageCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/LanguageCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PatentStatusCodeList.json">PatentStatusCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PatentStatusCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PayCycleIntervalCodeList.json">PayCycleIntervalCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PayCycleIntervalCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PayRateIntervalCodeList.json">PayRateIntervalCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PayRateIntervalCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PayTypeCodeList.json">PayTypeCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PayTypeCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PositionScheduleTypeCodeList.json">PositionScheduleTypeCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PositionScheduleTypeCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/PositionTypeCodeList.json">PositionTypeCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/PositionTypeCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/ScheduledHoursCodeList.json">ScheduledHoursCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/ScheduledHoursCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/scoreNumericCodeList.json">scoreNumericCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/scoreNumericCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/UnitCodeList.json">UnitCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/UnitCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/WeekdayCodeList.json">WeekdayCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/WeekdayCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/WorkerAssignmentSourceCodeList.json">WorkerAssignmentSourceCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/WorkerAssignmentSourceCodeList.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/codelist/objectiveActionCodeList.json">objectiveActionCodeList.json</a>
+										<a href="/HROPEN/Common/json/codelist/objectiveActionCodeList.json"> {json}</a>
+									</li>
+								</ul>
+
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+				          <a data-toggle="collapse" href="#common-communication">communication</a>
+				        </h4>
+						</div>
+						<div id="common-communication" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/AddressComponentType.json">AddressComponentType.json</a>
+										<a href="/HROPEN/Common/json/communication/AddressComponentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/AddressType.json">AddressType.json</a>
+										<a href="/HROPEN/Common/json/communication/AddressType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/AddressTypeArray.json">AddressTypeArray.json</a>
+										<a href="/HROPEN/Common/json/communication/AddressTypeArray.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/CommunicationItemInclusion.json">CommunicationItemInclusion.json</a>
+										<a href="/HROPEN/Common/json/communication/CommunicationItemInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/CommunicationType.json">CommunicationType.json</a>
+										<a href="/HROPEN/Common/json/communication/CommunicationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/EmailType.json">EmailType.json</a>
+										<a href="/HROPEN/Common/json/communication/EmailType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/EmailTypeArray.json">EmailTypeArray.json</a>
+										<a href="/HROPEN/Common/json/communication/EmailTypeArray.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/LocationType.json">LocationType.json</a>
+										<a href="/HROPEN/Common/json/communication/LocationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/PhoneType.json">PhoneType.json</a>
+										<a href="/HROPEN/Common/json/communication/PhoneType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/PositionType.json">PositionType.json</a>
+										<a href="/HROPEN/Common/json/communication/PositionType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/WebType.json">WebType.json</a>
+										<a href="/HROPEN/Common/json/communication/WebType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/communication/WebTypeArray.json">WebTypeArray.json</a>
+										<a href="/HROPEN/Common/json/communication/WebTypeArray.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+				          <a data-toggle="collapse" href="#common-competency">competency</a>
+				        </h4>
+						</div>
+						<div id="common-competency" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/competency/CompetencyType.json">CompetencyType.json</a>
+										<a href="/HROPEN/Common/json/competency/CompetencyType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/competency/PersonCompetencyType.json">PersonCompetencyType.json</a>
+										<a href="/HROPEN/Common/json/competency/PersonCompetencyType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/competency/SpecifiedCompetencyType.json">SpecifiedCompetencyType.json</a>
+										<a href="/HROPEN/Common/json/competency/SpecifiedCompetencyType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+				          <a data-toggle="collapse" href="#common-evaulation">evaluation</a>
+				        </h4>
+						</div>
+						<div id="common-evaulation" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/evaluation/BaseScoreType.json">BaseScoreType.json</a>
+										<a href="/HROPEN/Common/json/evaluation/BaseScoreType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/evaluation/ScoreNumericType.json">ScoreNumericType.json</a>
+										<a href="/HROPEN/Common/json/evaluation/ScoreNumericType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/evaluation/ScoreTextType.json">ScoreTextType.json</a>
+										<a href="/HROPEN/Common/json/evaluation/ScoreTextType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/evaluation/ScoreType.json">ScoreType.json</a>
+										<a href="/HROPEN/Common/json/evaluation/ScoreType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" href="#common-meta">meta</a>
+							</h4>
+						</div>
+						<div id="common-meta" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/meta/hros.json">hros.json</a>
+										<a href="/HROPEN/Common/json/meta/hros.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/meta/hyper4.json">hyper4.json</a>
+										<a href="/HROPEN/Common/json/meta/hyper4.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/meta/patch.json">patch.json</a>
+										<a href="/HROPEN/Common/json/meta/patch.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/meta/v4.json">v4.json</a>
+										<a href="/HROPEN/Common/json/meta/v4.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" href="#common-organization">organization</a>
+							</h4>
+						</div>
+						<div id="common-organization" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/organization/OrganizationReferenceType.json">OrganizationReferenceType.json</a>
+										<a href="/HROPEN/Common/json/organization/OrganizationReferenceType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/organization/OrganizationType.json">OrganizationType.json</a>
+										<a href="/HROPEN/Common/json/organization/OrganizationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/organization/PartyInclusion.json">PartyInclusion.json</a>
+										<a href="/HROPEN/Common/json/organization/PartyInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/organization/PartyType.json">PartyType.json</a>
+										<a href="/HROPEN/Common/json/organization/PartyType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/organization/WorkLocationType.json">WorkLocationType.json</a>
+										<a href="/HROPEN/Common/json/organization/WorkLocationType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+					          <a data-toggle="collapse" href="#common-pay">pay</a>
+					        </h4>
+						</div>
+						<div id="common-pay" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/pay/CostAllocationType.json">CostAllocationType.json</a>
+										<a href="/HROPEN/Common/json/pay/CostAllocationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/pay/PayRateType.json">PayRateType.json</a>
+										<a href="/HROPEN/Common/json/pay/PayRateType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/pay/RemunerationRangeType.json">RemunerationRangeType.json</a>
+										<a href="/HROPEN/Common/json/pay/RemunerationRangeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/pay/WorkAllocationType.json">WorkAllocationType.json</a>
+										<a href="/HROPEN/Common/json/pay/WorkAllocationType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<!-- person panel-group -->
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" href="#common-person">person</a>
+							</h4>
+						</div>
+						<div id="common-person" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonBaseType.json">PersonBaseType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonBaseType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonLegalInclusion.json">PersonLegalInclusion.json</a>
+										<a href="/HROPEN/Common/json/person/PersonLegalInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonLegalType.json">PersonLegalType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonLegalType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonNameType.json">PersonNameType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonNameType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonNameTypeArray.json">PersonNameTypeArray.json</a>
+										<a href="/HROPEN/Common/json/person/PersonNameTypeArray.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonPhysicalInclusion.json">PersonPhysicalInclusion.json</a>
+										<a href="/HROPEN/Common/json/person/PersonPhysicalInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonPhysicalType.json">PersonPhysicalType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonPhysicalType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonReferenceType.json">PersonReferenceType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonReferenceType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/PersonType.json">PersonType.json</a>
+										<a href="/HROPEN/Common/json/person/PersonType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/ResponsibleInclusion.json">ResponsibleInclusion.json</a>
+										<a href="/HROPEN/Common/json/person/ResponsibleInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/ResponsibleType.json">ResponsibleType.json</a>
+										<a href="/HROPEN/Common/json/person/ResponsibleType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/person/SpecifiedPersonType.json">SpecifiedPersonType.json</a>
+										<a href="/HROPEN/Common/json/person/SpecifiedPersonType.json"> {json}</a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<!-- profile panel-group -->
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+									<a data-toggle="collapse" href="#common-profile">profile</a>
+								</h4>
+						</div>
+						<div id="common-profile" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/BaseHistoryType.json">BaseHistoryType.json</a>
+										<a href="/HROPEN/Common/json/profile/BaseHistoryType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/CertificationType.json">CertificationType.json</a>
+										<a href="/HROPEN/Common/json/profile/CertificationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/DeploymentType.json">DeploymentType.json</a>
+										<a href="/HROPEN/Common/json/profile/DeploymentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/EducationAttendanceType.json">EducationAttendanceType.json</a>
+										<a href="/HROPEN/Common/json/profile/EducationAttendanceType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/EmployerHistoryType.json">EmployerHistoryType.json</a>
+										<a href="/HROPEN/Common/json/profile/EmployerHistoryType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/EventType.json">EventType.json</a>
+										<a href="/HROPEN/Common/json/profile/EventType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/LicenseType.json">LicenseType.json</a>
+										<a href="/HROPEN/Common/json/profile/LicenseType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/MilitaryServiceType.json">MilitaryServiceType.json</a>
+										<a href="/HROPEN/Common/json/profile/MilitaryServiceType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/OrganizationAffiliationType.json">OrganizationAffiliationType.json</a>
+										<a href="/HROPEN/Common/json/profile/OrganizationAffiliationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/PatentType.json">PatentType.json</a>
+										<a href="/HROPEN/Common/json/profile/PatentType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/PersonProfileInclusion.json">PersonProfileInclusion.json</a>
+										<a href="/HROPEN/Common/json/profile/PersonProfileInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/PersonProfileType.json">PersonProfileType.json</a>
+										<a href="/HROPEN/Common/json/profile/PersonProfileType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/PublicationType.json">PublicationType.json</a>
+										<a href="/HROPEN/Common/json/profile/PublicationType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/RefereeType.json">RefereeType.json</a>
+										<a href="/HROPEN/Common/json/profile/RefereeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/profile/SecurityCredentialType.json">SecurityCredentialType.json</a>
+										<a href="/HROPEN/Common/json/profile/SecurityCredentialType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<!-- vcard panel-group -->
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+									<a data-toggle="collapse" href="#common-vcard">vcard</a>
+								</h4>
+						</div>
+						<div id="common-vcard" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/vcard/JobType.json">JobType.json</a>
+										<a href="/HROPEN/Common/json/vcard/JobType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+				<!-- work panel-group -->
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+									<a data-toggle="collapse" href="#common-work">work</a>
+								</h4>
+						</div>
+						<div id="common-work" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/DisabilityType.json">DisabilityType.json</a>
+										<a href="/HROPEN/Common/json/work/DisabilityType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/EmployeeType.json">EmployeeType.json</a>
+										<a href="/HROPEN/Common/json/work/EmployeeType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/JobType.json">JobType.json</a>
+										<a href="/HROPEN/Common/json/work/JobType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/ResourceClassificationInclusion.json">ResourceClassificationInclusion.json</a>
+										<a href="/HROPEN/Common/json/work/ResourceClassificationInclusion.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/ScheduleType.json">ScheduleType.json</a>
+										<a href="/HROPEN/Common/json/work/ScheduleType.json"> {json}</a>
+									</li>
+									<li><a href="/HROPEN/jschema/JSchema/index.htm#schema=/HROPEN/Common/json/work/StaffingReferenceIdsType.json">StaffingReferenceIdsType.json</a>
+										<a href="/HROPEN/Common/json/work/StaffingReferenceIdsType.json"> {json}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<!-- panel-group -->
+
+			</div>
+			<!-- col-md-6 -->
+
+
+		</div>
+		<!-- row -->
+
+
+
+	</div>
+	<!-- container -->
+
+</body>
+<script type="text/javascript">
+	var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+	var root = "/HROPEN/Assessments/json/";
+	var assessments, catalog, order, report;
+	$.getJSON(root + "AssessmentType.json", function(data) {
+		assessments = data;
+		console.log(assessments);
+	});
+
+	$.getJSON(root + "CatalogType.json", function(data) {
+		catalog = data;
+		console.log(catalog);
+	});
+
+	$.getJSON(root + "OrderType.json", function(data) {
+		order = data;
+		console.log(order);
+	});
+
+	$.getJSON(root + "ReportType.json", function(data) {
+		report = data;
+		console.log(report);
+	});
+</script>
+
+
+</html>

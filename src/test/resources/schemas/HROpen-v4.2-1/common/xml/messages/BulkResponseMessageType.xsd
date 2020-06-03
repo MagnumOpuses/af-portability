@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hropen="https://hropenstandards.org/schema/xml/" elementFormDefault="qualified" targetNamespace="https://hropenstandards.org/schema/xml/" version="4.2.0" id="BulkResponseMessageType" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="MessageInclusion.xsd" />
+  <xsd:include schemaLocation="ResponseMessageBaseInclusion.xsd" />
+  <xsd:include schemaLocation="ResourceMessageInclusion.xsd" />
+  <xsd:complexType name="BulkResponseMessageType">
+    <xsd:annotation>
+      <xsd:documentation>A response message for communicating processing results of a request to process a set of resources, a bulk request.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="requestResultStatusCode">
+        <xsd:simpleType>
+          <xsd:annotation>
+            <xsd:documentation>The result status code for the request.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Succeeded" />
+            <xsd:enumeration value="Failed" />
+            <xsd:enumeration value="PartiallyFailed" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="messages">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>A list of messages concerning the processing of the bulk request.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hropen:MessageInclusion" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="resourceMessages">
+        <xsd:complexType>
+          <xsd:annotation>
+            <xsd:documentation>A list of messages concerning the processing of the individual resources of the bulk request.</xsd:documentation>
+          </xsd:annotation>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="hropen:ResourceMessageInclusion" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:element name="BulkResponseMessage" type="hropen:BulkResponseMessageType" />
+</xsd:schema>

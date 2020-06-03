@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hropen="https://hropenstandards.org/schema/xml/" elementFormDefault="qualified" targetNamespace="https://hropenstandards.org/schema/xml/" version="4.2.0" id="ResourceRelationshipCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="ResourceRelationshipCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Resource relationship code list.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Employee">
+        <xsd:annotation>
+          <xsd:documentation>Employee</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VendorEmployee">
+        <xsd:annotation>
+          <xsd:documentation>VendorEmployee</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ResourceRelationshipCode" type="hropen:ResourceRelationshipCodeList" />
+</xsd:schema>

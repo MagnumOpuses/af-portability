@@ -1,0 +1,18 @@
+{
+    "catalog": {
+        "party": {
+            "customer": {
+                "name": "Hannah Marks",
+                "id": { "value": "C001" }
+            },
+            "requestor": {
+                "name": "Ed Richards",
+                "id": { "value": "R001" }
+            },
+            "supplier": {
+                "name": "Accurate Assessments, Inc",
+                "id": { "value": "S001" }
+            }
+        }
+    }
+}

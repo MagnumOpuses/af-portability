@@ -1,0 +1,597 @@
+{
+  "sessionToken": "219f40ce-44d5-4728-9dc5-0429b803da18",
+  "source": {
+    "sourceId": null,
+    "sourceName": null,
+    "sourceDescription": null,
+    "termsAndConditions": []
+  },
+  "sink": {
+    "sinkId": null,
+    "sinkName": null,
+    "sourceDescription": null,
+    "purposeOfUse": [
+      "Ansökan till roll 'System utvecklare' på 'JobTechDev'"
+    ]
+  },
+  "consent": {
+    "consentTimestamp": "2020-06-01T13:41:59.657Z",
+    "consentStatus": true,
+    "consentRevokedTimestamp": null,
+    "consentedTimePeriod": "2020-07-01T13:41:59.657Z",
+    "acceptedTerms": [],
+    "acceptedPurposes": [
+      "Ansökan till roll 'System utvecklare' på 'JobTechDev'"
+    ]
+  },
+  "data": [
+    {
+      "documentId": {
+        "value": "81994764",
+        "schemeId": null,
+        "schemeVersionId": null,
+        "schemeAgencyId": null,
+        "description": null,
+        "schemeLink": null,
+        "agencyUri": null
+      },
+      "alternateIds": [],
+      "language": null,
+      "uri": null,
+      "distributionGuidelines": null,
+      "person": {
+        "legalId": null,
+        "birthDate": null,
+        "gender": null,
+        "citizenship": null,
+        "residenceCountry": null,
+        "militaryStatus": null,
+        "ethnicity": [],
+        "id": null,
+        "name": {
+          "language": null,
+          "formattedName": null,
+          "legal": null,
+          "given": "Nina",
+          "preferred": null,
+          "middle": null,
+          "family": "Greger",
+          "familyPrefix": null,
+          "alias": null,
+          "formerFamily": null,
+          "formerFamilyPrefix": null,
+          "preferredSalutationCode": null,
+          "generationAffixCode": null,
+          "qualificationAffixCode": null,
+          "titleAffixCode": null,
+          "initials": null
+        },
+        "communication": {
+          "address": [
+            {
+              "line": "Karlavägen 98",
+              "extendedLines": [
+                {
+                  "type": null,
+                  "value": "test"
+                }
+              ],
+              "countryCode": "SE",
+              "countrySubDivisions": [],
+              "city": "Forserum",
+              "postalCode": "57197",
+              "postOfficeBox": null,
+              "geoLocation": null,
+              "formattedAddress": null
+            }
+          ],
+          "phone": [
+            {
+              "countryDialingCode": null,
+              "areaDialingCode": null,
+              "dialNumber": null,
+              "phoneExtension": null,
+              "access": null,
+              "formattedNumber": "08558945622"
+            },
+            {
+              "countryDialingCode": null,
+              "areaDialingCode": null,
+              "dialNumber": null,
+              "phoneExtension": null,
+              "access": null,
+              "formattedNumber": "07055555"
+            },
+            {
+              "countryDialingCode": null,
+              "areaDialingCode": null,
+              "dialNumber": null,
+              "phoneExtension": null,
+              "access": null,
+              "formattedNumber": "07081542644"
+            }
+          ],
+          "email": [
+            {
+              "address": "test@test.se"
+            }
+          ],
+          "web": [
+            {
+              "url": null
+            }
+          ]
+        },
+        "primaryLanguage": null,
+        "height": null,
+        "weight": null,
+        "disability": null,
+        "tobaccoUserIndicator": null,
+        "hairColor": null,
+        "eyeColor": null,
+        "identifyingMarks": [],
+        "age": null,
+        "bloodType": null,
+        "passportId": null,
+        "fatherName": null,
+        "motherName": null,
+        "race": [],
+        "birthPlace": null,
+        "deathDate": null,
+        "nationality": [],
+        "maritalStatus": null,
+        "maritalStatusDate": null,
+        "visa": [],
+        "religion": [],
+        "studentType": null,
+        "studentIndicator": null,
+        "studentStatus": null,
+        "legalDocuments": [],
+        "employmentPermits": []
+      },
+      "profiles": [
+        {
+          "profileName": "System Utvecklare",
+          "languageCode": null,
+          "education": [],
+          "employment": [
+            {
+              "id": null,
+              "start": "2017-02",
+              "end": "2018-07",
+              "current": false,
+              "attachmentReferences": [],
+              "descriptions": [
+                "Min roll involverar administration av IT system på företaget JobJobJob IT."
+              ],
+              "organization": {
+                "taxId": null,
+                "legalId": {
+                  "value": "JobJobJob IT",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                },
+                "industryCodes": [],
+                "industryIdentifiers": [],
+                "headCount": null,
+                "revenue": null,
+                "description": null,
+                "geographicResponsibilityCode": null,
+                "ownershipType": null,
+                "stockSymbol": null,
+                "workEnvironmentCode": null,
+                "contacts": [],
+                "domainName": null
+              },
+              "positionHistories": [
+                {
+                  "id": null,
+                  "start": null,
+                  "end": null,
+                  "current": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "title": "Systemadmin på JobJobJob IT",
+                  "resourceRelationshipCode": null,
+                  "organization": null,
+                  "location": null,
+                  "jobCategories": [],
+                  "jobLevels": []
+                }
+              ]
+            },
+            {
+              "id": null,
+              "start": "2018-07",
+              "end": "2019-05",
+              "current": false,
+              "attachmentReferences": [],
+              "descriptions": [
+                "Jag har utvecklat ett HR system och Demo verktyg."
+              ],
+              "organization": {
+                "taxId": null,
+                "legalId": {
+                  "value": "Mittmittjobbjobb",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                },
+                "industryCodes": [],
+                "industryIdentifiers": [],
+                "headCount": null,
+                "revenue": null,
+                "description": null,
+                "geographicResponsibilityCode": null,
+                "ownershipType": null,
+                "stockSymbol": null,
+                "workEnvironmentCode": null,
+                "contacts": [],
+                "domainName": null
+              },
+              "positionHistories": [
+                {
+                  "id": null,
+                  "start": null,
+                  "end": null,
+                  "current": null,
+                  "attachmentReferences": null,
+                  "descriptions": null,
+                  "title": "Systemutvecklare på mittmittjobbjobb.se",
+                  "resourceRelationshipCode": null,
+                  "organization": null,
+                  "location": null,
+                  "jobCategories": [],
+                  "jobLevels": []
+                }
+              ]
+            }
+          ],
+          "militaryService": [],
+          "licenses": [
+            {
+              "id": null,
+              "name": null,
+              "type": {
+                "id": {
+                  "value": "",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                },
+                "name": null,
+                "code": null
+              },
+              "status": null,
+              "effectiveTimePeriod": null,
+              "issued": "Fri Oct 04 11:43:01 GMT 2019",
+              "firstIssued": null,
+              "issuingAuthority": null,
+              "attachmentReferences": [],
+              "descriptions": [],
+              "endorsements": null,
+              "restrictions": null,
+              "violations": null
+            }
+          ],
+          "certifications": [],
+          "patents": [],
+          "publications": [],
+          "qualifications": [
+            {
+              "competencyIds": [
+                {
+                  "value": "609205",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "5956",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "200029",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "605952",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "161",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "3252",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "607902",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            },
+            {
+              "competencyIds": [
+                {
+                  "value": "200028",
+                  "schemeId": null,
+                  "schemeVersionId": null,
+                  "schemeAgencyId": null,
+                  "description": null,
+                  "schemeLink": null,
+                  "agencyUri": null
+                }
+              ],
+              "competencyName": null,
+              "description": "skill",
+              "proficiencyLevel": null,
+              "lastUsedDate": null,
+              "experienceMeasure": null,
+              "interestLevel": null,
+              "competencyDimensions": [],
+              "competencyEvidence": null,
+              "attachmentReferences": []
+            }
+          ],
+          "affiliations": [],
+          "securityCredentials": [],
+          "references": [],
+          "attachments": [],
+          "profileId": null,
+          "alternateIds": [],
+          "personAvailability": null,
+          "processingInformation": null,
+          "distributionGuidelines": null,
+          "associatedPositionOpenings": [],
+          "objective": "Systemutvecklare som vill jobba i Stockholm",
+          "executiveSummary": "Jag är en duktig system utvecklare!",
+          "employerPreferences": [],
+          "positionPreferences": [
+            {
+              "locations": [
+                {
+                  "maximumCommuteDuration": null,
+                  "maximumCommuteDistance": null,
+                  "referenceLocation": {
+                    "line": null,
+                    "extendedLines": [],
+                    "countryCode": null,
+                    "countrySubDivisions": [
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      },
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      }
+                    ],
+                    "city": "0180",
+                    "postalCode": null,
+                    "postOfficeBox": null,
+                    "geoLocation": null,
+                    "formattedAddress": null
+                  }
+                }
+              ],
+              "jobCategories": [],
+              "positionTitles": [],
+              "positionOfferingTypeCodes": [],
+              "positionScheduleTypeCodes": [],
+              "shiftSchedules": [],
+              "shiftDescriptions": [],
+              "remoteWork": null,
+              "careerLevelCodes": null,
+              "jobGradeCode": null,
+              "offeredRemunerationPackage": null,
+              "travel": null,
+              "relocation": null,
+              "workingLanguageCodes": []
+            },
+            {
+              "locations": [
+                {
+                  "maximumCommuteDuration": null,
+                  "maximumCommuteDistance": null,
+                  "referenceLocation": {
+                    "line": null,
+                    "extendedLines": [],
+                    "countryCode": null,
+                    "countrySubDivisions": [
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      },
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      }
+                    ],
+                    "city": "0180",
+                    "postalCode": null,
+                    "postOfficeBox": null,
+                    "geoLocation": null,
+                    "formattedAddress": null
+                  }
+                },
+                {
+                  "maximumCommuteDuration": null,
+                  "maximumCommuteDistance": null,
+                  "referenceLocation": {
+                    "line": null,
+                    "extendedLines": [],
+                    "countryCode": null,
+                    "countrySubDivisions": [
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      },
+                      {
+                        "type": null,
+                        "value": "Kommun"
+                      }
+                    ],
+                    "city": "01",
+                    "postalCode": null,
+                    "postOfficeBox": null,
+                    "geoLocation": null,
+                    "formattedAddress": null
+                  }
+                }
+              ],
+              "jobCategories": [],
+              "positionTitles": [],
+              "positionOfferingTypeCodes": [],
+              "positionScheduleTypeCodes": [],
+              "shiftSchedules": [],
+              "shiftDescriptions": [],
+              "remoteWork": null,
+              "careerLevelCodes": null,
+              "jobGradeCode": null,
+              "offeredRemunerationPackage": null,
+              "travel": null,
+              "relocation": null,
+              "workingLanguageCodes": []
+            }
+          ],
+          "candidateRelationships": [],
+          "candidateSources": [],
+          "applicationProcessHistory": null,
+          "workLifeCycles": []
+        }
+      ]
+    }
+  ]
+}
