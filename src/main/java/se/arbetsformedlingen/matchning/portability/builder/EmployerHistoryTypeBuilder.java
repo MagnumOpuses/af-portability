@@ -56,6 +56,8 @@ public class EmployerHistoryTypeBuilder {
 
 
     public EmployerHistoryTypeBuilder withCodes(String yrkesbenamning) {
+        //TODO change jobterm from Name to ID
+        //TODO map yrkesbenamning taxonomy result to Name
         List<PositionHistoryType> list = new ArrayList<>();
         List<EntityType> joblevels = new ArrayList<>();
         joblevels.add(new EntityTypeBuilder().setCode(yrkesbenamning).setName(String.valueOf(Concept.EntityType.jobterm)).build());

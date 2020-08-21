@@ -171,10 +171,10 @@ public class CandidateProfileTypeBuilder {
         if (profil.getKompetenser() != null) {
             final List<PersonCompetencyType> qualifications = new ArrayList<>();
             for (final Kompetens kompetens : profil.getKompetenser()) {
-                // TODO Adjust this to use the new taxonomy.
+                // TODO map taxonomiId to taxonomy name
                 qualifications
                         .add(new PersonCompetencyTypeBuilder().withKompetens(String.valueOf(kompetens.getTaxonomiId()))
-                                .setDescription(String.valueOf(Concept.EntityType.skill)).build());
+                                .setDescription(String.valueOf(Concept.EntityType.skill)).setCompetencyName().build());
             }
             setQualifications(qualifications);
         }
@@ -182,7 +182,7 @@ public class CandidateProfileTypeBuilder {
         if (profil.getYrkeserfarenheter() != null) {
             final List<EmployerHistoryType> employment = new ArrayList<>();
             for (final Yrkeserfarenhet yrkeserfarenhet : profil.getYrkeserfarenheter()) {
-                // TODO Adjust this to use the new taxonomy.
+                // TODO map yrkesbenamning to taxonomy
                 employment.add(new EmployerHistoryTypeBuilder()
                         .withCodes(String.valueOf(yrkeserfarenhet.getYrkesbenamning())).build());
             }
@@ -190,6 +190,9 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getYrkesroller() != null) {
+            //TODO map kod to taxonomy name
+            //TODO map kodtyp
+            //TODO map the kodetyp to YRKESBENAMNING
             final List<EmployerHistoryType> employment = new ArrayList<>();
             for (final Yrkesroll yrkesroll : profil.getYrkesroller()) {
                 employment.add(new EmployerHistoryTypeBuilder().withCodes(yrkesroll.getKod()).build());
@@ -198,6 +201,7 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getAnstallningar() != null) {
+            //TODO need to map grundmeritId and use taxonomy on it
             final List<EmployerHistoryType> emplyments = new ArrayList<>();
             for (final Anstallning anstallning : profil.getAnstallningar()) {
                 final List<PositionHistoryType> positions = new ArrayList<>();
@@ -229,6 +233,8 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getUtbildningar() != null) {
+            //TODO need to map grundmeritId and use taxonomy on it
+            //TODO need to map inriktning and use taxonomy on it
             final List<EducationAttendanceType> education = new ArrayList<>();
             for (final Utbildning utbildning : profil.getUtbildningar()) {
                 final List<String> descriptions = new ArrayList<>();
@@ -272,6 +278,7 @@ public class CandidateProfileTypeBuilder {
         }
 
         if (profil.getArbetsorter() != null) {
+            //TODO map varde1 to taxonomy
             final List<PositionPreferenceType> positionPreferences = new ArrayList<>();
             final List<PreferredLocationType> preferredLocations = new ArrayList<>();
             final List<AddressComponentType> countrySubDivisions = new ArrayList<>();
