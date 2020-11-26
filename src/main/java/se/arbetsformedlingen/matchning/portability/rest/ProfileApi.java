@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -130,6 +131,9 @@ public class ProfileApi {
     private List<String> decodeStringToList(final String encodedString) {
         final byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
         final String decodedString = new String(decodedBytes);
+        if (decodedString.isEmpty()) {
+            return Collections.emptyList();
+        }
         final JSONArray parsed = new JSONArray(decodedString);
         final List<String> purposeList = IntStream.range(0, parsed.length()).mapToObj(parsed::get).map(Object::toString)
                 .collect(Collectors.toList());
