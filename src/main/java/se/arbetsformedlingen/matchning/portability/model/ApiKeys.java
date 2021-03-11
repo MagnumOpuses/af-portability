@@ -26,6 +26,26 @@ public class ApiKeys {
         this.company_name = company_name;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getApikey() {
+        return apikey;
+    }
+
+    public Long getApiId() {
+        return api_id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCompanyName() {
+        return company_name;
+    }
+
     @Override
     public String toString() {
         return this.id + " -- " + this.apikey + " -- " + this.email + " -- " + this.company_name;
