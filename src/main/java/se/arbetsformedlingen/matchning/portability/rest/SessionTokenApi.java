@@ -47,10 +47,7 @@ public class SessionTokenApi {
     @GetMapping(value = "/token")
     public Token generateSessionToken(
         @RequestParam("api-key") String apikey,
-        @RequestParam("purpose") String purpose,
-        @RequestParam("job_title") String jobTitle,
-        @RequestParam("company_name") String companyName
-        ) {
+        @RequestParam("purpose") String purpose) {
         ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
@@ -59,14 +56,10 @@ public class SessionTokenApi {
         UUID uuid = UUID.randomUUID();
         Token sessionToken = new Token(uuid.toString());
         Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
-        Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
-        Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
 
         try {
             this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
             this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
-            this.registerTokenToRedis(new StoreRequestBody(jobTitleToken.getToken(), jobTitle));
-            this.registerTokenToRedis(new StoreRequestBody(companyNameToken.getToken(), companyName));
         } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
             throw he;

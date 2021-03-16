@@ -10,8 +10,7 @@ public class Sink {
     public String sinkId;
     public String sinkName;
     public List<String> purposeOfUse;
-    public String companyName;
-    public String jobTitle;
+
 
     public String getSinkId() {
         return sinkId;
@@ -29,22 +28,6 @@ public class Sink {
         this.sinkName = sinkName;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(final String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(final String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-    
     public List<String> getPurposeOfUse() {
         if (purposeOfUse == null) {
             purposeOfUse = new ArrayList<String>();

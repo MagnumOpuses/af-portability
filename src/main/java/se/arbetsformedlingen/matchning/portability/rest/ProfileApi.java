@@ -83,41 +83,11 @@ public class ProfileApi {
             throw new RuntimeException(e);
         }
 
-        StoreResponse companyName = new StoreResponse();
-        final String companyNameToken = sessionToken + "-companyName";
-        try {
-            companyName = this.requestValueWithSessionToken(companyNameToken);
-        } catch (final URISyntaxException ue) {
-            ue.printStackTrace();
-        } catch (final HttpException he) {
-            throw new HttpNotFoundException("Invalid or missing Company Name");
-        } catch (final IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        StoreResponse jobTitle = new StoreResponse();
-        final String jobTitleToken = sessionToken + "-jobTitle";
-        try {
-            jobTitle = this.requestValueWithSessionToken(jobTitleToken);
-        } catch (final URISyntaxException ue) {
-            ue.printStackTrace();
-        } catch (final HttpException he) {
-            throw new HttpNotFoundException("Invalid or missing Job Title");
-        } catch (final IOException e) {
-            throw new RuntimeException(e);
-        }
-
         final List<CandidateType> candidates = new ArrayList<CandidateType>();
         candidates.add(candidate);
 
         final Source source = new SourceBuilder().setSourceName("Arbetsformedlingen").build();
-        final Sink sink = new SinkBuilder()
-                .setSinkName("PLACEHOLDER NAME")
-                .setCompanyName(companyName.value)
-                .setJobTitle(jobTitle.value)
-                .setPurposeOfUse(this.decodeStringToList(encodedPurpose.value))
-                .build();
-
+        final Sink sink = new SinkBuilder().setSinkName("PLACEHOLDER NAME").setPurposeOfUse(this.decodeStringToList(encodedPurpose.value)).build();
         final Consent consent = new ConsentBuilder().build();
 
         final TransferObject transferObject = new TransferObjectBuilder()

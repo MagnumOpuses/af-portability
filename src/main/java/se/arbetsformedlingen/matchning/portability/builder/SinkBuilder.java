@@ -17,15 +17,6 @@ public class SinkBuilder {
         return this;
     }
 
-    public SinkBuilder setCompanyName(String companyName) {
-        sinkBuilder.setCompanyName(companyName);
-        return this;
-    }
-
-    public SinkBuilder setJobTitle(String jobTitle) {
-        sinkBuilder.setJobTitle(jobTitle);
-        return this;
-    }
 
     public SinkBuilder setPurposeOfUse(List<String> purposeOfUse) {
         sinkBuilder.setPurposeOfUse(purposeOfUse);
