@@ -47,46 +47,31 @@ public class SessionTokenApi {
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
     public Token generateSessionToken(
-<<<<<<< HEAD
         @RequestParam("api-key") String apikey,
         @RequestParam("purpose") String purpose,
         @RequestParam("job_title") String jobTitle,
         @RequestParam("company_name") String companyName
         ) {
-        ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
-=======
-            @RequestParam("api-key") final String apikey,
-            @RequestParam("purpose") final String purpose) {
         final ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
->>>>>>> 16cab48ec63a168b69912cdcb7b83d45ac03f7cd
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
         }
 
-<<<<<<< HEAD
-        UUID uuid = UUID.randomUUID();
-        Token sessionToken = new Token(uuid.toString());
-        Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
-        Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
-        Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
-=======
         final UUID uuid = UUID.randomUUID();
         final Token sessionToken = new Token(uuid.toString());
         final Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
->>>>>>> 16cab48ec63a168b69912cdcb7b83d45ac03f7cd
+        final Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
+        final Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
 
         try {
             this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
             this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
-<<<<<<< HEAD
+
             this.registerTokenToRedis(new StoreRequestBody(jobTitleToken.getToken(), jobTitle));
             this.registerTokenToRedis(new StoreRequestBody(companyNameToken.getToken(), companyName));
         } catch (HttpException he) {
-            System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
-=======
-        } catch (final HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed (" + he.getStatusCode() + ")");
->>>>>>> 16cab48ec63a168b69912cdcb7b83d45ac03f7cd
+
             throw he;
         } catch (final IOException e) {
             throw new RuntimeException(e);
