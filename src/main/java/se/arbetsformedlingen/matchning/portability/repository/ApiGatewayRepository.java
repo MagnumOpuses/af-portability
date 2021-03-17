@@ -7,6 +7,6 @@ import se.arbetsformedlingen.matchning.portability.model.ApiKeys;
 
 @RepositoryRestResource
 public interface ApiGatewayRepository extends JpaRepository<ApiKeys, Integer> {
-    @Query(value = "select id, apikey, api_id, email from apikeys where apikey = :apikey", nativeQuery = true)
+    @Query(value = "select id, apikey, api_id, email, userinfo->>'company_name' AS company_name from apikeys where apikey = :apikey", nativeQuery = true)
     public ApiKeys getAllApiKeys(String apikey);
 }
