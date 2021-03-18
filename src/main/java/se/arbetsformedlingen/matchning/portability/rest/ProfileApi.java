@@ -83,6 +83,18 @@ public class ProfileApi {
             throw new RuntimeException(e);
         }
 
+        StoreResponse dataSinkName = new StoreResponse();
+        final String dataSinkNameToken = sessionToken + "-dataSinkName";
+        try {
+            dataSinkName = this.requestValueWithSessionToken(dataSinkNameToken);
+        } catch (final URISyntaxException ue) {
+            ue.printStackTrace();
+        } catch (final HttpException he) {
+            throw new HttpNotFoundException("Invalid or missing dataSinkName");
+        } catch (final IOException e) {
+            throw new RuntimeException(e);
+        }
+
         StoreResponse companyName = new StoreResponse();
         final String companyNameToken = sessionToken + "-companyName";
         try {
@@ -112,7 +124,7 @@ public class ProfileApi {
 
         final Source source = new SourceBuilder().setSourceName("Arbetsformedlingen").build();
         final Sink sink = new SinkBuilder()
-                .setSinkName("PLACEHOLDER NAME")
+                .setSinkName(dataSinkName.value)
                 .setCompanyName(companyName.value)
                 .setJobTitle(jobTitle.value)
                 .setPurposeOfUse(this.decodeStringToList(encodedPurpose.value))

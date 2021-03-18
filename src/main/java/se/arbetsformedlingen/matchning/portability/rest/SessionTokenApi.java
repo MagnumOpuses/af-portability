@@ -59,6 +59,7 @@ public class SessionTokenApi {
 
         final UUID uuid = UUID.randomUUID();
         final Token sessionToken = new Token(uuid.toString());
+        final Token dataSinkNameToken = new Token(sessionToken.getToken() + "-dataSinkName");
         final Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
         final Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
         final Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
@@ -66,7 +67,7 @@ public class SessionTokenApi {
         try {
             this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
             this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
-
+            this.registerTokenToRedis(new StoreRequestBody(dataSinkNameToken.getToken(), info.getCompanyName()));
             this.registerTokenToRedis(new StoreRequestBody(jobTitleToken.getToken(), jobTitle));
             this.registerTokenToRedis(new StoreRequestBody(companyNameToken.getToken(), companyName));
         } catch (HttpException he) {
