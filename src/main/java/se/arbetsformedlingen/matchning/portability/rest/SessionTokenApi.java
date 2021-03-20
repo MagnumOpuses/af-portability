@@ -47,8 +47,11 @@ public class SessionTokenApi {
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
     public Token generateSessionToken(
-            @RequestParam("api-key") final String apikey,
-            @RequestParam("purpose") final String purpose) {
+        @RequestParam("api-key") String apikey,
+        @RequestParam("purpose") String purpose,
+        @RequestParam("job_title") String jobTitle,
+        @RequestParam("company_name") String companyName
+        ) {
         final ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
@@ -56,13 +59,20 @@ public class SessionTokenApi {
 
         final UUID uuid = UUID.randomUUID();
         final Token sessionToken = new Token(uuid.toString());
+        final Token dataSinkNameToken = new Token(sessionToken.getToken() + "-dataSinkName");
         final Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
+        final Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
+        final Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
 
         try {
             this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
             this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
-        } catch (final HttpException he) {
+            this.registerTokenToRedis(new StoreRequestBody(dataSinkNameToken.getToken(), info.getCompanyName()));
+            this.registerTokenToRedis(new StoreRequestBody(jobTitleToken.getToken(), jobTitle));
+            this.registerTokenToRedis(new StoreRequestBody(companyNameToken.getToken(), companyName));
+        } catch (HttpException he) {
             System.out.println("Error Request to " + he.getURL() + " failed (" + he.getStatusCode() + ")");
+
             throw he;
         } catch (final IOException e) {
             throw new RuntimeException(e);
