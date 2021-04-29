@@ -196,6 +196,7 @@ public class CandidatePersonTypeBuilder {
     }
 
     public CandidatePersonTypeBuilder withPersonUppgifter(final PersonUppgifter personUppgifter) {
+        setLegalId(new IdentifierTypeBuilder().setValue(personUppgifter.getPersonnummer()).build());
         setName(new PersonNameTypeBuilder()
                 .setGiven(personUppgifter.getFornamn())
                 .setFamily(personUppgifter.getEfternamn())
