@@ -3,7 +3,6 @@ package se.arbetsformedlingen.matchning.portability.rest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -37,6 +36,19 @@ public class StoreApi {
     @CrossOrigin
     @PostMapping("/store")
     private JsonNode StoreValue(@RequestBody StoreRequestBody body) throws IOException {
+
+        // Remove personal number from CV data to be shared
+        JSONObject jo=new JSONObject(body.value);
+        JSONObject person=jo
+            .getJSONObject("transferObject")
+            .getJSONArray("data").getJSONObject(0)
+            .getJSONObject("person");
+        JSONObject id = person.getJSONObject("legalId");  // Save id for later use
+        person.remove("legalId");                    // Remove from shared CV data
+
+        body.value=jo.toString();
+
+        // Store to Redis
         String results;
         try {
             results = this.storeValueToRedis(body);
@@ -64,12 +76,7 @@ public class StoreApi {
                 .getString("value");
 
         // Get the personal number "YYYY-MM-DD-NNNN"
-        String legalId = data.getJSONObject("transferObject")
-                .getJSONArray("data")
-                .getJSONObject(0)
-                .getJSONObject("person")
-                .getJSONObject("legalId")
-                .getString("value");
+        String legalId = id.getString("value");
 
         JSONObject nameObj = data.getJSONObject("transferObject")
                 .getJSONArray("data")
@@ -112,9 +119,7 @@ public class StoreApi {
 
         System.out.println(logEntry); // Logging occurs here !
 
-        JsonNode jsonNode = mapper.readTree(results);
-
-        return jsonNode;
+        return mapper.readTree(results);
     }
 
     /** Create AF Connect consent log item */
@@ -170,7 +175,6 @@ public class StoreApi {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-
 
         StringEntity entity = new StringEntity(json, "UTF-8");
         postRequest.setEntity(entity);
