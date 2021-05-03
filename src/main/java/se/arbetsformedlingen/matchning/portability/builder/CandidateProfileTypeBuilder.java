@@ -158,6 +158,9 @@ public class CandidateProfileTypeBuilder {
     }
 
     public CandidateProfileTypeBuilder withProfiles(final ArbetsSokandeProfil profil) {
+        final IdentifierType profileId = new IdentifierTypeBuilder().setValue(profil.getId() + "").build();
+        setProfileId(profileId);
+
         setProfileName(profil.getNamn());
         setObjective(profil.getBeskrivning());
         setExecutiveSummary(profil.getPresentation());

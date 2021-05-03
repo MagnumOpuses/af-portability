@@ -14,7 +14,7 @@ import java.util.List;
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CandidateProfileType {
-
+    public IdentifierType profileId;
     public String profileName;
     public LanguageCodeList languageCode;
     public List<EducationAttendanceType> education;
@@ -29,7 +29,6 @@ public class CandidateProfileType {
     public List<CertificationType> securityCredentials;
     public List<RefereeType> references;
     public List<AttachmentType> attachments;
-    public IdentifierType profileId;
     public List<IdentifierType> alternateIds;
     public PersonAvailabilityType personAvailability;
     public String processingInformation;
@@ -43,7 +42,6 @@ public class CandidateProfileType {
     public List<CandidateSourceType> candidateSources;
     public ProcessHistoryType applicationProcessHistory;
     public List<WorkLifeCycleType> workLifeCycles;
-
 
     public String getProfileName() {
         return profileName;
