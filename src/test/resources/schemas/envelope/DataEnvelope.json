@@ -1,0 +1,173 @@
+{
+  "$schema": "https://github.com/MagnumOpuses/common-cv-model",
+  "id": "resource:/schemas/envelope/DataEnvelope.json#",
+  "title": "DataEnvelope",
+  "description": "Metadata for the data transferred through the AF-Connect service.",
+  "definitions": {
+    "SessionTokenType": {
+      "description": "The session token assigned to this session.",
+      "type": "string"
+    },
+    "SourceType": {
+      "title": "SourceType",
+      "description": "Contains information about the source of the data.",
+      "type": "object",
+      "properties": {
+        "sourceId": {
+          "description": "The primary identifier of the source of the data.",
+          "type": "string"
+        },
+        "sourceName": {
+          "description": "The name of the source.",
+          "type": "string"
+        },
+        "termsAndConditions": {
+          "description": "List of the term and conditions as specified by the source of the data. The user needs to consent to these for the data to be allowed through.",
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "sourceName",
+        "termsAndConditions"
+      ]
+    },
+    "SinkType": {
+      "title": "SinkType",
+      "description": "Contains information about the sink of teh data.",
+      "type": "object",
+      "properties": {
+        "sinkId": {
+          "description": "The primary identifier of the sink of the data."
+        },
+        "sinkName": {
+          "description": "The name of the sink.",
+          "type": "string"
+        },
+        "sinkDescription": {
+          "description": "The name of the sink.",
+          "type": "string"
+        },
+        "purposeOfUse": {
+          "description": "List of the term and conditions as specified by the source of the data. The user needs to consent to these for the data to be allowed through.",
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "sinkName",
+        "purposeOfUse"
+      ]
+    },
+    "ConsentType": {
+      "title": "ConsentType",
+      "description": "Details about the consent provided.",
+      "type": "object",
+      "properties": {
+        "consentTimestamp": {
+          "description": "The time and date the consent was given. If the consent has been changed multiple times this shows the latest one.",
+          "type": "string"
+        },
+        "consentStatus": {
+          "description": "The status of the consent.",
+          "type": "boolean"
+        },
+        "consentRevokedTimestamp": {
+          "description": "If the concent was revoked this shows the timestamp of the revocation. If the consent has been revoked multiple times this shows the latest one.",
+          "type": "string"
+        },
+        "consentedTimePeriod": {
+          "description": "The time period the user has given consent for their data to be accessible. If this amount of time has traversed from the time the concent was changed to yes then it is automatically changed to no and the action is recorded in the rest of this data structure as well.",
+          "type": "string"
+        },
+        "acceptedTerms": {
+          "description": "List of the terms and conditions the user has consented to.",
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "acceptedPurposes": {
+          "description": "List of the purposes the user has consented to.",
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "consentTimestamp",
+        "consentStatus",
+        "acceptedTerms",
+        "acceptedPurposes"
+      ]
+    },
+    "TransferObjectType": {
+      "title": "TransferObjectType",
+      "description": "Details about the data transferred. TODO add the name of the structure/document type, ",
+      "type": "object",
+      "properties": {
+        "documentType": {
+          "description": "Since this is envisioned to be a data agnostic envelope it is better to show here what kind of data is being transferred. In this case this will most likely be CV data but can also be certificates or insurance information.",
+          "type": "string"
+        },
+        "dataStructureLink": {
+          "description": "Link to the location of the data structure of the data sent.",
+          "type": "string"
+        },
+        "data": {
+          "description": "The data transferred.",
+          "type": "array",
+          "items": {
+            "$ref": "../HROpen-v4.2-1/recruiting/json/CandidateType.json#"
+          }
+        }
+      },
+      "required": [
+        "documentType",
+        "data"
+      ]
+    }
+  },
+  "properties": {
+    "sessionToken": {
+      "description": "The session token assigned to this session.",
+      "$ref": "#/definitions/SessionTokenType"
+    },
+    "source": {
+      "description": "Contains information about the source of the data.",
+      "$ref": "#/definitions/SourceType"
+    },
+    "sink": {
+      "description": "Contains information about the sink of teh data.",
+      "$ref": "#/definitions/SinkType"
+    },
+    "consent": {
+      "description": "The time and date the consent was given. If the consent has been changed multiple times this shows the latest one. This structure also contains the accepted terms and conditions as well as the purpose of use of the data that the user allows to be shared between teh source and sink.",
+      "$ref": "#/definitions/ConsentType"
+    },
+    "transferObject": {
+      "description": "Details about the data transferred.",
+      "$ref": "#/definitions/TransferObjectType"
+    }
+  },
+  "required": [
+    "sessionToken",
+    "source",
+    "sink",
+    "consent",
+    "transferObject"
+  ]
+}

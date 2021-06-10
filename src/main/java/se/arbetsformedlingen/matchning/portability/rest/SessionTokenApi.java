@@ -12,9 +12,13 @@ import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import se.arbetsformedlingen.matchning.portability.model.ApiKeys;
 import se.arbetsformedlingen.matchning.portability.model.sessionToken.Token;
+import se.arbetsformedlingen.matchning.portability.model.storeapi.StoreRequestBody;
 import se.arbetsformedlingen.matchning.portability.repository.ApiGatewayRepository;
 import se.arbetsformedlingen.matchning.portability.repository.HttpException;
 
@@ -28,66 +32,78 @@ public class SessionTokenApi {
     private static String registerTokenUrl;
 
     private static String envMessage;
-
+    ObjectMapper mapper = new ObjectMapper();
     @Autowired
     private ApiGatewayRepository apiGatewayRepository;
 
     SessionTokenApi(
-            @Value("${spring.outbox.host}") String host,
-            @Value("${spring.outbox.port}") String port,
-            @Value("${spring.env.message}") String message) {
+            @Value("${spring.outbox.host}") final String host,
+            @Value("${spring.outbox.port}") final String port,
+            @Value("${spring.env.message}") final String message) {
         SessionTokenApi.registerTokenUrl = "http://" + host + ":" + port;
         SessionTokenApi.envMessage = message;
     }
 
-    ObjectMapper mapper = new ObjectMapper();
-
     @CrossOrigin(allowedHeaders = "*")
     @GetMapping(value = "/token")
-    public Token generateSessionToken(@RequestParam("api-key") String apikey) {
-        ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
+    public Token generateSessionToken(
+        @RequestParam("api-key") String apikey,
+        @RequestParam("purpose") String purpose,
+        @RequestParam("job_title") String jobTitle,
+        @RequestParam("company_name") String companyName
+        ) {
+        final ApiKeys info = apiGatewayRepository.getAllApiKeys(apikey);
         if (info == null) {
             throw new UnauthorizedException("Api Key missing or invalid");
         }
 
-        UUID uuid = UUID.randomUUID();
-        Token t = new Token(uuid.toString());
+        final UUID uuid = UUID.randomUUID();
+        final Token sessionToken = new Token(uuid.toString());
+        final Token dataSinkNameToken = new Token(sessionToken.getToken() + "-dataSinkName");
+        final Token purposeToken = new Token(sessionToken.getToken() + "-purpose");
+        final Token jobTitleToken = new Token(sessionToken.getToken() + "-jobTitle");
+        final Token companyNameToken = new Token(sessionToken.getToken() + "-companyName");
 
         try {
-            this.registerTokenToRedis(t);
+            this.registerTokenToRedis(new StoreRequestBody(sessionToken.getToken(), ""));
+            this.registerTokenToRedis(new StoreRequestBody(purposeToken.getToken(), purpose));
+            this.registerTokenToRedis(new StoreRequestBody(dataSinkNameToken.getToken(), info.getCompanyName()));
+            this.registerTokenToRedis(new StoreRequestBody(jobTitleToken.getToken(), jobTitle));
+            this.registerTokenToRedis(new StoreRequestBody(companyNameToken.getToken(), companyName));
         } catch (HttpException he) {
-            System.out.println("Error Request to " + he.getURL() + " failed ("+ he.getStatusCode() + ")");
+            System.out.println("Error Request to " + he.getURL() + " failed (" + he.getStatusCode() + ")");
+
             throw he;
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
 
-        return t;
+        return sessionToken;
     }
 
-    public void registerTokenToRedis(Token t) throws IOException {
+    public void registerTokenToRedis(final StoreRequestBody body) throws IOException {
 
-        HttpClient client = HttpClients.createDefault();
+        final HttpClient client = HttpClients.createDefault();
 
-        HttpPost postRequest = new HttpPost(SessionTokenApi.registerTokenUrl + "/store");
+        final HttpPost postRequest = new HttpPost(SessionTokenApi.registerTokenUrl + "/store");
 
         String json = "";
         try {
-            json = mapper.writeValueAsString(t);
-        } catch (JsonProcessingException e) {
+            json = mapper.writeValueAsString(body);
+        } catch (final JsonProcessingException e) {
             e.printStackTrace();
         }
 
-        StringEntity entity = new StringEntity(json);
+        final StringEntity entity = new StringEntity(json);
         postRequest.setEntity(entity);
         postRequest.setHeader("Content-type", "application/json");
-        HttpResponse response = client.execute(postRequest);
+        final HttpResponse response = client.execute(postRequest);
 
         if (response.getStatusLine().getStatusCode() != 200) {
             throw new HttpException(response.getStatusLine().getStatusCode(), SessionTokenApi.registerTokenUrl + "/store");
         }
-        HttpEntity responseEntity = response.getEntity();
-        String results = EntityUtils.toString(responseEntity);
+        final HttpEntity responseEntity = response.getEntity();
+        final String results = EntityUtils.toString(responseEntity);
     }
 
 }

@@ -1,0 +1,1446 @@
+{  
+  "source":{  
+     "sourceId":"01",
+     "sourceName":"Arbetsformedlingen",
+     "allowsWrite":true
+  },
+  "consent":{  
+     "consentTimestamp":"2019-09-20T11:53:21+00:00",
+     "consentStatus":true,
+     "consentedTimePeriod":"0000-00-30T00:00:00+00:00"
+  },
+  "data":{  
+     "size":"500",
+     "documentType":"CV",
+     "dataStructureLink":"https://github.com/MagnumOpuses/common-cv-model/tree/master/common%20data%20structure",
+     "data":{  
+        "documentId":{  
+           "value":"81994764",
+           "schemeId":"AF Kundnummer"
+        },
+        "timestamp":0,
+        "person":{  
+           "legalId":{  
+              "value":"1973-09-06-9289",
+              "schemeId":"Personnummer",
+              "description":"Svenskt personnummer"
+           },
+           "name":{  
+              "given":"Nina",
+              "family":"Greger",
+              "formattedName":"Nina Greger"
+           },
+           "communication":{  
+              "address":[  
+                 {  
+                    "useCode":"hemadress",
+                    "line1":"Karlavägen 98",
+                    "line2":"test",
+                    "postalCode":"57197",
+                    "city":"Forserum",
+                    "countryCode":"SE"
+                 }
+              ],
+              "phone":[  
+                 {  
+                    "useCode":"hem",
+                    "preference":1,
+                    "formattedNumber":"08558945622"
+                 },
+                 {  
+                    "useCode":"mobil",
+                    "preference":2,
+                    "formattedNumber":"07055555"
+                 },
+                 {  
+                    "useCode":"övrigt",
+                    "preference":3,
+                    "formattedNumber":"07081542644"
+                 }
+              ],
+              "email":[  
+                 {  
+                    "preference":1,
+                    "address":"test@test.se"
+                 }
+              ],
+              "web":[  
+
+              ]
+           }
+        },
+        "profiles":[  
+           {  
+              "languageCode":"sv-SE",
+              "profileName":"UX Designer",
+              "description":"rrrr"
+           },
+           {  
+              "languageCode":"sv-SE",
+              "profileName":"Arkitekt",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"01",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ]
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"Ellinor\nLorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.\n\n",
+              "profileName":"Ellinor B.",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"3339 - Övriga förmedlare",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"9111 - Städare",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"5113 - Guider och reseledare",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"8331 - Buss- och spårvagnsförare",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "description":"Passionerad praktikant",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0140",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0117",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0181",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0191",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0120",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0187",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0162",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0183",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0126",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0128",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0115",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0138",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0136",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0163",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0188",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0160",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0123",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0127",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0184",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0180",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0114",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0186",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0192",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0125",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0139",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"19 - Transport",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"12 - Sanering och renhållning",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"5 - Försäljning, inköp, marknadsföring",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Fiskeguide",
+                       "Servicechef, bilverkstad",
+                       "Vildmarksguide",
+                       "Lokalguide",
+                       "Taxiguide",
+                       "Reseledare",
+                       "Färdledare/Turledare",
+                       "Rundtursguide",
+                       "Turistvärd/Turistvärdinna",
+                       "Fastighetsstädare",
+                       "Städare/Lokalvårdare",
+                       "Bussguide",
+                       "Bussförare/Busschaufför",
+                       "Sjukhusstädare",
+                       "Guide",
+                       "Platschef, reseföretag",
+                       "Företagsguide"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Testledare",
+                    "industryCodes":[  
+                       {  
+                          "value":"6826",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "description":"sdfsdf",
+                    "title":"test",
+                    "organization":{  
+                       "name":"refd"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":true,
+                       "start":"2019-02"
+                    }
+                 }
+              ],
+              "education":[  
+                 {  
+                    "institution":{  
+                       "name":"Vasaskolan"
+                    },
+                    "attendancePeriods":[  
+                       {  
+                          "currentIndicator":false,
+                          "start":"2010-01",
+                          "end":"2015-06"
+                       }
+                    ],
+                    "programs":[  
+                       "340"
+                    ],
+                    "currentlyAttendingIndicator":false,
+                    "description":"Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldu"
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"400059",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Bilmärkespecialisering"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605911",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Solresor, ledarerfarenhet"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605913",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Skidresor, ledarerfarenhet"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607655",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Antikviteter och konst"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"773",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Bokföringsvana"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605207",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Segling, instruktör/tränare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"603062",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Fordonselektronik, felsöknings-/reparationsvana"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"606185",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Försäljningsstatistik"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605240",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Slalom, instruktör/tränare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605200",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Klättring, instruktör"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605194",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Kanot, instruktör/tränare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"34",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"A-certifikat, dykning, 40 m."
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"1657",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Festarrangemang"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"602713",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Fordonsvärdering"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"200170",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"C-certifikat, dykning,  blandgas"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"604888",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Annonstjänster, produktkunskap"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"394",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"B-certifikat, dykning, 50 m, luft"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605917",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Turistbussresor, ledarerfarenhet"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"894",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Butiksprojektering"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"602667",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Golfresor, ledarerfarenhet"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"6049",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Tourist Guide Licence"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"1987",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Förhandlingsvana"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"604154",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Butiksinredning, planeringsvana"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"Jag är en duktig system utvecklare!",
+              "profileName":"System Utvecklare",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"3422 - Idrottstränare och instruktörer m.fl.",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "description":"Systemutvecklare som vill jobba i Stockholm",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0180",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"01",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"15 - Pedagogiskt arbete",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Instruktör/Tränare inom specialidrott",
+                       "Personlig tränare/PT"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Systemadministratör",
+                    "industryCodes":[  
+                       {  
+                          "value":"2918",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "title":"Systemutvecklare/Programmerare",
+                    "industryCodes":[  
+                       {  
+                          "value":"2419",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "description":"Min roll involverar administration av IT system på företaget JobJobJob IT.",
+                    "title":"Systemadmin på JobJobJob IT",
+                    "organization":{  
+                       "name":"JobJobJob IT"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":false,
+                       "start":"2017-02",
+                       "end":"2018-07"
+                    }
+                 },
+                 {  
+                    "description":"Jag har utvecklat ett HR system och Demo verktyg.",
+                    "title":"Systemutvecklare på mittmittjobbjobb.se",
+                    "organization":{  
+                       "name":"Mittmittjobbjobb"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":false,
+                       "start":"2018-07",
+                       "end":"2019-05"
+                    }
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"609205",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"IntelliJ, programmeringsverktyg"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"5956",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Test av prestanda och säkerhet"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607902",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"C#.NET, programmeringsspråk"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"200028",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Java, programmeringsspråk"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"3252",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Kvalitetsansvar"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"200029",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"HTML, programmeringsspråk"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605952",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Python, programmeringsspråk"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"161",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Analysteknik"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "profileName":"Personlig tränare",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"1740 - Chefer inom friskvård, sport och fritid",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "positionPreferences":[  
+                 {  
+                    "jobCategories":[  
+                       {  
+                          "name":"20 - Chefer och verksamhetsledare",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Fritidschef"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Fritidschef",
+                    "industryCodes":[  
+                       {  
+                          "value":"5226",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"517",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Base Maintenance"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"hej hej",
+              "profileName":"Testare",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"2512 - Mjukvaru- och systemutvecklare m.fl.",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"9411 - Pizzabagare m.fl.",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "description":"Test för bevakningsmail",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0180",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0184",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"01",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"PL",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"7 - Hotell, restaurang, storhushåll",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"3 - Data/IT",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Pizzabagare",
+                       "Systemutvecklare/Programmerare"
+                    ]
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"200028",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Java, programmeringsspråk"
+                 },
+                 {  
+                    "competencyName":"test",
+                    "description":"test"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "profileName":"System ingenjör",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"2213 - AT-läkare",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"3153 - Piloter m.fl.",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"DZ",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"MA",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"8 - Hälso- och sjukvård",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"19 - Transport",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "AT-läkare",
+                       "Flyginstruktör/Flyglärare"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Flyginstruktör/Flyglärare",
+                    "industryCodes":[  
+                       {  
+                          "value":"4733",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "description":"personlig tränare",
+                    "title":"pt",
+                    "organization":{  
+                       "name":"sats"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":true,
+                       "start":"1999-12"
+                    }
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"608302",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"QDP, certifiering för dekorationsmålare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"608174",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Dekormålning, TV"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607546",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Läkarintyg för sjöfolk"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"86",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Affischer, design"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607293",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Basic safety training"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"609204",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Glassfish Server, applikationsplattform"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"1288",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Djurexperimentell metodik"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607330",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"CPL Commercial Pilot License"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"602883",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Akvariefiskar"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"3589",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Läkarexamen"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"Hej \nVill jobaa gärnet!",
+              "profileName":"Läkare",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"7231 - Motorfordonsmekaniker och fordonsreparatörer",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"3422 - Idrottstränare och instruktörer m.fl.",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"5141 - Frisörer",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"9411 - Pizzabagare m.fl.",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"0184",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"15 - Pedagogiskt arbete",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"7 - Hotell, restaurang, storhushåll",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"10 - Installation, drift, underhåll",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"4 - Kropps- och skönhetsvård",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Pizzabagare",
+                       "Bussmekaniker",
+                       "Småmaskinsmekaniker",
+                       "Trailerreparatör",
+                       "Maskinmekaniker/Skogsmaskinmekaniker",
+                       "Truckreparatör",
+                       "Personlig tränare/PT",
+                       "Servicetekniker, maskin",
+                       "Peruk- och tupéfrisör",
+                       "Marinmekaniker",
+                       "Reservdelsspecialist/Bildelsspecialist",
+                       "Fordonstekniker/Bilmekaniker/Personbilsmekaniker",
+                       "Traktormekaniker",
+                       "Lastbilsmekaniker"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Halmvaruarbetare",
+                    "industryCodes":[  
+                       {  
+                          "value":"5144",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "title":"Ytbehandlare/Sprutlackerare, manuell, trä",
+                    "industryCodes":[  
+                       {  
+                          "value":"4879",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "description":"kjhj",
+                    "title":"kjhkj",
+                    "organization":{  
+                       "name":"kjh"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":true,
+                       "start":"2011-12"
+                    }
+                 },
+                 {  
+                    "description":"asdfija",
+                    "title":"uytuy",
+                    "organization":{  
+                       "name":"sdffd"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":true,
+                       "start":"2008-12"
+                    }
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605167",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Budo, instruktör/tränare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605165",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Boxning, instruktör/tränare"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"605181",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Aerobic, instruktör/tränare"
+                 },
+                 {  
+                    "competencyName":"Personlig tränare Sats",
+                    "description":"Personlig tränare"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"Hej Christopher !!!!!",
+              "profileName":"Scrum Master",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"9111 - Städare",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"5221 - Säljande butikschefer o avdelningschefer i butik",
+                          "schemeId":"SSYK"
+                       },
+                       {  
+                          "value":"5225 - Bensinstationspersonal",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "description":"Psykopat till Stationschef",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"03",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"01",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       },
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"2584",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"12 - Sanering och renhållning",
+                          "code":"AF Taxonomy Field"
+                       },
+                       {  
+                          "name":"5 - Försäljning, inköp, marknadsföring",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Bensinstationsföreståndare/Stationschef",
+                       "Städare/Lokalvårdare",
+                       "Bensinstationsbiträde/Servicebiträde"
+                    ]
+                 }
+              ],
+              "employment":[  
+                 {  
+                    "title":"Arbetsledare, anläggning",
+                    "industryCodes":[  
+                       {  
+                          "value":"4205",
+                          "schemeId":"AF Taxonomy Occupation"
+                       }
+                    ]
+                 },
+                 {  
+                    "description":"bhghg",
+                    "title":"gg",
+                    "organization":{  
+                       "name":"gg"
+                    },
+                    "employmentPeriod":{  
+                       "currentIndicator":true,
+                       "start":"1999-12"
+                    }
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"603586",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Fordonstillbehör"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"600871",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Hyresavtal"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"607654",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Hälsokrav vid livsmedelshantering"
+                 },
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"2904",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Kassavana"
+                 },
+                 {  
+                    "competencyName":"dsfsd",
+                    "description":"fsdfds"
+                 },
+                 {  
+                    "competencyName":"dasdas",
+                    "description":"gfdgfd"
+                 }
+              ]
+           },
+           {  
+              "languageCode":"sv-SE",
+              "executiveSummary":"JLFNÄAIRJEFGPEIHRNFGVOLJSM RGOL  EIRFVNOEKLRNO V-KE RMVF",
+              "profileName":"Receptionist",
+              "employerPreferences":[  
+                 {  
+                    "industryCodes":[  
+                       {  
+                          "value":"4211 - Croupierer och oddssättare m.fl.",
+                          "schemeId":"SSYK"
+                       }
+                    ]
+                 }
+              ],
+              "description":"to have an education to show",
+              "positionPreferences":[  
+                 {  
+                    "locations":[  
+                       {  
+                          "referenceLocation":{  
+                             "countrySubDivision":{  
+                                "value":"1862",
+                                "schemeId":"kommun"
+                             }
+                          }
+                       }
+                    ],
+                    "jobCategories":[  
+                       {  
+                          "name":"7 - Hotell, restaurang, storhushåll",
+                          "code":"AF Taxonomy Field"
+                       }
+                    ],
+                    "positionTitles":[  
+                       "Dealer"
+                    ]
+                 }
+              ],
+              "education":[  
+                 {  
+                    "institution":{  
+                       "name":"test school"
+                    },
+                    "attendancePeriods":[  
+                       {  
+                          "currentIndicator":false,
+                          "start":"1996-07",
+                          "end":"1998-12"
+                       }
+                    ],
+                    "programs":[  
+                       "010"
+                    ],
+                    "currentlyAttendingIndicator":false,
+                    "description":"qwwvadfdfkdfdk"
+                 }
+              ],
+              "qualifications":[  
+                 {  
+                    "competencyId":[  
+                       {  
+                          "value":"609065",
+                          "schemeId":"AF Taxonomy Skill"
+                       }
+                    ],
+                    "competencyName":"Fast rescue boats"
+                 },
+                 {  
+                    "competencyName":"wefwefwrf",
+                    "description":"WEFAWEF"
+                 }
+              ]
+           }
+        ]
+     }
+  }
+}

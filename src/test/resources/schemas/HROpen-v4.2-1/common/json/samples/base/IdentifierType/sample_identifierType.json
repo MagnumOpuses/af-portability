@@ -1,0 +1,16 @@
+{
+    "$schema": "http://schema.hropenstandards.org/4_0/common/json/meta/hros.json",
+    "version": "4.0.1",
+    "title": "sample_extendedIdentifier",
+    "description": "A schema to demonstrate data type usage.",
+    "type": "object",
+    "properties": {
+        "taxonomyId": { "$ref": "../../../base/IdentifierType.json#" },
+        "competencyId": { "$ref": "../../../base/IdentifierType.json#" },
+        "competencyIds": {
+            "description": "An array of competencyId that demonstrates IdentifierTypes",
+            "type": "array",
+            "items": { "$ref": "../../../base/IdentifierType.json#" }
+        }
+    }
+}

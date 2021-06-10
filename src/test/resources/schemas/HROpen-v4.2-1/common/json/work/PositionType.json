@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "version": "4.2.0",
+    "title": "PositionType",
+    "description": "A type that defines a position type and related identifiers.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "An identifier for a position.",
+            "$ref": "../base/IdentifierType.json#"
+        },
+        "title": {
+            "description": "The title of a position.",
+            "type": "string"
+        },
+        "remunerationBasisCode": {
+            "description": "A code classifying the primary method by which remuneration for a position is provided or calculated. Examples include Hourly, Salaried, Salaried plus Commission, Commission Only, Salaried plus Bonus, etc.",
+            "$ref": "../codelist/RemunerationBasisCodeList.json#"
+        },
+        "positionScheduleType": {
+            "description": "The type of position schedule.",
+            "$ref": "../codelist/PositionScheduleTypeCodeList.json#"
+        },
+        "positionTypeCode": {
+            "description": "The code of the position type.",
+            "$ref": "../codelist/PositionTypeCodeList.json#"
+        },
+        "careerLevelCode": {
+            "description": "The code representing the career level.",
+            "$ref": "../base/CodeType.json#"
+        }
+    }
+}

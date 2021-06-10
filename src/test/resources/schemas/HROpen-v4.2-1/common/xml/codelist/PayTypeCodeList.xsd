@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hropen="https://hropenstandards.org/schema/xml/" elementFormDefault="qualified" targetNamespace="https://hropenstandards.org/schema/xml/" version="4.2.0" id="PayTypeCodeList" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="PayTypeCodeList">
+    <xsd:annotation>
+      <xsd:documentation>Values that classify the various pay types.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BasePay">
+        <xsd:annotation>
+          <xsd:documentation>Base Pay</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Commission">
+        <xsd:annotation>
+          <xsd:documentation>Commission</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Bonus">
+        <xsd:annotation>
+          <xsd:documentation>Bonus</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ShortTermIncentive">
+        <xsd:annotation>
+          <xsd:documentation>Short-Term Incentive</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ShiftPay">
+        <xsd:annotation>
+          <xsd:documentation>Shift Pay</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="OnCall">
+        <xsd:annotation>
+          <xsd:documentation>On Call</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Hazard">
+        <xsd:annotation>
+          <xsd:documentation>Hazard</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="VariablePay">
+        <xsd:annotation>
+          <xsd:documentation>Variable Pay</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Allowance">
+        <xsd:annotation>
+          <xsd:documentation>Allowance</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Overtime">
+        <xsd:annotation>
+          <xsd:documentation>Overtime</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="PayTypeCode" type="hropen:PayTypeCodeList" />
+</xsd:schema>
